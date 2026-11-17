@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>Lernkarten-Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700;1,800&family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: editor column left, 9:16 phone preview right; stacks on phones. Card colours copy the reference video. */
+:root{
+  --bg:#eef0f7; --panel:#ffffff; --fg:#161a33; --muted:#5b6080; --line:#d8dbea;
+  --accent:#2b2fc4; --accent-fg:#ffffff; --soft:#e4e6fb; --danger:#c42b45;
+  --f-ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-head:"Poppins","Inter",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1122; --panel:#181b33; --fg:#e8eaf8; --muted:#a2a6c6; --line:#2c3054;
+  --accent:#6f73ff; --accent-fg:#0b0c1a; --soft:#23275a; --danger:#ff6b85; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1122; --panel:#181b33; --fg:#e8eaf8; --muted:#a2a6c6; --line:#2c3054;
+  --accent:#6f73ff; --accent-fg:#0b0c1a; --soft:#23275a; --danger:#ff6b85; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-ui);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 40px}
+.wrap{max-width:1120px;margin:0 auto;display:grid;gap:24px}
+header h1{font-family:var(--f-head);font-size:1.6rem;margin:0;text-wrap:balance}
+header p{margin:4px 0 0;color:var(--muted);max-width:62ch}
+.main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:24px;align-items:start}
+@media (max-width:820px){.main{grid-template-columns:minmax(0,1fr)}.preview{order:-1}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:18px;min-width:0}
+.field{display:grid;gap:6px;min-width:0}
+label,.lbl{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+input[type=text],input[type=number],textarea,select{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%}
+textarea{min-height:230px;font-size:.9rem;line-height:1.55;resize:vertical;font-family:ui-monospace,"SF Mono",Menlo,monospace}
+input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hint{font-size:.83rem;color:var(--muted);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.row>.field{flex:1 1 140px}
+.check{display:flex;align-items:center;gap:8px;font-size:.92rem;text-transform:none;letter-spacing:0;font-weight:500;color:var(--fg)}
+.check input{width:18px;height:18px;accent-color:var(--accent)}
+.presets{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;font-weight:600;border-radius:9px;border:1px solid var(--line);background:var(--panel);color:var(--fg);padding:9px 14px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+button.rec{background:var(--danger);border-color:var(--danger);color:#fff}
+button:disabled{opacity:.5;cursor:not-allowed}
+.chip{font-size:.85rem;padding:6px 12px;border-radius:99px}
+.chip[aria-pressed=true]{background:var(--soft);border-color:var(--accent)}
+.preview{display:grid;gap:12px;position:sticky;top:16px}
+.phone{width:100%;max-width:360px;aspect-ratio:9/16;margin:0 auto;border-radius:22px;overflow:hidden;box-shadow:0 12px 40px rgba(20,24,80,.25);background:#1b1d8f}
+canvas{width:100%;height:100%;display:block}
+.controls{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.status{text-align:center;font-size:.86rem;color:var(--muted);min-height:1.4em;margin:0}
+.bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden;max-width:360px;width:100%;margin:0 auto}
+.bar span{display:block;height:100%;width:0;background:var(--accent)}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Lernkarten-Studio</h1>
+    <p>Kurzvideos im Stil „sich vorstellen“: Stichwörter auf einer Karte, die nacheinander markiert werden. Text anpassen, abspielen, als Video speichern und mit deiner Stimme hochladen.</p>
+  </header>
+
+  <div class="main">
+    <section class="panel" aria-label="Inhalt">
+      <div class="field">
+        <span class="lbl">Vorlage</span>
+        <div class="presets" id="presets"></div>
+      </div>
+      <div class="field">
+        <label for="title">Überschrift</label>
+        <input type="text" id="title">
+      </div>
+      <div class="field">
+        <label for="items">Karten-Zeilen</label>
+        <textarea id="items" spellcheck="false"></textarea>
+        <p class="hint">Eine Zeile pro Stichwort: <b>Stichwort | ganze Frage | Beispielantwort</b>. Frage und Antwort sind optional. Bis zu 9 Zeilen passen gut.</p>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="secs">Sekunden pro Zeile</label>
+          <input type="number" id="secs" min="1" max="15" step="0.5" value="5">
+        </div>
+        <div class="field">
+          <label for="footer">Fußzeile</label>
+          <input type="text" id="footer" placeholder="z. B. @elmakademie">
+        </div>
+      </div>
+      <div class="field">
+        <span class="lbl">Optionen</span>
+        <label class="check"><input type="checkbox" id="showAnswer" checked> Frage &amp; Beispielantwort unten einblenden</label>
+        <label class="check"><input type="checkbox" id="speak"> Beim Abspielen vorlesen (nur Vorschau, nicht im Video)</label>
+      </div>
+    </section>
+
+    <section class="preview" aria-label="Vorschau">
+      <div class="phone"><canvas id="cv" width="1080" height="1920" aria-label="Vorschau der Lernkarte"></canvas></div>
+      <div class="bar"><span id="prog"></span></div>
+      <div class="controls">
+        <button class="primary" id="play">▶ Abspielen</button>
+        <button id="stop">■ Stopp</button>
+        <button class="rec" id="rec">● Video speichern</button>
+      </div>
+      <p class="status" id="status">Vorschau bereit.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+const PRESETS = {
+  "sich vorstellen": {
+    title: "sich vorstellen",
+    items: [
+      "Name? | Wie heißt du? | Ich heiße Amira.",
+      "Alter? | Wie alt bist du? | Ich bin 24 Jahre alt.",
+      "Land? | Woher kommst du? | Ich komme aus Syrien.",
+      "Wohnort? | Wo wohnst du? | Ich wohne in Berlin.",
+      "Sprachen? | Welche Sprachen sprichst du? | Ich spreche Arabisch, Englisch und ein bisschen Deutsch.",
+      "Beruf? | Was bist du von Beruf? | Ich bin Krankenpflegerin.",
+      "Hobby? | Was ist dein Hobby? | Ich lese gern und gehe schwimmen."
+    ]
+  },
+  "Familie": {
+    title: "meine Familie",
+    items: [
+      "Geschwister? | Hast du Geschwister? | Ja, ich habe einen Bruder und zwei Schwestern.",
+      "Eltern? | Wo wohnen deine Eltern? | Meine Eltern wohnen in Kairo.",
+      "Verheiratet? | Bist du verheiratet? | Ja, ich bin seit drei Jahren verheiratet.",
+      "Kinder? | Hast du Kinder? | Ja, ich habe eine Tochter.",
+      "Alter? | Wie alt ist deine Tochter? | Sie ist vier Jahre alt."
+    ]
+  },
+  "Beim Arzt": {
+    title: "beim Arzt",
+    items: [
+      "Termin? | Haben Sie einen Termin? | Ja, um 10 Uhr.",
+      "Beschwerden? | Was fehlt Ihnen? | Ich habe Kopfschmerzen.",
+      "Seit wann? | Seit wann haben Sie das? | Seit drei Tagen.",
+      "Fieber? | Haben Sie Fieber? | Ja, 38,5 Grad.",
+      "Medikamente? | Nehmen Sie Medikamente? | Nein, keine."
+    ]
+  }
+};
+
+const $ = id => document.getElementById(id);
+const cv = $("cv"), ctx = cv.getContext("2d");
+const W = 1080, H = 1920;
+const INTRO = 1.5, OUTRO = 2.5;
+let state = { playing:false, t0:0, recorder:null };
+
+function store(k,v){ try{ localStorage.setItem("lks:"+k, v) }catch(e){} }
+function load(k){ try{ return localStorage.getItem("lks:"+k) }catch(e){ return null } }
+
+function applyPreset(name){
+  const p = PRESETS[name];
+  $("title").value = p.title;
+  $("items").value = p.items.join("\n");
+  document.querySelectorAll("#presets button").forEach(b => b.setAttribute("aria-pressed", b.dataset.name === name));
+  saveDraft(); drawFrame(null);
+}
+Object.keys(PRESETS).forEach(name => {
+  const b = document.createElement("button");
+  b.className = "chip"; b.type = "button"; b.textContent = name; b.dataset.name = name;
+  b.setAttribute("aria-pressed","false");
+  b.onclick = () => applyPreset(name);
+  $("presets").appendChild(b);
+});
+
+function readItems(){
+  return $("items").value.split("\n").map(l => l.trim()).filter(Boolean).slice(0,12).map(l => {
+    const [word, q, a] = l.split("|").map(s => (s || "").trim());
+    return { word, q, a };
+  });
+}
+function cfg(){
+  return {
+    title: $("title").value.trim(),
+    items: readItems(),
+    secs: Math.max(1, parseFloat($("secs").value) || 5),
+    footer: $("footer").value.trim(),
+    showAnswer: $("showAnswer").checked
+  };
+}
+function saveDraft(){
+  store("title",$("title").value); store("items",$("items").value);
+  store("secs",$("secs").value); store("footer",$("footer").value);
+  store("showAnswer",$("showAnswer").checked ? "1":"0");
+}
+["title","items","secs","footer","showAnswer"].forEach(id => $(id).addEventListener("input", () => { saveDraft(); if(!state.playing) drawFrame(null); }));
+
+/* ---------- drawing ---------- */
+function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+function fitFont(text, weight, size, family, maxW){
+  let s = size;
+  do { ctx.font = `${weight} ${s}px ${family}`; if (ctx.measureText(text).width <= maxW) break; s -= 4; } while (s > 30);
+  return s;
+}
+function wrap(text, maxW){
+  const words = text.split(/\s+/); const lines = []; let cur = "";
+  for (const w of words){ const t = cur ? cur+" "+w : w; if (ctx.measureText(t).width > maxW && cur){ lines.push(cur); cur = w; } else cur = t; }
+  if (cur) lines.push(cur); return lines;
+}
+const SERIF = '"Noto Serif", Georgia, "Times New Roman", serif';
+const SANS = 'Poppins, Inter, Arial, sans-serif';
+
+/* active: {index, local} where local = seconds since this item became active */
+function drawFrame(active, now){
+  const c = cfg();
+  // background gradient (dark navy left -> vivid blue right)
+  const g = ctx.createLinearGradient(0,0,W,H*0.35);
+  g.addColorStop(0,"#11126b"); g.addColorStop(1,"#3b3fdc");
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+
+  // title
+  ctx.fillStyle = "#ffffff"; ctx.textBaseline = "middle"; ctx.textAlign = "left";
+  fitFont(c.title || " ", 600, 58, SANS, W-120);
+  ctx.fillText(c.title, 90, 76);
+
+  // card
+  const cx = 30, cy = 140, cw = W-60, ch = H-cy-30;
+  ctx.fillStyle = "#ffffff"; roundRect(cx,cy,cw,ch,26); ctx.fill();
+
+  const answerH = c.showAnswer ? 330 : 0;
+  const footerH = c.footer ? 70 : 0;
+  const top = cy + 40, bottom = cy + ch - 30 - answerH - footerH;
+  const n = Math.max(1, c.items.length);
+  const step = Math.min(225, (bottom - top) / n);
+  const startY = top + ((bottom - top) - step*n)/2;
+  ctx.textAlign = "center";
+
+  c.items.forEach((it, i) => {
+    const yMid = startY + step*i + step*0.5;
+    const size = fitFont(it.word, 800, Math.min(104, step*0.5), SERIF, cw-120);
+    ctx.fillStyle = "#0d0d14";
+    ctx.fillText(it.word, W/2, yMid);
+    // separator
+    if (i < n-1){
+      ctx.strokeStyle = "#cfcfd6"; ctx.lineWidth = 2; ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(cx+55, startY+step*(i+1)); ctx.lineTo(cx+cw-55, startY+step*(i+1)); ctx.stroke();
+    }
+    // dashed highlight
+    if (active && active.index === i){
+      const tw = ctx.measureText(it.word).width;
+      const p = Math.min(1, active.local/0.45);
+      const ease = 1 - Math.pow(1-p, 3);
+      const uw = tw*0.82*ease, uy = yMid + size*0.55;
+      ctx.strokeStyle = "#2d2fc0"; ctx.lineWidth = 7; ctx.lineCap = "butt";
+      ctx.setLineDash([22,10]); ctx.lineDashOffset = -(now||0)*30;
+      ctx.beginPath(); ctx.moveTo(W/2 - tw*0.41, uy); ctx.lineTo(W/2 - tw*0.41 + uw, uy); ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  });
+
+  // answer box
+  if (c.showAnswer){
+    const bx = cx+40, by = cy+ch-30-footerH-answerH+20, bw = cw-80, bh = answerH-30;
+    ctx.fillStyle = "#eceefe"; roundRect(bx,by,bw,bh,22); ctx.fill();
+    const it = active ? c.items[active.index] : null;
+    ctx.textAlign = "center";
+    if (it && (it.q || it.a)){
+      const a = Math.min(1, Math.max(0,(active.local-0.3)/0.4));
+      ctx.globalAlpha = a;
+      let y = by + 85;
+      if (it.q){ ctx.fillStyle = "#2d2fc0"; ctx.font = `700 58px ${SANS}`; fitFont(it.q,700,58,SANS,bw-60); ctx.fillText(it.q, W/2, y); y += 90; }
+      if (it.a){
+        ctx.fillStyle = "#14152b"; ctx.font = `700 italic 52px ${SERIF}`;
+        const lines = wrap(it.a, bw-70).slice(0,3);
+        const lh = 66; let ay = it.q ? y : by + bh/2 - (lines.length-1)*lh/2;
+        lines.forEach(l => { ctx.fillText(l, W/2, ay); ay += lh; });
+      }
+      ctx.globalAlpha = 1;
+    } else {
+      ctx.fillStyle = "#b9bce6"; ctx.font = `800 italic 120px ${SERIF}`;
+      ctx.fillText("?", W/2, by + bh/2);
+    }
+  }
+  if (c.footer){
+    ctx.fillStyle = "#6a6d92"; ctx.font = `600 38px ${SANS}`; ctx.textAlign = "center";
+    ctx.fillText(c.footer, W/2, cy+ch-30-footerH/2);
+  }
+}
+
+/* ---------- timeline ---------- */
+function total(c){ return INTRO + c.items.length*c.secs + OUTRO; }
+function activeAt(t, c){
+  const k = t - INTRO;
+  if (k < 0 || k >= c.items.length*c.secs) return null;
+  const index = Math.floor(k / c.secs);
+  return { index, local: k - index*c.secs };
+}
+let lastSpoken = -1;
+function speak(it){
+  if (!$("speak").checked || state.recorder || !("speechSynthesis" in window)) return;
+  try{
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance([it.q || it.word, it.a].filter(Boolean).join(" … "));
+    u.lang = "de-DE"; u.rate = 0.9; speechSynthesis.speak(u);
+  }catch(e){}
+}
+function tick(){
+  if (!state.playing) return;
+  const c = cfg(); const t = (performance.now() - state.t0)/1000; const T = total(c);
+  const a = activeAt(t, c);
+  if (a && a.index !== lastSpoken){ lastSpoken = a.index; speak(c.items[a.index]); }
+  drawFrame(a, t);
+  $("prog").style.width = Math.min(100, t/T*100) + "%";
+  if (t >= T){ finish(); return; }
+  requestAnimationFrame(tick);
+}
+function start(){
+  if (!cfg().items.length){ $("status").textContent = "Bitte mindestens eine Zeile eintragen."; return; }
+  state.playing = true; state.t0 = performance.now(); lastSpoken = -1;
+  setBusy(true); requestAnimationFrame(tick);
+}
+function finish(){
+  state.playing = false; setBusy(false); $("prog").style.width = "0";
+  try{ speechSynthesis.cancel() }catch(e){}
+  if (state.recorder && state.recorder.state !== "inactive") state.recorder.stop();
+  else { $("status").textContent = "Fertig."; drawFrame(null); }
+}
+function setBusy(b){ $("play").disabled = b; $("rec").disabled = b; }
+
+$("play").onclick = () => { $("status").textContent = "Läuft …"; start(); };
+$("stop").onclick = () => { if (state.recorder){ state.cancelled = true; } finish(); };
+
+/* ---------- recording ---------- */
+function pickMime(){
+  const opts = ["video/mp4;codecs=avc1.42E01E","video/mp4","video/webm;codecs=vp9","video/webm;codecs=vp8","video/webm"];
+  return opts.find(m => window.MediaRecorder && MediaRecorder.isTypeSupported(m)) || "";
+}
+async function saveBlob(blob, filename){
+  let dl = null;
+  try{ dl = window.claude && await window.claude.use("downloads"); }catch(e){}
+  if (dl){
+    try{ await dl.save({ filename, data: blob }); $("status").textContent = "Video gespeichert: " + filename; }
+    catch(e){ $("status").textContent = e && e.code === "declined" ? "Speichern abgebrochen." : "Speichern ging hier nicht (" + (e && e.code || "Fehler") + ")."; }
+    return;
+  }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+  $("status").textContent = "Video gespeichert: " + filename;
+}
+$("rec").onclick = () => {
+  if (!cv.captureStream || !window.MediaRecorder){ $("status").textContent = "Dein Browser kann keine Videos aufnehmen. Bitte Chrome, Edge oder Firefox nutzen."; return; }
+  const mime = pickMime();
+  const rec = new MediaRecorder(cv.captureStream(30), mime ? { mimeType: mime, videoBitsPerSecond: 6e6 } : undefined);
+  const chunks = [];
+  rec.ondataavailable = e => e.data.size && chunks.push(e.data);
+  rec.onstop = () => {
+    const cancelled = state.cancelled; state.recorder = null; state.cancelled = false; drawFrame(null);
+    if (cancelled){ $("status").textContent = "Aufnahme abgebrochen."; return; }
+    const type = rec.mimeType || mime || "video/webm";
+    const ext = type.includes("mp4") ? "mp4" : "webm";
+    const name = (cfg().title || "lernkarte").replace(/[^\wäöüÄÖÜß -]/g,"").trim().replace(/\s+/g,"-") + "." + ext;
+    saveBlob(new Blob(chunks, { type }), name);
+  };
+  state.recorder = rec; state.cancelled = false;
+  rec.start(250);
+  $("status").textContent = "Aufnahme läuft … Tab bitte offen lassen.";
+  start();
+};
+
+/* ---------- boot ---------- */
+(function boot(){
+  const t = load("title"), it = load("items");
+  if (t !== null && it){
+    $("title").value = t; $("items").value = it;
+    $("secs").value = load("secs") || 5; $("footer").value = load("footer") || "";
+    $("showAnswer").checked = load("showAnswer") !== "0";
+  } else applyPreset("sich vorstellen");
+  drawFrame(null);
+  const redraw = () => { if (!state.playing) drawFrame(null); };
+  if (document.fonts){
+    Promise.all([
+      document.fonts.load(`800 italic 80px "Noto Serif"`),
+      document.fonts.load(`700 italic 40px "Noto Serif"`),
+      document.fonts.load(`600 40px Poppins`),
+      document.fonts.load(`700 40px Poppins`)
+    ]).then(redraw, redraw);
+    document.fonts.ready.then(redraw);
+  }
+})();
+</script>
+
+</body>
+</html>
