@@ -8,9 +8,10 @@
 videos/wohnung/
 ├── README.md            diese Anleitung
 ├── inhalt.py            ALLE Texte, Wörter, Farben, Dauer  ← hier bearbeiten
-├── illustrationen.py    zeichnet die 8 Raum-Illustrationen (Haus, Wohnzimmer, Küche, …)
+├── illustrationen.py    zeichnet 8 Raum-Illustrationen (Ersatz, falls keine Fotos)
+├── bilder_ausschneiden.py  schneidet die 8 Fotos aus der Collage (ohne Text-Schilder)
 ├── render.py            Technik: Zeitplan, Animationen, Karaoke-Untertitel, Export
-├── bilder/logo.png      ELM-Logo
+├── bilder/              collage_original.png, haus.png … gesamt.png, logo.png
 └── meine_wohnung.mp4    fertiges Video
 ```
 Stimme und Musik kommen aus `videos/common/audio.py` (gemeinsam für alle Videos).
@@ -35,9 +36,11 @@ In **`inhalt.py`**:
 - `VOKABELN`: bestimmt die Artikelfarbe der Nomen in allen Sätzen automatisch.
 - `SPRECHTEMPO`, `MUSIK_LAUTSTAERKE`, `GESAMTDAUER`, Farben.
 
-**Eigene Fotos statt Illustrationen:** Foto mit dem Namen der Szene in `bilder/` legen,
-z. B. `bilder/kueche.jpg` oder `bilder/wohnzimmer.png` (Querformat ca. 900 × 770 ideal).
-Danach in `inhalt.py` die `pins` an die Positionen im Foto anpassen.
+**Fotos oder Illustrationen:** In `inhalt.py` steht `BILDQUELLE = "fotos"` (aktuell) oder `"illustrationen"`.
+Die Fotos stammen aus deiner Collage: `bilder_ausschneiden.py` schneidet nur den Fotostreifen zwischen
+Titel- und Satzschild aus, damit keine Texte im Bild stehen, die vom gesprochenen Text abweichen.
+Eigenes Foto: z. B. `bilder/kueche.jpg` ersetzen (Querformat ca. 1,7 : 1) und `foto_pins` anpassen
+(Position von 0 bis 1, 0,0 = oben links).
 
 ## Neu exportieren
 

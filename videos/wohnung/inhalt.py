@@ -20,6 +20,10 @@ VOKABELN = [
     "das Bett", "der Schrank", "die Dusche", "das Waschbecken",
 ]
 
+# Bildquelle: "fotos" = Fotos aus bilder/ (aus deiner Collage, siehe bilder_ausschneiden.py)
+#              "illustrationen" = gezeichnete Räume aus illustrationen.py
+BILDQUELLE = "fotos"
+
 # Szenen
 #   bild    = Illustration (haus, wohnzimmer, kueche, schlafzimmer, bad, kinderzimmer, balkon,
 #             gesamt). Liegt in bilder/ ein Foto mit diesem Namen (z. B. bilder/kueche.jpg),
@@ -27,26 +31,32 @@ VOKABELN = [
 #   titel   = Überschrift (mit Artikel = farbig)
 #   saetze  = werden gesprochen + als Untertitel (Karaoke) gezeigt
 #   woerter = neue Wörter: werden groß eingeblendet, vorgesprochen, dann Pause zum Nachsprechen
-#   pins    = Position des Wortes im Bild (x, y) im Bildformat 900 × 770
+#   pins      = Position des Wortes in der Illustration (x, y) im Format 900 × 770
+#   foto_pins = Position des Wortes im Foto (x, y) von 0 bis 1 (0,0 = oben links)
 SZENEN = [
     dict(bild="haus", titel="die Wohnung",
          saetze=["Meine Wohnung ist sehr schön."],
-         woerter=["die Wohnung"], pins={"die Wohnung": (450, 335)}),
+         woerter=["die Wohnung"], pins={"die Wohnung": (450, 335)},
+         foto_pins={"die Wohnung": (0.68, 0.30)}),
     dict(bild="wohnzimmer", titel="das Wohnzimmer",
          saetze=["Hier ist das Wohnzimmer.", "Dort sehe ich fern und entspanne mich."],
          woerter=["das Wohnzimmer", "das Sofa", "der Tisch"],
-         pins={"das Sofa": (690, 445), "der Tisch": (460, 612)}),
+         pins={"das Sofa": (690, 445), "der Tisch": (460, 612)},
+         foto_pins={"das Sofa": (0.30, 0.56), "der Tisch": (0.60, 0.86)}),
     dict(bild="kueche", titel="die Küche",
          saetze=["Das ist die Küche. Hier koche ich."],
-         woerter=["die Küche", "der Kühlschrank"], pins={"der Kühlschrank": (770, 280)}),
+         woerter=["die Küche", "der Kühlschrank"], pins={"der Kühlschrank": (770, 280)},
+         foto_pins={"der Kühlschrank": (0.87, 0.40)}),
     dict(bild="schlafzimmer", titel="das Schlafzimmer",
          saetze=["Hier ist mein Schlafzimmer. Hier schlafe ich."],
          woerter=["das Schlafzimmer", "das Bett", "der Schrank"],
-         pins={"das Bett": (390, 525), "der Schrank": (760, 300)}),
+         pins={"das Bett": (390, 525), "der Schrank": (760, 300)},
+         foto_pins={"das Bett": (0.57, 0.78)}),
     dict(bild="bad", titel="das Badezimmer",
          saetze=["Das ist das Badezimmer. Hier dusche ich."],
          woerter=["das Badezimmer", "die Dusche", "das Waschbecken"],
-         pins={"die Dusche": (170, 330), "das Waschbecken": (470, 452)}),
+         pins={"die Dusche": (170, 330), "das Waschbecken": (470, 452)},
+         foto_pins={"die Dusche": (0.67, 0.40), "das Waschbecken": (0.26, 0.72)}),
     dict(bild="kinderzimmer", titel="das Kinderzimmer",
          saetze=["Das ist das Kinderzimmer."],
          woerter=["das Kinderzimmer"], pins={}),

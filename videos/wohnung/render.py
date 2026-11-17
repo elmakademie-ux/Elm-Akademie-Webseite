@@ -41,11 +41,19 @@ ART_COL = {"der": C.FARBE_DER, "die": C.FARBE_DIE, "das": C.FARBE_DAS}
 # Layout
 HEADER_Y = 48
 DOTS_Y = 208
-TITLE_Y = 286
-CARD = (90, 355, 990, 1125)          # 900 x 770
-SENT_Y = 1160
-WORD_Y = 1335
-REP_Y = 1478
+FOTOS = getattr(C, "BILDQUELLE", "illustrationen") == "fotos"
+if FOTOS:   # Fotos aus der Collage sind querformatig -> breitere Karte
+    TITLE_Y = 300
+    CARD = (60, 380, 1020, 940)      # 960 x 560
+    SENT_Y = 985
+    WORD_Y = 1165
+    REP_Y = 1318
+else:
+    TITLE_Y = 286
+    CARD = (90, 355, 990, 1125)      # 900 x 770
+    SENT_Y = 1160
+    WORD_Y = 1335
+    REP_Y = 1478
 
 
 # =================================================================== Helfer
@@ -354,11 +362,12 @@ def load_assets():
     global LOGO, THUMB
     for sc in C.SZENEN:
         img = None
-        for ext in (".jpg", ".jpeg", ".png", ".webp"):
+        for ext in ((".jpg", ".jpeg", ".png", ".webp") if FOTOS else ()):
             p = HERE / "bilder" / f"{sc['bild']}{ext}"
             if p.exists():
                 img = ImageOps.fit(ImageOps.exif_transpose(Image.open(p)).convert("RGB"),
                                    (int(CW * SRC_SCALE), int(CH * SRC_SCALE)), Image.LANCZOS)
+                img = img.filter(ImageFilter.UnsharpMask(radius=2.4, percent=70, threshold=2))
                 break
         if img is None:
             img = illustrationen.render(sc["bild"], int(CW * SRC_SCALE))
@@ -372,7 +381,8 @@ def load_assets():
     ImageDraw.Draw(m).rounded_rectangle((0, 0, logo.width - 1, logo.height - 1), 18, fill=255)
     card.paste(logo, (pad, pad), m)
     LOGO = shadow(card, 12, 40, 5)
-    th = SOURCES[0].resize((420, 359), Image.LANCZOS).convert("RGBA")
+    tw = 760 if FOTOS else 460
+    th = SOURCES[0].resize((tw, int(tw * SOURCES[0].height / SOURCES[0].width)), Image.LANCZOS).convert("RGBA")
     m = Image.new("L", th.size, 0)
     ImageDraw.Draw(m).rounded_rectangle((0, 0, th.width - 1, th.height - 1), 40, fill=255)
     th.putalpha(m)
@@ -409,6 +419,8 @@ def render_card(i, u):
     k = src.width / illustrationen.BW
 
     def to_card(x, y):
+        if FOTOS:   # Foto-Pins sind relativ (0..1)
+            return (x * src.width - bx) / s, (y * src.height - by) / s
         return (x * k - bx) / s, (y * k - by) / s
     return img, to_card
 
@@ -465,12 +477,13 @@ def draw_header(frame, active=-1):
 
 
 # =================================================================== Szenen
-def draw_sentence(frame, text, times, t, appear, fade_end):
+def draw_sentence(frame, text, times, t, appear, fade_end, y=None):
+    y = SENT_Y if y is None else y
     spoken = sum(1 for ws in times if t >= ws)
     img = sentence_img(text, spoken, fit_size(text))
     a = clamp((t - appear) / 0.3) * clamp((fade_end - t) / 0.3)
     s = 0.92 + 0.08 * back_out((t - appear) / 0.45)
-    comp_center(frame, img, W / 2, SENT_Y + img.height / 2, s, a)
+    comp_center(frame, img, W / 2, y + img.height / 2, s, a)
 
 
 def draw_scene(frame, t, i):
@@ -492,9 +505,10 @@ def draw_scene(frame, t, i):
     comp(frame, sh, (CARD[0] - pad + dx, CARD[1] - pad + 10), a)
     comp(frame, card, (CARD[0] + dx, CARD[1]), a)
     # Pins
+    pins = sc.get("foto_pins", {}) if FOTOS else sc["pins"]
     for w in sp["words"]:
-        if w["word"] in sc["pins"] and t >= w["start"]:
-            px, py = to_card(*sc["pins"][w["word"]])
+        if w["word"] in pins and t >= w["start"]:
+            px, py = to_card(*pins[w["word"]])
             x, y = CARD[0] + px + dx, CARD[1] + py
             pa = back_out((t - w["start"]) / 0.4)
             d = ImageDraw.Draw(frame, "RGBA")
@@ -502,7 +516,8 @@ def draw_scene(frame, t, i):
             d.ellipse((x - r - 5, y - r - 5, x + r + 5, y + r + 5), fill=(*WHITE, int(255 * a)))
             d.ellipse((x - r, y - r, x + r, y + r), fill=(*word_color(w["word"]), int(255 * a)))
             lab = pin_label(w["word"])
-            comp_center(frame, lab, x, y - 22 - lab.height / 2 + 10, max(0.01, pa), a)
+            lx = clamp(x, CARD[0] + dx + lab.width / 2 - 6, CARD[2] + dx - lab.width / 2 + 6)
+            comp_center(frame, lab, lx, y - 22 - lab.height / 2 + 10, max(0.01, pa), a)
     # Satz (Karaoke)
     text = " ".join(sc["saetze"])
     draw_sentence(frame, text, sp["sent_words"], t, sp["start"] + 0.35, sp["end"] - 0.05)
@@ -549,18 +564,18 @@ def draw_intro(frame, t):
     end = TL["intro_end"]
     a_out = clamp((end - t) / 0.35)
     draw_header(frame)
-    comp_center(frame, THUMB, W / 2, 620, 0.85 + 0.15 * back_out((t - 0.1) / 0.6), clamp(t / 0.3) * a_out)
+    comp_center(frame, THUMB, W / 2, 560, 0.85 + 0.15 * back_out((t - 0.1) / 0.6), clamp(t / 0.3) * a_out)
     ttl = pill(C.TITEL, 100, NAVY, (0, 0, 0, 0), 0, 0, "ExtraBold")
     tin = ease_out((t - 0.5) / 0.5)
-    comp_center(frame, ttl, W / 2, 905 + 30 * (1 - tin), 1, tin * a_out)
+    comp_center(frame, ttl, W / 2, 860 + 30 * (1 - tin), 1, tin * a_out)
     # Artikel-Farben erklaeren
-    y = 1030
+    y = 940
     for k, art in enumerate(("der", "die", "das")):
         p = pill(art, 52, WHITE, ART_COL[art], 36, 14)
         pa = back_out((t - 1.0 - 0.18 * k) / 0.4)
         if t > 1.0 + 0.18 * k:
             comp_center(frame, p, W / 2 + (k - 1) * 210, y + 45, max(0.01, pa), a_out)
-    draw_sentence(frame, C.INTRO_SATZ, TL["intro_words"], t, 0.3, end)
+    draw_sentence(frame, C.INTRO_SATZ, TL["intro_words"], t, 0.3, end, 1110)
 
 
 def draw_outro(frame, t):
