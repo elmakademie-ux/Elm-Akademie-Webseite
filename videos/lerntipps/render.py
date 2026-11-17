@@ -287,7 +287,8 @@ def main():
     n = int(TOTAL * FPS)
 
     # Tonspur
-    from audio import build_audio
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from common.audio import build_audio
     tip_starts = [HOOK_DUR + i * TIP_DUR for i in range(len(TIPS))]
     starts = [0.4] + [s + 0.3 for s in tip_starts] + [tip_starts[-1] + TIP_DUR + 0.2]
     lines = [(s, txt) for s, txt in zip(starts, VOICEOVER) if txt.strip()]
