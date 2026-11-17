@@ -305,49 +305,70 @@ def parse_marked(text):
 
 
 @lru_cache(None)
-def sentence_img(text, size=70, max_w=W - 140):
+def sentence_img(text, size=70, spoken=999, max_w=W - 140):
     f = font("ExtraBold", size)
     words = parse_marked(text)
     space = f.getlength(" ")
-    lines, cur, cur_w = [], [], 0
-    for parts in words:
-        ww = sum(f.getlength(t) for t, _ in parts)
-        if cur and cur_w + space + ww > max_w:
-            lines.append((cur, cur_w))
-            cur, cur_w = [], 0
-        cur_w += (space if cur else 0) + ww
-        cur.append(parts)
-    lines.append((cur, cur_w))
+    widths = [sum(f.getlength(t) for t, _ in parts) for parts in words]
+
+    def line_w(ws):
+        return sum(ws) + space * (len(ws) - 1)
+
+    if line_w(widths) <= max_w:
+        lines = [(words, line_w(widths))]
+    else:  # zwei moeglichst gleich lange Zeilen
+        k = min(range(1, len(words)), key=lambda k: max(line_w(widths[:k]), line_w(widths[k:])))
+        lines = [(words[:k], line_w(widths[:k])), (words[k:], line_w(widths[k:]))]
     lh = int(size * 1.3)
     img = Image.new("RGBA", (W, lh * len(lines) + 14), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
+    gi = 0
     for li, (line, lw) in enumerate(lines):
         x = (W - lw) / 2
         y = li * lh
         for wi, parts in enumerate(line):
             if wi:
                 x += space
+            a = 255 if gi < spoken else 85      # noch nicht gesprochene Woerter blass
             for t, hl in parts:
                 tw = f.getlength(t)
                 if hl:
                     d.rounded_rectangle((x - 4, y + size * 0.98, x + tw + 4, y + size * 0.98 + 9), 4,
-                                        fill=(*ORANGE, 110))
-                d.text((x, y), t, font=f, fill=ORANGE if hl else NAVY)
+                                        fill=(*ORANGE, int(110 * a / 255)))
+                d.text((x, y), t, font=f, fill=(*(ORANGE if hl else NAVY), a))
                 x += tw
+            gi += 1
     return img
 
 
 @lru_cache(None)
-def fitted_sentence(text):
+def fitted_sentence(text, spoken=999):
     """Groesste Schrift, bei der der Satz in eine Zeile passt (sonst Umbruch ab 56 px)."""
     plain = text.replace("*", "")
     for size in range(70, 55, -2):
-        if font("ExtraBold", size).getlength(plain) <= W - 120:
-            return sentence_img(text, size)
-    return sentence_img(text, 56)
+        if font("ExtraBold", size).getlength(plain) <= W - 150:
+            return sentence_img(text, size, spoken)
+    return sentence_img(text, 56, spoken)
 
 
-SUBS = []  # (start, ende, [(wort, wort_start, wort_ende)])
+SUBS = []        # Untertitel fuer Einleitung und Abschluss
+WORD_TIMES = {}  # szene -> Startzeit jedes Wortes (lokal), fuer die Karaoke-Hervorhebung
+
+
+def word_weight(w):
+    return len(w) + (5 if w[-1] in ".!?" else 2 if w[-1] == "," else 1)
+
+
+def build_word_times(timings):
+    for start, dur, text, scene in timings:
+        words = text.split()
+        total = sum(word_weight(w) for w in words)
+        t = start - (C.INTRO_DAUER + scene * C.SZENEN_DAUER)
+        times = []
+        for w in words:
+            times.append(t)
+            t += dur * word_weight(w) / total
+        WORD_TIMES[scene] = times
 
 
 def build_subs(timings):
@@ -446,11 +467,13 @@ def draw_scene(frame, t, i, lt):
     draw_time_block(frame, i, lt, clamp((C.SZENEN_DAUER - lt) / 0.35))
     draw_card_layer(frame, i, lt)
     # Lernsatz
-    s_img = fitted_sentence(sc["satz"])
-    sin_ = back_out((lt - 0.9) / 0.5)
-    if lt > 0.9:
+    # Karaoke: gesprochene Woerter werden kraeftig, die anderen bleiben blass
+    spoken = sum(1 for ws in WORD_TIMES.get(i, []) if lt >= ws)
+    s_img = fitted_sentence(sc["satz"], spoken)
+    sin_ = back_out((lt - 0.35) / 0.5)
+    if lt > 0.35:
         comp_center(frame, s_img, W / 2, SENT_Y + s_img.height / 2, 0.85 + 0.15 * max(0.01, sin_),
-                    clamp((lt - 0.9) / 0.25) * clamp((C.SZENEN_DAUER - lt) / 0.3))
+                    clamp((lt - 0.35) / 0.25) * clamp((C.SZENEN_DAUER - lt) / 0.3))
     draw_repeat(frame, i, lt)
 
 
@@ -589,7 +612,7 @@ def build_audio(out_wav):
     model = ensure_voice()
     tmp = HERE.parent / ".cache" / "line_ta.wav"
     lines = [(0.5, C.INTRO_SPRECHER, None)]
-    lines += [(s + 0.65, sc["sprecher"], k) for k, (s, sc) in enumerate(zip(starts, C.SZENEN))]
+    lines += [(s + 0.65, sc["satz"].replace("*", ""), k) for k, (s, sc) in enumerate(zip(starts, C.SZENEN))]
     lines += [(starts[-1] + C.SZENEN_DAUER + 0.35, C.OUTRO_SPRECHER, None)]
     timings = []
     for start, text, scene in lines:
@@ -598,7 +621,7 @@ def build_audio(out_wav):
         lead = nz[0] / SR if len(nz) else 0
         end = nz[-1] / SR if len(nz) else len(seg) / SR
         add(voice, 0.95 * seg, start)
-        timings.append((start + lead, end - lead, text))
+        timings.append((start + lead, end - lead, text, scene))
         if scene is not None:
             VOICE_END[scene] = start + end - starts[scene]
             if VOICE_END[scene] > C.SZENEN_DAUER - 1.5:
@@ -626,7 +649,9 @@ def main():
     cache.mkdir(exist_ok=True)
     wav = cache / "tagesablauf.wav"
     print("Erzeuge Tonspur ...", flush=True)
-    build_subs(build_audio(wav))
+    timings = build_audio(wav)
+    build_subs([x[:3] for x in timings if x[3] is None])
+    build_word_times([x for x in timings if x[3] is not None])
 
     if "--preview" in sys.argv:
         out = HERE / "vorschau"

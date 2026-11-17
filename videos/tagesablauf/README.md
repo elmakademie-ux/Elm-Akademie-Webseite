@@ -25,7 +25,7 @@ videos/
 | Zeit | Inhalt |
 |---|---|
 | 0–5 s | Einleitung: Bilder-Fächer, Titel „Mein Tagesablauf“, „Hallo! Ich erzähle euch …“ |
-| 5–54 s | 7 Szenen à 7 s: Uhr dreht zur neuen Zeit, große Uhrzeit + Sprechweise („= halb sieben“), Foto mit Zoom, Verb-Etikett, Lernsatz mit farbigen Verben, Untertitel synchron zur Stimme, danach „Sprich nach!“ mit Zeitbalken |
+| 5–54 s | 7 Szenen à 7 s: Uhr dreht zur neuen Zeit, große Uhrzeit + Sprechweise („= halb sieben“), Foto mit Zoom, Verb-Etikett, gesprochener Satz mit farbigen Verben – die Wörter leuchten mit, während sie gesprochen werden (Karaoke), danach „Sprich nach!“ mit Zeitbalken |
 | 54–60 s | „Das ist mein Tagesablauf!“, Wiederholung aller 7 Verben mit Uhrzeit, Aufruf + Logo |
 
 Das ELM-Logo ist oben links durchgehend sichtbar. Der Hintergrund färbt sich vom Morgen (warm) zum Abend (lila).
@@ -34,9 +34,9 @@ Das ELM-Logo ist oben links durchgehend sichtbar. Der Hintergrund färbt sich vo
 
 Öffne **`inhalt.py`** – dort steht alles, was man normalerweise ändern möchte:
 
-- **Lernsatz** (`satz`): Verben mit Sternchen markieren → werden orange und unterstrichen.
-  Beispiel: `"Ich *stehe* um 06:30 Uhr *auf*."`
-- **Sprechertext** (`sprecher`): wird vorgelesen und als Untertitel angezeigt.
+- **Satz** (`satz`): wird vorgelesen UND genau so auf dem Bildschirm gezeigt (Bild und Ton sind immer gleich).
+  Verben mit Sternchen markieren → werden orange und unterstrichen; die Sternchen werden nicht vorgelesen.
+  Beispiel: `"Um halb sieben *stehe* ich *auf*."`
 - **Uhrzeit** (`zeit`) und **Sprechweise** (`sprechweise`, z. B. „Viertel vor acht“).
 - **Verb-Etikett** (`verb`): erscheint am Bild und in der Wiederholung am Ende.
 - **Bild** (`bild`): Dateiname im Ordner `bilder/`. Eigene Fotos einfach dort ablegen (Querformat ca. 1,15 : 1 ist ideal, wird sonst automatisch zugeschnitten).
@@ -57,7 +57,7 @@ python3 render.py --preview   # schnell: einzelne Vorschaubilder in vorschau/
 python3 render.py             # komplettes Video → tagesablauf.mp4 (ca. 2–3 Minuten)
 ```
 
-Erscheint beim Export „wenig Zeit zum Nachsprechen“, ist ein Sprechertext für 7 Sekunden zu lang –
+Erscheint beim Export „wenig Zeit zum Nachsprechen“, ist ein Satz für 7 Sekunden zu lang –
 Text kürzen oder `SZENEN_DAUER` erhöhen.
 
 ## Hinweise
