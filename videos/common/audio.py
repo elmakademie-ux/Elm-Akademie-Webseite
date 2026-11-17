@@ -48,10 +48,10 @@ def read_wav(path):
     return data
 
 
-def speak(text, out_path, model):
+def speak(text, out_path, model, length_scale=0.97):
     subprocess.run(
         [sys.executable, "-m", "piper", "-m", str(model), "-f", str(out_path),
-         "--length-scale", "0.97", "--sentence-silence", "0.15"],
+         "--length-scale", str(length_scale), "--sentence-silence", "0.15"],
         input=text.encode(), check=True, stderr=subprocess.DEVNULL)
     return read_wav(out_path)
 
