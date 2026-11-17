@@ -1,6 +1,7 @@
 """Erzeugt die Stimmen für alle Vorlagen im Lernkarten-Studio.
 
   Mann (Frage, Überschrift): Piper TTS, Stimme "thorsten-medium"
+                             (spricht Piper einen Satz undeutlich: Chatterbox nach referenz-mann.wav)
   Frau (Antwort):            Chatterbox Multilingual, Klang nach referenz-frau.wav
 
 Aufruf (aus diesem Ordner):
@@ -25,6 +26,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 VOICE_DIR = os.environ.get("VOICE_DIR", os.path.join(HERE, "voices"))
 REF_FEMALE = os.path.join(HERE, "referenz-frau.wav")
+REF_MALE = os.path.join(HERE, "referenz-mann.wav")   # nur für Sätze, die Piper undeutlich spricht
 TMP = tempfile.mkdtemp()
 
 
@@ -60,7 +62,7 @@ def male_wav(text, out):
 _cb = None
 
 
-def female_wav(text, out, seed):
+def chatterbox_wav(text, out, seed, ref):
     global _cb
     import torch, torchaudio
     from chatterbox.mtl_tts import ChatterboxMultilingualTTS
@@ -68,7 +70,7 @@ def female_wav(text, out, seed):
         torch.set_num_threads(os.cpu_count() or 4)
         _cb = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
     torch.manual_seed(seed)
-    w = _cb.generate(text, language_id="de", audio_prompt_path=REF_FEMALE,
+    w = _cb.generate(text, language_id="de", audio_prompt_path=ref,
                      exaggeration=0.4, cfg_weight=0.5, temperature=0.7)
     torchaudio.save(out, w, _cb.sr)
 
@@ -141,20 +143,26 @@ def main():
             result[key] = old[key]
             continue
         wav, mp3 = f"{TMP}/{i}.wav", f"{TMP}/{i}.mp3"
+        best = None
         if v == "m":
             male_wav(text, wav)
-        else:
-            best = None
+            err, heard = recognised_ok(wav, text)
+            best = (err, wav)
+            if err:
+                print(f"  Piper undeutlich: „{heard}“ – versuche Chatterbox im Thorsten-Klang", flush=True)
+        if v == "f" or best[0]:
+            ref = REF_FEMALE if v == "f" else REF_MALE
             for attempt in range(5):
                 cand = f"{TMP}/{i}-{attempt}.wav"
-                female_wav(spoken(text), cand, seed=1 + attempt)
+                chatterbox_wav(spoken(text), cand, seed=1 + attempt, ref=ref)
                 err, heard = recognised_ok(cand, text)
                 if best is None or err < best[0]:
                     best = (err, cand)
                 if err == 0:
                     break
                 print(f"  Versuch {attempt + 1} passt nicht: „{heard}“", flush=True)
-            os.replace(best[1], wav)
+            if best[1] != wav:
+                os.replace(best[1], wav)
             if best[0]:
                 print(f"  WARNUNG: beste Version hat noch {best[0]} Fehler – bitte anhören", flush=True)
         to_mp3(wav, mp3)
