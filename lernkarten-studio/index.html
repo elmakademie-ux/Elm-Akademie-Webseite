@@ -25,6 +25,7 @@
   --bg:#0f1122; --panel:#181b33; --fg:#e8eaf8; --muted:#a2a6c6; --line:#2c3054;
   --accent:#6f73ff; --accent-fg:#0b0c1a; --soft:#23275a; --danger:#ff6b85; color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-ui);font-size:15px;line-height:1.5;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 40px}
 .wrap{max-width:1120px;margin:0 auto;display:grid;gap:24px}
@@ -58,13 +59,24 @@ canvas{width:100%;height:100%;display:block}
 .status{text-align:center;font-size:.86rem;color:var(--muted);min-height:1.4em;margin:0}
 .bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden;max-width:360px;width:100%;margin:0 auto}
 .bar span{display:block;height:100%;width:0;background:var(--accent)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin-bottom:6px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg label{display:block}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;padding:7px 13px;border:1px solid var(--line);border-radius:99px;font-size:.88rem;font-weight:600;color:var(--fg);text-transform:none;letter-spacing:0;cursor:pointer}
+.seg input:checked+span{background:var(--soft);border-color:var(--accent)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+input[type=file]{font:inherit;color:var(--fg);max-width:100%}
+.phone{position:relative}
+.count{position:absolute;inset:0;display:grid;place-items:center;background:rgba(10,12,60,.55);color:#fff;font:800 6rem/1 var(--f-head);z-index:2}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
 </style>
 
 <div class="wrap">
   <header>
     <h1>Lernkarten-Studio</h1>
-    <p>Kurzvideos im Stil „sich vorstellen“: Stichwörter auf einer Karte, die nacheinander markiert werden. Text anpassen, abspielen, als Video speichern und mit deiner Stimme hochladen.</p>
+    <p>Kurzvideos im Stil „sich vorstellen“: Stichwörter auf einer Karte, die nacheinander markiert werden. Text anpassen, abspielen, mit deiner Stimme als Video speichern.</p>
   </header>
 
   <div class="main">
@@ -95,12 +107,27 @@ canvas{width:100%;height:100%;display:block}
       <div class="field">
         <span class="lbl">Optionen</span>
         <label class="check"><input type="checkbox" id="showAnswer" checked> Frage &amp; Beispielantwort unten einblenden</label>
-        <label class="check"><input type="checkbox" id="speak"> Beim Abspielen vorlesen (nur Vorschau, nicht im Video)</label>
       </div>
+      <fieldset class="field sound">
+        <legend class="lbl">Ton im Video</legend>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="sound" id="snd-mic" value="mic" checked><span>Mikrofon</span></label>
+          <label><input type="radio" name="sound" id="snd-file" value="file"><span>Audiodatei</span></label>
+          <label><input type="radio" name="sound" id="snd-none" value="none"><span>Ohne Stimme</span></label>
+        </div>
+        <p class="hint" id="micHint">Nach „Video speichern“ zählt die Seite 3 – 2 – 1 herunter. Dann sprichst du live mit, während die Karte läuft – wie im Original. Tipp: „Sekunden pro Zeile“ so wählen, dass du Frage und Antwort bequem sagen kannst. Das Mikrofon funktioniert auf deiner Webseite; in der Claude-Vorschau ist es gesperrt – dort „Audiodatei“ nutzen.</p>
+        <div id="fileBox" class="field" hidden>
+          <input type="file" id="audioIn" accept="audio/*,.mp3,.m4a,.wav,.ogg,.aac">
+          <p class="hint" id="fileInfo">Nimm deine Stimme z. B. mit der Sprachmemo-App auf und wähle die Datei hier aus.</p>
+          <label class="check"><input type="checkbox" id="fitAudio" checked> Stichwörter gleichmäßig auf die Länge der Aufnahme verteilen</label>
+        </div>
+        <label class="check"><input type="checkbox" id="ding" checked> Signalton bei jedem neuen Stichwort</label>
+        <label class="check"><input type="checkbox" id="music"> Leise Hintergrundmusik</label>
+      </fieldset>
     </section>
 
     <section class="preview" aria-label="Vorschau">
-      <div class="phone"><canvas id="cv" width="1080" height="1920" aria-label="Vorschau der Lernkarte"></canvas></div>
+      <div class="phone"><div class="count" id="count" hidden>3</div><canvas id="cv" width="1080" height="1920" aria-label="Vorschau der Lernkarte"></canvas></div>
       <div class="bar"><span id="prog"></span></div>
       <div class="controls">
         <button class="primary" id="play">▶ Abspielen</button>
@@ -178,11 +205,17 @@ function readItems(){
     return { word, q, a };
   });
 }
+function secsValue(){
+  const n = readItems().length || 1;
+  if (soundMode() === "file" && audioFile.buffer && $("fitAudio").checked)
+    return Math.max(1, (audioFile.buffer.duration - INTRO - OUTRO) / n);
+  return Math.max(1, parseFloat($("secs").value) || 5);
+}
 function cfg(){
   return {
     title: $("title").value.trim(),
     items: readItems(),
-    secs: Math.max(1, parseFloat($("secs").value) || 5),
+    secs: secsValue(),
     footer: $("footer").value.trim(),
     showAnswer: $("showAnswer").checked
   };
@@ -286,52 +319,144 @@ function drawFrame(active, now){
   }
 }
 
+/* ---------- audio ---------- */
+let AC = null;
+const audioFile = { buffer:null, name:"" };
+let micStream = null;
+function ac(){
+  if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)();
+  if (AC.state === "suspended") AC.resume();
+  return AC;
+}
+function soundMode(){ return document.querySelector('input[name="sound"]:checked').value; }
+function fmt(s){ s = Math.round(s); return Math.floor(s/60) + ":" + String(s%60).padStart(2,"0"); }
+function updateSoundUI(){
+  const m = soundMode();
+  $("fileBox").hidden = m !== "file";
+  $("micHint").hidden = m !== "mic";
+  const fit = m === "file" && audioFile.buffer && $("fitAudio").checked;
+  $("secs").disabled = !!fit;
+  if (fit) $("secs").value = cfg().secs.toFixed(1);
+}
+document.querySelectorAll('input[name="sound"]').forEach(r => r.addEventListener("change", () => { store("sound", soundMode()); updateSoundUI(); }));
+$("fitAudio").addEventListener("change", updateSoundUI);
+["ding","music"].forEach(id => $(id).addEventListener("change", () => store(id, $(id).checked ? "1":"0")));
+$("audioIn").addEventListener("change", async e => {
+  const f = e.target.files[0]; if (!f) return;
+  $("fileInfo").textContent = "Lade „" + f.name + "“ …";
+  try{
+    const buf = await f.arrayBuffer();
+    audioFile.buffer = await new Promise((res, rej) => { const p = ac().decodeAudioData(buf, res, rej); if (p && p.then) p.then(res, rej); });
+    audioFile.name = f.name;
+    $("fileInfo").textContent = "„" + f.name + "“ · " + fmt(audioFile.buffer.duration);
+    updateSoundUI();
+  }catch(err){
+    audioFile.buffer = null;
+    $("fileInfo").textContent = "Diese Datei kann ich nicht lesen. Bitte MP3, M4A, WAV oder OGG verwenden.";
+  }
+});
+
+/* Short bell when a new keyword gets highlighted */
+function scheduleDing(a, at, outs){
+  [[1046.5,0.16],[1568,0.07]].forEach(([f,v]) => {
+    const o = a.createOscillator(), g = a.createGain();
+    o.type = "sine"; o.frequency.value = f;
+    g.gain.setValueAtTime(0, at); g.gain.linearRampToValueAtTime(v, at+0.01); g.gain.exponentialRampToValueAtTime(0.0001, at+0.9);
+    o.connect(g); outs.forEach(d => g.connect(d)); o.start(at); o.stop(at+1);
+  });
+}
+/* Calm background loop: C – Am – F – G, soft pad plus a light arpeggio */
+function scheduleMusic(a, t0, dur, outs){
+  const chords = [[261.63,329.63,392],[220,261.63,329.63],[174.61,220,261.63],[196,246.94,293.66]];
+  const bus = a.createGain(); bus.gain.value = 0.5; outs.forEach(d => bus.connect(d));
+  const bar = 2.4;
+  for (let k = 0, t = t0; t < t0 + dur; k++, t += bar){
+    const ch = chords[k % 4], end = Math.min(t + bar, t0 + dur);
+    ch.forEach(f => {
+      const o = a.createOscillator(), g = a.createGain();
+      o.type = "triangle"; o.frequency.value = f/2;
+      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.035, t+0.5); g.gain.linearRampToValueAtTime(0, end);
+      o.connect(g); g.connect(bus); o.start(t); o.stop(end+0.05);
+    });
+    for (let s = 0; s < 4; s++){
+      const at = t + s*bar/4; if (at >= t0 + dur - 0.3) break;
+      const o = a.createOscillator(), g = a.createGain();
+      o.type = "sine"; o.frequency.value = ch[s % 3] * 2;
+      g.gain.setValueAtTime(0, at); g.gain.linearRampToValueAtTime(0.025, at+0.02); g.gain.exponentialRampToValueAtTime(0.0001, at+0.5);
+      o.connect(g); g.connect(bus); o.start(at); o.stop(at+0.55);
+    }
+  }
+  return bus;
+}
+/* Starts all sound for one run. dest = recorder input (or null for preview). Returns a stop function. */
+function startAudio(dest){
+  const c = cfg(), m = soundMode();
+  if (m === "none" && !$("ding").checked && !$("music").checked) return () => {};
+  const a = ac(), t0 = a.currentTime + 0.05;
+  const outs = dest ? [a.destination, dest] : [a.destination];
+  const stoppers = [];
+  const master = a.createGain(); master.gain.value = 1; outs.forEach(d => master.connect(d));
+  stoppers.push(() => master.disconnect());
+  if (m === "file" && audioFile.buffer){
+    const src = a.createBufferSource(); src.buffer = audioFile.buffer;
+    src.connect(master); src.start(t0);
+    stoppers.push(() => { try{ src.stop() }catch(e){} });
+  }
+  if (m === "mic" && micStream && dest){
+    const mic = a.createMediaStreamSource(micStream);
+    mic.connect(dest);                       /* not to speakers: avoids feedback */
+    stoppers.push(() => mic.disconnect());
+  }
+  if ($("ding").checked) c.items.forEach((_, i) => scheduleDing(a, t0 + INTRO + i*c.secs, [master]));
+  if ($("music").checked) scheduleMusic(a, t0, total(c), [master]);
+  return () => stoppers.forEach(f => f());
+}
+
 /* ---------- timeline ---------- */
-function total(c){ return INTRO + c.items.length*c.secs + OUTRO; }
+function total(c){
+  const base = INTRO + c.items.length*c.secs + OUTRO;
+  return (soundMode() === "file" && audioFile.buffer) ? Math.max(base, audioFile.buffer.duration + 0.3) : base;
+}
 function activeAt(t, c){
   const k = t - INTRO;
   if (k < 0 || k >= c.items.length*c.secs) return null;
   const index = Math.floor(k / c.secs);
   return { index, local: k - index*c.secs };
 }
-let lastSpoken = -1;
-function speak(it){
-  if (!$("speak").checked || state.recorder || !("speechSynthesis" in window)) return;
-  try{
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance([it.q || it.word, it.a].filter(Boolean).join(" … "));
-    u.lang = "de-DE"; u.rate = 0.9; speechSynthesis.speak(u);
-  }catch(e){}
-}
+let stopAudio = () => {};
 function tick(){
   if (!state.playing) return;
   const c = cfg(); const t = (performance.now() - state.t0)/1000; const T = total(c);
-  const a = activeAt(t, c);
-  if (a && a.index !== lastSpoken){ lastSpoken = a.index; speak(c.items[a.index]); }
-  drawFrame(a, t);
+  drawFrame(activeAt(t, c), t);
   $("prog").style.width = Math.min(100, t/T*100) + "%";
   if (t >= T){ finish(); return; }
   requestAnimationFrame(tick);
 }
-function start(){
-  if (!cfg().items.length){ $("status").textContent = "Bitte mindestens eine Zeile eintragen."; return; }
-  state.playing = true; state.t0 = performance.now(); lastSpoken = -1;
+function start(dest){
+  state.playing = true; state.t0 = performance.now();
+  stopAudio = startAudio(dest || null);
   setBusy(true); requestAnimationFrame(tick);
 }
 function finish(){
   state.playing = false; setBusy(false); $("prog").style.width = "0";
-  try{ speechSynthesis.cancel() }catch(e){}
+  stopAudio(); stopAudio = () => {};
   if (state.recorder && state.recorder.state !== "inactive") state.recorder.stop();
-  else { $("status").textContent = "Fertig."; drawFrame(null); }
+  else { if (!state.recorder) $("status").textContent = "Fertig."; drawFrame(null); }
 }
 function setBusy(b){ $("play").disabled = b; $("rec").disabled = b; }
+function hasItems(){
+  if (cfg().items.length) return true;
+  $("status").textContent = "Bitte mindestens eine Zeile eintragen."; return false;
+}
 
-$("play").onclick = () => { $("status").textContent = "Läuft …"; start(); };
-$("stop").onclick = () => { if (state.recorder){ state.cancelled = true; } finish(); };
+$("play").onclick = () => { if (!hasItems()) return; $("status").textContent = "Läuft …"; start(); };
+$("stop").onclick = () => { if (state.counting){ state.counting = false; return; } if (state.recorder){ state.cancelled = true; } finish(); };
 
 /* ---------- recording ---------- */
-function pickMime(){
-  const opts = ["video/mp4;codecs=avc1.42E01E","video/mp4","video/webm;codecs=vp9","video/webm;codecs=vp8","video/webm"];
+function pickMime(withAudio){
+  const opts = withAudio
+    ? ['video/mp4;codecs="avc1.42E01E,mp4a.40.2"','video/mp4;codecs=avc1,opus','video/mp4','video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm']
+    : ["video/mp4;codecs=avc1.42E01E","video/mp4","video/webm;codecs=vp9","video/webm;codecs=vp8","video/webm"];
   return opts.find(m => window.MediaRecorder && MediaRecorder.isTypeSupported(m)) || "";
 }
 async function saveBlob(blob, filename){
@@ -348,13 +473,46 @@ async function saveBlob(blob, filename){
   setTimeout(() => URL.revokeObjectURL(a.href), 60000);
   $("status").textContent = "Video gespeichert: " + filename;
 }
-$("rec").onclick = () => {
+function countdown(n){
+  return new Promise(res => {
+    state.counting = true; $("count").hidden = false;
+    const step = k => {
+      if (!state.counting){ $("count").hidden = true; res(false); return; }
+      if (k === 0){ $("count").hidden = true; state.counting = false; res(true); return; }
+      $("count").textContent = k; setTimeout(() => step(k-1), 1000);
+    };
+    step(n);
+  });
+}
+$("rec").onclick = async () => {
+  if (!hasItems()) return;
   if (!cv.captureStream || !window.MediaRecorder){ $("status").textContent = "Dein Browser kann keine Videos aufnehmen. Bitte Chrome, Edge oder Firefox nutzen."; return; }
-  const mime = pickMime();
-  const rec = new MediaRecorder(cv.captureStream(30), mime ? { mimeType: mime, videoBitsPerSecond: 6e6 } : undefined);
+  const m = soundMode();
+  if (m === "file" && !audioFile.buffer){ $("status").textContent = "Bitte zuerst eine Audiodatei auswählen."; return; }
+  const a = ac();
+  if (m === "mic"){
+    try{
+      micStream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation:true, noiseSuppression:true } });
+    }catch(e){
+      $("status").textContent = "Kein Zugriff auf das Mikrofon. Erlaube es im Browser – oder nimm deine Stimme vorher auf und wähle „Audiodatei“.";
+      return;
+    }
+  }
+  setBusy(true);
+  if (m === "mic"){
+    $("status").textContent = "Gleich geht’s los – sprich mit, sobald die Karte startet.";
+    const go = await countdown(3);
+    if (!go){ micStream.getTracks().forEach(t => t.stop()); micStream = null; setBusy(false); $("status").textContent = "Aufnahme abgebrochen."; return; }
+  }
+  const dest = a.createMediaStreamDestination();
+  const withAudio = m !== "none" || $("ding").checked || $("music").checked;
+  const tracks = [...cv.captureStream(30).getVideoTracks(), ...(withAudio ? dest.stream.getAudioTracks() : [])];
+  const mime = pickMime(withAudio);
+  const rec = new MediaRecorder(new MediaStream(tracks), mime ? { mimeType: mime, videoBitsPerSecond: 6e6, audioBitsPerSecond: 160000 } : undefined);
   const chunks = [];
   rec.ondataavailable = e => e.data.size && chunks.push(e.data);
   rec.onstop = () => {
+    if (micStream){ micStream.getTracks().forEach(t => t.stop()); micStream = null; }
     const cancelled = state.cancelled; state.recorder = null; state.cancelled = false; drawFrame(null);
     if (cancelled){ $("status").textContent = "Aufnahme abgebrochen."; return; }
     const type = rec.mimeType || mime || "video/webm";
@@ -364,8 +522,8 @@ $("rec").onclick = () => {
   };
   state.recorder = rec; state.cancelled = false;
   rec.start(250);
-  $("status").textContent = "Aufnahme läuft … Tab bitte offen lassen.";
-  start();
+  $("status").textContent = m === "mic" ? "● Aufnahme läuft – jetzt sprechen." : "● Aufnahme läuft … Tab bitte offen lassen.";
+  start(dest);
 };
 
 /* ---------- boot ---------- */
@@ -375,7 +533,10 @@ $("rec").onclick = () => {
     $("title").value = t; $("items").value = it;
     $("secs").value = load("secs") || 5; $("footer").value = load("footer") || "";
     $("showAnswer").checked = load("showAnswer") !== "0";
+    const snd = load("sound"); if (snd && $("snd-"+snd)) $("snd-"+snd).checked = true;
+    $("ding").checked = load("ding") !== "0"; $("music").checked = load("music") === "1";
   } else applyPreset("sich vorstellen");
+  updateSoundUI();
   drawFrame(null);
   const redraw = () => { if (!state.playing) drawFrame(null); };
   if (document.fonts){
