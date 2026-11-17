@@ -50,6 +50,23 @@ CTA = {
 
 BRAND = "ELM-AKADEMIE"
 
+# Sprechertexte (Zahlen ausgeschrieben, damit die Stimme sie sauber spricht).
+# Reihenfolge: Einstieg, 5 Tipps, Abschluss. Leer lassen = kein Sprecher.
+VOICEOVER = [
+    "Fünf Lerntipps, die wirklich funktionieren. In sechzig Sekunden.",
+    "Tipp eins: die Pomodoro-Technik. Fünfundzwanzig Minuten konzentriert lernen, "
+    "dann fünf Minuten Pause. Nach vier Runden eine längere Pause.",
+    "Tipp zwei: aktiv abrufen. Buch zu, und frag dich selbst ab. "
+    "Abrufen trainiert dein Gedächtnis mehr als erneutes Lesen.",
+    "Tipp drei: verteilt wiederholen. Lieber öfter kurz als einmal lang. "
+    "Wiederhole nach einem Tag, drei Tagen und einer Woche.",
+    "Tipp vier: Erklär es jemandem. Wenn du es einfach erklären kannst, "
+    "hast du es verstanden. Lücken fallen dabei sofort auf.",
+    "Tipp fünf: Handy aus dem Raum. Schon ein sichtbares Handy lenkt ab. "
+    "Leg es woanders hin, solange du lernst.",
+    "Welcher Tipp hilft dir am meisten? Speichern und teilen. Deine Elm-Akademie.",
+]
+
 # Zeiten in Sekunden
 HOOK_DUR = 5.0
 TIP_DUR = 10.0
@@ -268,12 +285,23 @@ def main():
         return
     out = out_dir / "lerntipps.mp4"
     n = int(TOTAL * FPS)
+
+    # Tonspur
+    from audio import build_audio
+    tip_starts = [HOOK_DUR + i * TIP_DUR for i in range(len(TIPS))]
+    starts = [0.4] + [s + 0.3 for s in tip_starts] + [tip_starts[-1] + TIP_DUR + 0.2]
+    lines = [(s, txt) for s, txt in zip(starts, VOICEOVER) if txt.strip()]
+    print("Erzeuge Tonspur ...", flush=True)
+    wav = build_audio(TOTAL, lines, tip_starts, HOOK_DUR, out_dir.parent / ".cache" / "audio.wav")
+
     cmd = [
         "ffmpeg", "-y", "-loglevel", "error",
         "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-        "-f", "lavfi", "-t", str(TOTAL), "-i", "anullsrc=r=44100:cl=stereo",
+        "-i", str(wav),
         "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-shortest", "-movflags", "+faststart", str(out),
+        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "44100",
+        "-shortest", "-movflags", "+faststart", str(out),
     ]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     for i in range(n):
