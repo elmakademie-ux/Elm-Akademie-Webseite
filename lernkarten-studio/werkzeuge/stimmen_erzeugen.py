@@ -42,8 +42,10 @@ def read_presets(html_path):
             seen.add((v, keytext))
             jobs.append((v, text, keytext))
 
-    for m in re.finditer(r'title:\s*"([^"]+)"\s*,(?:\s*roles:\s*"(\w\w)"\s*,)?\s*items:\s*\[(.*?)\]', block, re.S):
-        title, roles, items = m.group(1), m.group(2) or "mf", m.group(3)
+    for m in re.finditer(r'title:\s*"([^"]+)"(.*?)items:\s*\[(.*?)\]', block, re.S):
+        title, middle, items = m.group(1), m.group(2), m.group(3)
+        r = re.search(r'roles:\s*"(\w\w)"', middle)
+        roles = r.group(1) if r else "mf"
         q, a = roles[0], roles[1]
         add(q, title[0].upper() + title[1:] + ".", title)
         for l in re.findall(r'"([^"]+\|[^"]*)"', items):
