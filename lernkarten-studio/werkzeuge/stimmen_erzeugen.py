@@ -137,9 +137,16 @@ def recognised_ok(path, text):
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
                          capture_output=True, check=True).stdout
     x = np.frombuffer(pcm, dtype=np.float32)
-    heard = " ".join(s.text for s in _asr.transcribe(x, language="de", beam_size=5,
-                                                     initial_prompt=VOCAB or None)[0])
-    return distance(words(heard), words(text)), heard.strip()
+    # mehrere Dekodierungen: ein klarer Satz wird bei allen richtig erkannt
+    total, worst = 0, ""
+    for temp in (0.0, 0.4, 0.8):
+        heard = " ".join(s.text for s in _asr.transcribe(x, language="de", beam_size=5, temperature=temp,
+                                                         initial_prompt=VOCAB or None)[0])
+        err = distance(words(heard), words(text))
+        if err and not worst:
+            worst = heard.strip()
+        total += err
+    return total, worst or heard.strip()
 
 
 def to_mp3(src, dst):
