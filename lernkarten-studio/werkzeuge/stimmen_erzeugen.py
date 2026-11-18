@@ -1,8 +1,9 @@
 """Erzeugt die Stimmen für alle Vorlagen im Lernkarten-Studio.
 
-  Mann (Frage, Überschrift): Piper TTS, Stimme "thorsten-medium"
-                             (spricht Piper einen Satz undeutlich: Chatterbox nach referenz-mann.wav)
-  Frau (Antwort):            Chatterbox Multilingual, Klang nach referenz-frau.wav
+  Mann: Piper TTS, Stimme "thorsten-medium"
+        (spricht Piper einen Satz undeutlich: Chatterbox nach referenz-mann.wav)
+  Frau: Chatterbox Multilingual, Klang nach referenz-frau.wav
+  Wer fragt und wer antwortet, steht pro Vorlage in "roles" ("mf" oder "fm").
 
 Aufruf (aus diesem Ordner):
   python3 stimmen_erzeugen.py ../index.html ../stimmen.js
@@ -13,7 +14,7 @@ Voraussetzungen:
   ./voices/de_DE-thorsten-medium.onnx und .onnx.json
      von https://huggingface.co/rhasspy/piper-voices (Ordner de/de_DE/thorsten/medium)
 
-Jede Antwort wird mit Whisper geprüft. Wenn die Erkennung nicht zum Text passt,
+Jeder Satz wird mit Whisper geprüft. Wenn die Erkennung nicht zum Text passt,
 wird sie mit einem anderen Zufallswert neu erzeugt (bis zu 5 Versuche, die beste wird behalten).
 
 Neue Themen: zuerst als Vorlage in PRESETS in index.html eintragen, dann dieses Skript ausführen.
@@ -31,17 +32,26 @@ TMP = tempfile.mkdtemp()
 
 
 def read_presets(html_path):
+    """Liest alle Vorlagen. roles: "mf" = Mann fragt, Frau antwortet; "fm" = umgekehrt."""
     html = open(html_path, encoding="utf-8").read()
     block = html[html.index("const PRESETS"):html.index("const $ =")]
-    titles = re.findall(r'title:\s*"([^"]+)"', block)
-    lines = re.findall(r'^\s*"([^"]+\|[^"]*)",?\s*$', block, re.M)
-    jobs = [("m", t[0].upper() + t[1:] + ".", t) for t in titles]
-    for l in lines:
-        parts = [p.strip() for p in l.split("|")]
-        if len(parts) > 1 and parts[1]:
-            jobs.append(("m", parts[1], parts[1]))
-        if len(parts) > 2 and parts[2]:
-            jobs.append(("f", parts[2], parts[2]))
+    jobs, seen = [], set()
+
+    def add(v, text, keytext):
+        if (v, keytext) not in seen:
+            seen.add((v, keytext))
+            jobs.append((v, text, keytext))
+
+    for m in re.finditer(r'title:\s*"([^"]+)"\s*,(?:\s*roles:\s*"(\w\w)"\s*,)?\s*items:\s*\[(.*?)\]', block, re.S):
+        title, roles, items = m.group(1), m.group(2) or "mf", m.group(3)
+        q, a = roles[0], roles[1]
+        add(q, title[0].upper() + title[1:] + ".", title)
+        for l in re.findall(r'"([^"]+\|[^"]*)"', items):
+            parts = [p.strip() for p in l.split("|")]
+            if len(parts) > 1 and parts[1]:
+                add(q, parts[1], parts[1])
+            if len(parts) > 2 and parts[2]:
+                add(a, parts[2], parts[2])
     return jobs
 
 
@@ -92,6 +102,15 @@ def spoken(text):
 
 
 SAME = {"cairo": "kairo"}
+VOCAB = ""   # Namen, Länder, Sprachen aus den Vorlagen, damit Whisper seltene Wörter kennt
+
+
+def vocab_hint(jobs):
+    names = set()
+    for _, text, _ in jobs:
+        for w in re.findall(r"(?<=[\s,])([A-ZÄÖÜ][a-zäöüß]+)", text):
+            names.add(w)
+    return ("Wörter: " + ", ".join(sorted(names)) + ".") if names else ""
 
 
 def words(t):
@@ -116,7 +135,8 @@ def recognised_ok(path, text):
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
                          capture_output=True, check=True).stdout
     x = np.frombuffer(pcm, dtype=np.float32)
-    heard = " ".join(s.text for s in _asr.transcribe(x, language="de", beam_size=5)[0])
+    heard = " ".join(s.text for s in _asr.transcribe(x, language="de", beam_size=5,
+                                                     initial_prompt=VOCAB or None)[0])
     return distance(words(heard), words(text)), heard.strip()
 
 
@@ -136,8 +156,11 @@ def main():
     if os.path.exists(out_path) and not fresh:
         s = open(out_path, encoding="utf-8").read()
         old = json.loads(s[s.index("{"):s.rindex("}") + 1])
+    global VOCAB
     result = {}
-    for i, (v, text, keytext) in enumerate(read_presets(html_path)):
+    jobs = read_presets(html_path)
+    VOCAB = vocab_hint(jobs)
+    for i, (v, text, keytext) in enumerate(jobs):
         key = v + "|" + keytext
         if key in old:
             result[key] = old[key]
@@ -169,7 +192,7 @@ def main():
         result[key] = "data:audio/mpeg;base64," + base64.b64encode(open(mp3, "rb").read()).decode()
         print(f"{key}", flush=True)
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write("/* Vorab erzeugte Stimmen: m = Mann (Piper, Thorsten), f = Frau (Chatterbox). "
+        f.write("/* Vorab erzeugte Stimmen: m = Mann (Thorsten), f = Frau (Chatterbox). "
                 "Erzeugt mit werkzeuge/stimmen_erzeugen.py */\n")
         f.write("window.VOICE_CLIPS = " + json.dumps(result, ensure_ascii=False, indent=0) + ";\n")
     print(len(result), "Aufnahmen,", os.path.getsize(out_path) // 1024, "KB")

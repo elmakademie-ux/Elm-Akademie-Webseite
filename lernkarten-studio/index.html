@@ -116,7 +116,13 @@ input[type=file]{font:inherit;color:var(--fg);max-width:100%}
           <label><input type="radio" name="sound" id="snd-file" value="file"><span>Audiodatei</span></label>
           <label><input type="radio" name="sound" id="snd-none" value="none"><span>Ohne Stimme</span></label>
         </div>
-        <p class="hint" id="voiceHint">Ein Mann liest die Frage, eine Frau die Antwort. Die Zeit pro Stichwort richtet sich nach der Länge der Sätze. <span id="voiceInfo"></span></p>
+        <div id="voiceHint" class="field">
+          <div class="seg" role="radiogroup" aria-label="Wer fragt, wer antwortet">
+            <label><input type="radio" name="roles" id="roles-mf" value="mf" checked><span>Mann fragt, Frau antwortet</span></label>
+            <label><input type="radio" name="roles" id="roles-fm" value="fm"><span>Frau fragt, Mann antwortet</span></label>
+          </div>
+          <p class="hint">Die Zeit pro Stichwort richtet sich nach der Länge der Sätze. <span id="voiceInfo"></span></p>
+        </div>
         <p class="hint" id="micHint">Nach „Video speichern“ zählt die Seite 3 – 2 – 1 herunter. Dann sprichst du live mit, während die Karte läuft – wie im Original. Tipp: „Sekunden pro Zeile“ so wählen, dass du Frage und Antwort bequem sagen kannst. Das Mikrofon funktioniert auf deiner Webseite; in der Claude-Vorschau ist es gesperrt – dort „Audiodatei“ nutzen.</p>
         <div id="fileBox" class="field" hidden>
           <input type="file" id="audioIn" accept="audio/*,.mp3,.m4a,.wav,.ogg,.aac">
@@ -144,8 +150,9 @@ input[type=file]{font:inherit;color:var(--fg);max-width:100%}
 <script src="stimmen.js"></script>
 <script>
 const PRESETS = {
-  "sich vorstellen": {
+  "Vorstellung Amira": {
     title: "sich vorstellen",
+    roles: "mf",
     items: [
       "Name? | Wie heißt du? | Ich heiße Amira.",
       "Alter? | Wie alt bist du? | Ich bin 24 Jahre alt.",
@@ -154,6 +161,19 @@ const PRESETS = {
       "Sprachen? | Welche Sprachen sprichst du? | Ich spreche Arabisch, Englisch und ein bisschen Deutsch.",
       "Beruf? | Was bist du von Beruf? | Ich bin Krankenpflegerin.",
       "Hobby? | Was ist dein Hobby? | Ich lese gern und gehe schwimmen."
+    ]
+  },
+  "Vorstellung Ahmad": {
+    title: "sich vorstellen",
+    roles: "fm",
+    items: [
+      "Name? | Wie heißt du? | Ich heiße Ahmad.",
+      "Alter? | Wie alt bist du? | Ich bin 31 Jahre alt.",
+      "Land? | Woher kommst du? | Ich komme aus Afghanistan.",
+      "Wohnort? | Wo wohnst du? | Ich wohne in Hamburg.",
+      "Sprachen? | Welche Sprachen sprichst du? | Ich spreche Dari, Paschtu und ein bisschen Deutsch.",
+      "Beruf? | Was bist du von Beruf? | Ich bin Elektriker.",
+      "Hobby? | Was ist dein Hobby? | Ich spiele gern Fußball und koche gern."
     ]
   },
   "Familie": {
@@ -191,6 +211,7 @@ function applyPreset(name){
   const p = PRESETS[name];
   $("title").value = p.title;
   $("items").value = p.items.join("\n");
+  setRoles(p.roles || "mf");
   document.querySelectorAll("#presets button").forEach(b => b.setAttribute("aria-pressed", b.dataset.name === name));
   saveDraft(); drawFrame(null);
 }
@@ -202,6 +223,8 @@ Object.keys(PRESETS).forEach(name => {
   $("presets").appendChild(b);
 });
 
+function roles(){ const r = document.querySelector('input[name="roles"]:checked').value; return { q:r[0], a:r[1] }; }
+function setRoles(r){ const el = $("roles-" + r); if (el){ el.checked = true; store("roles", r); } }
 function readItems(){
   return $("items").value.split("\n").map(l => l.trim()).filter(Boolean).slice(0,12).map(l => {
     const [word, q, a] = l.split("|").map(s => (s || "").trim());
@@ -350,6 +373,7 @@ function updateSoundUI(){
   $("secs").disabled = !!fit || m === "voices";
   if (fit) $("secs").value = cfg().secs.toFixed(1);
 }
+document.querySelectorAll('input[name="roles"]').forEach(r => r.addEventListener("change", () => { store("roles", roles().q + roles().a); updateSoundUI(); }));
 document.querySelectorAll('input[name="sound"]').forEach(r => r.addEventListener("change", () => { store("sound", soundMode()); updateSoundUI(); }));
 $("fitAudio").addEventListener("change", updateSoundUI);
 ["ding","music"].forEach(id => $(id).addEventListener("change", () => store(id, $(id).checked ? "1":"0")));
@@ -408,8 +432,8 @@ function clipKey(v, text){ return v + "|" + (text || "").trim(); }
 function hasClip(v, text){ return !!CLIPS[clipKey(v, text)]; }
 function clip(v, text){ return BUFS[clipKey(v, text)] || null; }
 function missingVoices(){
-  const c = cfg(), miss = [];
-  c.items.forEach(it => { if (it.q && !hasClip("m", it.q)) miss.push(it.q); if (it.a && !hasClip("f", it.a)) miss.push(it.a); });
+  const c = cfg(), R = roles(), miss = [];
+  c.items.forEach(it => { if (it.q && !hasClip(R.q, it.q)) miss.push(it.q); if (it.a && !hasClip(R.a, it.a)) miss.push(it.a); });
   return miss;
 }
 function ensureClips(){
@@ -430,15 +454,15 @@ function estSecs(text){ return text ? Math.max(1, text.split(/\s+/).length * 0.4
 
 /* Timeline: start and length of each keyword. In voice mode the sentence lengths set the pace. */
 function plan(c){
-  const voices = soundMode() === "voices";
+  const voices = soundMode() === "voices", R = roles();
   let intro = INTRO;
-  const tclip = voices ? clip("m", c.title) : null;
+  const tclip = voices ? clip(R.q, c.title) : null;
   if (tclip) intro = Math.max(INTRO, tclip.duration + 0.9);
   const items = []; let t = intro;
   c.items.forEach(it => {
     if (voices){
-      const qd = it.q ? (clip("m", it.q)?.duration ?? estSecs(it.q)) : 0;
-      const ad = it.a ? (clip("f", it.a)?.duration ?? estSecs(it.a)) : 0;
+      const qd = it.q ? (clip(R.q, it.q)?.duration ?? estSecs(it.q)) : 0;
+      const ad = it.a ? (clip(R.a, it.a)?.duration ?? estSecs(it.a)) : 0;
       const qAt = 0.35, aAt = it.q ? qAt + qd + 0.45 : 0.35;
       const dur = Math.max(2.5, aAt + ad + 1.1);
       items.push({ start:t, dur, qAt, aAt, ansAt:aAt });
@@ -498,8 +522,9 @@ function startAudio(dest, P){
       if (b) play(b, at);
       else if (!dest) timers.push(setTimeout(() => browserSay(text, v === "m"), at*1000));
     };
-    say("m", c.title, 0.3);
-    c.items.forEach((it, i) => { const p = P.items[i]; say("m", it.q, p.start + p.qAt); say("f", it.a, p.start + p.aAt); });
+    const R = roles();
+    say(R.q, c.title, 0.3);
+    c.items.forEach((it, i) => { const p = P.items[i]; say(R.q, it.q, p.start + p.qAt); say(R.a, it.a, p.start + p.aAt); });
     stoppers.push(() => { timers.forEach(clearTimeout); try{ speechSynthesis.cancel() }catch(e){} });
   }
   if ($("ding").checked) P.items.forEach(p => scheduleDing(a, t0 + p.start, [master]));
@@ -630,9 +655,10 @@ $("rec").onclick = async () => {
     $("title").value = t; $("items").value = it;
     $("secs").value = load("secs") || 5; $("footer").value = load("footer") || "";
     $("showAnswer").checked = load("showAnswer") !== "0";
+    const rl = load("roles"); if (rl) setRoles(rl);
     const snd = load("sound"); if (snd && $("snd-"+snd)) $("snd-"+snd).checked = true;
     $("ding").checked = load("ding") !== "0"; $("music").checked = load("music") === "1";
-  } else applyPreset("sich vorstellen");
+  } else applyPreset("Vorstellung Amira");
   updateSoundUI();
   drawFrame(null);
   const redraw = () => { if (!state.playing) drawFrame(null); };
