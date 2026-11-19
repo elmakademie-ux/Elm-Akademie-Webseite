@@ -47,8 +47,9 @@ def read_presets(html_path):
         r = re.search(r'roles:\s*"(\w\w)"', middle)
         roles = r.group(1) if r else "mf"
         q, a = roles[0], roles[1]
-        tv = re.search(r'titleVoice:\s*"(\w)"', middle)
-        add(tv.group(1) if tv else q, title[0].upper() + title[1:] + ".", title)
+        tv = re.search(r'titleVoice:\s*"([\w-])"', middle)   # "-" = Titel nicht vorlesen
+        if not (tv and tv.group(1) == "-"):
+            add(tv.group(1) if tv else q, title[0].upper() + title[1:] + ".", title)
         for l in re.findall(r'"([^"]+\|[^"]*)"', items):
             parts = [p.strip() for p in l.split("|")]
             if len(parts) > 1 and parts[1]:
@@ -103,13 +104,16 @@ def spoken(text):
         return out
     for short, said in SAY_AS.items():
         text = re.sub(r"\b" + re.escape(short) + r"\b", said, text)
+    # Postleitzahl (5 Ziffern) Ziffer für Ziffer: 44135 -> vier vier eins drei fünf
+    text = re.sub(r"\b(\d)\s?(\d)\s?(\d)\s?(\d)\s?(\d)\b",
+                  lambda m: " ".join(num2words(int(d), lang="de") for d in m.groups()), text)
     return re.sub(r"(\d+)(?:,(\d+))?", rep, text)
 
 
 SAY_AS = {"DTZ": "De Te Zett", "A2/B1": "A zwei, B eins"}   # Abkürzungen so, wie man sie spricht
 
 
-SAME = {"cairo": "kairo"}
+SAME = {"cairo": "kairo", "baghdad": "bagdad", "autowerkstadt": "autowerkstatt", "jonas": "yonas", "bagdat": "bagdad"}   # gleiche Aussprache, andere Schreibweise
 VOCAB = ""   # Namen, Länder, Sprachen aus den Vorlagen, damit Whisper seltene Wörter kennt
 
 
@@ -148,7 +152,8 @@ def recognised_ok(path, text):
     for temp in (0.0, 0.4, 0.8):
         heard = " ".join(s.text for s in _asr.transcribe(x, language="de", beam_size=5, temperature=temp,
                                                          initial_prompt=VOCAB or None)[0])
-        err = distance(words(heard), words(text))
+        same = re.sub(r"[^a-zäöüß]", "", " ".join(words(heard))) == re.sub(r"[^a-zäöüß]", "", " ".join(words(text)))
+        err = 0 if same else distance(words(heard), words(text))   # "Sprechenteil" = "Sprechen Teil"
         if err and not worst:
             worst = heard.strip()
         total += err

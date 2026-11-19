@@ -243,6 +243,76 @@ const PRESETS = {
       "Sprachen | | Meine Muttersprache ist Arabisch und ich kann Kurdisch und ein bisschen Deutsch sprechen."
     ]
   },
+  "DTZ Monolog Omar": {
+    title: "DTZ Prüfung A2/B1 Sprechen Teil 1",
+    roles: "fm",
+    titleVoice: "-",
+    theme: "rot",
+    items: [
+      "Name | | Mein Name ist Omar Saleh. Ich bin 36 Jahre alt.",
+      "Geburtsort | | Ich bin in Bagdad im Irak geboren.",
+      "Wohnort | | Ich wohne in der Bahnhofstraße 14 in 60329 Frankfurt am Main.",
+      "Arbeit/Beruf | | Ich bin Mechaniker und arbeite in einer Autowerkstatt.",
+      "Familie | | Ich bin verheiratet und habe zwei Söhne.",
+      "Sprachen | | Meine Muttersprache ist Arabisch. Ich spreche auch Englisch und ein bisschen Deutsch."
+    ]
+  },
+  "DTZ Monolog Maria": {
+    title: "DTZ Prüfung A2/B1 Sprechen Teil 1",
+    roles: "mf",
+    titleVoice: "f",
+    theme: "lila",
+    items: [
+      "Name | | Mein Name ist Maria Kowalska. Ich bin 33 Jahre alt.",
+      "Geburtsort | | Ich bin in Krakau in Polen geboren.",
+      "Wohnort | | Ich wohne in der Lindenstraße 7 in 10969 Berlin.",
+      "Arbeit/Beruf | | Ich bin Friseurin und arbeite in einem Friseursalon.",
+      "Familie | | Ich bin geschieden und habe eine Tochter.",
+      "Sprachen | | Meine Muttersprache ist Polnisch. Ich spreche auch Englisch und ein bisschen Deutsch."
+    ]
+  },
+  "DTZ Monolog Samuel": {
+    title: "DTZ Prüfung A2/B1 Sprechen Teil 1",
+    roles: "fm",
+    titleVoice: "-",
+    theme: "gruen",
+    items: [
+      "Name | | Mein Name ist Samuel Okafor. Ich bin 40 Jahre alt.",
+      "Geburtsort | | Ich bin in Lagos in Nigeria geboren.",
+      "Wohnort | | Ich wohne in der Schillerstraße 23 in 50667 Köln.",
+      "Arbeit/Beruf | | Ich bin Lagerarbeiter und arbeite bei einer Logistikfirma.",
+      "Familie | | Ich bin verheiratet und habe drei Kinder.",
+      "Sprachen | | Meine Muttersprache ist Igbo. Ich spreche auch Englisch und ein bisschen Deutsch."
+    ]
+  },
+  "DTZ Monolog Elena": {
+    title: "DTZ Prüfung A2/B1 Sprechen Teil 1",
+    roles: "mf",
+    titleVoice: "f",
+    theme: "orange",
+    items: [
+      "Name | | Mein Name ist Elena Dimitrova. Ich bin 26 Jahre alt.",
+      "Geburtsort | | Ich bin in Sofia in Bulgarien geboren.",
+      "Wohnort | | Ich wohne in der Gartenstraße 5 in 80331 München.",
+      "Arbeit/Beruf | | Ich bin Krankenschwester und arbeite in einem Krankenhaus.",
+      "Familie | | Ich bin ledig und habe keine Kinder.",
+      "Sprachen | | Meine Muttersprache ist Bulgarisch. Ich spreche auch Russisch und ein bisschen Deutsch."
+    ]
+  },
+  "DTZ Monolog Yonas": {
+    title: "DTZ Prüfung A2/B1 Sprechen Teil 1",
+    roles: "fm",
+    titleVoice: "-",
+    theme: "blau",
+    items: [
+      "Name | | Mein Name ist Yonas Tesfaye. Ich bin 31 Jahre alt.",
+      "Geburtsort | | Ich bin in Asmara in Eritrea geboren.",
+      "Wohnort | | Ich wohne in der Mozartstraße 9 in 70173 Stuttgart.",
+      "Arbeit/Beruf | | Ich bin Koch und arbeite in einem Restaurant.",
+      "Familie | | Ich bin verheiratet und habe ein Kind.",
+      "Sprachen | | Meine Muttersprache ist Tigrinya. Ich spreche auch Englisch und ein bisschen Deutsch."
+    ]
+  },
   "DTZ Teil 1 Fatima": {
     title: "DTZ Teil 1",
     roles: "mf",
@@ -675,7 +745,7 @@ function startAudio(dest, P){
       else if (!dest) timers.push(setTimeout(() => browserSay(text, v === "m"), at*1000));
     };
     const R = roles();
-    say(state.titleVoice || R.q, c.title, 0.3);
+    if (state.titleVoice !== "-") say(state.titleVoice || R.q, c.title, 0.3);
     c.items.forEach((it, i) => { const p = P.items[i]; say(R.q, it.q, p.start + p.qAt); say(R.a, it.a, p.start + p.aAt); });
     stoppers.push(() => { timers.forEach(clearTimeout); try{ speechSynthesis.cancel() }catch(e){} });
   }
