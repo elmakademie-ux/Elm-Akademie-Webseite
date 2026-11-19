@@ -100,7 +100,12 @@ def spoken(text):
         if frac:
             out += " Komma " + " ".join(num2words(int(d), lang="de") for d in frac)
         return out
+    for short, said in SAY_AS.items():
+        text = re.sub(r"\b" + short + r"\b", said, text)
     return re.sub(r"(\d+)(?:,(\d+))?", rep, text)
+
+
+SAY_AS = {"DTZ": "De Te Zett"}   # Abkürzungen so, wie man sie spricht
 
 
 SAME = {"cairo": "kairo"}
