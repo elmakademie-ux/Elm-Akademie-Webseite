@@ -229,6 +229,47 @@ const PRESETS = {
       "Sprachen | Welche Sprachen sprechen Sie? | Ich spreche Dari, Paschtu und ein bisschen Deutsch."
     ]
   },
+  "DTZ Teil 1 Fatima": {
+    title: "DTZ Teil 1",
+    roles: "mf",
+    titleVoice: "f",
+    theme: "blau",
+    items: [
+      "Name | Wie heißen Sie? | Mein Name ist Fatima Haddad. Ich bin 42 Jahre alt.",
+      "Geburtsort | Wo sind Sie geboren? | Ich bin in Aleppo in Syrien geboren.",
+      "Wohnort | Wo wohnen Sie? | Ich wohne seit sechs Jahren in Dortmund.",
+      "Arbeit/Beruf | Was sind Sie von Beruf? | Ich bin Schneiderin. Im Moment arbeite ich in einer Bäckerei.",
+      "Familie | Erzählen Sie etwas über Ihre Familie. | Ich bin verheiratet und habe drei Kinder.",
+      "Sprachen | Welche Sprachen sprechen Sie? | Ich spreche Arabisch, Kurdisch und Deutsch."
+    ]
+  },
+  "DTZ Teil 1 Mehmet": {
+    title: "DTZ Teil 1",
+    roles: "fm",
+    theme: "gruen",
+    items: [
+      "Name | Wie heißen Sie? | Mein Name ist Mehmet Yilmaz. Ich bin 38 Jahre alt.",
+      "Geburtsort | Wo sind Sie geboren? | Ich bin in Izmir in der Türkei geboren.",
+      "Wohnort | Wo wohnen Sie? | Ich wohne mit meiner Familie in Stuttgart.",
+      "Arbeit/Beruf | Was sind Sie von Beruf? | Ich bin Busfahrer. Ich fahre jeden Tag Bus in Stuttgart.",
+      "Familie | Erzählen Sie etwas über Ihre Familie. | Ich bin verheiratet. Wir haben einen Sohn und eine Tochter.",
+      "Sprachen | Welche Sprachen sprechen Sie? | Ich spreche Türkisch, Deutsch und ein bisschen Englisch."
+    ]
+  },
+  "DTZ Teil 1 Daniela": {
+    title: "DTZ Teil 1",
+    roles: "mf",
+    titleVoice: "f",
+    theme: "orange",
+    items: [
+      "Name | Wie heißen Sie? | Mein Name ist Daniela Popescu. Ich bin 29 Jahre alt.",
+      "Geburtsort | Wo sind Sie geboren? | Ich bin in Bukarest in Rumänien geboren.",
+      "Wohnort | Wo wohnen Sie? | Ich wohne seit zwei Jahren in Leipzig.",
+      "Arbeit/Beruf | Was sind Sie von Beruf? | Ich bin Altenpflegerin. Ich arbeite in einem Pflegeheim.",
+      "Familie | Erzählen Sie etwas über Ihre Familie. | Ich bin ledig. Meine Eltern und mein Bruder leben in Rumänien.",
+      "Sprachen | Welche Sprachen sprechen Sie? | Ich spreche Rumänisch, Englisch und ein bisschen Deutsch."
+    ]
+  },
   "Familie": {
     title: "meine Familie",
     items: [
@@ -298,6 +339,7 @@ function applyPreset(name){
   $("title").value = p.title;
   $("items").value = p.items.join("\n");
   setRoles(p.roles || "mf");
+  state.titleVoice = p.titleVoice || ""; store("titleVoice", state.titleVoice);
   $("theme").value = p.theme || "blau";
   document.querySelectorAll("#presets button").forEach(b => b.setAttribute("aria-pressed", b.dataset.name === name));
   saveDraft(); drawFrame(null);
@@ -551,7 +593,8 @@ function estSecs(text){ return text ? Math.max(1, text.split(/\s+/).length * 0.4
 function plan(c){
   const voices = soundMode() === "voices", R = roles();
   let intro = INTRO;
-  const tclip = voices ? clip(R.q, c.title) : null;
+  const TV = state.titleVoice || R.q;
+  const tclip = voices ? clip(TV, c.title) : null;
   if (tclip) intro = Math.max(INTRO, tclip.duration + 0.9);
   const items = []; let t = intro;
   c.items.forEach(it => {
@@ -618,7 +661,7 @@ function startAudio(dest, P){
       else if (!dest) timers.push(setTimeout(() => browserSay(text, v === "m"), at*1000));
     };
     const R = roles();
-    say(R.q, c.title, 0.3);
+    say(state.titleVoice || R.q, c.title, 0.3);
     c.items.forEach((it, i) => { const p = P.items[i]; say(R.q, it.q, p.start + p.qAt); say(R.a, it.a, p.start + p.aAt); });
     stoppers.push(() => { timers.forEach(clearTimeout); try{ speechSynthesis.cancel() }catch(e){} });
   }
@@ -755,6 +798,7 @@ $("rec").onclick = async () => {
     $("secs").value = load("secs") || 5; $("footer").value = load("footer") || "";
     $("showAnswer").checked = load("showAnswer") !== "0";
     const rl = load("roles"); if (rl) setRoles(rl);
+    state.titleVoice = load("titleVoice") || "";
     const th = load("theme"); if (th && THEMES[th]) $("theme").value = th;
     const snd = load("sound"); if (snd && $("snd-"+snd)) $("snd-"+snd).checked = true;
     $("ding").checked = load("ding") !== "0"; $("music").checked = load("music") === "1";

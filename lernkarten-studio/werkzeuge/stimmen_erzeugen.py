@@ -47,7 +47,8 @@ def read_presets(html_path):
         r = re.search(r'roles:\s*"(\w\w)"', middle)
         roles = r.group(1) if r else "mf"
         q, a = roles[0], roles[1]
-        add(q, title[0].upper() + title[1:] + ".", title)
+        tv = re.search(r'titleVoice:\s*"(\w)"', middle)
+        add(tv.group(1) if tv else q, title[0].upper() + title[1:] + ".", title)
         for l in re.findall(r'"([^"]+\|[^"]*)"', items):
             parts = [p.strip() for p in l.split("|")]
             if len(parts) > 1 and parts[1]:
@@ -182,7 +183,7 @@ def main():
         wav, mp3 = f"{TMP}/{i}.wav", f"{TMP}/{i}.mp3"
         best = None
         if v == "m":
-            male_wav(text, wav)
+            male_wav(spoken(text), wav)
             err, heard = recognised_ok(wav, text)
             best = (err, wav)
             if err:
