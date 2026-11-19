@@ -229,6 +229,20 @@ const PRESETS = {
       "Sprachen | Welche Sprachen sprechen Sie? | Ich spreche Dari, Paschtu und ein bisschen Deutsch."
     ]
   },
+  "DTZ Monolog Fatima": {
+    title: "DTZ Prüfung A2/B1 Sprechen Teil 1",
+    roles: "mf",
+    titleVoice: "f",
+    theme: "blau",
+    items: [
+      "Name | | Mein Name ist Fatima Haddad. Ich bin 42 Jahre alt.",
+      "Geburtsort | | Ich bin in Aleppo in Syrien geboren.",
+      "Wohnort | | Ich bin vor 6 Jahren nach Deutschland gekommen und ich wohne jetzt in Dortmund.",
+      "Arbeit/Beruf | | Ich bin Schneiderin und arbeite gerade in einer Bäckerei.",
+      "Familie | | Ich bin verheiratet und ich habe drei Kinder.",
+      "Sprachen | | Meine Muttersprache ist Arabisch und ich kann Kurdisch und ein bisschen Deutsch sprechen."
+    ]
+  },
   "DTZ Teil 1 Fatima": {
     title: "DTZ Teil 1",
     roles: "mf",
@@ -468,14 +482,14 @@ function drawFrame(active, now){
       ctx.globalAlpha = aa;
       if (it.a){
         ctx.fillStyle = "#14152b"; ctx.font = `700 italic 52px ${SERIF}`;
-        const lines = wrap(it.a, bw-70).slice(0,3);
+        const lines = wrap(it.a, bw-70).slice(0, it.q ? 3 : 4);
         const lh = 66; let ay = it.q ? y : by + bh/2 - (lines.length-1)*lh/2;
         lines.forEach(l => { ctx.fillText(l, W/2, ay); ay += lh; });
       }
       ctx.globalAlpha = 1;
     } else {
       ctx.fillStyle = TH.soft; ctx.font = `800 italic 120px ${SERIF}`;
-      ctx.fillText("?", W/2, by + bh/2);
+      if (c.items.some(x => x.q)) ctx.fillText("?", W/2, by + bh/2);
     }
   }
   if (c.footer){
