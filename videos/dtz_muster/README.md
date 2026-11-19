@@ -44,6 +44,17 @@ python3 render.py 7 --preview    # nur Vorschaubilder in vorschau/
 ```
 Nummern: 1–3 = Aufgabe 1, 4–6 = Aufgabe 2, 7–9 = Aufgabe 3, 10–12 = Aufgabe 4, 13–15 = Aufgabe 5.
 
+## Gesamtvideo 16:9 (YouTube)
+```bash
+python3 render.py gesamt          # alle 15 E-Mails im Querformat + Einleitung + Satzmuster/Lerntipp
+python3 render.py 3 --16x9        # einzelne E-Mail im Querformat
+```
+Ergebnis: `dtz_15_muster_emails_16x9.mp4` (1920 × 1080, ca. 15½ Minuten) und `kapitel_youtube.txt`
+(Zeitmarken für die YouTube-Beschreibung → YouTube zeigt daraus Kapitel an).
+Im Querformat steht links die Aufgabe mit den 4 Punkten und ein Grammatik-Feld, das die Konnektoren und
+Modalverben der E-Mail live sammelt; rechts wird die E-Mail getippt. Zwischenteile liegen in `ausgabe_16x9/`
+(nicht in Git; bereits fertige Teile werden beim nächsten Lauf wiederverwendet – zum Neu-Rendern dort löschen).
+
 ## Hinweise
 - Stimme „Thorsten“ (Piper TTS, CC0), KI-generiert → beim Posten als KI-Inhalt kennzeichnen.
 - Musik wird vom Programm erzeugt, daher keine Lizenzfragen.

@@ -54,6 +54,23 @@ BODY_BOTTOM = MAIL[3] - 26
 BODY_X = MAIL[0] + 92
 BODY_W = MAIL[2] - BODY_X - 36
 FS, LH = 32, 44
+LANDSCAPE = False
+GRAM = None          # Grammatik-Feld (nur Querformat)
+SPECIAL = None       # "gintro" / "goutro" fuer das Gesamtvideo
+
+
+def apply_landscape():
+    """Layout fuer 16:9 (1920 x 1080): links Aufgabe + Grammatik, rechts E-Mail."""
+    global W, H, TASK, MAIL, BODY_TOP, BODY_BOTTOM, BODY_X, BODY_W, LANDSCAPE, GRAM
+    W, H = 1920, 1080
+    LANDSCAPE = True
+    TASK = (70, 175, 900, 500)
+    GRAM = (70, 545, 900, 1035)
+    MAIL = (970, 175, 1850, 1040)
+    BODY_TOP = MAIL[1] + TOPBAR + FIELDS + 18
+    BODY_BOTTOM = MAIL[3] - 26
+    BODY_X = MAIL[0] + 92
+    BODY_W = MAIL[2] - BODY_X - 36
 
 E = None   # aktuelle E-Mail
 A = None   # zugehoerige Aufgabe
@@ -347,10 +364,16 @@ def legend():
 
 
 def draw_header(frame, show_title=True):
-    comp(frame, LOGO, (36, 26))
+    comp(frame, LOGO, (36, 26 if not LANDSCAPE else 8))
     p = pill(NIVEAU, 36, WHITE, NAVY)
-    comp(frame, p, (W - 64 - p.width, 78))
+    comp(frame, p, (W - 64 - p.width, 78 if not LANDSCAPE else 48))
     if not show_title:
+        return
+    if LANDSCAPE:
+        sub = text_img(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", "Bold", 30, ORANGE)
+        comp_center(frame, sub, W / 2, 52)
+        ttl = text_img(A["thema"], "ExtraBold", 54, NAVY)
+        comp_center(frame, ttl, W / 2, 104, min(1.0, 1100 / ttl.width))
         return
     sub = text_img(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", "Bold", 32, ORANGE)
     comp_center(frame, sub, W / 2, 222)
@@ -599,7 +622,39 @@ def caption(frame, text, s, e, t, y):
 
 
 # ================================================================ Szenen
+def envelope():
+    S = 3
+    env = Image.new("RGBA", (340 * S, 236 * S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(env)
+    d.rounded_rectangle((0, 0, 340 * S - 1, 236 * S - 1), 26 * S, fill=WHITE, outline=NAVY, width=8 * S)
+    d.line([(14 * S, 22 * S), (170 * S, 140 * S), (326 * S, 22 * S)], fill=NAVY, width=8 * S, joint="curve")
+    return shadow(env.resize((340, 236), Image.LANCZOS), 18, 60, 10)
+
+
+def draw_intro_landscape(frame, t):
+    draw_header(frame, False)
+    a_out = clamp((TL["intro_end"] - t) / 0.3)
+    bob = 10 * math.sin(t * 2.4)
+    comp_center(frame, envelope(), 560, 470 + bob, 0.75 + 0.25 * back_out(t / 0.6), clamp(t / 0.25) * a_out)
+    lab = pill(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", 44, WHITE, ORANGE, 32, 12, "ExtraBold")
+    comp(frame, lab, (840, 330), a_out * clamp((t - 0.3) / 0.3))
+    ttl = text_img(A["thema"], "ExtraBold", 78, NAVY)
+    tin = ease_out((t - 0.5) / 0.5)
+    s = min(1.0, 1000 / ttl.width)
+    comp(frame, scale_img(ttl, s), (840, 425 + 30 * (1 - tin)), tin * a_out)
+    comp(frame, scale_img(legend(), 1.3), (845, 545), ease_out((t - 0.9) / 0.4) * a_out)
+    caption(frame, intro_text(), *TL["intro"], t, 760)
+
+
+def scale_img(img, s):
+    if abs(s - 1) < 0.003:
+        return img
+    return img.resize((int(img.width * s), int(img.height * s)), Image.BICUBIC)
+
+
 def draw_intro(frame, t):
+    if LANDSCAPE:
+        return draw_intro_landscape(frame, t)
     draw_header(frame, False)
     a_out = clamp((TL["intro_end"] - t) / 0.3)
     S = 3
@@ -621,15 +676,87 @@ def draw_intro(frame, t):
     caption(frame, intro_text(), *TL["intro"], t, 1120)
 
 
+GRAM_EVENTS = []   # (wort, art, zeit_getippt)
+
+
+def build_gram_events():
+    GRAM_EVENTS.clear()
+    seen = set()
+    for pid, w, x, y, off, p, first, weight in body_layout():
+        k = word_kind(w)
+        if not k:
+            continue
+        c = re.sub(r"[^\wäöüÄÖÜß]", "", w).lower()
+        if c in seen:
+            continue
+        seen.add(c)
+        s0, e0 = TL["types"][pid]
+        n = len(dict((q[0], q[1]) for q in parts())[pid].replace("\n", " "))
+        GRAM_EVENTS.append((c, k, s0 + (e0 - s0) * 0.95 * (off + len(w)) / (n + 1)))
+
+
+@lru_cache(None)
+def gram_bg():
+    x0, y0, x1, y1 = GRAM
+    img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 28, fill=WHITE)
+    d.text((32, 24), "Grammatik in dieser E-Mail", font=font("ExtraBold", 36), fill=NAVY)
+    d.text((32, 96), "Konnektoren", font=font("Bold", 30), fill=ORANGE)
+    d.text((32, 296), "Modalverben", font=font("Bold", 30), fill=PURPLE)
+    return shadow(img, 18, 45, 8)
+
+
+def draw_gram(frame, t):
+    x0, y0, x1, y1 = GRAM
+    comp(frame, gram_bg(), (x0 - 36, y0 - 28))
+    for kind, top in (("k", 145), ("m", 345)):
+        x, y = x0 + 32, y0 + top
+        for w, k, tt in GRAM_EVENTS:
+            if k != kind or t < tt:
+                continue
+            p = pill(w, 40, WHITE, KIND_COL[k], 26, 10, "ExtraBold")
+            if x + p.width > x1 - 24:
+                x, y = x0 + 32, y + p.height + 14
+            comp_center(frame, p, x + p.width / 2, y + p.height / 2, max(0.01, back_out((t - tt) / 0.35)))
+            x += p.width + 14
+
+
 def draw_main(frame, t):
     draw_header(frame)
     draw_task(frame, t)
+    if LANDSCAPE:
+        draw_gram(frame, t)
     slide = ease_out((t - TL["mail_in"]) / 0.5)
     if slide > 0.01:
         draw_mail(frame, t, slide)
 
 
+def draw_outro_landscape(frame, t):
+    lt = t - TL["outro_start"]
+    draw_header(frame, False)
+    comp_center(frame, LOGO, W / 2, 230, 1.6 * (0.8 + 0.2 * back_out(lt / 0.6)), clamp(lt / 0.3))
+    ttl = text_img("Wichtige Wörter", "ExtraBold", 70, NAVY)
+    comp_center(frame, ttl, W / 2, 420, 1, ease_out((lt - 0.2) / 0.4))
+    ks, ms = key_words()
+    chips = [shadow(pill(w, 56, WHITE, c, 38, 14, "ExtraBold"), 12, 45, 6)
+             for w, c in [(w, ORANGE) for w in ks] + [(w, PURPLE) for w in ms]]
+    total = sum(c.width for c in chips) - 30 * (len(chips) - 1)
+    x = W / 2 - total / 2
+    for k, c in enumerate(chips):
+        st = 0.5 + 0.25 * k
+        if lt > st:
+            comp_center(frame, c, x + c.width / 2, 545, max(0.01, back_out((lt - st) / 0.4)))
+        x += c.width - 30
+    p = pill("Folge der ELM Akademie", 46, WHITE, NAVY, 40, 16, "ExtraBold")
+    comp_center(frame, shadow(p, 14, 50, 8), W / 2, 690, max(0.01, back_out((lt - 1.6) / 0.5)),
+                clamp((lt - 1.6) / 0.2))
+    caption(frame, outro_text(), *TL["outro"], t, 820)
+
+
 def draw_outro(frame, t):
+    if LANDSCAPE:
+        return draw_outro_landscape(frame, t)
     lt = t - TL["outro_start"]
     draw_header(frame, False)
     comp_center(frame, LOGO, W / 2, 470, 2.0 * (0.8 + 0.2 * back_out(lt / 0.6)), clamp(lt / 0.3))
@@ -651,10 +778,70 @@ def draw_outro(frame, t):
     caption(frame, outro_text(), *TL["outro"], t, 1400)
 
 
+GINTRO = dict(text="DTZ Schreiben: 15 Muster-E-Mails auf Niveau B1. Hör zu, lies mit und lerne die Satzmuster.",
+              dauer=10.0)
+GOUTRO = dict(text="Lerntipp: Lerne nicht alle E-Mails auswendig. Lerne die Satzmuster und benutze sie "
+                   "selbst. Folge der ELM Akademie!", dauer=14.0)
+GRAMMATIK = [("weil", "Ich schreibe Ihnen, weil mein Auto kaputt ist."),
+             ("dass", "Ich hoffe, dass Sie gesund werden."),
+             ("wenn", "Wenn du Zeit hast, komm bitte vorbei."),
+             ("obwohl", "Obwohl die Wohnung klein ist, gefällt sie mir."),
+             ("damit", "Ich lerne Deutsch, damit ich eine Arbeit finde."),
+             ("deshalb", "Mein Auto ist kaputt. Deshalb brauche ich Hilfe."),
+             ("außerdem", "Außerdem möchte ich Sie einladen."),
+             ("aber", "Die Wohnung ist klein, aber schön.")]
+MODAL_BSP = [("können", "Können Sie mir bitte helfen?"), ("müssen", "Ich muss am Samstag arbeiten."),
+             ("möchten", "Ich möchte einen Termin machen."), ("sollen", "Sie sollen sich gut ausruhen.")]
+
+
+def draw_special(frame, t):
+    s, e, text = TL["say"]
+    if SPECIAL == "gintro":
+        comp(frame, LOGO, (36, 8))
+        comp_center(frame, envelope(), W / 2, 250 + 10 * math.sin(t * 2.4), 0.8 + 0.2 * back_out(t / 0.6))
+        ttl = text_img("15 Muster-E-Mails", "ExtraBold", 96, NAVY)
+        comp_center(frame, ttl, W / 2, 450, 1, ease_out((t - 0.3) / 0.5))
+        sub = pill("DTZ Schreiben · Niveau B1.1", 44, WHITE, ORANGE, 34, 12, "ExtraBold")
+        comp_center(frame, sub, W / 2, 560, max(0.01, back_out((t - 0.6) / 0.4)))
+        for k, (n, a) in enumerate(M.AUFGABEN.items()):
+            st = 1.2 + 0.35 * k
+            if t > st:
+                p = shadow(pill(f"{n}  {a['thema']}", 30, NAVY, WHITE, 26, 12, "Bold"), 10, 40, 5)
+                col, row = k % 3, k // 3
+                n_in_row = 3 if row == 0 else 2
+                x = W / 2 + (col - (n_in_row - 1) / 2) * 590
+                comp_center(frame, p, x, 680 + row * 90, max(0.01, back_out((t - st) / 0.4)))
+        caption(frame, text, s, e, t, 880)
+    else:
+        comp(frame, LOGO, (36, 8))
+        ttl = text_img("Satzmuster für den DTZ", "ExtraBold", 64, NAVY)
+        comp_center(frame, ttl, W / 2, 95, 1, ease_out(t / 0.4))
+        items = [(w, b, ORANGE) for w, b in GRAMMATIK] + [(w, b, PURPLE) for w, b in MODAL_BSP]
+        for k, (w, bsp, col) in enumerate(items):
+            st = 0.3 + 0.22 * k
+            if t < st:
+                continue
+            a = ease_out((t - st) / 0.3)
+            colx, row = (0, k) if k < 6 else (1, k - 6)
+            x = 90 + colx * 900
+            y = 190 + row * 88
+            p = pill(w, 32, WHITE, col, 20, 8, "ExtraBold")
+            comp(frame, p, (x, y), a)
+            comp(frame, text_img(bsp, "Medium", 29, NAVY), (x + 222, y + 8), a)
+        lt = text_img("Lerntipp", "ExtraBold", 40, OK)
+        comp(frame, lt, (90, 715), ease_out((t - 3.2) / 0.4))
+        caption(frame, text, s, e, t, 820)
+        if t > 9.5:
+            p = pill("Folge der ELM Akademie", 46, WHITE, NAVY, 40, 16, "ExtraBold")
+            comp_center(frame, shadow(p, 14, 50, 8), W / 2, 1000, max(0.01, back_out((t - 9.5) / 0.5)))
+
+
 def render_frame(fi):
     t = fi / FPS
     frame = background(t)
-    if t < TL["intro_end"]:
+    if SPECIAL:
+        draw_special(frame, t)
+    elif t < TL["intro_end"]:
         draw_intro(frame, t)
     elif t < TL["outro_start"]:
         draw_main(frame, t)
@@ -669,16 +856,107 @@ def render_frame(fi):
 
 # ================================================================ Start
 def clear_caches():
-    for fn in (task_lines, task_bg, chip_img, mail_base, body_layout):
+    for fn in (task_lines, task_bg, chip_img, mail_base, body_layout, gram_bg):
         fn.cache_clear()
 
 
-def render_one(idx, preview=False):
+def encode(out, wav, total):
+    cmd = ["ffmpeg", "-y", "-loglevel", "error",
+           "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+           "-i", str(wav),
+           "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-profile:v", "high",
+           "-pix_fmt", "yuv420p", "-af", "loudnorm=I=-14:TP=-1.0:LRA=9",
+           "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
+           "-t", f"{total:.3f}", "-movflags", "+faststart", str(out)]
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    with Pool(os.cpu_count()) as pool:
+        for data in pool.imap(render_frame, range(int(round(total * FPS))), chunksize=6):
+            proc.stdin.write(data)
+    proc.stdin.close()
+    proc.wait()
+
+
+def render_special(kind, out):
+    """Einleitung/Abschluss des Gesamtvideos."""
+    global SPECIAL, TOTAL
+    from common.audio import SR, add, ensure_voice, make_music, speak
+    SPECIAL = kind
+    cfg = GINTRO if kind == "gintro" else GOUTRO
+    TOTAL = cfg["dauer"]
+    tmp = HERE.parent / ".cache" / "line_dtzm.wav"
+    seg = speak(spoken(cfg["text"]), tmp, ensure_voice(), SPRECHTEMPO)
+    nz = np.nonzero(np.abs(seg) > 0.02)[0]
+    s0, s1 = nz[0] / SR, nz[-1] / SR
+    start = 0.8 if kind == "gintro" else 3.6
+    TL.clear()
+    TL["say"] = (start, start + s1 - s0, cfg["text"])
+    music = make_music(TOTAL, [], TOTAL + 1) * MUSIK_LAUTSTAERKE
+    voice = np.zeros_like(music)
+    add(voice, 0.95 * seg, start - s0)
+    mixd = music * 0.6 + voice
+    mixd = mixd / (np.abs(mixd).max() + 1e-9) * 0.9
+    pcm = (np.stack([mixd, mixd], 1) * 32767).astype(np.int16)
+    wav = HERE.parent / ".cache" / f"{kind}.wav"
+    with wave.open(str(wav), "wb") as w:
+        w.setnchannels(2)
+        w.setsampwidth(2)
+        w.setframerate(SR)
+        w.writeframes(pcm.tobytes())
+    encode(out, wav, TOTAL)
+    SPECIAL = None
+
+
+def render_gesamt():
+    """Alle 15 E-Mails + Einleitung + Abschluss in einem 16:9-Video, mit Kapitelliste."""
+    global TOTAL
+    outdir = HERE / "ausgabe_16x9"
+    outdir.mkdir(exist_ok=True)
+    segs = [outdir / "00_einleitung.mp4"]
+    if not segs[0].exists():
+        print("Einleitung ...", flush=True)
+        render_special("gintro", segs[0])
+    for idx in range(len(M.EMAILS)):
+        e = M.EMAILS[idx]
+        f = outdir / f"dtz_aufgabe{e['aufgabe']}_beispiel{e['beispiel']}_16x9.mp4"
+        if not f.exists():
+            TOTAL = GESAMTDAUER
+            render_one(idx, out=f)
+        segs.append(f)
+    end = outdir / "99_abschluss.mp4"
+    if not end.exists():
+        print("Abschluss ...", flush=True)
+        render_special("goutro", end)
+    segs.append(end)
+    lst = outdir / "liste.txt"
+    lst.write_text("".join(f"file '{p.name}'\n" for p in segs))
+    final = HERE / "dtz_15_muster_emails_16x9.mp4"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
+                    "-c", "copy", "-movflags", "+faststart", str(final)], check=True)
+    # Kapitel fuer YouTube
+    t, lines = 0.0, []
+    for p in segs:
+        d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                  str(p)], capture_output=True, text=True).stdout)
+        if p.name.startswith("00"):
+            label = "Einleitung"
+        elif p.name.startswith("99"):
+            label = "Satzmuster & Lerntipp"
+        else:
+            a, b = re.findall(r"aufgabe(\d)_beispiel(\d)", p.name)[0]
+            label = f"Aufgabe {a} · Beispiel {b}: {M.AUFGABEN[int(a)]['thema']}"
+        lines.append(f"{int(t // 60)}:{int(t % 60):02d} {label}")
+        t += d
+    (HERE / "kapitel_youtube.txt").write_text("\n".join(lines) + "\n")
+    print("Fertig:", final, flush=True)
+
+
+def render_one(idx, preview=False, out=None):
     setup(idx)
     clear_caches()
     name = f"dtz_aufgabe{E['aufgabe']}_beispiel{E['beispiel']}"
     print(f"[{idx + 1}/15] {name}: {A['thema']}", flush=True)
     plan()
+    build_gram_events()
     wav = HERE.parent / ".cache" / f"{name}.wav"
     build_audio(wav)
     if preview:
@@ -688,35 +966,46 @@ def render_one(idx, preview=False):
         for x in ts:
             Image.frombytes("RGB", (W, H), render_frame(int(x * FPS))).save(out / f"{name}_t{x:05.1f}.png")
         return
-    outdir = HERE / "ausgabe"
-    outdir.mkdir(exist_ok=True)
-    out = outdir / f"{name}.mp4"
-    cmd = ["ffmpeg", "-y", "-loglevel", "error",
-           "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-           "-i", str(wav),
-           "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-profile:v", "high",
-           "-pix_fmt", "yuv420p", "-af", "loudnorm=I=-14:TP=-1.0:LRA=9",
-           "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
-           "-t", f"{TOTAL:.3f}", "-movflags", "+faststart", str(out)]
-    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    with Pool(os.cpu_count()) as pool:
-        for data in pool.imap(render_frame, range(N_FRAMES), chunksize=6):
-            proc.stdin.write(data)
-    proc.stdin.close()
-    proc.wait()
+    if out is None:
+        outdir = HERE / ("ausgabe_16x9" if LANDSCAPE else "ausgabe")
+        outdir.mkdir(exist_ok=True)
+        out = outdir / f"{name}{'_16x9' if LANDSCAPE else ''}.mp4"
+    encode(out, wav, TOTAL)
     print("  fertig:", out, flush=True)
 
 
 def main():
     load_logo()
+    if "--16x9" in sys.argv:
+        apply_landscape()
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     preview = "--preview" in sys.argv
+    if args == ["gesamt"]:
+        if not LANDSCAPE:
+            apply_landscape()
+        return render_gesamt()
+    if args and args[0] in ("gintro", "goutro") and preview:
+        global TOTAL
+        out = HERE / "vorschau"
+        out.mkdir(exist_ok=True)
+        render_special_preview = args[0]
+        return preview_special(render_special_preview, out)
     if not args or args == ["alle"]:
         nums = list(range(1, len(M.EMAILS) + 1)) if args == ["alle"] else [1]
     else:
         nums = [int(a) for a in args]
     for n in nums:
         render_one(n - 1, preview)
+
+
+def preview_special(kind, outdir):
+    global SPECIAL, TOTAL
+    cfg = GINTRO if kind == "gintro" else GOUTRO
+    SPECIAL, TOTAL = kind, cfg["dauer"]
+    TL.clear()
+    TL["say"] = (0.8, cfg["dauer"] - 2, cfg["text"])
+    for x in (cfg["dauer"] * 0.5, cfg["dauer"] - 1.5):
+        Image.frombytes("RGB", (W, H), render_frame(int(x * FPS))).save(outdir / f"{kind}_t{x:04.1f}.png")
 
 
 if __name__ == "__main__":
