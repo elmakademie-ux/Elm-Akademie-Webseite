@@ -1,0 +1,483 @@
+{
+  "level": "A2",
+  "scenes": [
+    {
+      "scene_id": "A2-S01",
+      "title": "Hook: Erster Arbeitstag",
+      "type": "hook",
+      "estimated_duration_sec": 12.8,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 5.6
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 7.2
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Entrance of a modern glass office building in Cologne, mid-morning.\nACTION: Mia stands in front of a modern glass office building holding a laptop bag, looking slightly nervous. Small thought bubbles with question marks swirl around her head. She takes a deep breath and smiles with determination.\nCAMERA: Slow tracking shot from behind toward Mia, then close-up on her face; thought bubbles swirl.\nLIGHTING: Cool morning light with reflections in the glass facade, turning warmer when she smiles.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (curious, slightly dramatic, moderate-slow) says in German: \"Erster Arbeitstag. Alle Gesichter sind neu. Was sagst du?\" | Erzähler (encouraging, moderate-slow) says in German: \"Heute lernst du, wie du dich vorstellst, wenn du neue Kollegen triffst.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png"
+      ],
+      "on_screen_text_overlay": [
+        "Erster Arbeitstag!"
+      ]
+    },
+    {
+      "scene_id": "A2-S02",
+      "title": "Einführung: Niveau A2",
+      "type": "intro",
+      "estimated_duration_sec": 13.4,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 7.2
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 6.2
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Bright title space with an office silhouette.\nACTION: Jonas stands next to a big blackboard reading 'A2'. Three icons appear one after another: a sentence with a 'weil' bubble, a small office, and a speech bubble with a suitcase. Jonas points at each with a friendly smile.\nCAMERA: Medium shot of Jonas, slight pan to the board.\nLIGHTING: Soft bright pastel studio light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (friendly, moderate) says in German: \"Das ist Niveau A2. Du sprichst über deinen Alltag und deine Arbeit.\" | Erzähler (clear, moderate) says in German: \"Du benutzt einfache Nebensätze, zum Beispiel mit „weil“ und „wenn“.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "A2",
+        "Nebensätze: weil, wenn, dass",
+        "Alltag und Beruf",
+        "Erfahrungen erzählen"
+      ]
+    },
+    {
+      "scene_id": "A2-S03",
+      "title": "Szene 1: Willkommen im Team",
+      "type": "dialog",
+      "estimated_duration_sec": 25.2,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 6.2
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 6.7
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 8.3
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 4.0
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Bright modern office kitchen with a coffee machine and plants.\nACTION: A bright modern office kitchen with plants and a coffee machine. Jonas stands at the coffee machine, turns with a welcoming smile as Mia enters. They shake hands, he offers her a cup of coffee, she accepts gratefully.\nCAMERA: Medium-wide shot of the kitchen, then calm eye-level shot/reverse shot.\nLIGHTING: Bright daylight from large windows, warm kitchen lamps.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (friendly, welcoming, moderate) says in German: \"Guten Morgen! Du bist bestimmt Mia, die neue Kollegin, oder?\" | Mia (a little nervous, smiling, moderate) says in German: \"Ja, genau. Ich bin Mia Navarro. Heute ist mein erster Arbeitstag.\" | Jonas (warm, moderate) says in German: \"Herzlich willkommen! Ich bin Jonas. Ich arbeite im Team Technik. Möchtest du einen Kaffee?\" | Mia (relieved, laughing, moderate) says in German: \"Gern, danke! Den brauche ich heute.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Herzlich willkommen!",
+        "Ich arbeite im Team Technik."
+      ]
+    },
+    {
+      "scene_id": "A2-S04",
+      "title": "Szene 2: Herkunft und Wohnort",
+      "type": "dialog",
+      "estimated_duration_sec": 33.6,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 5.1
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 8.9
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 4.0
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 7.8
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 7.8
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Office kitchen, high table by the window.\nACTION: Mia and Jonas stand at a high table by the window holding coffee cups. Thought bubbles show a sunny beach city (Valencia) and the Cologne Cathedral. Mia gestures happily while talking, Jonas listens with interest.\nCAMERA: Two-shot at the high table; thought-bubble illustrations of Valencia and Cologne Cathedral.\nLIGHTING: Soft window light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (curious, friendly, moderate) says in German: \"Woher kommst du denn? Dein Name klingt spanisch.\" | Mia (proud, warm, moderate) says in German: \"Ja, ich komme aus Valencia. Die Stadt liegt im Osten von Spanien, direkt am Meer.\" | Jonas (interested, moderate) says in German: \"Schön! Und wo wohnst du jetzt?\" | Mia (content, moderate) says in German: \"Ich wohne in Ehrenfeld. Meine Wohnung ist klein, aber ich mag das Viertel.\" | Jonas (friendly, moderate) says in German: \"Ehrenfeld ist toll! Ich wohne in Nippes, aber ich komme ursprünglich aus Leipzig.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Woher kommst du?",
+        "Wo wohnst du?",
+        "Ich wohne in Ehrenfeld."
+      ]
+    },
+    {
+      "scene_id": "A2-S05",
+      "title": "Szene 3: Seit wann in Deutschland? Deutschkenntnisse",
+      "type": "dialog",
+      "estimated_duration_sec": 36.9,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 4.0
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 10.0
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 4.5
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 12.2
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 6.2
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Office kitchen, high table by the window.\nACTION: Mia and Jonas continue at the high table. A simple calendar timeline pops up showing 'seit einem Jahr'. Mia counts on her fingers, Jonas gives an impressed nod, then an encouraging thumbs up.\nCAMERA: Two-shot with close-ups on the answers; short calendar timeline overlay.\nLIGHTING: Soft window light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (curious, moderate) says in German: \"Seit wann lebst du in Deutschland?\" | Mia (explaining, moderate) says in German: \"Seit einem Jahr. Ich bin im September nach Köln gezogen, weil ich hier einen Job gefunden habe.\" | Jonas (impressed, moderate) says in German: \"Und dein Deutsch ist schon richtig gut!\" | Mia (modest, smiling, moderate) says in German: \"Danke! Ich lerne seit zwei Jahren Deutsch. Aber manchmal mache ich noch Fehler. Wenn ich einen Fehler mache, korrigier mich bitte.\" | Jonas (reassuring, warm, moderate) says in German: \"Klar, gern. Aber ehrlich gesagt: Ich verstehe dich sehr gut.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Seit wann …?",
+        "seit einem Jahr",
+        "seit zwei Jahren",
+        "weil … / wenn …"
+      ]
+    },
+    {
+      "scene_id": "A2-S06",
+      "title": "Szene 4: Erfahrungen austauschen",
+      "type": "dialog",
+      "estimated_duration_sec": 44.1,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 5.1
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 11.1
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 4.0
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 12.7
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 9.4
+        },
+        {
+          "lines": [
+            5
+          ],
+          "duration": 1.8
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Office kitchen; thought bubbles show paper forms and a bike path along the Rhine.\nACTION: Mia and Jonas chat at the window table. Thought bubbles show a stack of paper forms (Mia rolls her eyes with a laugh), then a bicycle path along the sunny Rhine river (Mia beams). Jonas makes an inviting gesture; Mia nods happily.\nCAMERA: Two-shot, then thought-bubble overlays, finishing on a close-up of both agreeing.\nLIGHTING: Bright light, sunny and warm for the Rhine thought bubble.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (curious, moderate) says in German: \"Was war bis jetzt am schwierigsten in Deutschland?\" | Mia (amused, expressive, moderate) says in German: \"Die Bürokratie! Ich musste viele Formulare ausfüllen, obwohl ich nicht alle Wörter kannte. Aber die Leute waren sehr nett.\" | Jonas (friendly, moderate) says in German: \"Und was gefällt dir besonders gut?\" | Mia (enthusiastic, moderate) says in German: \"Ich fahre gern mit dem Fahrrad am Rhein entlang. Das habe ich in Valencia auch gemacht, weil es dort viele Radwege gibt.\" | Jonas (inviting, moderate) says in German: \"Dann komm doch am Samstag mit! Ich fahre immer am Rhein, wenn das Wetter schön ist.\" | Mia (delighted, moderate) says in German: \"Sehr gern!\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Erfahrungen: Was war schwierig? Was gefällt dir?",
+        "Perfekt: ich habe gemacht"
+      ]
+    },
+    {
+      "scene_id": "A2-S07",
+      "title": "Szene 5: Das Team trifft Mia",
+      "type": "dialog",
+      "estimated_duration_sec": 12.3,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 7.8
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 4.5
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Bright office corridor leading to an open-plan office.\nACTION: Mia and Jonas walk side by side down a bright office corridor toward an open-plan office. Jonas gestures ahead. Blurred colleagues in the background wave at them. Mia smiles with excitement.\nCAMERA: Side tracking shot, both walk side by side, background softly blurred.\nLIGHTING: Bright friendly office light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (friendly, moderate) says in German: \"Ich zeige dir jetzt dein Büro. Danach stelle ich dich dem Team vor.\" | Mia (excited, moderate) says in German: \"Super, danke dir! Ich freue mich schon.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Ich stelle dich dem Team vor."
+      ]
+    },
+    {
+      "scene_id": "A2-S08",
+      "title": "Wortschatz",
+      "type": "vocab",
+      "estimated_duration_sec": 33.4,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 6.2
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 7.1
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 8.2
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 6.5
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 5.4
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Bright pastel learning room with floating word cards.\nACTION: Bright pastel learning room with colorful word cards floating in. Mia and Jonas stand on either side, pointing at each card and pronouncing the phrase clearly.\nCAMERA: Static frontal shot, calm card pop-ins.\nLIGHTING: Bright pastel light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (encouraging, moderate) says in German: \"Diese Wörter und Sätze helfen dir im Gespräch. Sprich nach!\" | Mia (clear, moderate) says in German: \"der Kollege, die Kollegin. Der Arbeitstag. Herzlich willkommen!\" | Jonas (clear, moderate) says in German: \"wohnen, ziehen, leben. Ich lebe seit einem Jahr in Köln.\" | Mia (clear, moderate) says in German: \"der Fehler, korrigieren. Das Deutsch, die Kenntnisse.\" | Jonas (clear, moderate) says in German: \"ursprünglich, ehrlich gesagt, besonders gut.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "der Kollege / die Kollegin",
+        "der Arbeitstag",
+        "wohnen · leben · ziehen",
+        "der Fehler · korrigieren",
+        "ursprünglich",
+        "ehrlich gesagt"
+      ]
+    },
+    {
+      "scene_id": "A2-S09",
+      "title": "Grammatik: Nebensätze und „seit“",
+      "type": "grammar",
+      "estimated_duration_sec": 27.2,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 11.1
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 7.8
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 8.3
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Bright pastel learning room with colored sentence building blocks.\nACTION: Jonas stands next to a large screen with colorful sentence building blocks. He slides the verb block to the end of the sentence and it clicks into place. Second screen: 'seit + Dativ: seit einem Jahr, seit zwei Jahren'.\nCAMERA: Medium shot of Jonas, the block board fills the frame.\nLIGHTING: Bright, clear light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (clear, moderate) says in German: \"Im Nebensatz steht das Verb am Ende. Zum Beispiel mit „weil“: Ich wohne in Köln, weil ich hier arbeite.\" | Erzähler (clear, moderate) says in German: \"Mit „wenn“ ist es genauso: Wenn ich einen Fehler mache, korrigier mich bitte.\" | Erzähler (clear, moderate) says in German: \"Und für die Zeit sagst du „seit“: Ich lebe seit einem Jahr in Deutschland.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "weil / wenn / obwohl → Verb am Ende",
+        "Ich wohne in Köln, weil ich hier arbeite.",
+        "seit + Dativ: seit einem Jahr · seit zwei Jahren"
+      ]
+    },
+    {
+      "scene_id": "A2-S10",
+      "title": "Übung: Verbinde die Sätze",
+      "type": "exercise",
+      "estimated_duration_sec": 69.9,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 6.7
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 10.2
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 5.6
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 10.2
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 5.6
+        },
+        {
+          "lines": [
+            5
+          ],
+          "duration": 10.2
+        },
+        {
+          "lines": [
+            6
+          ],
+          "duration": 5.6
+        },
+        {
+          "lines": [
+            7
+          ],
+          "duration": 10.2
+        },
+        {
+          "lines": [
+            8
+          ],
+          "duration": 5.6
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Bright pastel learning room with a blackboard.\nACTION: Blackboard with two short sentences and a connector word. A countdown clock runs. Mia and Jonas stand beside it thinking with a hand on the chin, then celebrate as the combined sentence appears in green with the verb highlighted at the end.\nCAMERA: Frontal on the board, Mia and Jonas left and right.\nLIGHTING: Bright light.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (playful, moderate) says in German: \"Jetzt bist du dran! Verbinde die Sätze mit „weil“ oder „wenn“.\" | Erzähler (clear, moderate) says in German: \"Eins: Ich wohne in Köln. Ich arbeite hier. Mit „weil“.\" | Erzähler (pleased, moderate) says in German: \"Lösung: Ich wohne in Köln, weil ich hier arbeite.\" | Erzähler (clear, moderate) says in German: \"Zwei: Ich mache einen Fehler. Bitte korrigier mich. Mit „wenn“.\" | Erzähler (pleased, moderate) says in German: \"Lösung: Wenn ich einen Fehler mache, korrigier mich bitte.\" | Erzähler (clear, moderate) says in German: \"Drei: Ich lerne Deutsch. Ich will hier arbeiten. Mit „weil“.\" | Erzähler (pleased, moderate) says in German: \"Lösung: Ich lerne Deutsch, weil ich hier arbeiten will.\" | Erzähler (clear, moderate) says in German: \"Vier: Seit wann lebst du in Deutschland? Antworte mit „seit“.\" | Erzähler (pleased, moderate) says in German: \"Zum Beispiel: Ich lebe seit einem Jahr in Deutschland.\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "1. Ich wohne in Köln. + Ich arbeite hier. (weil)",
+        "2. Ich mache einen Fehler. + Korrigier mich bitte. (wenn)",
+        "3. Ich lerne Deutsch. + Ich will hier arbeiten. (weil)",
+        "4. Seit wann …? → seit …"
+      ]
+    },
+    {
+      "scene_id": "A2-S11",
+      "title": "Abschluss: Mach mit!",
+      "type": "outro",
+      "estimated_duration_sec": 17.5,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 5.6
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 3.4
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 5.6
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 2.9
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Mia carries a laptop bag; Jonas holds a coffee mug\nLOCATION: Sunny office rooftop terrace with the Cologne Cathedral in the distance; ends on a logo end card.\nACTION: Mia and Jonas stand on a sunny office rooftop terrace with the Cologne Cathedral in the distance. They raise their coffee cups toward the camera, point playfully at the viewer and wave. Smooth transition to an end card.\nCAMERA: Medium shot, slow zoom-out over the rooftops, dissolve to end card.\nLIGHTING: Warm afternoon light with golden edges.\nDIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Mia (inviting, warm, moderate) says in German: \"Und du? Woher kommst du und wo wohnst du?\" | Jonas (curious, warm, moderate) says in German: \"Seit wann lernst du Deutsch?\" | Erzähler (friendly, moderate) says in German: \"Schreib es in die Kommentare! Benutze „weil“ oder „seit“.\" | Erzähler (warm, moderate) says in German: \"Bis zum nächsten Video!\"\nMUSIC / AMBIENCE: light pizzicato strings, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Woher kommst du? Wo wohnst du?",
+        "Seit wann lernst du Deutsch?",
+        "Schreib in die Kommentare!",
+        "Abonnieren"
+      ]
+    }
+  ]
+}

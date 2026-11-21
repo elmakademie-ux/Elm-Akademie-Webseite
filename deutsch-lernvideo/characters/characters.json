@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "continuity_rule": "Jede Folge ist ein eigenständiges Kennenlernen (Reboot). Aussehen, Kleidung und Stimme bleiben in ALLEN Szenen aller vier Videos exakt gleich. Nur die Lebensdaten unter episode_profiles ändern sich.",
+  "characters": {
+    "mia": {
+      "display_name": "Mia",
+      "full_name": "Mia Navarro",
+      "role": "Person A",
+      "age_look": "about 27",
+      "personality": "freundlich, offen, neugierig, lacht schnell",
+      "appearance": "young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall",
+      "wardrobe": "mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings",
+      "signature": "mustard-yellow cardigan + dark wavy hair + silver hoop earrings",
+      "voice": "young woman, warm, bright and clear, native Standard German (Hochdeutsch), very clear articulation, friendly smile in the voice"
+    },
+    "jonas": {
+      "display_name": "Jonas",
+      "full_name": "Jonas Keller",
+      "role": "Person B",
+      "age_look": "about 29",
+      "personality": "ruhig, freundlich, humorvoll, aufmerksamer Zuhörer",
+      "appearance": "young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall",
+      "wardrobe": "denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes",
+      "signature": "denim-blue shirt + short tousled brown hair + calm smile",
+      "voice": "young man, calm, warm, medium-low pitch, native Standard German (Hochdeutsch), clear articulation, friendly and relaxed"
+    },
+    "narrator": {
+      "display_name": "Erzähler",
+      "role": "Sprecher aus dem Off (kein sichtbarer Charakter)",
+      "voice": "neutral, warm and encouraging off-screen narrator, native Standard German, very clear articulation, teacher-like but not stiff"
+    }
+  },
+  "episode_profiles": {
+    "A1": {
+      "mia": "kommt aus Valencia (Spanien), wohnt in Köln, ist neu in der Stadt",
+      "jonas": "kommt aus Leipzig (Deutschland), wohnt in Köln",
+      "accessories": "Jonas hält einen Kaffeebecher, Mia trägt eine kleine Umhängetasche",
+      "props_en": "Jonas holds a coffee cup; Mia carries a small shoulder bag"
+    },
+    "A2": {
+      "mia": "neue Kollegin bei der Lernwerk GmbH, lebt seit einem Jahr in Köln, lernt seit zwei Jahren Deutsch",
+      "jonas": "Kollege im Team Technik, wohnt in Köln-Nippes",
+      "accessories": "Mia: Laptop-Tasche; Jonas: Kaffeetasse",
+      "props_en": "Mia carries a laptop bag; Jonas holds a coffee mug"
+    },
+    "B1": {
+      "mia": "Projektkoordinatorin, lebt seit fast drei Jahren in Köln",
+      "jonas": "Softwareentwickler, Studienfreund der Gastgeberin Sophie",
+      "accessories": "Mia und Jonas halten Getränke; Luftballons im Hintergrund",
+      "props_en": "Mia and Jonas hold drinks; balloons and string lights in the background"
+    },
+    "B2": {
+      "mia": "Projektleiterin E-Learning bei der Lernwerk GmbH, lebt seit sechs Jahren in Köln",
+      "jonas": "Leiter Entwicklung bei der Lernplattform Lernfluss",
+      "accessories": "beide tragen ein Namensschild an einem Band (einziger Unterschied zu den anderen Folgen); Visitenkarten",
+      "props_en": "both wear a conference badge on a lanyard (the only difference to the other episodes); business cards"
+    }
+  },
+  "consistency_checklist": [
+    "Gleiche Haarfarbe, Haarlänge und Frisur in jeder Szene",
+    "Gleiche Kleidung und gleiche Farben in jeder Szene",
+    "Gleiche Körpergröße im Verhältnis zueinander (Jonas ca. 14 cm größer als Mia)",
+    "Gleiche Gesichtsform, Augenfarbe und Hautton",
+    "Gleicher Animationsstil, gleiche Proportionen, gleiche Stimme pro Figur",
+    "Immer dieselben Referenzbilder (characters/reference/*.png) als Bildeingabe verwenden"
+  ],
+  "reference_image_prompts": {
+    "mia": "3D animated feature-film style character turnaround sheet (front, 3/4, side, back) of a young woman, about 27, shoulder-length dark brown wavy hair with soft side parting, large warm brown eyes, light olive skin, mustard-yellow knitted cardigan over white t-shirt, dark blue slim jeans, white sneakers, silver hoop earrings, friendly smile, neutral standing pose, plain light-grey background, soft studio lighting, high detail, consistent proportions, also a row of 6 facial expressions (happy, surprised, curious, shy, laughing, thoughtful)",
+    "jonas": "3D animated feature-film style character turnaround sheet (front, 3/4, side, back) of a young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven, denim-blue button-up shirt with rolled sleeves over white t-shirt, beige chino trousers, brown leather shoes, calm friendly smile, neutral standing pose, plain light-grey background, soft studio lighting, high detail, consistent proportions, also a row of 6 facial expressions (happy, surprised, curious, shy, laughing, thoughtful)"
+  }
+}

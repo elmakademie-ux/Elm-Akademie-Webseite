@@ -1,0 +1,239 @@
+{
+  "level": "A1",
+  "title": "Hallo! Ich heiße … – Begrüßen und sich vorstellen",
+  "scenes": [
+    {
+      "scene_id": "A1-S01",
+      "type": "hook",
+      "start_est": 0.0,
+      "end_est": 15.0,
+      "clips": [
+        "clips/A1/A1-S01_c01.mp4",
+        "clips/A1/A1-S01_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S01-L01_narrator.mp3",
+        "audio/A1/A1-S01-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Hallo!"
+      ]
+    },
+    {
+      "scene_id": "A1-S02",
+      "type": "intro",
+      "start_est": 15.0,
+      "end_est": 30.0,
+      "clips": [
+        "clips/A1/A1-S02_c01.mp4",
+        "clips/A1/A1-S02_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S02-L01_narrator.mp3",
+        "audio/A1/A1-S02-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "A1",
+        "Kurze Sätze",
+        "Langsam sprechen",
+        "Laut mitsprechen!"
+      ]
+    },
+    {
+      "scene_id": "A1-S03",
+      "type": "dialog",
+      "start_est": 30.0,
+      "end_est": 38.229,
+      "clips": [
+        "clips/A1/A1-S03_c01.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S03-L01_mia.mp3",
+        "audio/A1/A1-S03-L02_jonas.mp3",
+        "audio/A1/A1-S03-L03_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Hallo!",
+        "Guten Morgen!"
+      ]
+    },
+    {
+      "scene_id": "A1-S04",
+      "type": "dialog",
+      "start_est": 38.229,
+      "end_est": 58.047,
+      "clips": [
+        "clips/A1/A1-S04_c01.mp4",
+        "clips/A1/A1-S04_c02.mp4",
+        "clips/A1/A1-S04_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S04-L01_jonas.mp3",
+        "audio/A1/A1-S04-L02_mia.mp3",
+        "audio/A1/A1-S04-L03_jonas.mp3",
+        "audio/A1/A1-S04-L04_mia.mp3",
+        "audio/A1/A1-S04-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Ich heiße …",
+        "Wie heißt du?",
+        "Freut mich!"
+      ]
+    },
+    {
+      "scene_id": "A1-S05",
+      "type": "dialog",
+      "start_est": 58.047,
+      "end_est": 84.412,
+      "clips": [
+        "clips/A1/A1-S05_c01.mp4",
+        "clips/A1/A1-S05_c02.mp4",
+        "clips/A1/A1-S05_c03.mp4",
+        "clips/A1/A1-S05_c04.mp4",
+        "clips/A1/A1-S05_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S05-L01_jonas.mp3",
+        "audio/A1/A1-S05-L02_mia.mp3",
+        "audio/A1/A1-S05-L03_mia.mp3",
+        "audio/A1/A1-S05-L04_jonas.mp3",
+        "audio/A1/A1-S05-L05_mia.mp3",
+        "audio/A1/A1-S05-L06_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Woher kommst du?",
+        "Ich komme aus …",
+        "Spanien – Valencia",
+        "Deutschland – Leipzig"
+      ]
+    },
+    {
+      "scene_id": "A1-S06",
+      "type": "dialog",
+      "start_est": 84.412,
+      "end_est": 91.647,
+      "clips": [
+        "clips/A1/A1-S06_c01.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S06-L01_mia.mp3",
+        "audio/A1/A1-S06-L02_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Tschüss!",
+        "Bis bald!"
+      ]
+    },
+    {
+      "scene_id": "A1-S07",
+      "type": "vocab",
+      "start_est": 91.647,
+      "end_est": 122.288,
+      "clips": [
+        "clips/A1/A1-S07_c01.mp4",
+        "clips/A1/A1-S07_c02.mp4",
+        "clips/A1/A1-S07_c03.mp4",
+        "clips/A1/A1-S07_c04.mp4",
+        "clips/A1/A1-S07_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S07-L01_narrator.mp3",
+        "audio/A1/A1-S07-L02_mia.mp3",
+        "audio/A1/A1-S07-L03_jonas.mp3",
+        "audio/A1/A1-S07-L04_mia.mp3",
+        "audio/A1/A1-S07-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Hallo",
+        "Guten Morgen",
+        "Tschüss",
+        "Ich heiße …",
+        "Wie heißt du?",
+        "Ich komme aus …",
+        "Woher kommst du?",
+        "Freut mich!"
+      ]
+    },
+    {
+      "scene_id": "A1-S08",
+      "type": "grammar",
+      "start_est": 122.288,
+      "end_est": 149.482,
+      "clips": [
+        "clips/A1/A1-S08_c01.mp4",
+        "clips/A1/A1-S08_c02.mp4",
+        "clips/A1/A1-S08_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S08-L01_narrator.mp3",
+        "audio/A1/A1-S08-L02_narrator.mp3",
+        "audio/A1/A1-S08-L03_narrator.mp3"
+      ],
+      "overlay_text": [
+        "ich heiße – du heißt",
+        "ich komme – du kommst",
+        "ich bin – du bist",
+        "Wie heißt du?",
+        "Woher kommst du?"
+      ]
+    },
+    {
+      "scene_id": "A1-S09",
+      "type": "exercise",
+      "start_est": 149.482,
+      "end_est": 196.9,
+      "clips": [
+        "clips/A1/A1-S09_c01.mp4",
+        "clips/A1/A1-S09_c02.mp4",
+        "clips/A1/A1-S09_c03.mp4",
+        "clips/A1/A1-S09_c04.mp4",
+        "clips/A1/A1-S09_c05.mp4",
+        "clips/A1/A1-S09_c06.mp4",
+        "clips/A1/A1-S09_c07.mp4",
+        "clips/A1/A1-S09_c08.mp4",
+        "clips/A1/A1-S09_c09.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S09-L01_narrator.mp3",
+        "audio/A1/A1-S09-L02_narrator.mp3",
+        "audio/A1/A1-S09-L03_narrator.mp3",
+        "audio/A1/A1-S09-L04_narrator.mp3",
+        "audio/A1/A1-S09-L05_narrator.mp3",
+        "audio/A1/A1-S09-L06_narrator.mp3",
+        "audio/A1/A1-S09-L07_narrator.mp3",
+        "audio/A1/A1-S09-L08_narrator.mp3",
+        "audio/A1/A1-S09-L09_narrator.mp3"
+      ],
+      "overlay_text": [
+        "1. Wie ___ du?  → heißt",
+        "2. Ich ___ Mia.  → heiße",
+        "3. Woher ___ du?  → kommst",
+        "4. Ich ___ aus Spanien.  → komme"
+      ]
+    },
+    {
+      "scene_id": "A1-S10",
+      "type": "outro",
+      "start_est": 196.9,
+      "end_est": 216.524,
+      "clips": [
+        "clips/A1/A1-S10_c01.mp4",
+        "clips/A1/A1-S10_c02.mp4",
+        "clips/A1/A1-S10_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/A1/A1-S10-L01_mia.mp3",
+        "audio/A1/A1-S10-L02_jonas.mp3",
+        "audio/A1/A1-S10-L03_narrator.mp3",
+        "audio/A1/A1-S10-L04_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Ich heiße …",
+        "Ich komme aus …",
+        "Schreib in die Kommentare!",
+        "Abonnieren"
+      ]
+    }
+  ],
+  "subtitles": "subtitles/A1.srt"
+}

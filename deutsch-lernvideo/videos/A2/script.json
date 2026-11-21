@@ -1,0 +1,706 @@
+{
+  "id": "A2",
+  "level": "A2",
+  "level_name": "Grundlegende Sprachkenntnisse",
+  "title": "Neue Kollegen kennenlernen – Mein erster Arbeitstag",
+  "subtitle": "Deutsch lernen A2: Herkunft, Wohnort, Deutschkenntnisse",
+  "target_duration_sec": 340,
+  "form_of_address": "du",
+  "can_do": "Ich kann mich im Alltag und im Beruf vorstellen, über Herkunft, Wohnort und Deutschkenntnisse sprechen und einfache Erfahrungen erzählen.",
+  "social": {
+    "title_youtube": "Deutsch lernen A2: Neue Kollegen kennenlernen | Sich vorstellen im Alltag",
+    "hashtags": [
+      "#DeutschLernen",
+      "#LearnGerman",
+      "#A2",
+      "#DeutschAmArbeitsplatz",
+      "#GermanConversation"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "A2-S01",
+      "type": "hook",
+      "title": "Hook: Erster Arbeitstag",
+      "location": "Eingang eines modernen Bürogebäudes in Köln, Vormittag",
+      "characters": [
+        "mia"
+      ],
+      "description": "Mia steht mit Laptop-Tasche vor der Glastür der Firma. Im Kopf von Mia erscheinen Sprechblasen mit Fragen, die sie durcheinanderwirbeln. Sie atmet tief durch und lächelt.",
+      "direction": {
+        "camera": "Langsame Fahrt von hinten auf Mia zu, dann Nahaufnahme ihres Gesichts; Sprechblasen wirbeln im Bild.",
+        "lighting": "Kühles Vormittagslicht, Reflexe in der Glasfassade; beim Lächeln wird das Licht wärmer.",
+        "animation": "Nervöses Atmen, Schultern heben und senken sich, dann entschlossenes Nicken.",
+        "music": "Spannungsvolles, dann aufhellendes Pizzicato."
+      },
+      "visual": "Mia stands in front of a modern glass office building holding a laptop bag, looking slightly nervous. Small thought bubbles with question marks swirl around her head. She takes a deep breath and smiles with determination.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Erster Arbeitstag. Alle Gesichter sind neu. Was sagst du?",
+          "emotion": "curious, slightly dramatic, moderate-slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Heute lernst du, wie du dich vorstellst, wenn du neue Kollegen triffst.",
+          "emotion": "encouraging, moderate-slow"
+        }
+      ],
+      "on_screen": [
+        "Erster Arbeitstag!"
+      ],
+      "prompt_en": {
+        "location": "Entrance of a modern glass office building in Cologne, mid-morning",
+        "camera": "Slow tracking shot from behind toward Mia, then close-up on her face; thought bubbles swirl",
+        "lighting": "Cool morning light with reflections in the glass facade, turning warmer when she smiles"
+      }
+    },
+    {
+      "id": "A2-S02",
+      "type": "intro",
+      "title": "Einführung: Niveau A2",
+      "location": "Heller Titelraum mit Büro-Silhouette",
+      "characters": [
+        "jonas"
+      ],
+      "description": "Jonas steht neben einer Tafel mit „A2“ und erklärt das Niveau. Drei Symbole erscheinen: Nebensätze, Alltag und Beruf, Erfahrungen erzählen.",
+      "direction": {
+        "camera": "Halbnah auf Jonas, leichter Schwenk zur Tafel.",
+        "lighting": "Helles, weiches Studiolicht, pastellfarben.",
+        "animation": "Jonas zeigt nacheinander auf die drei Symbole und nickt.",
+        "music": "Leise Pizzicato-Melodie."
+      },
+      "visual": "Jonas stands next to a big blackboard reading 'A2'. Three icons appear one after another: a sentence with a 'weil' bubble, a small office, and a speech bubble with a suitcase. Jonas points at each with a friendly smile.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Das ist Niveau A2. Du sprichst über deinen Alltag und deine Arbeit.",
+          "emotion": "friendly, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Du benutzt einfache Nebensätze, zum Beispiel mit „weil“ und „wenn“.",
+          "emotion": "clear, moderate"
+        }
+      ],
+      "on_screen": [
+        "A2",
+        "Nebensätze: weil, wenn, dass",
+        "Alltag und Beruf",
+        "Erfahrungen erzählen"
+      ],
+      "prompt_en": {
+        "location": "Bright title space with an office silhouette",
+        "camera": "Medium shot of Jonas, slight pan to the board",
+        "lighting": "Soft bright pastel studio light"
+      }
+    },
+    {
+      "id": "A2-S03",
+      "type": "dialog",
+      "title": "Szene 1: Willkommen im Team",
+      "location": "Helle Büroküche mit Kaffeemaschine und Pflanzen",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia betritt die Büroküche. Jonas steht an der Kaffeemaschine und erkennt die neue Kollegin. Er begrüßt sie herzlich und bietet ihr einen Kaffee an.",
+      "direction": {
+        "camera": "Halbtotale in der Küche, dann ruhiger Schuss-Gegenschuss auf Augenhöhe.",
+        "lighting": "Helles Tageslicht von großen Fenstern, warme Küchenlampen.",
+        "animation": "Jonas dreht sich überrascht um und lächelt, Mia nickt erleichtert, beide geben sich die Hand.",
+        "music": "Leichte Pizzicato-Begleitung."
+      },
+      "visual": "A bright modern office kitchen with plants and a coffee machine. Jonas stands at the coffee machine, turns with a welcoming smile as Mia enters. They shake hands, he offers her a cup of coffee, she accepts gratefully.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Guten Morgen! Du bist bestimmt Mia, die neue Kollegin, oder?",
+          "emotion": "friendly, welcoming, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ja, genau. Ich bin Mia Navarro. Heute ist mein erster Arbeitstag.",
+          "emotion": "a little nervous, smiling, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Herzlich willkommen! Ich bin Jonas. Ich arbeite im Team Technik. Möchtest du einen Kaffee?",
+          "emotion": "warm, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Gern, danke! Den brauche ich heute.",
+          "emotion": "relieved, laughing, moderate"
+        }
+      ],
+      "on_screen": [
+        "Herzlich willkommen!",
+        "Ich arbeite im Team Technik."
+      ],
+      "prompt_en": {
+        "location": "Bright modern office kitchen with a coffee machine and plants",
+        "camera": "Medium-wide shot of the kitchen, then calm eye-level shot/reverse shot",
+        "lighting": "Bright daylight from large windows, warm kitchen lamps"
+      }
+    },
+    {
+      "id": "A2-S04",
+      "type": "dialog",
+      "title": "Szene 2: Herkunft und Wohnort",
+      "location": "Büroküche, Stehtisch am Fenster",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Beide stehen mit Kaffeetassen am Stehtisch. Jonas fragt nach Mias Herkunft und Wohnort. Eine kleine Illustration zeigt Valencia am Meer und danach Köln mit dem Dom.",
+      "direction": {
+        "camera": "Zweier-Einstellung am Stehtisch; Einblendung zweier Illustrationen (Valencia, Kölner Dom) als Gedankenblasen.",
+        "lighting": "Weiches Fensterlicht.",
+        "animation": "Mia schwärmt mit offenen Händen von Valencia, Jonas nickt neugierig und lächelt.",
+        "music": "Leise, fröhlich."
+      },
+      "visual": "Mia and Jonas stand at a high table by the window holding coffee cups. Thought bubbles show a sunny beach city (Valencia) and the Cologne Cathedral. Mia gestures happily while talking, Jonas listens with interest.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Woher kommst du denn? Dein Name klingt spanisch.",
+          "emotion": "curious, friendly, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ja, ich komme aus Valencia. Die Stadt liegt im Osten von Spanien, direkt am Meer.",
+          "emotion": "proud, warm, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Schön! Und wo wohnst du jetzt?",
+          "emotion": "interested, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ich wohne in Ehrenfeld. Meine Wohnung ist klein, aber ich mag das Viertel.",
+          "emotion": "content, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Ehrenfeld ist toll! Ich wohne in Nippes, aber ich komme ursprünglich aus Leipzig.",
+          "emotion": "friendly, moderate"
+        }
+      ],
+      "on_screen": [
+        "Woher kommst du?",
+        "Wo wohnst du?",
+        "Ich wohne in Ehrenfeld."
+      ],
+      "prompt_en": {
+        "location": "Office kitchen, high table by the window",
+        "camera": "Two-shot at the high table; thought-bubble illustrations of Valencia and Cologne Cathedral",
+        "lighting": "Soft window light"
+      }
+    },
+    {
+      "id": "A2-S05",
+      "type": "dialog",
+      "title": "Szene 3: Seit wann in Deutschland? Deutschkenntnisse",
+      "location": "Büroküche, Stehtisch am Fenster",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas fragt, seit wann Mia in Deutschland lebt. Eine Zeitleiste blendet kurz „vor einem Jahr“ ein. Mia spricht über ihre Deutschkenntnisse und bittet um Korrekturen.",
+      "direction": {
+        "camera": "Zweier-Einstellung, Nahaufnahmen bei den Antworten; kurze Einblendung einer Kalender-Zeitleiste.",
+        "lighting": "Unverändert.",
+        "animation": "Mia zählt mit den Fingern „ein Jahr“ und „zwei Jahre“, Jonas macht eine anerkennende Geste.",
+        "music": "Leise Begleitung."
+      },
+      "visual": "Mia and Jonas continue at the high table. A simple calendar timeline pops up showing 'seit einem Jahr'. Mia counts on her fingers, Jonas gives an impressed nod, then an encouraging thumbs up.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Seit wann lebst du in Deutschland?",
+          "emotion": "curious, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Seit einem Jahr. Ich bin im September nach Köln gezogen, weil ich hier einen Job gefunden habe.",
+          "emotion": "explaining, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Und dein Deutsch ist schon richtig gut!",
+          "emotion": "impressed, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Danke! Ich lerne seit zwei Jahren Deutsch. Aber manchmal mache ich noch Fehler. Wenn ich einen Fehler mache, korrigier mich bitte.",
+          "emotion": "modest, smiling, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Klar, gern. Aber ehrlich gesagt: Ich verstehe dich sehr gut.",
+          "emotion": "reassuring, warm, moderate"
+        }
+      ],
+      "on_screen": [
+        "Seit wann …?",
+        "seit einem Jahr",
+        "seit zwei Jahren",
+        "weil … / wenn …"
+      ],
+      "prompt_en": {
+        "location": "Office kitchen, high table by the window",
+        "camera": "Two-shot with close-ups on the answers; short calendar timeline overlay",
+        "lighting": "Soft window light"
+      }
+    },
+    {
+      "id": "A2-S06",
+      "type": "dialog",
+      "title": "Szene 4: Erfahrungen austauschen",
+      "location": "Büroküche, später Blick aus dem Fenster auf eine Rheinpromenade",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas fragt nach Mias Erfahrungen. Mia erzählt von der Bürokratie und vom Radfahren am Rhein. Jonas lädt sie zu einer Radtour ein. Illustrierte Szenen erscheinen als Gedankenblasen: Formulare, dann Fahrrad am Rhein.",
+      "direction": {
+        "camera": "Zweier-Einstellung, dann Gedankenblasen als Einblendung; zum Schluss Nahaufnahme von beiden beim Zusagen.",
+        "lighting": "Helles Licht, am Ende sonnig und warm (Gedanke an den Rhein).",
+        "animation": "Mia verdreht lachend die Augen bei „Formulare“, strahlt bei „Fahrrad“; Jonas macht eine einladende Geste.",
+        "music": "Leichte, hoffnungsvolle Melodie."
+      },
+      "visual": "Mia and Jonas chat at the window table. Thought bubbles show a stack of paper forms (Mia rolls her eyes with a laugh), then a bicycle path along the sunny Rhine river (Mia beams). Jonas makes an inviting gesture; Mia nods happily.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Was war bis jetzt am schwierigsten in Deutschland?",
+          "emotion": "curious, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Die Bürokratie! Ich musste viele Formulare ausfüllen, obwohl ich nicht alle Wörter kannte. Aber die Leute waren sehr nett.",
+          "emotion": "amused, expressive, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Und was gefällt dir besonders gut?",
+          "emotion": "friendly, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ich fahre gern mit dem Fahrrad am Rhein entlang. Das habe ich in Valencia auch gemacht, weil es dort viele Radwege gibt.",
+          "emotion": "enthusiastic, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Dann komm doch am Samstag mit! Ich fahre immer am Rhein, wenn das Wetter schön ist.",
+          "emotion": "inviting, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Sehr gern!",
+          "emotion": "delighted, moderate"
+        }
+      ],
+      "on_screen": [
+        "Erfahrungen: Was war schwierig? Was gefällt dir?",
+        "Perfekt: ich habe gemacht"
+      ],
+      "prompt_en": {
+        "location": "Office kitchen; thought bubbles show paper forms and a bike path along the Rhine",
+        "camera": "Two-shot, then thought-bubble overlays, finishing on a close-up of both agreeing",
+        "lighting": "Bright light, sunny and warm for the Rhine thought bubble"
+      }
+    },
+    {
+      "id": "A2-S07",
+      "type": "dialog",
+      "title": "Szene 5: Das Team trifft Mia",
+      "location": "Büroflur zu einem Großraumbüro",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas führt Mia durch den Flur zu ihrem Schreibtisch. Im Hintergrund winken Kollegen (Nebenfiguren, nur unscharf im Hintergrund).",
+      "direction": {
+        "camera": "Tracking-Shot seitlich, beide gehen nebeneinander; Hintergrund leicht unscharf.",
+        "lighting": "Helles, freundliches Büro-Licht.",
+        "animation": "Beide gehen locker, Jonas zeigt mit der Hand voraus; Mia lächelt aufgeregt.",
+        "music": "Fröhlich, Ausklang."
+      },
+      "visual": "Mia and Jonas walk side by side down a bright office corridor toward an open-plan office. Jonas gestures ahead. Blurred colleagues in the background wave at them. Mia smiles with excitement.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Ich zeige dir jetzt dein Büro. Danach stelle ich dich dem Team vor.",
+          "emotion": "friendly, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "Super, danke dir! Ich freue mich schon.",
+          "emotion": "excited, moderate"
+        }
+      ],
+      "on_screen": [
+        "Ich stelle dich dem Team vor."
+      ],
+      "prompt_en": {
+        "location": "Bright office corridor leading to an open-plan office",
+        "camera": "Side tracking shot, both walk side by side, background softly blurred",
+        "lighting": "Bright friendly office light"
+      }
+    },
+    {
+      "id": "A2-S08",
+      "type": "vocab",
+      "title": "Wortschatz",
+      "location": "Heller Lernraum mit Wortkarten",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Wortkarten fliegen ein. Mia und Jonas sprechen die wichtigsten Wörter und Wendungen vor.",
+      "direction": {
+        "camera": "Frontal, ruhige Einblendungen.",
+        "lighting": "Hell, pastellfarben.",
+        "animation": "Mia und Jonas sprechen abwechselnd, zeigen auf die Karten.",
+        "music": "Leise."
+      },
+      "visual": "Bright pastel learning room with colorful word cards floating in. Mia and Jonas stand on either side, pointing at each card and pronouncing the phrase clearly.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Diese Wörter und Sätze helfen dir im Gespräch. Sprich nach!",
+          "emotion": "encouraging, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "der Kollege, die Kollegin. Der Arbeitstag. Herzlich willkommen!",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "jonas",
+          "text": "wohnen, ziehen, leben. Ich lebe seit einem Jahr in Köln.",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "mia",
+          "text": "der Fehler, korrigieren. Das Deutsch, die Kenntnisse.",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "jonas",
+          "text": "ursprünglich, ehrlich gesagt, besonders gut.",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        }
+      ],
+      "on_screen": [
+        "der Kollege / die Kollegin",
+        "der Arbeitstag",
+        "wohnen · leben · ziehen",
+        "der Fehler · korrigieren",
+        "ursprünglich",
+        "ehrlich gesagt"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with floating word cards",
+        "camera": "Static frontal shot, calm card pop-ins",
+        "lighting": "Bright pastel light"
+      }
+    },
+    {
+      "id": "A2-S09",
+      "type": "grammar",
+      "title": "Grammatik: Nebensätze und „seit“",
+      "location": "Heller Lernraum mit Satzbaukasten",
+      "characters": [
+        "jonas"
+      ],
+      "description": "Satzbausteine in Farbe zeigen, wie das Verb im Nebensatz ans Ende wandert. Daneben die Zeitangabe „seit“ mit Dativ.",
+      "direction": {
+        "camera": "Halbnah auf Jonas, Einblendung des Satzbaukastens formatfüllend.",
+        "lighting": "Hell, klar.",
+        "animation": "Jonas schiebt das farbige Verb-Bauteil ans Satzende; es rastet mit einem Klick ein.",
+        "music": "Sehr leise."
+      },
+      "visual": "Jonas stands next to a large screen with colorful sentence building blocks. He slides the verb block to the end of the sentence and it clicks into place. Second screen: 'seit + Dativ: seit einem Jahr, seit zwei Jahren'.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Im Nebensatz steht das Verb am Ende. Zum Beispiel mit „weil“: Ich wohne in Köln, weil ich hier arbeite.",
+          "emotion": "clear, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Mit „wenn“ ist es genauso: Wenn ich einen Fehler mache, korrigier mich bitte.",
+          "emotion": "clear, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Und für die Zeit sagst du „seit“: Ich lebe seit einem Jahr in Deutschland.",
+          "emotion": "clear, moderate"
+        }
+      ],
+      "on_screen": [
+        "weil / wenn / obwohl → Verb am Ende",
+        "Ich wohne in Köln, weil ich hier arbeite.",
+        "seit + Dativ: seit einem Jahr · seit zwei Jahren"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with colored sentence building blocks",
+        "camera": "Medium shot of Jonas, the block board fills the frame",
+        "lighting": "Bright, clear light"
+      }
+    },
+    {
+      "id": "A2-S10",
+      "type": "exercise",
+      "title": "Übung: Verbinde die Sätze",
+      "location": "Heller Lernraum mit Tafel",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Vier Aufgaben: Zwei Hauptsätze werden zu einem Satz mit Nebensatz verbunden. Nach einer Denkpause erscheint die Lösung. Danach folgt eine Sprechaufgabe.",
+      "direction": {
+        "camera": "Frontal auf die Tafel, Mia und Jonas stehen links und rechts.",
+        "lighting": "Hell.",
+        "animation": "Beide denken nach (Hand am Kinn), freuen sich bei der Lösung.",
+        "music": "Leichte Quiz-Melodie in den Denkpausen."
+      },
+      "visual": "Blackboard with two short sentences and a connector word. A countdown clock runs. Mia and Jonas stand beside it thinking with a hand on the chin, then celebrate as the combined sentence appears in green with the verb highlighted at the end.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Jetzt bist du dran! Verbinde die Sätze mit „weil“ oder „wenn“.",
+          "emotion": "playful, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Eins: Ich wohne in Köln. Ich arbeite hier. Mit „weil“.",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Lösung: Ich wohne in Köln, weil ich hier arbeite.",
+          "emotion": "pleased, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Zwei: Ich mache einen Fehler. Bitte korrigier mich. Mit „wenn“.",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Lösung: Wenn ich einen Fehler mache, korrigier mich bitte.",
+          "emotion": "pleased, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Drei: Ich lerne Deutsch. Ich will hier arbeiten. Mit „weil“.",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Lösung: Ich lerne Deutsch, weil ich hier arbeiten will.",
+          "emotion": "pleased, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Vier: Seit wann lebst du in Deutschland? Antworte mit „seit“.",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Zum Beispiel: Ich lebe seit einem Jahr in Deutschland.",
+          "emotion": "pleased, moderate"
+        }
+      ],
+      "on_screen": [
+        "1. Ich wohne in Köln. + Ich arbeite hier. (weil)",
+        "2. Ich mache einen Fehler. + Korrigier mich bitte. (wenn)",
+        "3. Ich lerne Deutsch. + Ich will hier arbeiten. (weil)",
+        "4. Seit wann …? → seit …"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with a blackboard",
+        "camera": "Frontal on the board, Mia and Jonas left and right",
+        "lighting": "Bright light"
+      }
+    },
+    {
+      "id": "A2-S11",
+      "type": "outro",
+      "title": "Abschluss: Mach mit!",
+      "location": "Büro-Dachterrasse mit Blick auf den Kölner Dom, Nachmittagslicht; am Ende Logo-Endcard",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia und Jonas stehen mit Kaffeetassen auf der Terrasse und laden die Zuschauer ein, sich in den Kommentaren vorzustellen. Danach Endcard mit Logo.",
+      "direction": {
+        "camera": "Halbnah, leichter Zoom-out über die Dächer, Überblendung zur Endcard.",
+        "lighting": "Warmes Nachmittagslicht, goldene Kanten.",
+        "animation": "Beide prosten mit den Tassen, zeigen auf die Kamera und winken.",
+        "music": "Hauptmelodie, Ausklang."
+      },
+      "visual": "Mia and Jonas stand on a sunny office rooftop terrace with the Cologne Cathedral in the distance. They raise their coffee cups toward the camera, point playfully at the viewer and wave. Smooth transition to an end card.",
+      "lines": [
+        {
+          "speaker": "mia",
+          "text": "Und du? Woher kommst du und wo wohnst du?",
+          "emotion": "inviting, warm, moderate"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Seit wann lernst du Deutsch?",
+          "emotion": "curious, warm, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Schreib es in die Kommentare! Benutze „weil“ oder „seit“.",
+          "emotion": "friendly, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Bis zum nächsten Video!",
+          "emotion": "warm, moderate"
+        }
+      ],
+      "on_screen": [
+        "Woher kommst du? Wo wohnst du?",
+        "Seit wann lernst du Deutsch?",
+        "Schreib in die Kommentare!",
+        "Abonnieren"
+      ],
+      "prompt_en": {
+        "location": "Sunny office rooftop terrace with the Cologne Cathedral in the distance; ends on a logo end card",
+        "camera": "Medium shot, slow zoom-out over the rooftops, dissolve to end card",
+        "lighting": "Warm afternoon light with golden edges"
+      }
+    }
+  ],
+  "vocabulary": [
+    {
+      "de": "der Kollege / die Kollegin",
+      "en": "colleague (m/f)",
+      "example": "Du bist die neue Kollegin."
+    },
+    {
+      "de": "der Arbeitstag",
+      "en": "working day",
+      "example": "Heute ist mein erster Arbeitstag."
+    },
+    {
+      "de": "Herzlich willkommen!",
+      "en": "Welcome!",
+      "example": "Herzlich willkommen im Team!"
+    },
+    {
+      "de": "wohnen",
+      "en": "to live (at a place)",
+      "example": "Ich wohne in Ehrenfeld."
+    },
+    {
+      "de": "leben",
+      "en": "to live (in a country)",
+      "example": "Ich lebe seit einem Jahr in Deutschland."
+    },
+    {
+      "de": "ziehen (nach)",
+      "en": "to move (to)",
+      "example": "Ich bin nach Köln gezogen."
+    },
+    {
+      "de": "ursprünglich",
+      "en": "originally",
+      "example": "Ich komme ursprünglich aus Leipzig."
+    },
+    {
+      "de": "der Fehler",
+      "en": "mistake",
+      "example": "Ich mache manchmal Fehler."
+    },
+    {
+      "de": "korrigieren",
+      "en": "to correct",
+      "example": "Korrigier mich bitte."
+    },
+    {
+      "de": "die Bürokratie",
+      "en": "bureaucracy",
+      "example": "Die Bürokratie war schwierig."
+    },
+    {
+      "de": "das Formular",
+      "en": "form",
+      "example": "Ich musste viele Formulare ausfüllen."
+    },
+    {
+      "de": "ehrlich gesagt",
+      "en": "to be honest",
+      "example": "Ehrlich gesagt: Ich verstehe dich gut."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Nebensätze mit „weil“, „wenn“, „obwohl“",
+      "rule": "Im Nebensatz steht das konjugierte Verb am Ende. Beginnt der Satz mit dem Nebensatz, steht das Verb des Hauptsatzes direkt nach dem Komma.",
+      "examples": [
+        "Ich wohne in Köln, weil ich hier arbeite.",
+        "Wenn ich einen Fehler mache, korrigier mich bitte.",
+        "Ich musste Formulare ausfüllen, obwohl ich nicht alle Wörter kannte."
+      ]
+    },
+    {
+      "title": "„seit“ + Dativ",
+      "rule": "Mit „seit“ sagst du, wie lange etwas schon dauert. Auf „seit“ folgt der Dativ.",
+      "examples": [
+        "seit einem Jahr",
+        "seit zwei Jahren",
+        "Seit wann lebst du in Deutschland?"
+      ]
+    },
+    {
+      "title": "Perfekt für Erfahrungen",
+      "rule": "haben/sein + Partizip II. Bewegung und Ortswechsel: meistens mit „sein“.",
+      "examples": [
+        "Ich habe Formulare ausgefüllt.",
+        "Ich bin nach Köln gezogen."
+      ]
+    }
+  ],
+  "exercise": {
+    "instruction": "Verbinde die Sätze mit „weil“ oder „wenn“.",
+    "items": [
+      {
+        "prompt": "Ich wohne in Köln. Ich arbeite hier. (weil)",
+        "answer": "Ich wohne in Köln, weil ich hier arbeite."
+      },
+      {
+        "prompt": "Ich mache einen Fehler. Bitte korrigier mich. (wenn)",
+        "answer": "Wenn ich einen Fehler mache, korrigier mich bitte."
+      },
+      {
+        "prompt": "Ich lerne Deutsch. Ich will hier arbeiten. (weil)",
+        "answer": "Ich lerne Deutsch, weil ich hier arbeiten will."
+      },
+      {
+        "prompt": "Seit wann lebst du in Deutschland? (seit)",
+        "answer": "Ich lebe seit einem Jahr in Deutschland."
+      }
+    ],
+    "speaking_task": "Sag laut: Ich wohne in …, weil … Ich lerne seit … Deutsch."
+  },
+  "music_en": "light pizzicato strings"
+}

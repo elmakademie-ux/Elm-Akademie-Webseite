@@ -1,0 +1,401 @@
+{
+  "level": "A1",
+  "scenes": [
+    {
+      "scene_id": "A1-S01",
+      "title": "Hook: Hallo!",
+      "type": "hook",
+      "estimated_duration_sec": 13.8,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 7.3
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 6.5
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: City park in Cologne at sunrise, misty golden light.\nACTION: Mia and Jonas stand side by side on a park path at sunrise, looking straight into the camera, both waving with a big friendly smile. A large speech bubble with the word 'Hallo!' pops up above them.\nCAMERA: Starts with a high aerial view over the park, glides down to a medium-wide shot of both characters, ends with a gentle push-in on their faces.\nLIGHTING: Golden backlight, soft rim light, light mist.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Erzähler (bright, welcoming, slow) says in German: \"Hallo! Nur ein Wort. Und schon beginnt ein Gespräch.\" | Erzähler (curious, encouraging, slow) says in German: \"Heute lernst du: Wie stelle ich mich vor?\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Hallo!"
+      ]
+    },
+    {
+      "scene_id": "A1-S02",
+      "title": "Einführung: Niveau A1",
+      "type": "intro",
+      "estimated_duration_sec": 13.8,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 8.7
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 5.1
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Bright title space with a soft park silhouette in the background.\nACTION: Mia stands next to a big colorful blackboard that reads 'A1'. She gestures toward the board. Three small icons appear one after another: a short sentence bubble, a slow turtle, a mouth speaking.\nCAMERA: Medium shot of Mia, slight pan to the board, icons pop in one after another.\nLIGHTING: Soft bright studio light, pastel background.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Erzähler (friendly, slow) says in German: \"Das ist Niveau A1. Du lernst einfache Wörter und kurze Sätze.\" | Erzähler (encouraging, slow) says in German: \"Wir sprechen langsam. Sprich laut mit!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png"
+      ],
+      "on_screen_text_overlay": [
+        "A1",
+        "Kurze Sätze",
+        "Langsam sprechen",
+        "Laut mitsprechen!"
+      ]
+    },
+    {
+      "scene_id": "A1-S03",
+      "title": "Szene 1: Guten Morgen!",
+      "type": "dialog",
+      "estimated_duration_sec": 7.0,
+      "shots": [
+        {
+          "lines": [
+            0,
+            1,
+            2
+          ],
+          "duration": 7.0
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Park bench under a blossoming cherry tree, morning sun.\nACTION: Jonas sits on a park bench holding a coffee cup under a blossoming cherry tree. Mia walks past with a small shoulder bag, stops, and waves. They greet each other warmly for the first time.\nCAMERA: Medium-wide frontal shot, then calm over-the-shoulder shot/reverse shot for each line.\nLIGHTING: Warm morning light filtering through cherry blossoms, dappled light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Mia (friendly, bright, slow) says in German: \"Hallo! Guten Morgen!\" | Jonas (pleasantly surprised, slow) says in German: \"Guten Morgen!\" | Jonas (warm, smiling, slow) says in German: \"Hallo!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Hallo!",
+        "Guten Morgen!"
+      ]
+    },
+    {
+      "scene_id": "A1-S04",
+      "title": "Szene 2: Wie heißt du?",
+      "type": "dialog",
+      "estimated_duration_sec": 18.5,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 6.5
+        },
+        {
+          "lines": [
+            1,
+            2
+          ],
+          "duration": 5.3
+        },
+        {
+          "lines": [
+            3,
+            4
+          ],
+          "duration": 6.7
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Park bench under the cherry tree.\nACTION: Jonas points to his chest, then offers a handshake. Mia sits down next to him on the bench, points to herself, and shakes his hand. Close-up on the friendly handshake and two smiling faces.\nCAMERA: Two-shot on the bench with a gentle sideways dolly, close-up on the handshake.\nLIGHTING: Same warm morning light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Jonas (friendly, curious, slow) says in German: \"Ich heiße Jonas. Und du? Wie heißt du?\" | Mia (warm, a little shy, slow) says in German: \"Ich heiße Mia.\" | Jonas (happy, slow) says in German: \"Hallo, Mia!\" | Mia (delighted, slow) says in German: \"Hallo, Jonas! Freut mich!\" | Jonas (warm, smiling, slow) says in German: \"Freut mich auch!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Ich heiße …",
+        "Wie heißt du?",
+        "Freut mich!"
+      ]
+    },
+    {
+      "scene_id": "A1-S05",
+      "title": "Szene 3: Woher kommst du?",
+      "type": "dialog",
+      "estimated_duration_sec": 25.0,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 3.7
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 5.1
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 4.4
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 5.1
+        },
+        {
+          "lines": [
+            4,
+            5
+          ],
+          "duration": 6.7
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Park bench, with an illustrated world map popping up beside them.\nACTION: Mia and Jonas chat on the bench. A stylized animated map pops up beside them: a pin drops on Spain (Valencia), then a pin drops on Germany (Leipzig). Mia and Jonas smile and point to the pins.\nCAMERA: Two-shot, a stylized animated map overlays beside the characters, then back to the bench.\nLIGHTING: Same warm morning light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Jonas (curious, slow) says in German: \"Woher kommst du, Mia?\" | Mia (proud, warm, slow) says in German: \"Ich komme aus Spanien. Aus Valencia.\" | Mia (curious, slow) says in German: \"Und du? Woher kommst du?\" | Jonas (friendly, slow) says in German: \"Ich komme aus Deutschland. Aus Leipzig.\" | Mia (enthusiastic, slow) says in German: \"Leipzig ist schön!\" | Jonas (smiling, slow) says in German: \"Valencia ist auch schön!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Woher kommst du?",
+        "Ich komme aus …",
+        "Spanien – Valencia",
+        "Deutschland – Leipzig"
+      ]
+    },
+    {
+      "scene_id": "A1-S06",
+      "title": "Szene 4: Tschüss!",
+      "type": "dialog",
+      "estimated_duration_sec": 6.0,
+      "shots": [
+        {
+          "lines": [
+            0,
+            1
+          ],
+          "duration": 6.0
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Sunny park path, Mia walks on while Jonas stays on the bench.\nACTION: Mia stands up from the bench, waves goodbye and walks along the sunny park path, turning around once to wave again. Jonas waves back from the bench with a smile.\nCAMERA: Medium-wide shot, camera follows Mia a few steps then returns to Jonas.\nLIGHTING: Higher sun, bright clear light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Mia (cheerful, slow) says in German: \"Tschüss, Jonas!\" | Jonas (warm, slow) says in German: \"Tschüss, Mia! Bis bald!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Tschüss!",
+        "Bis bald!"
+      ]
+    },
+    {
+      "scene_id": "A1-S07",
+      "title": "Wortschatz",
+      "type": "vocab",
+      "estimated_duration_sec": 29.3,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 5.8
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 5.7
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 6.4
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 7.1
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 4.3
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Bright pastel learning room with floating word cards.\nACTION: A bright pastel learning room. Colorful word cards float in one by one. Mia and Jonas stand on either side, pointing at each card and pronouncing the word clearly with exaggerated lip movements.\nCAMERA: Static frontal shot, cards fly in from the right and stay about two seconds each.\nLIGHTING: Bright pastel light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Erzähler (encouraging, slow) says in German: \"Das sind die wichtigen Wörter. Sprich nach!\" | Mia (clear, slow) says in German: \"Hallo. Guten Morgen. Tschüss.\" | Jonas (clear, slow) says in German: \"Ich heiße. Wie heißt du?\" | Mia (clear, slow) says in German: \"Ich komme aus. Woher kommst du?\" | Jonas (clear, slow) says in German: \"Freut mich!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Hallo",
+        "Guten Morgen",
+        "Tschüss",
+        "Ich heiße …",
+        "Wie heißt du?",
+        "Ich komme aus …",
+        "Woher kommst du?",
+        "Freut mich!"
+      ]
+    },
+    {
+      "scene_id": "A1-S08",
+      "title": "Grammatik: ich, du und das Verb",
+      "type": "grammar",
+      "estimated_duration_sec": 26.0,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 4.4
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 9.4
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 12.2
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Bright pastel learning room with a large table on screen.\nACTION: Mia stands next to a large clean table on screen. The endings -e and -st glow orange one after another while she taps them. Table: ich heiße / du heißt; ich komme / du kommst; ich bin / du bist.\nCAMERA: Medium shot of Mia next to the table, then the table fills the frame.\nLIGHTING: Bright, clear light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Erzähler (clear, slow) says in German: \"Achtung: Das Verb ändert sich.\" | Erzähler (clear, very slow) says in German: \"Ich heiße. Du heißt. Ich komme. Du kommst. Ich bin. Du bist.\" | Erzähler (clear, slow) says in German: \"Bei Fragen mit Fragewort steht das Verb an Position zwei: Wie heißt du? Woher kommst du?\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png"
+      ],
+      "on_screen_text_overlay": [
+        "ich heiße – du heißt",
+        "ich komme – du kommst",
+        "ich bin – du bist",
+        "Wie heißt du?",
+        "Woher kommst du?"
+      ]
+    },
+    {
+      "scene_id": "A1-S09",
+      "title": "Übung: Ergänze die Sätze",
+      "type": "exercise",
+      "estimated_duration_sec": 46.0,
+      "shots": [
+        {
+          "lines": [
+            0
+          ],
+          "duration": 5.8
+        },
+        {
+          "lines": [
+            1
+          ],
+          "duration": 6.0
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 3.7
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 6.0
+        },
+        {
+          "lines": [
+            4
+          ],
+          "duration": 3.7
+        },
+        {
+          "lines": [
+            5
+          ],
+          "duration": 6.0
+        },
+        {
+          "lines": [
+            6
+          ],
+          "duration": 3.7
+        },
+        {
+          "lines": [
+            7
+          ],
+          "duration": 6.7
+        },
+        {
+          "lines": [
+            8
+          ],
+          "duration": 4.4
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: Bright pastel learning room with a big fill-in blackboard.\nACTION: A big blackboard with a fill-in-the-blank sentence. A cheerful countdown clock ticks in the corner. Mia and Jonas stand left and right, shrugging playfully, then celebrate when the answer appears in green.\nCAMERA: Frontal on the board, Mia and Jonas left and right, countdown clock in the corner.\nLIGHTING: Bright, cheerful light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Erzähler (playful, slow) says in German: \"Jetzt bist du dran! Ergänze die Sätze.\" | Erzähler (clear, slow) says in German: \"Eins: Wie … du?\" | Erzähler (pleased, slow) says in German: \"Richtig: Wie heißt du?\" | Erzähler (clear, slow) says in German: \"Zwei: Ich … Mia.\" | Erzähler (pleased, slow) says in German: \"Richtig: Ich heiße Mia.\" | Erzähler (clear, slow) says in German: \"Drei: Woher … du?\" | Erzähler (pleased, slow) says in German: \"Richtig: Woher kommst du?\" | Erzähler (clear, slow) says in German: \"Vier: Ich … aus Spanien.\" | Erzähler (pleased, slow) says in German: \"Richtig: Ich komme aus Spanien.\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "1. Wie ___ du?  → heißt",
+        "2. Ich ___ Mia.  → heiße",
+        "3. Woher ___ du?  → kommst",
+        "4. Ich ___ aus Spanien.  → komme"
+      ]
+    },
+    {
+      "scene_id": "A1-S10",
+      "title": "Abschluss: Mach mit!",
+      "type": "outro",
+      "estimated_duration_sec": 18.4,
+      "shots": [
+        {
+          "lines": [
+            0,
+            1
+          ],
+          "duration": 7.4
+        },
+        {
+          "lines": [
+            2
+          ],
+          "duration": 8.0
+        },
+        {
+          "lines": [
+            3
+          ],
+          "duration": 3.0
+        }
+      ],
+      "prompt": "STYLE: High-end 3D animated feature-film look in the style of a major animation studio: appealing, friendly, expressive characters with natural facial expressions and accurate lip-sync, modern colorful environments, cinematic lighting, professional camera work, smooth natural motion, soft global illumination, rich but clean color palette.\nCHARACTERS (must look identical in every shot; use the provided reference images): MIA: young woman, about 27, shoulder-length dark brown wavy hair with a soft side parting, large warm brown eyes, light olive skin, small friendly smile lines, slim build, about 1.68 m tall; wearing mustard-yellow knitted cardigan over a white t-shirt, dark blue slim jeans, white sneakers, small silver hoop earrings. JONAS: young man, about 29, short tousled brown hair, kind hazel eyes, light skin, clean-shaven with a gentle smile, medium athletic build, about 1.82 m tall; wearing denim-blue button-up shirt with rolled-up sleeves over a white t-shirt, beige chino trousers, brown leather shoes.\nPROPS THIS EPISODE: Jonas holds a coffee cup; Mia carries a small shoulder bag\nLOCATION: City park in warm afternoon light, ends on a logo end card.\nACTION: Mia and Jonas stand together in the park in warm afternoon light, point playfully at the camera, give a thumbs up and wave goodbye. A speech bubble shows 'Ich heiße … Ich komme aus …'. Smooth transition to an end card.\nCAMERA: Medium shot, slow zoom-out, dissolve to end card.\nLIGHTING: Warm afternoon light.\nDIALOGUE (German, speech pace slow and very clear; lip-sync to the supplied audio track): Mia (inviting, warm, slow) says in German: \"Und du? Wie heißt du?\" | Jonas (inviting, warm, slow) says in German: \"Woher kommst du?\" | Erzähler (friendly, slow) says in German: \"Schreib es in die Kommentare: Ich heiße … Ich komme aus …\" | Erzähler (warm, slow) says in German: \"Bis bald! Tschüss!\"\nMUSIC / AMBIENCE: light cheerful ukulele melody, very low in the mix. Keep music low so the speech stays clearly intelligible.\nFRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.\nNEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions",
+      "reference_images": [
+        "characters/reference/mia.png",
+        "characters/reference/jonas.png"
+      ],
+      "on_screen_text_overlay": [
+        "Ich heiße …",
+        "Ich komme aus …",
+        "Schreib in die Kommentare!",
+        "Abonnieren"
+      ]
+    }
+  ]
+}

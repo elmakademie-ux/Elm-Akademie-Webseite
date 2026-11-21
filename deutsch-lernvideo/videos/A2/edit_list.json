@@ -1,0 +1,267 @@
+{
+  "level": "A2",
+  "title": "Neue Kollegen kennenlernen – Mein erster Arbeitstag",
+  "scenes": [
+    {
+      "scene_id": "A2-S01",
+      "type": "hook",
+      "start_est": 0.0,
+      "end_est": 14.055,
+      "clips": [
+        "clips/A2/A2-S01_c01.mp4",
+        "clips/A2/A2-S01_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S01-L01_narrator.mp3",
+        "audio/A2/A2-S01-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Erster Arbeitstag!"
+      ]
+    },
+    {
+      "scene_id": "A2-S02",
+      "type": "intro",
+      "start_est": 14.055,
+      "end_est": 28.655,
+      "clips": [
+        "clips/A2/A2-S02_c01.mp4",
+        "clips/A2/A2-S02_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S02-L01_narrator.mp3",
+        "audio/A2/A2-S02-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "A2",
+        "Nebensätze: weil, wenn, dass",
+        "Alltag und Beruf",
+        "Erfahrungen erzählen"
+      ]
+    },
+    {
+      "scene_id": "A2-S03",
+      "type": "dialog",
+      "start_est": 28.655,
+      "end_est": 55.018,
+      "clips": [
+        "clips/A2/A2-S03_c01.mp4",
+        "clips/A2/A2-S03_c02.mp4",
+        "clips/A2/A2-S03_c03.mp4",
+        "clips/A2/A2-S03_c04.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S03-L01_jonas.mp3",
+        "audio/A2/A2-S03-L02_mia.mp3",
+        "audio/A2/A2-S03-L03_jonas.mp3",
+        "audio/A2/A2-S03-L04_mia.mp3"
+      ],
+      "overlay_text": [
+        "Herzlich willkommen!",
+        "Ich arbeite im Team Technik."
+      ]
+    },
+    {
+      "scene_id": "A2-S04",
+      "type": "dialog",
+      "start_est": 55.018,
+      "end_est": 89.718,
+      "clips": [
+        "clips/A2/A2-S04_c01.mp4",
+        "clips/A2/A2-S04_c02.mp4",
+        "clips/A2/A2-S04_c03.mp4",
+        "clips/A2/A2-S04_c04.mp4",
+        "clips/A2/A2-S04_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S04-L01_jonas.mp3",
+        "audio/A2/A2-S04-L02_mia.mp3",
+        "audio/A2/A2-S04-L03_jonas.mp3",
+        "audio/A2/A2-S04-L04_mia.mp3",
+        "audio/A2/A2-S04-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Woher kommst du?",
+        "Wo wohnst du?",
+        "Ich wohne in Ehrenfeld."
+      ]
+    },
+    {
+      "scene_id": "A2-S05",
+      "type": "dialog",
+      "start_est": 89.718,
+      "end_est": 127.691,
+      "clips": [
+        "clips/A2/A2-S05_c01.mp4",
+        "clips/A2/A2-S05_c02.mp4",
+        "clips/A2/A2-S05_c03.mp4",
+        "clips/A2/A2-S05_c04.mp4",
+        "clips/A2/A2-S05_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S05-L01_jonas.mp3",
+        "audio/A2/A2-S05-L02_mia.mp3",
+        "audio/A2/A2-S05-L03_jonas.mp3",
+        "audio/A2/A2-S05-L04_mia.mp3",
+        "audio/A2/A2-S05-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Seit wann …?",
+        "seit einem Jahr",
+        "seit zwei Jahren",
+        "weil … / wenn …"
+      ]
+    },
+    {
+      "scene_id": "A2-S06",
+      "type": "dialog",
+      "start_est": 127.691,
+      "end_est": 172.909,
+      "clips": [
+        "clips/A2/A2-S06_c01.mp4",
+        "clips/A2/A2-S06_c02.mp4",
+        "clips/A2/A2-S06_c03.mp4",
+        "clips/A2/A2-S06_c04.mp4",
+        "clips/A2/A2-S06_c05.mp4",
+        "clips/A2/A2-S06_c06.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S06-L01_jonas.mp3",
+        "audio/A2/A2-S06-L02_mia.mp3",
+        "audio/A2/A2-S06-L03_jonas.mp3",
+        "audio/A2/A2-S06-L04_mia.mp3",
+        "audio/A2/A2-S06-L05_jonas.mp3",
+        "audio/A2/A2-S06-L06_mia.mp3"
+      ],
+      "overlay_text": [
+        "Erfahrungen: Was war schwierig? Was gefällt dir?",
+        "Perfekt: ich habe gemacht"
+      ]
+    },
+    {
+      "scene_id": "A2-S07",
+      "type": "dialog",
+      "start_est": 172.909,
+      "end_est": 186.418,
+      "clips": [
+        "clips/A2/A2-S07_c01.mp4",
+        "clips/A2/A2-S07_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S07-L01_jonas.mp3",
+        "audio/A2/A2-S07-L02_mia.mp3"
+      ],
+      "overlay_text": [
+        "Ich stelle dich dem Team vor."
+      ]
+    },
+    {
+      "scene_id": "A2-S08",
+      "type": "vocab",
+      "start_est": 186.418,
+      "end_est": 220.936,
+      "clips": [
+        "clips/A2/A2-S08_c01.mp4",
+        "clips/A2/A2-S08_c02.mp4",
+        "clips/A2/A2-S08_c03.mp4",
+        "clips/A2/A2-S08_c04.mp4",
+        "clips/A2/A2-S08_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S08-L01_narrator.mp3",
+        "audio/A2/A2-S08-L02_mia.mp3",
+        "audio/A2/A2-S08-L03_jonas.mp3",
+        "audio/A2/A2-S08-L04_mia.mp3",
+        "audio/A2/A2-S08-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "der Kollege / die Kollegin",
+        "der Arbeitstag",
+        "wohnen · leben · ziehen",
+        "der Fehler · korrigieren",
+        "ursprünglich",
+        "ehrlich gesagt"
+      ]
+    },
+    {
+      "scene_id": "A2-S09",
+      "type": "grammar",
+      "start_est": 220.936,
+      "end_est": 249.327,
+      "clips": [
+        "clips/A2/A2-S09_c01.mp4",
+        "clips/A2/A2-S09_c02.mp4",
+        "clips/A2/A2-S09_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S09-L01_narrator.mp3",
+        "audio/A2/A2-S09-L02_narrator.mp3",
+        "audio/A2/A2-S09-L03_narrator.mp3"
+      ],
+      "overlay_text": [
+        "weil / wenn / obwohl → Verb am Ende",
+        "Ich wohne in Köln, weil ich hier arbeite.",
+        "seit + Dativ: seit einem Jahr · seit zwei Jahren"
+      ]
+    },
+    {
+      "scene_id": "A2-S10",
+      "type": "exercise",
+      "start_est": 249.327,
+      "end_est": 320.282,
+      "clips": [
+        "clips/A2/A2-S10_c01.mp4",
+        "clips/A2/A2-S10_c02.mp4",
+        "clips/A2/A2-S10_c03.mp4",
+        "clips/A2/A2-S10_c04.mp4",
+        "clips/A2/A2-S10_c05.mp4",
+        "clips/A2/A2-S10_c06.mp4",
+        "clips/A2/A2-S10_c07.mp4",
+        "clips/A2/A2-S10_c08.mp4",
+        "clips/A2/A2-S10_c09.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S10-L01_narrator.mp3",
+        "audio/A2/A2-S10-L02_narrator.mp3",
+        "audio/A2/A2-S10-L03_narrator.mp3",
+        "audio/A2/A2-S10-L04_narrator.mp3",
+        "audio/A2/A2-S10-L05_narrator.mp3",
+        "audio/A2/A2-S10-L06_narrator.mp3",
+        "audio/A2/A2-S10-L07_narrator.mp3",
+        "audio/A2/A2-S10-L08_narrator.mp3",
+        "audio/A2/A2-S10-L09_narrator.mp3"
+      ],
+      "overlay_text": [
+        "1. Ich wohne in Köln. + Ich arbeite hier. (weil)",
+        "2. Ich mache einen Fehler. + Korrigier mich bitte. (wenn)",
+        "3. Ich lerne Deutsch. + Ich will hier arbeiten. (weil)",
+        "4. Seit wann …? → seit …"
+      ]
+    },
+    {
+      "scene_id": "A2-S11",
+      "type": "outro",
+      "start_est": 320.282,
+      "end_est": 339.009,
+      "clips": [
+        "clips/A2/A2-S11_c01.mp4",
+        "clips/A2/A2-S11_c02.mp4",
+        "clips/A2/A2-S11_c03.mp4",
+        "clips/A2/A2-S11_c04.mp4"
+      ],
+      "audio_lines": [
+        "audio/A2/A2-S11-L01_mia.mp3",
+        "audio/A2/A2-S11-L02_jonas.mp3",
+        "audio/A2/A2-S11-L03_narrator.mp3",
+        "audio/A2/A2-S11-L04_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Woher kommst du? Wo wohnst du?",
+        "Seit wann lernst du Deutsch?",
+        "Schreib in die Kommentare!",
+        "Abonnieren"
+      ]
+    }
+  ],
+  "subtitles": "subtitles/A2.srt"
+}

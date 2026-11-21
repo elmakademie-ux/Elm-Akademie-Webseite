@@ -1,0 +1,683 @@
+{
+  "id": "B1",
+  "level": "B1",
+  "level_name": "Selbstständige Sprachverwendung",
+  "title": "Auf der Geburtstagsparty – Jemanden näher kennenlernen",
+  "subtitle": "Deutsch lernen B1: Smalltalk, Erfahrungen, Meinungen begründen",
+  "target_duration_sec": 325,
+  "form_of_address": "du",
+  "can_do": "Ich kann ein Gespräch beginnen, über Beruf, Herkunft und Erfahrungen berichten sowie meine Meinung äußern und begründen.",
+  "social": {
+    "title_youtube": "Deutsch lernen B1: Smalltalk auf einer Party | Meinungen begründen mit weil, obwohl, deshalb",
+    "hashtags": [
+      "#DeutschLernen",
+      "#LearnGerman",
+      "#B1",
+      "#Smalltalk",
+      "#GermanConversation"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "B1-S01",
+      "type": "hook",
+      "title": "Hook: Eine Party, niemand kennt dich",
+      "location": "Wohnzimmer einer Altbauwohnung in Köln, Abend, Geburtstagsparty",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Eine lebendige Party mit Luftballons und Lichterketten. Mia steht mit einem Getränk am Rand und sieht sich um; Jonas steht am Buffet. Ihre Blicke treffen sich kurz.",
+      "direction": {
+        "camera": "Gleitende Steadicam-Fahrt durch die Party, verliert den Lärm im Hintergrund und bleibt auf dem Blickkontakt von Mia und Jonas stehen.",
+        "lighting": "Warmes Abendlicht, Lichterketten mit Bokeh, farbige Akzente.",
+        "animation": "Mia hält ihr Glas mit beiden Händen und lächelt unsicher; Jonas bemerkt sie und hebt kurz sein Glas.",
+        "music": "Lebendiger Indie-Pop, der beim Blickkontakt leiser wird."
+      },
+      "visual": "A lively birthday party in a cozy apartment with balloons and string lights. Mia stands at the edge holding a drink, glancing around a little unsure. Jonas stands near the buffet and notices her; their eyes meet and he raises his glass slightly.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Du bist auf einer Party und kennst nur die Gastgeberin. Wie kommst du ins Gespräch?",
+          "emotion": "curious, conversational, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Heute siehst du, wie aus einem kurzen Hallo ein richtiges Gespräch wird.",
+          "emotion": "warm, moderate"
+        }
+      ],
+      "on_screen": [
+        "Party. Niemand kennt dich. Und jetzt?"
+      ],
+      "prompt_en": {
+        "location": "Living room of an old-building apartment in Cologne, evening birthday party",
+        "camera": "Gliding steadicam through the party, party noise fades, settles on the eye contact of Mia and Jonas",
+        "lighting": "Warm evening light, string lights with bokeh, colorful accents"
+      }
+    },
+    {
+      "id": "B1-S02",
+      "type": "intro",
+      "title": "Einführung: Niveau B1",
+      "location": "Heller Titelraum mit Partyfarben",
+      "characters": [
+        "mia"
+      ],
+      "description": "Mia steht neben einer Tafel mit „B1“ und erklärt, was man auf diesem Niveau kann: Erfahrungen beschreiben, Meinungen äußern, Gründe nennen.",
+      "direction": {
+        "camera": "Halbnah auf Mia, leichter Schwenk zur Tafel.",
+        "lighting": "Hell, weiche Farbverläufe in Lila und Orange.",
+        "animation": "Mia zählt drei Punkte an den Fingern ab.",
+        "music": "Gleiche Indie-Melodie, leiser."
+      },
+      "visual": "Mia stands next to a colorful blackboard reading 'B1'. She counts three points on her fingers while icons appear: a suitcase (experiences), a speech bubble (opinions), a lightbulb (reasons).",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Das ist Niveau B1. Du kannst Erfahrungen beschreiben und deine Meinung sagen.",
+          "emotion": "friendly, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Außerdem begründest du, was du denkst – mit Wörtern wie „weil“, „obwohl“ und „deshalb“.",
+          "emotion": "clear, moderate"
+        }
+      ],
+      "on_screen": [
+        "B1",
+        "Erfahrungen beschreiben",
+        "Meinung äußern",
+        "Gründe nennen: weil · obwohl · deshalb"
+      ],
+      "prompt_en": {
+        "location": "Bright title space in party colors",
+        "camera": "Medium shot of Mia, slight pan to the board",
+        "lighting": "Bright, soft purple and orange gradients"
+      }
+    },
+    {
+      "id": "B1-S03",
+      "type": "dialog",
+      "title": "Szene 1: Das Eis brechen – Woher kennst du Sophie?",
+      "location": "Buffet in der Wohnung, im Hintergrund eine große Schokoladentorte",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas geht auf Mia zu und stellt sich vor. Beide stellen fest, dass sie die Gastgeberin Sophie kennen – aber aus verschiedenen Zusammenhängen.",
+      "direction": {
+        "camera": "Halbtotale am Buffet, dann Schuss-Gegenschuss in Halbnah; die Torte steht im Hintergrund.",
+        "lighting": "Warmes Partylicht, Lichterketten im Hintergrund.",
+        "animation": "Jonas macht eine offene Geste, Mia lacht überrascht, beide stoßen leicht mit den Gläsern an.",
+        "music": "Gedämpfter Partysound, leise Musik."
+      },
+      "visual": "At the buffet, Jonas walks up to Mia with a friendly smile and introduces himself. A big chocolate cake sits in the background. They talk animatedly, laugh, and lightly clink their drinks.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Hi, ich glaube, wir kennen uns noch nicht. Ich bin Jonas.",
+          "emotion": "casual, friendly, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Hallo Jonas, ich bin Mia. Stimmt, wir sind uns noch nicht begegnet.",
+          "emotion": "warm, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Woher kennst du Sophie?",
+          "emotion": "curious, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Wir haben uns vor zwei Jahren im Deutschkurs kennengelernt. Damals war Sophie meine Tandempartnerin. Und du?",
+          "emotion": "friendly, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Wir haben zusammen in Leipzig studiert. Sie hat mich vorhin gewarnt, dass heute ihre berühmte Schokoladentorte auf den Tisch kommt.",
+          "emotion": "amused, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Dann bin ich froh, dass ich vorher nichts gegessen habe!",
+          "emotion": "laughing, natural"
+        }
+      ],
+      "on_screen": [
+        "Woher kennst du …?",
+        "Wir haben uns … kennengelernt."
+      ],
+      "prompt_en": {
+        "location": "Buffet in the apartment, big chocolate cake in the background",
+        "camera": "Medium-wide at the buffet, then medium shot/reverse shot with the cake behind",
+        "lighting": "Warm party light, string lights in the background"
+      }
+    },
+    {
+      "id": "B1-S04",
+      "type": "dialog",
+      "title": "Szene 2: Beruf und Herkunft",
+      "location": "Sofaecke im Wohnzimmer, gedämpftes Licht",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Beide setzen sich auf ein Sofa. Sie sprechen über ihre Herkunft und ihre Berufe, und Mia widerspricht Jonas’ Vorurteil, Programmieren sei nicht kreativ.",
+      "direction": {
+        "camera": "Zweier-Einstellung auf dem Sofa, ruhige Nahaufnahmen bei persönlichen Aussagen.",
+        "lighting": "Gedämpftes, warmes Licht, Lampenschein, im Hintergrund Bokeh der Party.",
+        "animation": "Mia gestikuliert lebhaft, Jonas lächelt bescheiden und lehnt sich zurück.",
+        "music": "Leiser Lounge-Sound."
+      },
+      "visual": "Mia and Jonas sit on a sofa in a cozy corner of the party. Mia gestures expressively while talking, Jonas smiles modestly and leans back, then nods in agreement. Warm lamp light, blurred party in the background.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Du hast einen leichten Akzent. Woher kommst du ursprünglich?",
+          "emotion": "curious, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Aus Valencia, in Spanien. Seit fast drei Jahren lebe ich in Köln. Ich arbeite als Projektkoordinatorin bei einem Unternehmen, das digitale Lernmaterialien entwickelt.",
+          "emotion": "proud, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Klingt spannend! Ich bin Softwareentwickler. Manche würden sagen, das ist nicht besonders kreativ.",
+          "emotion": "self-ironic, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Das glaube ich nicht. Programmieren ist doch kreativ, denn man muss ständig neue Lösungen finden.",
+          "emotion": "convinced, warm, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Genau so sehe ich das auch! Danke.",
+          "emotion": "pleased, natural"
+        }
+      ],
+      "on_screen": [
+        "Ich arbeite als …",
+        "ein Unternehmen, das … entwickelt",
+        "denn …"
+      ],
+      "prompt_en": {
+        "location": "Sofa corner in the living room, dim warm light",
+        "camera": "Two-shot on the sofa, calm close-ups for personal remarks",
+        "lighting": "Dim warm lamp light, blurred party in the background"
+      }
+    },
+    {
+      "id": "B1-S05",
+      "type": "dialog",
+      "title": "Szene 3: Erfahrungen in Deutschland",
+      "location": "Sofaecke",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia erzählt, wie schwer es am Anfang war, Freunde zu finden. Jonas berichtet, dass er sich in Köln trotz gleicher Sprache zuerst fremd gefühlt hat.",
+      "direction": {
+        "camera": "Nahaufnahmen im Wechsel; kurze Rückblende als Gedankenblase (Mia allein im Café).",
+        "lighting": "Weich; Rückblende leicht entsättigt.",
+        "animation": "Mia zuckt mit den Schultern bei „zurückhaltend“, Jonas lacht verständnisvoll beim Thema Dialekt.",
+        "music": "Zurückhaltend, warm."
+      },
+      "visual": "Mia and Jonas talk on the sofa. A short thought-bubble flashback shows Mia sitting alone in a cafe, slightly lonely, in muted colors. Back on the sofa, Jonas laughs sympathetically and Mia laughs too.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Und wie hast du dich in Deutschland eingelebt? Ist dir etwas schwergefallen?",
+          "emotion": "interested, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Am Anfang war es schwierig, Freunde zu finden, weil die Leute hier eher zurückhaltend sind. Inzwischen habe ich aber gemerkt, dass sie sehr zuverlässig sind, wenn man sie erst einmal kennt.",
+          "emotion": "reflective, honest, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Da ist was dran. Als ich für den Job nach Köln gezogen bin, habe ich mich auch fremd gefühlt, obwohl ich Deutscher bin. Der Dialekt war für mich anfangs ein Rätsel.",
+          "emotion": "sympathetic, humorous, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ja, genau! Kölsch verstehe ich bis heute nicht richtig.",
+          "emotion": "laughing, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Keine Sorge, das geht vielen Kölnern auch so.",
+          "emotion": "joking, natural"
+        }
+      ],
+      "on_screen": [
+        "Am Anfang war es schwierig, weil …",
+        "Ich habe mich fremd gefühlt, obwohl …",
+        "Inzwischen habe ich gemerkt, dass …"
+      ],
+      "prompt_en": {
+        "location": "Sofa corner; short thought-bubble flashback of Mia alone in a cafe",
+        "camera": "Alternating close-ups; short desaturated flashback bubble",
+        "lighting": "Soft light; flashback slightly desaturated"
+      }
+    },
+    {
+      "id": "B1-S06",
+      "type": "dialog",
+      "title": "Szene 4: Meinungen und Begründungen",
+      "location": "Balkon der Wohnung, Abendstimmung, Stadtlichter",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Beide gehen auf den Balkon. Jonas fragt, welchen Rat Mia Neuankömmlingen geben würde. Mia begründet ihre Meinung, Jonas fügt ein Gegenargument hinzu, am Ende finden sie einen Kompromiss.",
+      "direction": {
+        "camera": "Halbnah an der Balkonbrüstung, Stadtlichter im Hintergrund; langsame Kreisfahrt um beide.",
+        "lighting": "Blaue Stunde, warme Lichter aus dem Fenster, Stadtlichter als Bokeh.",
+        "animation": "Mia zählt Argumente mit den Fingern, Jonas hebt einen Finger bei „trotzdem“ und lächelt bei der Einigung.",
+        "music": "Ruhige, warme Gitarre."
+      },
+      "visual": "Mia and Jonas stand on a balcony at blue hour with city lights glowing behind them. Mia counts her arguments on her fingers, Jonas raises one finger for a counterpoint, then they smile in agreement. The camera slowly circles them.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Was würdest du Leuten raten, die neu in Deutschland sind?",
+          "emotion": "curious, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Meiner Meinung nach sollte man so früh wie möglich einem Verein beitreten oder einen Kurs besuchen. Man lernt dort nicht nur die Sprache, sondern auch Menschen mit ähnlichen Interessen kennen. Deshalb habe ich mich bei einem Fahrradclub angemeldet.",
+          "emotion": "convinced, clear, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Ich finde, das ist ein guter Tipp. Trotzdem traut sich nicht jeder. Außerdem fehlt vielen die Zeit.",
+          "emotion": "thoughtful, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Das stimmt. Aber wenn man nur eine Stunde pro Woche investiert, ist das schon ein Anfang.",
+          "emotion": "reasonable, warm, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Da hast du recht. Weißt du was? Mein Kumpel Tom fährt auch viel Rad. Soll ich euch vorstellen?",
+          "emotion": "friendly, natural"
+        },
+        {
+          "speaker": "mia",
+          "text": "Sehr gern! Und danach probieren wir die berühmte Schokoladentorte.",
+          "emotion": "cheerful, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Abgemacht!",
+          "emotion": "laughing, natural"
+        }
+      ],
+      "on_screen": [
+        "Meiner Meinung nach …",
+        "Ich finde, dass …",
+        "Deshalb … · Trotzdem … · Außerdem …"
+      ],
+      "prompt_en": {
+        "location": "Apartment balcony at blue hour with city lights",
+        "camera": "Medium shot at the balcony railing with city lights behind, slow circular dolly around both",
+        "lighting": "Blue hour, warm light from the window, bokeh city lights"
+      }
+    },
+    {
+      "id": "B1-S07",
+      "type": "vocab",
+      "title": "Wortschatz",
+      "location": "Heller Lernraum mit Wortkarten",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Wortkarten mit Wendungen aus dem Gespräch erscheinen. Mia und Jonas sprechen sie vor.",
+      "direction": {
+        "camera": "Frontal, ruhige Einblendungen.",
+        "lighting": "Hell, pastellfarben.",
+        "animation": "Beide sprechen abwechselnd, zeigen auf die Karten.",
+        "music": "Leise."
+      },
+      "visual": "Bright pastel learning room with word cards floating in. Mia and Jonas alternate pointing at cards and pronouncing the phrases.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Das sind nützliche Wörter und Wendungen für Smalltalk. Sprich nach!",
+          "emotion": "encouraging, moderate"
+        },
+        {
+          "speaker": "mia",
+          "text": "jemanden kennenlernen. Sich einleben. Sich fremd fühlen.",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "jonas",
+          "text": "zurückhaltend, zuverlässig. Inzwischen. Anfangs.",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "mia",
+          "text": "Meiner Meinung nach. Ich finde, dass. Da hast du recht.",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "jonas",
+          "text": "einem Verein beitreten. Abgemacht!",
+          "emotion": "clear, moderate",
+          "pause_after": 2.0
+        }
+      ],
+      "on_screen": [
+        "jemanden kennenlernen",
+        "sich einleben",
+        "sich fremd fühlen",
+        "zurückhaltend · zuverlässig",
+        "inzwischen · anfangs",
+        "Meiner Meinung nach …",
+        "Da hast du recht."
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with floating word cards",
+        "camera": "Static frontal shot, calm card pop-ins",
+        "lighting": "Bright pastel light"
+      }
+    },
+    {
+      "id": "B1-S08",
+      "type": "grammar",
+      "title": "Grammatik: Konnektoren und Relativsätze",
+      "location": "Heller Lernraum mit Satzbaukasten",
+      "characters": [
+        "jonas"
+      ],
+      "description": "Farbige Satzbausteine zeigen den Unterschied zwischen Konnektoren, die das Verb ans Ende schieben (weil, obwohl, dass), und solchen, bei denen das Verb direkt folgt (deshalb, trotzdem, außerdem). Dazu der Relativsatz.",
+      "direction": {
+        "camera": "Halbnah auf Jonas; Einblendung zweier Spalten (Verb am Ende / Verb auf Position 2).",
+        "lighting": "Hell, klar.",
+        "animation": "Jonas verschiebt Bausteine; die Verbposition leuchtet.",
+        "music": "Sehr leise."
+      },
+      "visual": "Jonas stands in front of two colored columns of sentence blocks. In the left column the verb block slides to the end (weil, obwohl, dass), in the right column the verb stays at position two after deshalb, trotzdem, außerdem. The verb block glows.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Mit „weil“, „obwohl“ und „dass“ steht das Verb am Ende: Es war schwierig, weil die Leute zurückhaltend sind.",
+          "emotion": "clear, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Mit „deshalb“, „trotzdem“ und „außerdem“ steht das Verb direkt danach: Deshalb habe ich mich angemeldet.",
+          "emotion": "clear, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Der Relativsatz beschreibt ein Nomen: ein Unternehmen, das digitale Lernmaterialien entwickelt.",
+          "emotion": "clear, moderate"
+        }
+      ],
+      "on_screen": [
+        "weil · obwohl · dass → Verb am Ende",
+        "deshalb · trotzdem · außerdem → Verb auf Position 2",
+        "ein Unternehmen, das … entwickelt"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with two columns of sentence blocks",
+        "camera": "Medium shot of Jonas, two columns fill the frame",
+        "lighting": "Bright, clear light"
+      }
+    },
+    {
+      "id": "B1-S09",
+      "type": "exercise",
+      "title": "Übung: Gründe und Gegensätze",
+      "location": "Heller Lernraum mit Tafel",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Vier Lückensätze mit Konnektoren. Nach einer Denkpause erscheint die Lösung. Danach eine Sprechaufgabe zu einer eigenen Meinung.",
+      "direction": {
+        "camera": "Frontal auf die Tafel.",
+        "lighting": "Hell.",
+        "animation": "Beide denken nach, freuen sich bei der Lösung.",
+        "music": "Leichte Quiz-Melodie."
+      },
+      "visual": "Blackboard with four gap-fill sentences, countdown clock in the corner. Mia and Jonas stand beside it thinking, then celebrate as the correct connector appears in green.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Jetzt bist du dran! Welches Wort passt?",
+          "emotion": "playful, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Eins: Ich fühle mich fremd, … ich Deutscher bin. Weil oder obwohl?",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Lösung: obwohl.",
+          "emotion": "pleased, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Zwei: Ich lerne Menschen kennen. … habe ich mich angemeldet. Deshalb oder trotzdem?",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Lösung: Deshalb.",
+          "emotion": "pleased, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Drei: Programmieren ist kreativ, … man findet neue Lösungen. Denn oder obwohl?",
+          "emotion": "clear, moderate",
+          "pause_after": 4.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Lösung: denn.",
+          "emotion": "pleased, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Vier: Sag deine Meinung. Beginne mit „Meiner Meinung nach“ und nenne einen Grund.",
+          "emotion": "encouraging, moderate",
+          "pause_after": 6.0
+        }
+      ],
+      "on_screen": [
+        "1. Ich fühle mich fremd, ___ ich Deutscher bin. (weil / obwohl)  → obwohl",
+        "2. Ich lerne Menschen kennen. ___ habe ich mich angemeldet. (Deshalb / Trotzdem)  → Deshalb",
+        "3. Programmieren ist kreativ, ___ man findet neue Lösungen. (denn / obwohl)  → denn",
+        "4. Meiner Meinung nach … , weil …"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with a blackboard",
+        "camera": "Frontal on the board, Mia and Jonas on both sides",
+        "lighting": "Bright light"
+      }
+    },
+    {
+      "id": "B1-S10",
+      "type": "outro",
+      "title": "Abschluss: Mach mit!",
+      "location": "Balkon bei Nacht, Stadtlichter; am Ende Logo-Endcard",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia und Jonas stehen mit einem Stück Torte auf dem Balkon, stoßen an und fordern die Zuschauer auf, ihre Meinung mit einer Begründung in die Kommentare zu schreiben. Danach Endcard.",
+      "direction": {
+        "camera": "Halbnah, langsamer Zoom-out über die Stadt, Überblendung zur Endcard.",
+        "lighting": "Nachtstimmung, warmes Licht aus dem Fenster, Stadtlichter.",
+        "animation": "Beide heben ihre Gabeln mit Torte, zeigen auf die Kamera und winken.",
+        "music": "Hauptmelodie, Ausklang."
+      },
+      "visual": "Mia and Jonas on the balcony at night holding plates with chocolate cake, city lights in the background. They toast with their forks, point playfully at the camera and wave. Smooth transition to an end card.",
+      "lines": [
+        {
+          "speaker": "mia",
+          "text": "Und du? Was rätst du Leuten, die neu in einem Land sind?",
+          "emotion": "inviting, warm, natural"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Schreib deine Meinung in die Kommentare, und vergiss den Grund nicht!",
+          "emotion": "friendly, natural"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Benutze „weil“, „deshalb“ oder „trotzdem“. Wir lesen alle Kommentare.",
+          "emotion": "friendly, moderate"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Abonniere den Kanal und bis zum nächsten Mal!",
+          "emotion": "warm, moderate"
+        }
+      ],
+      "on_screen": [
+        "Deine Meinung + dein Grund",
+        "weil · deshalb · trotzdem",
+        "Abonnieren"
+      ],
+      "prompt_en": {
+        "location": "Balcony at night with city lights; ends on a logo end card",
+        "camera": "Medium shot, slow zoom-out over the city, dissolve to end card",
+        "lighting": "Night mood, warm window light, city lights"
+      }
+    }
+  ],
+  "vocabulary": [
+    {
+      "de": "jemanden kennenlernen",
+      "en": "to get to know someone",
+      "example": "Wir haben uns im Deutschkurs kennengelernt."
+    },
+    {
+      "de": "die Tandempartnerin",
+      "en": "language exchange partner (f)",
+      "example": "Sophie war meine Tandempartnerin."
+    },
+    {
+      "de": "sich einleben",
+      "en": "to settle in",
+      "example": "Wie hast du dich eingelebt?"
+    },
+    {
+      "de": "sich fremd fühlen",
+      "en": "to feel like a stranger",
+      "example": "Ich habe mich anfangs fremd gefühlt."
+    },
+    {
+      "de": "zurückhaltend",
+      "en": "reserved",
+      "example": "Die Leute sind eher zurückhaltend."
+    },
+    {
+      "de": "zuverlässig",
+      "en": "reliable",
+      "example": "Sie sind sehr zuverlässig."
+    },
+    {
+      "de": "inzwischen",
+      "en": "by now, meanwhile",
+      "example": "Inzwischen habe ich Freunde gefunden."
+    },
+    {
+      "de": "anfangs",
+      "en": "at first",
+      "example": "Anfangs war der Dialekt ein Rätsel."
+    },
+    {
+      "de": "einem Verein beitreten",
+      "en": "to join a club",
+      "example": "Man sollte einem Verein beitreten."
+    },
+    {
+      "de": "Meiner Meinung nach …",
+      "en": "In my opinion …",
+      "example": "Meiner Meinung nach ist das ein guter Weg."
+    },
+    {
+      "de": "Da hast du recht.",
+      "en": "You are right about that.",
+      "example": "Da hast du recht!"
+    },
+    {
+      "de": "Abgemacht!",
+      "en": "Deal!",
+      "example": "Wir probieren die Torte. – Abgemacht!"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Konnektoren mit Verb am Ende: weil, obwohl, dass",
+      "rule": "weil = Grund, obwohl = Gegensatz, dass = Inhaltssatz. Das konjugierte Verb steht am Ende des Nebensatzes.",
+      "examples": [
+        "Es war schwierig, weil die Leute zurückhaltend sind.",
+        "Ich habe mich fremd gefühlt, obwohl ich Deutscher bin.",
+        "Ich habe gemerkt, dass sie zuverlässig sind."
+      ]
+    },
+    {
+      "title": "Konnektoren mit Verb auf Position 2: deshalb, trotzdem, außerdem, denn",
+      "rule": "Nach deshalb, trotzdem und außerdem steht direkt das Verb. „denn“ steht auf Position 0 und verbindet zwei Hauptsätze.",
+      "examples": [
+        "Deshalb habe ich mich angemeldet.",
+        "Trotzdem traut sich nicht jeder.",
+        "Programmieren ist kreativ, denn man muss neue Lösungen finden."
+      ]
+    },
+    {
+      "title": "Relativsatz",
+      "rule": "Der Relativsatz beschreibt ein Nomen. Das Relativpronomen richtet sich nach Genus und Numerus des Bezugswortes.",
+      "examples": [
+        "ein Unternehmen, das digitale Lernmaterialien entwickelt",
+        "Leute, die neu in Deutschland sind"
+      ]
+    },
+    {
+      "title": "Meinung äußern",
+      "rule": "Meiner Meinung nach + Hauptsatz. Ich finde, dass … / Ich finde, … + Satz.",
+      "examples": [
+        "Meiner Meinung nach sollte man einem Verein beitreten.",
+        "Ich finde, das ist ein guter Tipp."
+      ]
+    }
+  ],
+  "exercise": {
+    "instruction": "Welches Wort passt?",
+    "items": [
+      {
+        "prompt": "Ich fühle mich fremd, ___ ich Deutscher bin. (weil / obwohl)",
+        "answer": "obwohl"
+      },
+      {
+        "prompt": "Ich lerne Menschen kennen. ___ habe ich mich angemeldet. (Deshalb / Trotzdem)",
+        "answer": "Deshalb"
+      },
+      {
+        "prompt": "Programmieren ist kreativ, ___ man findet neue Lösungen. (denn / obwohl)",
+        "answer": "denn"
+      }
+    ],
+    "speaking_task": "Sag deine Meinung: Meiner Meinung nach …, weil …"
+  },
+  "music_en": "lively indie pop, softer under speech"
+}

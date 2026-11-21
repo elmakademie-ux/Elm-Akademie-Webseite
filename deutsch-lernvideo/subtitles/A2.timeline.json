@@ -1,0 +1,475 @@
+{
+  "level": "A2",
+  "lines": [
+    {
+      "line_id": "A2-S01-L01",
+      "scene": "A2-S01",
+      "speaker": "narrator",
+      "text": "Erster Arbeitstag. Alle Gesichter sind neu. Was sagst du?",
+      "start": 0.6,
+      "end": 5.509,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S01-L02",
+      "scene": "A2-S01",
+      "speaker": "narrator",
+      "text": "Heute lernst du, wie du dich vorstellst, wenn du neue Kollegen triffst.",
+      "start": 6.209,
+      "end": 12.755,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S02-L01",
+      "scene": "A2-S02",
+      "speaker": "narrator",
+      "text": "Das ist Niveau A2. Du sprichst über deinen Alltag und deine Arbeit.",
+      "start": 14.655,
+      "end": 21.2,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S02-L02",
+      "scene": "A2-S02",
+      "speaker": "narrator",
+      "text": "Du benutzt einfache Nebensätze, zum Beispiel mit „weil“ und „wenn“.",
+      "start": 21.9,
+      "end": 27.355,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S03-L01",
+      "scene": "A2-S03",
+      "speaker": "jonas",
+      "text": "Guten Morgen! Du bist bestimmt Mia, die neue Kollegin, oder?",
+      "start": 29.255,
+      "end": 34.709,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S03-L02",
+      "scene": "A2-S03",
+      "speaker": "mia",
+      "text": "Ja, genau. Ich bin Mia Navarro. Heute ist mein erster Arbeitstag.",
+      "start": 35.409,
+      "end": 41.409,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S03-L03",
+      "scene": "A2-S03",
+      "speaker": "jonas",
+      "text": "Herzlich willkommen! Ich bin Jonas. Ich arbeite im Team Technik. Möchtest du einen Kaffee?",
+      "start": 42.109,
+      "end": 49.745,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S03-L04",
+      "scene": "A2-S03",
+      "speaker": "mia",
+      "text": "Gern, danke! Den brauche ich heute.",
+      "start": 50.445,
+      "end": 53.718,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S04-L01",
+      "scene": "A2-S04",
+      "speaker": "jonas",
+      "text": "Woher kommst du denn? Dein Name klingt spanisch.",
+      "start": 55.618,
+      "end": 59.982,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S04-L02",
+      "scene": "A2-S04",
+      "speaker": "mia",
+      "text": "Ja, ich komme aus Valencia. Die Stadt liegt im Osten von Spanien, direkt am Meer.",
+      "start": 60.682,
+      "end": 68.864,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S04-L03",
+      "scene": "A2-S04",
+      "speaker": "jonas",
+      "text": "Schön! Und wo wohnst du jetzt?",
+      "start": 69.564,
+      "end": 72.836,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S04-L04",
+      "scene": "A2-S04",
+      "speaker": "mia",
+      "text": "Ich wohne in Ehrenfeld. Meine Wohnung ist klein, aber ich mag das Viertel.",
+      "start": 73.536,
+      "end": 80.627,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S04-L05",
+      "scene": "A2-S04",
+      "speaker": "jonas",
+      "text": "Ehrenfeld ist toll! Ich wohne in Nippes, aber ich komme ursprünglich aus Leipzig.",
+      "start": 81.327,
+      "end": 88.418,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S05-L01",
+      "scene": "A2-S05",
+      "speaker": "jonas",
+      "text": "Seit wann lebst du in Deutschland?",
+      "start": 90.318,
+      "end": 93.591,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S05-L02",
+      "scene": "A2-S05",
+      "speaker": "mia",
+      "text": "Seit einem Jahr. Ich bin im September nach Köln gezogen, weil ich hier einen Job gefunden habe.",
+      "start": 94.291,
+      "end": 103.564,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S05-L03",
+      "scene": "A2-S05",
+      "speaker": "jonas",
+      "text": "Und dein Deutsch ist schon richtig gut!",
+      "start": 104.264,
+      "end": 108.082,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S05-L04",
+      "scene": "A2-S05",
+      "speaker": "mia",
+      "text": "Danke! Ich lerne seit zwei Jahren Deutsch. Aber manchmal mache ich noch Fehler. Wenn ich einen Fehler mache, korrigier mich bitte.",
+      "start": 108.782,
+      "end": 120.236,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S05-L05",
+      "scene": "A2-S05",
+      "speaker": "jonas",
+      "text": "Klar, gern. Aber ehrlich gesagt: Ich verstehe dich sehr gut.",
+      "start": 120.936,
+      "end": 126.391,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S06-L01",
+      "scene": "A2-S06",
+      "speaker": "jonas",
+      "text": "Was war bis jetzt am schwierigsten in Deutschland?",
+      "start": 128.291,
+      "end": 132.655,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S06-L02",
+      "scene": "A2-S06",
+      "speaker": "mia",
+      "text": "Die Bürokratie! Ich musste viele Formulare ausfüllen, obwohl ich nicht alle Wörter kannte. Aber die Leute waren sehr nett.",
+      "start": 133.355,
+      "end": 143.718,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S06-L03",
+      "scene": "A2-S06",
+      "speaker": "jonas",
+      "text": "Und was gefällt dir besonders gut?",
+      "start": 144.418,
+      "end": 147.691,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S06-L04",
+      "scene": "A2-S06",
+      "speaker": "mia",
+      "text": "Ich fahre gern mit dem Fahrrad am Rhein entlang. Das habe ich in Valencia auch gemacht, weil es dort viele Radwege gibt.",
+      "start": 148.391,
+      "end": 160.391,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S06-L05",
+      "scene": "A2-S06",
+      "speaker": "jonas",
+      "text": "Dann komm doch am Samstag mit! Ich fahre immer am Rhein, wenn das Wetter schön ist.",
+      "start": 161.091,
+      "end": 169.818,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S06-L06",
+      "scene": "A2-S06",
+      "speaker": "mia",
+      "text": "Sehr gern!",
+      "start": 170.518,
+      "end": 171.609,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S07-L01",
+      "scene": "A2-S07",
+      "speaker": "jonas",
+      "text": "Ich zeige dir jetzt dein Büro. Danach stelle ich dich dem Team vor.",
+      "start": 173.509,
+      "end": 180.6,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S07-L02",
+      "scene": "A2-S07",
+      "speaker": "mia",
+      "text": "Super, danke dir! Ich freue mich schon.",
+      "start": 181.3,
+      "end": 185.118,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S08-L01",
+      "scene": "A2-S08",
+      "speaker": "narrator",
+      "text": "Diese Wörter und Sätze helfen dir im Gespräch. Sprich nach!",
+      "start": 187.018,
+      "end": 192.473,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S08-L02",
+      "scene": "A2-S08",
+      "speaker": "mia",
+      "text": "der Kollege, die Kollegin. Der Arbeitstag. Herzlich willkommen!",
+      "start": 193.173,
+      "end": 197.536,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S08-L03",
+      "scene": "A2-S08",
+      "speaker": "jonas",
+      "text": "wohnen, ziehen, leben. Ich lebe seit einem Jahr in Köln.",
+      "start": 200.236,
+      "end": 205.691,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S08-L04",
+      "scene": "A2-S08",
+      "speaker": "mia",
+      "text": "der Fehler, korrigieren. Das Deutsch, die Kenntnisse.",
+      "start": 208.391,
+      "end": 212.209,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S08-L05",
+      "scene": "A2-S08",
+      "speaker": "jonas",
+      "text": "ursprünglich, ehrlich gesagt, besonders gut.",
+      "start": 214.909,
+      "end": 217.636,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S09-L01",
+      "scene": "A2-S09",
+      "speaker": "narrator",
+      "text": "Im Nebensatz steht das Verb am Ende. Zum Beispiel mit „weil“: Ich wohne in Köln, weil ich hier arbeite.",
+      "start": 221.536,
+      "end": 231.9,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S09-L02",
+      "scene": "A2-S09",
+      "speaker": "narrator",
+      "text": "Mit „wenn“ ist es genauso: Wenn ich einen Fehler mache, korrigier mich bitte.",
+      "start": 232.6,
+      "end": 239.691,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S09-L03",
+      "scene": "A2-S09",
+      "speaker": "narrator",
+      "text": "Und für die Zeit sagst du „seit“: Ich lebe seit einem Jahr in Deutschland.",
+      "start": 240.391,
+      "end": 248.027,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S10-L01",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Jetzt bist du dran! Verbinde die Sätze mit „weil“ oder „wenn“.",
+      "start": 249.927,
+      "end": 255.927,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S10-L02",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Eins: Ich wohne in Köln. Ich arbeite hier. Mit „weil“.",
+      "start": 256.627,
+      "end": 262.082,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S10-L03",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Lösung: Ich wohne in Köln, weil ich hier arbeite.",
+      "start": 266.782,
+      "end": 271.691,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S10-L04",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Zwei: Ich mache einen Fehler. Bitte korrigier mich. Mit „wenn“.",
+      "start": 272.391,
+      "end": 277.845,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S10-L05",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Lösung: Wenn ich einen Fehler mache, korrigier mich bitte.",
+      "start": 282.545,
+      "end": 287.455,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S10-L06",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Drei: Ich lerne Deutsch. Ich will hier arbeiten. Mit „weil“.",
+      "start": 288.155,
+      "end": 293.609,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S10-L07",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Lösung: Ich lerne Deutsch, weil ich hier arbeiten will.",
+      "start": 298.309,
+      "end": 303.218,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S10-L08",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Vier: Seit wann lebst du in Deutschland? Antworte mit „seit“.",
+      "start": 303.918,
+      "end": 309.373,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "A2-S10-L09",
+      "scene": "A2-S10",
+      "speaker": "narrator",
+      "text": "Zum Beispiel: Ich lebe seit einem Jahr in Deutschland.",
+      "start": 314.073,
+      "end": 318.982,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S11-L01",
+      "scene": "A2-S11",
+      "speaker": "mia",
+      "text": "Und du? Woher kommst du und wo wohnst du?",
+      "start": 320.882,
+      "end": 325.791,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S11-L02",
+      "scene": "A2-S11",
+      "speaker": "jonas",
+      "text": "Seit wann lernst du Deutsch?",
+      "start": 326.491,
+      "end": 329.218,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S11-L03",
+      "scene": "A2-S11",
+      "speaker": "narrator",
+      "text": "Schreib es in die Kommentare! Benutze „weil“ oder „seit“.",
+      "start": 329.918,
+      "end": 334.827,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "A2-S11-L04",
+      "scene": "A2-S11",
+      "speaker": "narrator",
+      "text": "Bis zum nächsten Video!",
+      "start": 335.527,
+      "end": 337.709,
+      "estimated": true,
+      "hold": 0.0
+    }
+  ]
+}

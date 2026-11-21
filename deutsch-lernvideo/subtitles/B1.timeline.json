@@ -1,0 +1,475 @@
+{
+  "level": "B1",
+  "lines": [
+    {
+      "line_id": "B1-S01-L01",
+      "scene": "B1-S01",
+      "speaker": "narrator",
+      "text": "Du bist auf einer Party und kennst nur die Gastgeberin. Wie kommst du ins Gespräch?",
+      "start": 0.6,
+      "end": 7.523,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S01-L02",
+      "scene": "B1-S01",
+      "speaker": "narrator",
+      "text": "Heute siehst du, wie aus einem kurzen Hallo ein richtiges Gespräch wird.",
+      "start": 8.023,
+      "end": 13.562,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S02-L01",
+      "scene": "B1-S02",
+      "speaker": "narrator",
+      "text": "Das ist Niveau B1. Du kannst Erfahrungen beschreiben und deine Meinung sagen.",
+      "start": 15.262,
+      "end": 20.8,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S02-L02",
+      "scene": "B1-S02",
+      "speaker": "narrator",
+      "text": "Außerdem begründest du, was du denkst – mit Wörtern wie „weil“, „obwohl“ und „deshalb“.",
+      "start": 21.3,
+      "end": 27.3,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S03-L01",
+      "scene": "B1-S03",
+      "speaker": "jonas",
+      "text": "Hi, ich glaube, wir kennen uns noch nicht. Ich bin Jonas.",
+      "start": 29.0,
+      "end": 34.077,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S03-L02",
+      "scene": "B1-S03",
+      "speaker": "mia",
+      "text": "Hallo Jonas, ich bin Mia. Stimmt, wir sind uns noch nicht begegnet.",
+      "start": 34.577,
+      "end": 40.115,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S03-L03",
+      "scene": "B1-S03",
+      "speaker": "jonas",
+      "text": "Woher kennst du Sophie?",
+      "start": 40.615,
+      "end": 42.462,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S03-L04",
+      "scene": "B1-S03",
+      "speaker": "mia",
+      "text": "Wir haben uns vor zwei Jahren im Deutschkurs kennengelernt. Damals war Sophie meine Tandempartnerin. Und du?",
+      "start": 42.962,
+      "end": 50.346,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S03-L05",
+      "scene": "B1-S03",
+      "speaker": "jonas",
+      "text": "Wir haben zusammen in Leipzig studiert. Sie hat mich vorhin gewarnt, dass heute ihre berühmte Schokoladentorte auf den Tisch kommt.",
+      "start": 50.846,
+      "end": 60.077,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S03-L06",
+      "scene": "B1-S03",
+      "speaker": "mia",
+      "text": "Dann bin ich froh, dass ich vorher nichts gegessen habe!",
+      "start": 60.577,
+      "end": 65.192,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S04-L01",
+      "scene": "B1-S04",
+      "speaker": "jonas",
+      "text": "Du hast einen leichten Akzent. Woher kommst du ursprünglich?",
+      "start": 66.892,
+      "end": 71.046,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S04-L02",
+      "scene": "B1-S04",
+      "speaker": "mia",
+      "text": "Aus Valencia, in Spanien. Seit fast drei Jahren lebe ich in Köln. Ich arbeite als Projektkoordinatorin bei einem Unternehmen, das digitale Lernmaterialien entwickelt.",
+      "start": 71.546,
+      "end": 82.162,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S04-L03",
+      "scene": "B1-S04",
+      "speaker": "jonas",
+      "text": "Klingt spannend! Ich bin Softwareentwickler. Manche würden sagen, das ist nicht besonders kreativ.",
+      "start": 82.662,
+      "end": 88.662,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S04-L04",
+      "scene": "B1-S04",
+      "speaker": "mia",
+      "text": "Das glaube ich nicht. Programmieren ist doch kreativ, denn man muss ständig neue Lösungen finden.",
+      "start": 89.162,
+      "end": 96.085,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S04-L05",
+      "scene": "B1-S04",
+      "speaker": "jonas",
+      "text": "Genau so sehe ich das auch! Danke.",
+      "start": 96.585,
+      "end": 99.815,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S05-L01",
+      "scene": "B1-S05",
+      "speaker": "jonas",
+      "text": "Und wie hast du dich in Deutschland eingelebt? Ist dir etwas schwergefallen?",
+      "start": 101.515,
+      "end": 107.054,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S05-L02",
+      "scene": "B1-S05",
+      "speaker": "mia",
+      "text": "Am Anfang war es schwierig, Freunde zu finden, weil die Leute hier eher zurückhaltend sind. Inzwischen habe ich aber gemerkt, dass sie sehr zuverlässig sind, wenn man sie erst einmal kennt.",
+      "start": 107.554,
+      "end": 121.862,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S05-L03",
+      "scene": "B1-S05",
+      "speaker": "jonas",
+      "text": "Da ist was dran. Als ich für den Job nach Köln gezogen bin, habe ich mich auch fremd gefühlt, obwohl ich Deutscher bin. Der Dialekt war für mich anfangs ein Rätsel.",
+      "start": 122.362,
+      "end": 136.669,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S05-L04",
+      "scene": "B1-S05",
+      "speaker": "mia",
+      "text": "Ja, genau! Kölsch verstehe ich bis heute nicht richtig.",
+      "start": 137.169,
+      "end": 141.323,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S05-L05",
+      "scene": "B1-S05",
+      "speaker": "jonas",
+      "text": "Keine Sorge, das geht vielen Kölnern auch so.",
+      "start": 141.823,
+      "end": 145.515,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L01",
+      "scene": "B1-S06",
+      "speaker": "jonas",
+      "text": "Was würdest du Leuten raten, die neu in Deutschland sind?",
+      "start": 147.215,
+      "end": 151.831,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L02",
+      "scene": "B1-S06",
+      "speaker": "mia",
+      "text": "Meiner Meinung nach sollte man so früh wie möglich einem Verein beitreten oder einen Kurs besuchen. Man lernt dort nicht nur die Sprache, sondern auch Menschen mit ähnlichen Interessen kennen. Deshalb habe ich mich bei einem Fahrradclub angemeldet.",
+      "start": 152.331,
+      "end": 169.869,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L03",
+      "scene": "B1-S06",
+      "speaker": "jonas",
+      "text": "Ich finde, das ist ein guter Tipp. Trotzdem traut sich nicht jeder. Außerdem fehlt vielen die Zeit.",
+      "start": 170.369,
+      "end": 178.215,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L04",
+      "scene": "B1-S06",
+      "speaker": "mia",
+      "text": "Das stimmt. Aber wenn man nur eine Stunde pro Woche investiert, ist das schon ein Anfang.",
+      "start": 178.715,
+      "end": 186.1,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L05",
+      "scene": "B1-S06",
+      "speaker": "jonas",
+      "text": "Da hast du recht. Weißt du was? Mein Kumpel Tom fährt auch viel Rad. Soll ich euch vorstellen?",
+      "start": 186.6,
+      "end": 194.908,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L06",
+      "scene": "B1-S06",
+      "speaker": "mia",
+      "text": "Sehr gern! Und danach probieren wir die berühmte Schokoladentorte.",
+      "start": 195.408,
+      "end": 199.562,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S06-L07",
+      "scene": "B1-S06",
+      "speaker": "jonas",
+      "text": "Abgemacht!",
+      "start": 200.062,
+      "end": 200.862,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S07-L01",
+      "scene": "B1-S07",
+      "speaker": "narrator",
+      "text": "Das sind nützliche Wörter und Wendungen für Smalltalk. Sprich nach!",
+      "start": 202.562,
+      "end": 207.177,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S07-L02",
+      "scene": "B1-S07",
+      "speaker": "mia",
+      "text": "jemanden kennenlernen. Sich einleben. Sich fremd fühlen.",
+      "start": 207.677,
+      "end": 210.908,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S07-L03",
+      "scene": "B1-S07",
+      "speaker": "jonas",
+      "text": "zurückhaltend, zuverlässig. Inzwischen. Anfangs.",
+      "start": 213.408,
+      "end": 215.254,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S07-L04",
+      "scene": "B1-S07",
+      "speaker": "mia",
+      "text": "Meiner Meinung nach. Ich finde, dass. Da hast du recht.",
+      "start": 217.754,
+      "end": 222.369,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S07-L05",
+      "scene": "B1-S07",
+      "speaker": "jonas",
+      "text": "einem Verein beitreten. Abgemacht!",
+      "start": 224.869,
+      "end": 226.715,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S08-L01",
+      "scene": "B1-S08",
+      "speaker": "narrator",
+      "text": "Mit „weil“, „obwohl“ und „dass“ steht das Verb am Ende: Es war schwierig, weil die Leute zurückhaltend sind.",
+      "start": 230.415,
+      "end": 238.723,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S08-L02",
+      "scene": "B1-S08",
+      "speaker": "narrator",
+      "text": "Mit „deshalb“, „trotzdem“ und „außerdem“ steht das Verb direkt danach: Deshalb habe ich mich angemeldet.",
+      "start": 239.223,
+      "end": 246.146,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S08-L03",
+      "scene": "B1-S08",
+      "speaker": "narrator",
+      "text": "Der Relativsatz beschreibt ein Nomen: ein Unternehmen, das digitale Lernmaterialien entwickelt.",
+      "start": 246.646,
+      "end": 251.723,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S09-L01",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Jetzt bist du dran! Welches Wort passt?",
+      "start": 253.423,
+      "end": 256.654,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S09-L02",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Eins: Ich fühle mich fremd, … ich Deutscher bin. Weil oder obwohl?",
+      "start": 257.154,
+      "end": 262.231,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S09-L03",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Lösung: obwohl.",
+      "start": 266.731,
+      "end": 267.654,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S09-L04",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Zwei: Ich lerne Menschen kennen. … habe ich mich angemeldet. Deshalb oder trotzdem?",
+      "start": 268.154,
+      "end": 273.692,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S09-L05",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Lösung: Deshalb.",
+      "start": 278.192,
+      "end": 279.115,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S09-L06",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Drei: Programmieren ist kreativ, … man findet neue Lösungen. Denn oder obwohl?",
+      "start": 279.615,
+      "end": 284.692,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S09-L07",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Lösung: denn.",
+      "start": 289.192,
+      "end": 290.115,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S09-L08",
+      "scene": "B1-S09",
+      "speaker": "narrator",
+      "text": "Vier: Sag deine Meinung. Beginne mit „Meiner Meinung nach“ und nenne einen Grund.",
+      "start": 290.615,
+      "end": 296.615,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B1-S10-L01",
+      "scene": "B1-S10",
+      "speaker": "mia",
+      "text": "Und du? Was rätst du Leuten, die neu in einem Land sind?",
+      "start": 304.315,
+      "end": 309.854,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S10-L02",
+      "scene": "B1-S10",
+      "speaker": "jonas",
+      "text": "Schreib deine Meinung in die Kommentare, und vergiss den Grund nicht!",
+      "start": 310.354,
+      "end": 315.431,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S10-L03",
+      "scene": "B1-S10",
+      "speaker": "narrator",
+      "text": "Benutze „weil“, „deshalb“ oder „trotzdem“. Wir lesen alle Kommentare.",
+      "start": 315.931,
+      "end": 320.085,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B1-S10-L04",
+      "scene": "B1-S10",
+      "speaker": "narrator",
+      "text": "Abonniere den Kanal und bis zum nächsten Mal!",
+      "start": 320.585,
+      "end": 324.277,
+      "estimated": true,
+      "hold": 0.0
+    }
+  ]
+}

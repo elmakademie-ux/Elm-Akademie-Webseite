@@ -1,0 +1,15 @@
+{
+  "note": "Aussprachehilfen NUR für die TTS-Eingabe. Die Untertitel behalten die korrekte Schreibweise. Vor der Produktion mit der gewählten Stimme testen und anpassen.",
+  "replacements": {
+    "KI": "Ka-I",
+    "E-Learning": "I-Lörning",
+    "GmbH": "Gemmbeha",
+    "Lernwerk": "Lernwerk",
+    "Kölsch": "Kölsch",
+    "A1": "A eins",
+    "A2": "A zwei",
+    "B1": "B eins",
+    "B2": "B zwei",
+    "II": "zwei"
+  }
+}

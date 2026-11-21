@@ -1,0 +1,11 @@
+{
+  "note": "Provider-neutral Stimmbesetzung. Voice-IDs stehen NICHT hier, sondern in Umgebungsvariablen (.env). Vor der Produktion Stimmen testen und Mia/Jonas/Erzähler klar unterscheidbar wählen.",
+  "language": "de-DE",
+  "roles": {
+    "mia": {"env_voice_id": "TTS_VOICE_ID_MIA", "description": "junge Frau, warm, klar, Hochdeutsch"},
+    "jonas": {"env_voice_id": "TTS_VOICE_ID_JONAS", "description": "junger Mann, ruhig, warm, Hochdeutsch"},
+    "narrator": {"env_voice_id": "TTS_VOICE_ID_NARRATOR", "description": "neutral, ermutigend, sehr deutlich"}
+  },
+  "speech_rate_wpm": {"A1": 85, "A2": 110, "B1": 130, "B2": 145},
+  "pause_between_lines_sec": {"A1": 0.9, "A2": 0.7, "B1": 0.5, "B2": 0.45}
+}

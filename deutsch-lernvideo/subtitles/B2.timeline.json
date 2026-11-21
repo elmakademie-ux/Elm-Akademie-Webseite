@@ -1,0 +1,425 @@
+{
+  "level": "B2",
+  "lines": [
+    {
+      "line_id": "B2-S01-L01",
+      "scene": "B2-S01",
+      "speaker": "narrator",
+      "text": "Ein Gespräch von zwei Minuten kann der Anfang einer Zusammenarbeit sein. Aber wie beginnt man es professionell?",
+      "start": 0.6,
+      "end": 7.634,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S01-L02",
+      "scene": "B2-S01",
+      "speaker": "narrator",
+      "text": "Heute begleitest du zwei Fachleute von der ersten Begrüßung bis zum Austausch der Kontaktdaten.",
+      "start": 8.084,
+      "end": 13.878,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S02-L01",
+      "scene": "B2-S02",
+      "speaker": "narrator",
+      "text": "Das ist Niveau B2. Du sprichst formell und differenziert, du argumentierst und gehst auf andere Standpunkte ein.",
+      "start": 15.528,
+      "end": 22.562,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S02-L02",
+      "scene": "B2-S02",
+      "speaker": "narrator",
+      "text": "Achte auf die Anrede: Hier sagen die beiden „Sie“.",
+      "start": 23.012,
+      "end": 26.736,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S03-L01",
+      "scene": "B2-S03",
+      "speaker": "jonas",
+      "text": "Guten Tag, entschuldigen Sie die Störung. Darf ich mich kurz vorstellen? Jonas Keller, ich leite die Entwicklung bei der Lernplattform Lernfluss.",
+      "start": 28.386,
+      "end": 37.076,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S03-L02",
+      "scene": "B2-S03",
+      "speaker": "mia",
+      "text": "Guten Tag, Herr Keller. Mia Navarro, ich bin Projektleiterin im Bereich E-Learning bei der Lernwerk GmbH. Es freut mich, Sie kennenzulernen.",
+      "start": 37.526,
+      "end": 46.216,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S03-L03",
+      "scene": "B2-S03",
+      "speaker": "jonas",
+      "text": "Die Freude ist ganz meinerseits. Ihr Vortrag zur Lernmotivation hat mir sehr gut gefallen.",
+      "start": 46.666,
+      "end": 52.459,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S03-L04",
+      "scene": "B2-S03",
+      "speaker": "mia",
+      "text": "Vielen Dank, das freut mich zu hören.",
+      "start": 52.909,
+      "end": 55.805,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S04-L01",
+      "scene": "B2-S04",
+      "speaker": "jonas",
+      "text": "Woran arbeiten Sie derzeit?",
+      "start": 57.455,
+      "end": 59.11,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S04-L02",
+      "scene": "B2-S04",
+      "speaker": "mia",
+      "text": "Wir entwickeln gerade eine adaptive Lernumgebung für Deutsch als Fremdsprache, die sich automatisch dem Sprachniveau der Lernenden anpasst. Mein Team verantwortet die didaktische Konzeption, während externe Partner die technische Umsetzung übernehmen.",
+      "start": 59.56,
+      "end": 72.388,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S04-L03",
+      "scene": "B2-S04",
+      "speaker": "jonas",
+      "text": "Das ist interessant, denn genau an der technischen Seite arbeiten wir. Mein Team ist für die Schnittstellen und die Datenanalyse zuständig.",
+      "start": 72.838,
+      "end": 81.528,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S05-L01",
+      "scene": "B2-S05",
+      "speaker": "jonas",
+      "text": "Setzen Sie dabei auch künstliche Intelligenz ein?",
+      "start": 83.178,
+      "end": 86.074,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S05-L02",
+      "scene": "B2-S05",
+      "speaker": "mia",
+      "text": "In Teilbereichen schon, etwa bei der Erstellung von Übungsvarianten. Ich bin allerdings der Ansicht, dass KI Lehrkräfte nicht ersetzen, sondern entlasten sollte. Gerade bei der Aussprache und beim Feedback ist die menschliche Einschätzung unverzichtbar.",
+      "start": 86.524,
+      "end": 100.593,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S05-L03",
+      "scene": "B2-S05",
+      "speaker": "jonas",
+      "text": "Da stimme ich Ihnen grundsätzlich zu. Ich würde allerdings einwenden, dass automatisiertes Feedback bei großen Lerngruppen einen echten Mehrwert bietet, sofern die Qualität regelmäßig überprüft wird.",
+      "start": 101.043,
+      "end": 111.802,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S05-L04",
+      "scene": "B2-S05",
+      "speaker": "mia",
+      "text": "Das ist ein berechtigter Punkt. Vermutlich liegt die Lösung in einer Kombination aus beidem.",
+      "start": 112.252,
+      "end": 118.045,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L01",
+      "scene": "B2-S06",
+      "speaker": "jonas",
+      "text": "Wären Sie grundsätzlich an einem Pilotprojekt interessiert? Wir könnten Ihre Inhalte auf unserer Plattform testen.",
+      "start": 119.695,
+      "end": 125.902,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L02",
+      "scene": "B2-S06",
+      "speaker": "mia",
+      "text": "Durchaus. Ich würde vorschlagen, dass wir zunächst einen Termin vereinbaren, um die Rahmenbedingungen zu klären, bevor wir intern Ressourcen einplanen.",
+      "start": 126.352,
+      "end": 134.628,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L03",
+      "scene": "B2-S06",
+      "speaker": "jonas",
+      "text": "Sehr gern. Darf ich Ihnen meine Visitenkarte geben?",
+      "start": 135.078,
+      "end": 138.388,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L04",
+      "scene": "B2-S06",
+      "speaker": "mia",
+      "text": "Danke. Hier ist meine. Sie erreichen mich am besten per E-Mail, die Adresse steht auf der Karte.",
+      "start": 138.838,
+      "end": 145.872,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L05",
+      "scene": "B2-S06",
+      "speaker": "jonas",
+      "text": "Ich melde mich Anfang nächster Woche bei Ihnen.",
+      "start": 146.322,
+      "end": 149.633,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L06",
+      "scene": "B2-S06",
+      "speaker": "mia",
+      "text": "Das wäre wunderbar. Es war ein sehr anregendes Gespräch, und ich freue mich auf die Zusammenarbeit.",
+      "start": 150.083,
+      "end": 156.703,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L07",
+      "scene": "B2-S06",
+      "speaker": "jonas",
+      "text": "Ich mich ebenfalls. Auf Wiedersehen, Frau Navarro.",
+      "start": 157.153,
+      "end": 160.05,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S06-L08",
+      "scene": "B2-S06",
+      "speaker": "mia",
+      "text": "Auf Wiedersehen, Herr Keller.",
+      "start": 160.5,
+      "end": 162.155,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S07-L01",
+      "scene": "B2-S07",
+      "speaker": "narrator",
+      "text": "Das sind wichtige Wendungen für berufliche Gespräche. Sprich nach!",
+      "start": 163.805,
+      "end": 167.529,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S07-L02",
+      "scene": "B2-S07",
+      "speaker": "mia",
+      "text": "verantwortlich für, zuständig für. Die Zusammenarbeit. Das Pilotprojekt.",
+      "start": 167.979,
+      "end": 171.29,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S07-L03",
+      "scene": "B2-S07",
+      "speaker": "jonas",
+      "text": "die Rahmenbedingungen. Die Schnittstelle. Etwas einplanen.",
+      "start": 173.74,
+      "end": 176.222,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S07-L04",
+      "scene": "B2-S07",
+      "speaker": "mia",
+      "text": "unverzichtbar, berechtigt, grundsätzlich. Einen Standpunkt vertreten.",
+      "start": 178.672,
+      "end": 181.155,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S07-L05",
+      "scene": "B2-S07",
+      "speaker": "jonas",
+      "text": "Die Freude ist ganz meinerseits. Ich melde mich bei Ihnen.",
+      "start": 183.605,
+      "end": 187.743,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S08-L01",
+      "scene": "B2-S08",
+      "speaker": "narrator",
+      "text": "Erstens: Mit dem Konjunktiv II klingst du höflich. „Wären Sie interessiert?“ klingt freundlicher als „Sind Sie interessiert?“.",
+      "start": 191.393,
+      "end": 198.428,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S08-L02",
+      "scene": "B2-S08",
+      "speaker": "narrator",
+      "text": "Zweitens: Mit „allerdings“, „sofern“ und „obwohl“ begründest du differenziert und gehst auf Gegenargumente ein.",
+      "start": 198.878,
+      "end": 204.671,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S08-L03",
+      "scene": "B2-S08",
+      "speaker": "narrator",
+      "text": "Drittens: Relativsätze mit Präposition machen deine Sätze präziser: eine Lernumgebung, an der wir arbeiten.",
+      "start": 205.121,
+      "end": 210.914,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S09-L01",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Jetzt bist du dran! Formuliere höflicher.",
+      "start": 212.564,
+      "end": 215.047,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S09-L02",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Eins: „Sind Sie an einem Pilotprojekt interessiert?“ Benutze den Konjunktiv II.",
+      "start": 215.497,
+      "end": 220.048,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S09-L03",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Lösung: Wären Sie an einem Pilotprojekt interessiert?",
+      "start": 224.498,
+      "end": 227.395,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S09-L04",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Zwei: „Ich schlage vor: Wir vereinbaren einen Termin.“ Beginne mit „Ich würde vorschlagen, dass …“.",
+      "start": 227.845,
+      "end": 233.638,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S09-L05",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Lösung: Ich würde vorschlagen, dass wir einen Termin vereinbaren.",
+      "start": 239.088,
+      "end": 242.812,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S09-L06",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Drei: Verbinde die Sätze mit „sofern“: Automatisiertes Feedback hilft. Die Qualität wird überprüft.",
+      "start": 243.262,
+      "end": 248.641,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S09-L07",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Lösung: Automatisiertes Feedback hilft, sofern die Qualität überprüft wird.",
+      "start": 254.091,
+      "end": 257.816,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S09-L08",
+      "scene": "B2-S09",
+      "speaker": "narrator",
+      "text": "Vier: Stelle dich in drei Sätzen vor: Name, Position, Unternehmen.",
+      "start": 258.266,
+      "end": 262.403,
+      "estimated": true,
+      "hold": 2.0
+    },
+    {
+      "line_id": "B2-S10-L01",
+      "scene": "B2-S10",
+      "speaker": "mia",
+      "text": "Und Sie? Wie würden Sie sich in drei Sätzen vorstellen?",
+      "start": 270.053,
+      "end": 274.191,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S10-L02",
+      "scene": "B2-S10",
+      "speaker": "jonas",
+      "text": "Schreiben Sie es in die Kommentare. Wir freuen uns auf Ihre Vorstellung.",
+      "start": 274.641,
+      "end": 279.607,
+      "estimated": true,
+      "hold": 0.0
+    },
+    {
+      "line_id": "B2-S10-L03",
+      "scene": "B2-S10",
+      "speaker": "narrator",
+      "text": "Abonniere den Kanal für weitere Folgen. Bis zum nächsten Mal!",
+      "start": 280.057,
+      "end": 284.195,
+      "estimated": true,
+      "hold": 0.0
+    }
+  ]
+}

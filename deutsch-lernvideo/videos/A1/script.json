@@ -1,0 +1,642 @@
+{
+  "id": "A1",
+  "level": "A1",
+  "level_name": "Anfänger",
+  "title": "Hallo! Ich heiße … – Begrüßen und sich vorstellen",
+  "subtitle": "Deutsch lernen A1: Hallo, Name, Herkunft",
+  "target_duration_sec": 215,
+  "form_of_address": "du",
+  "can_do": "Ich kann jemanden begrüßen, meinen Namen sagen, nach dem Namen und der Herkunft fragen und mich verabschieden.",
+  "social": {
+    "title_youtube": "Deutsch lernen A1: Hallo! Ich heiße … | Begrüßung und sich vorstellen",
+    "hashtags": [
+      "#DeutschLernen",
+      "#LearnGerman",
+      "#A1",
+      "#Deutsch",
+      "#GermanForBeginners"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "A1-S01",
+      "type": "hook",
+      "title": "Hook: Hallo!",
+      "location": "Stadtpark in Köln, früher Morgen, Sonnenaufgang",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia und Jonas stehen im goldenen Morgenlicht im Park, sehen direkt in die Kamera und winken. Eine Sprechblase mit dem Wort „Hallo!“ erscheint groß im Bild.",
+      "direction": {
+        "camera": "Beginnt mit einer Vogelperspektive über den Park, fährt sanft nach unten und endet in einer Halbtotalen auf beide Figuren; am Ende kurzer Push-in auf die Gesichter.",
+        "lighting": "Goldenes Gegenlicht (Sonnenaufgang), weiche Lichtkanten, leichte Nebelschleier.",
+        "animation": "Beide winken gleichzeitig, Blick in die Kamera, breites Lächeln, leichtes Wippen auf den Füßen.",
+        "music": "Leichte, fröhliche Ukulele-Melodie, setzt mit dem ersten Wort ein."
+      },
+      "visual": "Mia and Jonas stand side by side on a park path at sunrise, looking straight into the camera, both waving with a big friendly smile. A large speech bubble with the word 'Hallo!' pops up above them.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Hallo! Nur ein Wort. Und schon beginnt ein Gespräch.",
+          "emotion": "bright, welcoming, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Heute lernst du: Wie stelle ich mich vor?",
+          "emotion": "curious, encouraging, slow"
+        }
+      ],
+      "on_screen": [
+        "Hallo!"
+      ],
+      "prompt_en": {
+        "location": "City park in Cologne at sunrise, misty golden light",
+        "camera": "Starts with a high aerial view over the park, glides down to a medium-wide shot of both characters, ends with a gentle push-in on their faces",
+        "lighting": "Golden backlight, soft rim light, light mist"
+      }
+    },
+    {
+      "id": "A1-S02",
+      "type": "intro",
+      "title": "Einführung: Niveau A1",
+      "location": "Heller Titelraum mit Park-Silhouette im Hintergrund",
+      "characters": [
+        "mia"
+      ],
+      "description": "Mia steht neben einer großen Tafel mit „A1“ und erklärt das Niveau. Drei Symbole erscheinen: kurze Sätze, langsames Sprechen, laut mitsprechen.",
+      "direction": {
+        "camera": "Halbnah auf Mia, leichter Schwenk zur Tafel; Symbole poppen nacheinander ein.",
+        "lighting": "Helles, weiches Studiolicht, pastellfarbener Hintergrund.",
+        "animation": "Mia zeigt mit der Hand auf die Tafel, nickt bei „langsam“, hält die Hand ans Ohr bei „laut mitsprechen“.",
+        "music": "Gleiche Ukulele, leiser."
+      },
+      "visual": "Mia stands next to a big colorful blackboard that reads 'A1'. She gestures toward the board. Three small icons appear one after another: a short sentence bubble, a slow turtle, a mouth speaking.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Das ist Niveau A1. Du lernst einfache Wörter und kurze Sätze.",
+          "emotion": "friendly, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Wir sprechen langsam. Sprich laut mit!",
+          "emotion": "encouraging, slow"
+        }
+      ],
+      "on_screen": [
+        "A1",
+        "Kurze Sätze",
+        "Langsam sprechen",
+        "Laut mitsprechen!"
+      ],
+      "prompt_en": {
+        "location": "Bright title space with a soft park silhouette in the background",
+        "camera": "Medium shot of Mia, slight pan to the board, icons pop in one after another",
+        "lighting": "Soft bright studio light, pastel background"
+      }
+    },
+    {
+      "id": "A1-S03",
+      "type": "dialog",
+      "title": "Szene 1: Guten Morgen!",
+      "location": "Parkbank unter einem Kirschbaum, Morgensonne",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas sitzt mit einem Kaffeebecher auf der Bank. Mia kommt mit ihrer Umhängetasche vorbei. Beide begrüßen sich zum ersten Mal.",
+      "direction": {
+        "camera": "Halbtotale von vorn; dann ruhiges Schuss-Gegenschuss (Over-the-Shoulder) bei jeder Zeile.",
+        "lighting": "Warmes Morgenlicht durch Kirschblüten, leichte Lichtflecken.",
+        "animation": "Mia bleibt stehen und winkt, Jonas blickt auf und lächelt überrascht, beide nicken bei „Guten Morgen“.",
+        "music": "Sehr leise, nur Vogelgezwitscher."
+      },
+      "visual": "Jonas sits on a park bench holding a coffee cup under a blossoming cherry tree. Mia walks past with a small shoulder bag, stops, and waves. They greet each other warmly for the first time.",
+      "lines": [
+        {
+          "speaker": "mia",
+          "text": "Hallo! Guten Morgen!",
+          "emotion": "friendly, bright, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Guten Morgen!",
+          "emotion": "pleasantly surprised, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Hallo!",
+          "emotion": "warm, smiling, slow"
+        }
+      ],
+      "on_screen": [
+        "Hallo!",
+        "Guten Morgen!"
+      ],
+      "prompt_en": {
+        "location": "Park bench under a blossoming cherry tree, morning sun",
+        "camera": "Medium-wide frontal shot, then calm over-the-shoulder shot/reverse shot for each line",
+        "lighting": "Warm morning light filtering through cherry blossoms, dappled light"
+      }
+    },
+    {
+      "id": "A1-S04",
+      "type": "dialog",
+      "title": "Szene 2: Wie heißt du?",
+      "location": "Parkbank unter dem Kirschbaum",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas zeigt auf sich selbst und stellt sich vor. Mia setzt sich neben ihn und nennt ihren Namen. Beide geben sich die Hand.",
+      "direction": {
+        "camera": "Zweier-Einstellung auf der Bank, leichte Kamerafahrt seitlich; Nahaufnahme beim Handschlag.",
+        "lighting": "Gleiches warmes Morgenlicht.",
+        "animation": "Jonas legt die Hand auf die Brust bei „Ich heiße Jonas“, Mia zeigt auf sich selbst; Handschlag mit Lächeln.",
+        "music": "Ukulele setzt leise wieder ein."
+      },
+      "visual": "Jonas points to his chest, then offers a handshake. Mia sits down next to him on the bench, points to herself, and shakes his hand. Close-up on the friendly handshake and two smiling faces.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Ich heiße Jonas. Und du? Wie heißt du?",
+          "emotion": "friendly, curious, slow"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ich heiße Mia.",
+          "emotion": "warm, a little shy, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Hallo, Mia!",
+          "emotion": "happy, slow"
+        },
+        {
+          "speaker": "mia",
+          "text": "Hallo, Jonas! Freut mich!",
+          "emotion": "delighted, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Freut mich auch!",
+          "emotion": "warm, smiling, slow"
+        }
+      ],
+      "on_screen": [
+        "Ich heiße …",
+        "Wie heißt du?",
+        "Freut mich!"
+      ],
+      "prompt_en": {
+        "location": "Park bench under the cherry tree",
+        "camera": "Two-shot on the bench with a gentle sideways dolly, close-up on the handshake",
+        "lighting": "Same warm morning light"
+      }
+    },
+    {
+      "id": "A1-S05",
+      "type": "dialog",
+      "title": "Szene 3: Woher kommst du?",
+      "location": "Parkbank, danach Blick auf eine illustrierte Weltkarte",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Jonas fragt nach Mias Herkunft. Eine animierte Landkarte blendet kurz ein: ein Pin in Spanien (Valencia), ein Pin in Deutschland (Leipzig).",
+      "direction": {
+        "camera": "Zweier-Einstellung; bei den Ländernamen Übergang zu einer animierten Karte (Einblendung), dann zurück zur Bank.",
+        "lighting": "Unverändert, warm.",
+        "animation": "Mia zeigt in die Ferne bei „Spanien“, Jonas nickt interessiert; beide lächeln bei „schön“.",
+        "music": "Ukulele, leicht belebter."
+      },
+      "visual": "Mia and Jonas chat on the bench. A stylized animated map pops up beside them: a pin drops on Spain (Valencia), then a pin drops on Germany (Leipzig). Mia and Jonas smile and point to the pins.",
+      "lines": [
+        {
+          "speaker": "jonas",
+          "text": "Woher kommst du, Mia?",
+          "emotion": "curious, slow"
+        },
+        {
+          "speaker": "mia",
+          "text": "Ich komme aus Spanien. Aus Valencia.",
+          "emotion": "proud, warm, slow"
+        },
+        {
+          "speaker": "mia",
+          "text": "Und du? Woher kommst du?",
+          "emotion": "curious, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Ich komme aus Deutschland. Aus Leipzig.",
+          "emotion": "friendly, slow"
+        },
+        {
+          "speaker": "mia",
+          "text": "Leipzig ist schön!",
+          "emotion": "enthusiastic, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Valencia ist auch schön!",
+          "emotion": "smiling, slow"
+        }
+      ],
+      "on_screen": [
+        "Woher kommst du?",
+        "Ich komme aus …",
+        "Spanien – Valencia",
+        "Deutschland – Leipzig"
+      ],
+      "prompt_en": {
+        "location": "Park bench, with an illustrated world map popping up beside them",
+        "camera": "Two-shot, a stylized animated map overlays beside the characters, then back to the bench",
+        "lighting": "Same warm morning light"
+      }
+    },
+    {
+      "id": "A1-S06",
+      "type": "dialog",
+      "title": "Szene 4: Tschüss!",
+      "location": "Parkweg, Mia geht weiter, Jonas bleibt sitzen",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia steht auf und geht weiter. Beide winken sich zum Abschied zu.",
+      "direction": {
+        "camera": "Halbtotale; Kamera folgt Mia ein paar Schritte, bleibt dann bei Jonas.",
+        "lighting": "Sonne steht höher, helles, klares Licht.",
+        "animation": "Mia dreht sich im Gehen um und winkt, Jonas winkt zurück.",
+        "music": "Ukulele-Melodie steigt auf."
+      },
+      "visual": "Mia stands up from the bench, waves goodbye and walks along the sunny park path, turning around once to wave again. Jonas waves back from the bench with a smile.",
+      "lines": [
+        {
+          "speaker": "mia",
+          "text": "Tschüss, Jonas!",
+          "emotion": "cheerful, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Tschüss, Mia! Bis bald!",
+          "emotion": "warm, slow"
+        }
+      ],
+      "on_screen": [
+        "Tschüss!",
+        "Bis bald!"
+      ],
+      "prompt_en": {
+        "location": "Sunny park path, Mia walks on while Jonas stays on the bench",
+        "camera": "Medium-wide shot, camera follows Mia a few steps then returns to Jonas",
+        "lighting": "Higher sun, bright clear light"
+      }
+    },
+    {
+      "id": "A1-S07",
+      "type": "vocab",
+      "title": "Wortschatz",
+      "location": "Heller Lernraum mit schwebenden Wortkarten",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Wortkarten schweben nacheinander ins Bild. Mia und Jonas sprechen jedes Wort langsam vor, die Zuschauer sprechen nach.",
+      "direction": {
+        "camera": "Frontal, ruhig; Karten fliegen von rechts ein, jede Karte bleibt etwa zwei Sekunden.",
+        "lighting": "Hell, pastellfarben.",
+        "animation": "Mia und Jonas zeigen abwechselnd auf die Karten und sprechen die Wörter deutlich mit.",
+        "music": "Leise, rhythmisch."
+      },
+      "visual": "A bright pastel learning room. Colorful word cards float in one by one. Mia and Jonas stand on either side, pointing at each card and pronouncing the word clearly with exaggerated lip movements.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Das sind die wichtigen Wörter. Sprich nach!",
+          "emotion": "encouraging, slow"
+        },
+        {
+          "speaker": "mia",
+          "text": "Hallo. Guten Morgen. Tschüss.",
+          "emotion": "clear, slow",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "jonas",
+          "text": "Ich heiße. Wie heißt du?",
+          "emotion": "clear, slow",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "mia",
+          "text": "Ich komme aus. Woher kommst du?",
+          "emotion": "clear, slow",
+          "pause_after": 2.0
+        },
+        {
+          "speaker": "jonas",
+          "text": "Freut mich!",
+          "emotion": "clear, slow",
+          "pause_after": 2.0
+        }
+      ],
+      "on_screen": [
+        "Hallo",
+        "Guten Morgen",
+        "Tschüss",
+        "Ich heiße …",
+        "Wie heißt du?",
+        "Ich komme aus …",
+        "Woher kommst du?",
+        "Freut mich!"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with floating word cards",
+        "camera": "Static frontal shot, cards fly in from the right and stay about two seconds each",
+        "lighting": "Bright pastel light"
+      }
+    },
+    {
+      "id": "A1-S08",
+      "type": "grammar",
+      "title": "Grammatik: ich, du und das Verb",
+      "location": "Heller Lernraum mit großer Tabelle",
+      "characters": [
+        "mia"
+      ],
+      "description": "Eine Tabelle zeigt die Verben heißen, kommen und sein mit ich und du. Die Endungen leuchten farbig auf.",
+      "direction": {
+        "camera": "Halbnah auf Mia neben der Tabelle; Einblendung der Tabelle formatfüllend.",
+        "lighting": "Hell, klar.",
+        "animation": "Mia tippt auf ‚-e‘ und ‚-st‘; die Endungen pulsieren in Orange.",
+        "music": "Sehr leise."
+      },
+      "visual": "Mia stands next to a large clean table on screen. The endings -e and -st glow orange one after another while she taps them. Table: ich heiße / du heißt; ich komme / du kommst; ich bin / du bist.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Achtung: Das Verb ändert sich.",
+          "emotion": "clear, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Ich heiße. Du heißt. Ich komme. Du kommst. Ich bin. Du bist.",
+          "emotion": "clear, very slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Bei Fragen mit Fragewort steht das Verb an Position zwei: Wie heißt du? Woher kommst du?",
+          "emotion": "clear, slow"
+        }
+      ],
+      "on_screen": [
+        "ich heiße – du heißt",
+        "ich komme – du kommst",
+        "ich bin – du bist",
+        "Wie heißt du?",
+        "Woher kommst du?"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with a large table on screen",
+        "camera": "Medium shot of Mia next to the table, then the table fills the frame",
+        "lighting": "Bright, clear light"
+      }
+    },
+    {
+      "id": "A1-S09",
+      "type": "exercise",
+      "title": "Übung: Ergänze die Sätze",
+      "location": "Heller Lernraum mit großer Lückentafel",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Vier Lückensätze erscheinen nacheinander. Nach einer Denkpause erscheint die Lösung. Am Ende sprechen die Zuschauer über sich selbst.",
+      "direction": {
+        "camera": "Frontal auf die Tafel; Mia und Jonas stehen links und rechts; Countdown-Uhr in der Ecke.",
+        "lighting": "Hell, fröhlich.",
+        "animation": "Mia und Jonas zucken beim Countdown spielerisch mit den Schultern, bei der Lösung freuen sie sich und nicken.",
+        "music": "Leichte Quiz-Melodie während der Denkpause."
+      },
+      "visual": "A big blackboard with a fill-in-the-blank sentence. A cheerful countdown clock ticks in the corner. Mia and Jonas stand left and right, shrugging playfully, then celebrate when the answer appears in green.",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Jetzt bist du dran! Ergänze die Sätze.",
+          "emotion": "playful, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Eins: Wie … du?",
+          "emotion": "clear, slow",
+          "pause_after": 3.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Richtig: Wie heißt du?",
+          "emotion": "pleased, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Zwei: Ich … Mia.",
+          "emotion": "clear, slow",
+          "pause_after": 3.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Richtig: Ich heiße Mia.",
+          "emotion": "pleased, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Drei: Woher … du?",
+          "emotion": "clear, slow",
+          "pause_after": 3.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Richtig: Woher kommst du?",
+          "emotion": "pleased, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Vier: Ich … aus Spanien.",
+          "emotion": "clear, slow",
+          "pause_after": 3.0
+        },
+        {
+          "speaker": "narrator",
+          "text": "Richtig: Ich komme aus Spanien.",
+          "emotion": "pleased, slow"
+        }
+      ],
+      "on_screen": [
+        "1. Wie ___ du?  → heißt",
+        "2. Ich ___ Mia.  → heiße",
+        "3. Woher ___ du?  → kommst",
+        "4. Ich ___ aus Spanien.  → komme"
+      ],
+      "prompt_en": {
+        "location": "Bright pastel learning room with a big fill-in blackboard",
+        "camera": "Frontal on the board, Mia and Jonas left and right, countdown clock in the corner",
+        "lighting": "Bright, cheerful light"
+      }
+    },
+    {
+      "id": "A1-S10",
+      "type": "outro",
+      "title": "Abschluss: Mach mit!",
+      "location": "Stadtpark, Nachmittagslicht; am Ende Logo-Endcard",
+      "characters": [
+        "mia",
+        "jonas"
+      ],
+      "description": "Mia und Jonas winken zum Abschied in die Kamera. Eine Sprechblase fordert die Zuschauer auf, ihren Namen und ihr Land in die Kommentare zu schreiben. Danach Endcard mit Logo und Abonnieren-Hinweis.",
+      "direction": {
+        "camera": "Halbnah, leichter Zoom-out, dann Überblendung zur Endcard.",
+        "lighting": "Warmes Nachmittagslicht.",
+        "animation": "Beide zeigen auf die Kamera („Du!“), dann Daumen hoch und Winken.",
+        "music": "Ukulele-Hauptmelodie, Ausklang."
+      },
+      "visual": "Mia and Jonas stand together in the park in warm afternoon light, point playfully at the camera, give a thumbs up and wave goodbye. A speech bubble shows 'Ich heiße … Ich komme aus …'. Smooth transition to an end card.",
+      "lines": [
+        {
+          "speaker": "mia",
+          "text": "Und du? Wie heißt du?",
+          "emotion": "inviting, warm, slow"
+        },
+        {
+          "speaker": "jonas",
+          "text": "Woher kommst du?",
+          "emotion": "inviting, warm, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Schreib es in die Kommentare: Ich heiße … Ich komme aus …",
+          "emotion": "friendly, slow"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Bis bald! Tschüss!",
+          "emotion": "warm, slow"
+        }
+      ],
+      "on_screen": [
+        "Ich heiße …",
+        "Ich komme aus …",
+        "Schreib in die Kommentare!",
+        "Abonnieren"
+      ],
+      "prompt_en": {
+        "location": "City park in warm afternoon light, ends on a logo end card",
+        "camera": "Medium shot, slow zoom-out, dissolve to end card",
+        "lighting": "Warm afternoon light"
+      }
+    }
+  ],
+  "vocabulary": [
+    {
+      "de": "Hallo!",
+      "en": "Hello!",
+      "example": "Hallo, Mia!"
+    },
+    {
+      "de": "Guten Morgen!",
+      "en": "Good morning!",
+      "example": "Guten Morgen, Jonas!"
+    },
+    {
+      "de": "Tschüss!",
+      "en": "Bye!",
+      "example": "Tschüss, Mia!"
+    },
+    {
+      "de": "Bis bald!",
+      "en": "See you soon!",
+      "example": "Tschüss! Bis bald!"
+    },
+    {
+      "de": "heißen",
+      "en": "to be called",
+      "example": "Ich heiße Mia."
+    },
+    {
+      "de": "Wie heißt du?",
+      "en": "What is your name?",
+      "example": "Wie heißt du?"
+    },
+    {
+      "de": "kommen",
+      "en": "to come (from)",
+      "example": "Ich komme aus Spanien."
+    },
+    {
+      "de": "Woher kommst du?",
+      "en": "Where are you from?",
+      "example": "Woher kommst du?"
+    },
+    {
+      "de": "Freut mich!",
+      "en": "Nice to meet you!",
+      "example": "Hallo, Jonas! Freut mich!"
+    },
+    {
+      "de": "schön",
+      "en": "nice, beautiful",
+      "example": "Leipzig ist schön!"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Verben mit ich und du",
+      "rule": "Das Verb bekommt eine Endung: ich → -e, du → -st. Das Verb „sein“ ist unregelmäßig.",
+      "examples": [
+        "ich heiße – du heißt",
+        "ich komme – du kommst",
+        "ich bin – du bist"
+      ]
+    },
+    {
+      "title": "W-Fragen",
+      "rule": "Fragewort auf Position 1, das Verb auf Position 2.",
+      "examples": [
+        "Wie heißt du?",
+        "Woher kommst du?"
+      ]
+    },
+    {
+      "title": "Herkunft mit „aus“",
+      "rule": "Ich komme aus + Land oder Stadt.",
+      "examples": [
+        "Ich komme aus Spanien.",
+        "Ich komme aus Leipzig."
+      ]
+    }
+  ],
+  "exercise": {
+    "instruction": "Ergänze die Sätze.",
+    "items": [
+      {
+        "prompt": "Wie ___ du?",
+        "answer": "heißt"
+      },
+      {
+        "prompt": "Ich ___ Mia.",
+        "answer": "heiße"
+      },
+      {
+        "prompt": "Woher ___ du?",
+        "answer": "kommst"
+      },
+      {
+        "prompt": "Ich ___ aus Spanien.",
+        "answer": "komme"
+      }
+    ],
+    "speaking_task": "Sag laut: Ich heiße … Ich komme aus …"
+  },
+  "music_en": "light cheerful ukulele melody"
+}

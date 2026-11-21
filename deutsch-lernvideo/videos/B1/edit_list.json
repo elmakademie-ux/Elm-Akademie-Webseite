@@ -1,0 +1,253 @@
+{
+  "level": "B1",
+  "title": "Auf der Geburtstagsparty – Jemanden näher kennenlernen",
+  "scenes": [
+    {
+      "scene_id": "B1-S01",
+      "type": "hook",
+      "start_est": 0.0,
+      "end_est": 14.662,
+      "clips": [
+        "clips/B1/B1-S01_c01.mp4",
+        "clips/B1/B1-S01_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S01-L01_narrator.mp3",
+        "audio/B1/B1-S01-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Party. Niemand kennt dich. Und jetzt?"
+      ]
+    },
+    {
+      "scene_id": "B1-S02",
+      "type": "intro",
+      "start_est": 14.662,
+      "end_est": 28.4,
+      "clips": [
+        "clips/B1/B1-S02_c01.mp4",
+        "clips/B1/B1-S02_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S02-L01_narrator.mp3",
+        "audio/B1/B1-S02-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "B1",
+        "Erfahrungen beschreiben",
+        "Meinung äußern",
+        "Gründe nennen: weil · obwohl · deshalb"
+      ]
+    },
+    {
+      "scene_id": "B1-S03",
+      "type": "dialog",
+      "start_est": 28.4,
+      "end_est": 66.292,
+      "clips": [
+        "clips/B1/B1-S03_c01.mp4",
+        "clips/B1/B1-S03_c02.mp4",
+        "clips/B1/B1-S03_c03.mp4",
+        "clips/B1/B1-S03_c04.mp4",
+        "clips/B1/B1-S03_c05.mp4",
+        "clips/B1/B1-S03_c06.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S03-L01_jonas.mp3",
+        "audio/B1/B1-S03-L02_mia.mp3",
+        "audio/B1/B1-S03-L03_jonas.mp3",
+        "audio/B1/B1-S03-L04_mia.mp3",
+        "audio/B1/B1-S03-L05_jonas.mp3",
+        "audio/B1/B1-S03-L06_mia.mp3"
+      ],
+      "overlay_text": [
+        "Woher kennst du …?",
+        "Wir haben uns … kennengelernt."
+      ]
+    },
+    {
+      "scene_id": "B1-S04",
+      "type": "dialog",
+      "start_est": 66.292,
+      "end_est": 100.915,
+      "clips": [
+        "clips/B1/B1-S04_c01.mp4",
+        "clips/B1/B1-S04_c02.mp4",
+        "clips/B1/B1-S04_c03.mp4",
+        "clips/B1/B1-S04_c04.mp4",
+        "clips/B1/B1-S04_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S04-L01_jonas.mp3",
+        "audio/B1/B1-S04-L02_mia.mp3",
+        "audio/B1/B1-S04-L03_jonas.mp3",
+        "audio/B1/B1-S04-L04_mia.mp3",
+        "audio/B1/B1-S04-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Ich arbeite als …",
+        "ein Unternehmen, das … entwickelt",
+        "denn …"
+      ]
+    },
+    {
+      "scene_id": "B1-S05",
+      "type": "dialog",
+      "start_est": 100.915,
+      "end_est": 146.615,
+      "clips": [
+        "clips/B1/B1-S05_c01.mp4",
+        "clips/B1/B1-S05_c02.mp4",
+        "clips/B1/B1-S05_c03.mp4",
+        "clips/B1/B1-S05_c04.mp4",
+        "clips/B1/B1-S05_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S05-L01_jonas.mp3",
+        "audio/B1/B1-S05-L02_mia.mp3",
+        "audio/B1/B1-S05-L03_jonas.mp3",
+        "audio/B1/B1-S05-L04_mia.mp3",
+        "audio/B1/B1-S05-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Am Anfang war es schwierig, weil …",
+        "Ich habe mich fremd gefühlt, obwohl …",
+        "Inzwischen habe ich gemerkt, dass …"
+      ]
+    },
+    {
+      "scene_id": "B1-S06",
+      "type": "dialog",
+      "start_est": 146.615,
+      "end_est": 201.962,
+      "clips": [
+        "clips/B1/B1-S06_c01.mp4",
+        "clips/B1/B1-S06_c02.mp4",
+        "clips/B1/B1-S06_c03.mp4",
+        "clips/B1/B1-S06_c04.mp4",
+        "clips/B1/B1-S06_c05.mp4",
+        "clips/B1/B1-S06_c06.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S06-L01_jonas.mp3",
+        "audio/B1/B1-S06-L02_mia.mp3",
+        "audio/B1/B1-S06-L03_jonas.mp3",
+        "audio/B1/B1-S06-L04_mia.mp3",
+        "audio/B1/B1-S06-L05_jonas.mp3",
+        "audio/B1/B1-S06-L06_mia.mp3",
+        "audio/B1/B1-S06-L07_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Meiner Meinung nach …",
+        "Ich finde, dass …",
+        "Deshalb … · Trotzdem … · Außerdem …"
+      ]
+    },
+    {
+      "scene_id": "B1-S07",
+      "type": "vocab",
+      "start_est": 201.962,
+      "end_est": 229.815,
+      "clips": [
+        "clips/B1/B1-S07_c01.mp4",
+        "clips/B1/B1-S07_c02.mp4",
+        "clips/B1/B1-S07_c03.mp4",
+        "clips/B1/B1-S07_c04.mp4",
+        "clips/B1/B1-S07_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S07-L01_narrator.mp3",
+        "audio/B1/B1-S07-L02_mia.mp3",
+        "audio/B1/B1-S07-L03_jonas.mp3",
+        "audio/B1/B1-S07-L04_mia.mp3",
+        "audio/B1/B1-S07-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "jemanden kennenlernen",
+        "sich einleben",
+        "sich fremd fühlen",
+        "zurückhaltend · zuverlässig",
+        "inzwischen · anfangs",
+        "Meiner Meinung nach …",
+        "Da hast du recht."
+      ]
+    },
+    {
+      "scene_id": "B1-S08",
+      "type": "grammar",
+      "start_est": 229.815,
+      "end_est": 252.823,
+      "clips": [
+        "clips/B1/B1-S08_c01.mp4",
+        "clips/B1/B1-S08_c02.mp4",
+        "clips/B1/B1-S08_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S08-L01_narrator.mp3",
+        "audio/B1/B1-S08-L02_narrator.mp3",
+        "audio/B1/B1-S08-L03_narrator.mp3"
+      ],
+      "overlay_text": [
+        "weil · obwohl · dass → Verb am Ende",
+        "deshalb · trotzdem · außerdem → Verb auf Position 2",
+        "ein Unternehmen, das … entwickelt"
+      ]
+    },
+    {
+      "scene_id": "B1-S09",
+      "type": "exercise",
+      "start_est": 252.823,
+      "end_est": 303.715,
+      "clips": [
+        "clips/B1/B1-S09_c01.mp4",
+        "clips/B1/B1-S09_c02.mp4",
+        "clips/B1/B1-S09_c03.mp4",
+        "clips/B1/B1-S09_c04.mp4",
+        "clips/B1/B1-S09_c05.mp4",
+        "clips/B1/B1-S09_c06.mp4",
+        "clips/B1/B1-S09_c07.mp4",
+        "clips/B1/B1-S09_c08.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S09-L01_narrator.mp3",
+        "audio/B1/B1-S09-L02_narrator.mp3",
+        "audio/B1/B1-S09-L03_narrator.mp3",
+        "audio/B1/B1-S09-L04_narrator.mp3",
+        "audio/B1/B1-S09-L05_narrator.mp3",
+        "audio/B1/B1-S09-L06_narrator.mp3",
+        "audio/B1/B1-S09-L07_narrator.mp3",
+        "audio/B1/B1-S09-L08_narrator.mp3"
+      ],
+      "overlay_text": [
+        "1. Ich fühle mich fremd, ___ ich Deutscher bin. (weil / obwohl)  → obwohl",
+        "2. Ich lerne Menschen kennen. ___ habe ich mich angemeldet. (Deshalb / Trotzdem)  → Deshalb",
+        "3. Programmieren ist kreativ, ___ man findet neue Lösungen. (denn / obwohl)  → denn",
+        "4. Meiner Meinung nach … , weil …"
+      ]
+    },
+    {
+      "scene_id": "B1-S10",
+      "type": "outro",
+      "start_est": 303.715,
+      "end_est": 325.377,
+      "clips": [
+        "clips/B1/B1-S10_c01.mp4",
+        "clips/B1/B1-S10_c02.mp4",
+        "clips/B1/B1-S10_c03.mp4",
+        "clips/B1/B1-S10_c04.mp4"
+      ],
+      "audio_lines": [
+        "audio/B1/B1-S10-L01_mia.mp3",
+        "audio/B1/B1-S10-L02_jonas.mp3",
+        "audio/B1/B1-S10-L03_narrator.mp3",
+        "audio/B1/B1-S10-L04_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Deine Meinung + dein Grund",
+        "weil · deshalb · trotzdem",
+        "Abonnieren"
+      ]
+    }
+  ],
+  "subtitles": "subtitles/B1.srt"
+}

@@ -1,0 +1,246 @@
+{
+  "level": "B2",
+  "title": "Professionelle Vorstellung – Kontakte auf einer Fachkonferenz",
+  "scenes": [
+    {
+      "scene_id": "B2-S01",
+      "type": "hook",
+      "start_est": 0.0,
+      "end_est": 14.928,
+      "clips": [
+        "clips/B2/B2-S01_c01.mp4",
+        "clips/B2/B2-S01_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S01-L01_narrator.mp3",
+        "audio/B2/B2-S01-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "2 Minuten. 1 Chance."
+      ]
+    },
+    {
+      "scene_id": "B2-S02",
+      "type": "intro",
+      "start_est": 14.928,
+      "end_est": 27.786,
+      "clips": [
+        "clips/B2/B2-S02_c01.mp4",
+        "clips/B2/B2-S02_c02.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S02-L01_narrator.mp3",
+        "audio/B2/B2-S02-L02_narrator.mp3"
+      ],
+      "overlay_text": [
+        "B2",
+        "formell · differenziert",
+        "argumentieren",
+        "Zusammenarbeit anbahnen"
+      ]
+    },
+    {
+      "scene_id": "B2-S03",
+      "type": "dialog",
+      "start_est": 27.786,
+      "end_est": 56.855,
+      "clips": [
+        "clips/B2/B2-S03_c01.mp4",
+        "clips/B2/B2-S03_c02.mp4",
+        "clips/B2/B2-S03_c03.mp4",
+        "clips/B2/B2-S03_c04.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S03-L01_jonas.mp3",
+        "audio/B2/B2-S03-L02_mia.mp3",
+        "audio/B2/B2-S03-L03_jonas.mp3",
+        "audio/B2/B2-S03-L04_mia.mp3"
+      ],
+      "overlay_text": [
+        "Darf ich mich kurz vorstellen?",
+        "Es freut mich, Sie kennenzulernen.",
+        "Die Freude ist ganz meinerseits."
+      ]
+    },
+    {
+      "scene_id": "B2-S04",
+      "type": "dialog",
+      "start_est": 56.855,
+      "end_est": 82.578,
+      "clips": [
+        "clips/B2/B2-S04_c01.mp4",
+        "clips/B2/B2-S04_c02.mp4",
+        "clips/B2/B2-S04_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S04-L01_jonas.mp3",
+        "audio/B2/B2-S04-L02_mia.mp3",
+        "audio/B2/B2-S04-L03_jonas.mp3"
+      ],
+      "overlay_text": [
+        "Woran arbeiten Sie derzeit?",
+        "verantwortlich für … / zuständig für …",
+        "eine Lernumgebung, die sich … anpasst"
+      ]
+    },
+    {
+      "scene_id": "B2-S05",
+      "type": "dialog",
+      "start_est": 82.578,
+      "end_est": 119.095,
+      "clips": [
+        "clips/B2/B2-S05_c01.mp4",
+        "clips/B2/B2-S05_c02.mp4",
+        "clips/B2/B2-S05_c03.mp4",
+        "clips/B2/B2-S05_c04.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S05-L01_jonas.mp3",
+        "audio/B2/B2-S05-L02_mia.mp3",
+        "audio/B2/B2-S05-L03_jonas.mp3",
+        "audio/B2/B2-S05-L04_mia.mp3"
+      ],
+      "overlay_text": [
+        "Ich bin der Ansicht, dass …",
+        "Da stimme ich Ihnen grundsätzlich zu.",
+        "Ich würde allerdings einwenden, dass …",
+        "sofern · allerdings"
+      ]
+    },
+    {
+      "scene_id": "B2-S06",
+      "type": "dialog",
+      "start_est": 119.095,
+      "end_est": 163.205,
+      "clips": [
+        "clips/B2/B2-S06_c01.mp4",
+        "clips/B2/B2-S06_c02.mp4",
+        "clips/B2/B2-S06_c03.mp4",
+        "clips/B2/B2-S06_c04.mp4",
+        "clips/B2/B2-S06_c05.mp4",
+        "clips/B2/B2-S06_c06.mp4",
+        "clips/B2/B2-S06_c07.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S06-L01_jonas.mp3",
+        "audio/B2/B2-S06-L02_mia.mp3",
+        "audio/B2/B2-S06-L03_jonas.mp3",
+        "audio/B2/B2-S06-L04_mia.mp3",
+        "audio/B2/B2-S06-L05_jonas.mp3",
+        "audio/B2/B2-S06-L06_mia.mp3",
+        "audio/B2/B2-S06-L07_jonas.mp3",
+        "audio/B2/B2-S06-L08_mia.mp3"
+      ],
+      "overlay_text": [
+        "Wären Sie an … interessiert?",
+        "Ich würde vorschlagen, dass …",
+        "Darf ich Ihnen meine Visitenkarte geben?",
+        "Ich melde mich bei Ihnen."
+      ]
+    },
+    {
+      "scene_id": "B2-S07",
+      "type": "vocab",
+      "start_est": 163.205,
+      "end_est": 190.793,
+      "clips": [
+        "clips/B2/B2-S07_c01.mp4",
+        "clips/B2/B2-S07_c02.mp4",
+        "clips/B2/B2-S07_c03.mp4",
+        "clips/B2/B2-S07_c04.mp4",
+        "clips/B2/B2-S07_c05.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S07-L01_narrator.mp3",
+        "audio/B2/B2-S07-L02_mia.mp3",
+        "audio/B2/B2-S07-L03_jonas.mp3",
+        "audio/B2/B2-S07-L04_mia.mp3",
+        "audio/B2/B2-S07-L05_jonas.mp3"
+      ],
+      "overlay_text": [
+        "verantwortlich / zuständig für",
+        "die Zusammenarbeit",
+        "das Pilotprojekt",
+        "die Rahmenbedingungen",
+        "die Schnittstelle",
+        "unverzichtbar · berechtigt · grundsätzlich",
+        "Die Freude ist ganz meinerseits."
+      ]
+    },
+    {
+      "scene_id": "B2-S08",
+      "type": "grammar",
+      "start_est": 190.793,
+      "end_est": 211.964,
+      "clips": [
+        "clips/B2/B2-S08_c01.mp4",
+        "clips/B2/B2-S08_c02.mp4",
+        "clips/B2/B2-S08_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S08-L01_narrator.mp3",
+        "audio/B2/B2-S08-L02_narrator.mp3",
+        "audio/B2/B2-S08-L03_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Konjunktiv II: Wären Sie …? · Ich würde vorschlagen, dass …",
+        "allerdings · sofern · obwohl",
+        "eine Lernumgebung, an der wir arbeiten"
+      ]
+    },
+    {
+      "scene_id": "B2-S09",
+      "type": "exercise",
+      "start_est": 211.964,
+      "end_est": 269.453,
+      "clips": [
+        "clips/B2/B2-S09_c01.mp4",
+        "clips/B2/B2-S09_c02.mp4",
+        "clips/B2/B2-S09_c03.mp4",
+        "clips/B2/B2-S09_c04.mp4",
+        "clips/B2/B2-S09_c05.mp4",
+        "clips/B2/B2-S09_c06.mp4",
+        "clips/B2/B2-S09_c07.mp4",
+        "clips/B2/B2-S09_c08.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S09-L01_narrator.mp3",
+        "audio/B2/B2-S09-L02_narrator.mp3",
+        "audio/B2/B2-S09-L03_narrator.mp3",
+        "audio/B2/B2-S09-L04_narrator.mp3",
+        "audio/B2/B2-S09-L05_narrator.mp3",
+        "audio/B2/B2-S09-L06_narrator.mp3",
+        "audio/B2/B2-S09-L07_narrator.mp3",
+        "audio/B2/B2-S09-L08_narrator.mp3"
+      ],
+      "overlay_text": [
+        "1. Sind Sie interessiert? → Wären Sie interessiert?",
+        "2. Ich schlage vor … → Ich würde vorschlagen, dass …",
+        "3. … hilft, sofern die Qualität überprüft wird.",
+        "4. Name · Position · Unternehmen"
+      ]
+    },
+    {
+      "scene_id": "B2-S10",
+      "type": "outro",
+      "start_est": 269.453,
+      "end_est": 285.245,
+      "clips": [
+        "clips/B2/B2-S10_c01.mp4",
+        "clips/B2/B2-S10_c02.mp4",
+        "clips/B2/B2-S10_c03.mp4"
+      ],
+      "audio_lines": [
+        "audio/B2/B2-S10-L01_mia.mp3",
+        "audio/B2/B2-S10-L02_jonas.mp3",
+        "audio/B2/B2-S10-L03_narrator.mp3"
+      ],
+      "overlay_text": [
+        "Stellen Sie sich in drei Sätzen vor!",
+        "Schreiben Sie in die Kommentare",
+        "Abonnieren"
+      ]
+    }
+  ],
+  "subtitles": "subtitles/B2.srt"
+}
