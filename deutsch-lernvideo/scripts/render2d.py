@@ -97,6 +97,15 @@ def read_wav(path):
     return x
 
 
+def _smooth(x, win):
+    """Gleitender Mittelwert in O(n) (cumsum statt Faltung)."""
+    c = np.concatenate([[0.0], np.cumsum(x, dtype=np.float64)])
+    n = len(x)
+    lo = np.clip(np.arange(n) - win // 2, 0, n)
+    hi = np.clip(np.arange(n) + win // 2, 0, n)
+    return ((c[hi] - c[lo]) / np.maximum(hi - lo, 1)).astype(np.float32)
+
+
 def build_audio(script, timeline, total, out_wav):
     from common.audio import make_music  # vorhandener, selbst erzeugter Musikgenerator (keine Lizenzfragen)
     n = int(total * SR)
@@ -111,10 +120,9 @@ def build_audio(script, timeline, total, out_wav):
     music = make_music(total, [], 10 ** 6).astype(np.float32)[:n] * 0.16
     if len(music) < n:
         music = np.pad(music, (0, n - len(music)))
-    win = int(0.3 * SR)
-    env = np.convolve(np.abs(voice), np.ones(win) / win, mode="same")
+    env = _smooth(np.abs(voice), int(0.3 * SR))
     env = np.clip(env / (env.max() + 1e-9) * 8, 0, 1)
-    env = np.convolve(env, np.ones(int(0.4 * SR)) / int(0.4 * SR), mode="same")
+    env = _smooth(env, int(0.4 * SR))
     mix = music * (1 - 0.6 * env) + voice * 0.95
     mix = np.tanh(mix * 1.1)
     mix *= 0.9 / (np.abs(mix).max() + 1e-9)
