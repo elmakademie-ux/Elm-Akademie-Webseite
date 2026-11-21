@@ -3,9 +3,9 @@
 Vier eigenständige Lernvideos (A1, A2, B1, B2) mit den wiederkehrenden Figuren **Mia** und **Jonas**
 (3D-Cartoon-Stil), geplant für YouTube, TikTok und Instagram.
 
-**Stand:** Alle Drehbücher, Dialoge, Regieanweisungen, KI-Prompts, Sprechertexte, Untertitel, Wortschatz,
-Grammatik und Übungen sind fertig und geprüft. **Es wurde nichts generiert, keine kostenpflichtige API
-aufgerufen und nichts veröffentlicht.** Siehe [PROJEKTPLAN.md](PROJEKTPLAN.md).
+**Stand:** Drehbücher, Prompts, Untertitel usw. sind fertig und geprüft. Zusätzlich gibt es eine **kostenlos
+produzierte 2D-Version** aller vier Videos (`videos/<N>/<N>_9x16.mp4`). **Keine kostenpflichtige API wurde
+aufgerufen, nichts wurde veröffentlicht.** Siehe [PROJEKTPLAN.md](PROJEKTPLAN.md).
 
 ## Struktur
 
@@ -101,3 +101,26 @@ Lesetempo, keine Überlappung, Text identisch mit dem Sprechtext) · Wortschatz 
 **Grenzen:** Das ersetzt kein muttersprachliches Lektorat. Vor der Produktion empfohlen: (1) Texte von einer
 Lehrkraft lesen lassen, (2) Stimmen und Aussprache hören („Kölsch“, „Tandempartnerin“, „KI“), (3) Figuren-Konsistenz
 an generierten Clips visuell prüfen (`characters.json → consistency_checklist`), (4) Untertitel gegen das fertige Audio abgleichen.
+
+## Kostenlose Produktion (2D-Version, bereits erzeugt)
+
+| Video | Datei | Länge |
+|---|---|---|
+| A1 | `videos/A1/A1_9x16.mp4` | 2:43 |
+| A2 | `videos/A2/A2_9x16.mp4` | 4:07 |
+| B1 | `videos/B1/B1_9x16.mp4` | 4:19 |
+| B2 | `videos/B2/B2_9x16.mp4` | 4:32 |
+
+1080 × 1920, 30 fps, mit Sprache, Hintergrundmusik, Untertiteln (28 Zeichen/Zeile) und Endcard.
+
+```bash
+pip install piper-tts                      # einmalig; Stimmen nach .cache/ laden (siehe scripts/make_audio.py)
+python3 scripts/make_audio.py              # Sprache (Piper, lokal) + audio/<N>/durations.json
+python3 scripts/build.py && python3 scripts/validate.py   # Untertitel mit echten Dauern
+python3 scripts/render2d.py A1 A2 B1 B2    # Video; --still 5,20 für Standbilder, --seconds 10 für Probelauf
+```
+* Figuren und Hintergründe werden in `scripts/anim_art.py` gezeichnet; Layout/Animation in `scripts/render2d.py`.
+* **Stimmen:** Mia = ramona, Jonas = thorsten (CC0), Erzähler = karlsson (Piper, de_DE). Die Stimmen klingen
+  synthetisch. Die Lizenz der M-AILABS-Stimmen (ramona, karlsson) vor kommerzieller Nutzung prüfen.
+* **Grenzen:** 2D statt 3D-Kinolook; Lippenbewegung folgt der Lautstärke, nicht den Lauten; Aussprache nicht
+  per Hörprobe geprüft. Die KI-Prompts in `prompts/` bleiben für eine spätere 3D-Version nutzbar.
