@@ -60,13 +60,15 @@ SPECIAL = None       # "gintro" / "goutro" fuer das Gesamtvideo
 
 
 def apply_landscape():
-    """Layout fuer 16:9 (1920 x 1080): links Aufgabe + Grammatik, rechts E-Mail."""
-    global W, H, TASK, MAIL, BODY_TOP, BODY_BOTTOM, BODY_X, BODY_W, LANDSCAPE, GRAM
+    """Layout fuer 16:9 (1920 x 1080): erst die Aufgabe allein, dann die E-Mail allein
+    (oben in der E-Mail die 4 Punkte statt An/Betreff)."""
+    global W, H, TASK, MAIL, BODY_TOP, BODY_BOTTOM, BODY_X, BODY_W, LANDSCAPE, FS, LH, FIELDS
     W, H = 1920, 1080
     LANDSCAPE = True
-    TASK = (70, 175, 900, 500)
-    GRAM = (70, 545, 900, 1035)
-    MAIL = (970, 175, 1850, 1040)
+    FS, LH = 36, 50
+    FIELDS = 104                       # Zeile mit den 4 Punkten
+    TASK = (230, 175, 1690, 1040)
+    MAIL = (300, 182, 1620, 1056)
     BODY_TOP = MAIL[1] + TOPBAR + FIELDS + 18
     BODY_BOTTOM = MAIL[3] - 26
     BODY_X = MAIL[0] + 92
@@ -229,7 +231,8 @@ def outro_text():
 
 def parts():
     """Teile der E-Mail in Tipp-Reihenfolge: (id, text, punkt)."""
-    out = [("betreff", E["betreff"], None), ("anrede", E["anrede"], None)]
+    out = [] if LANDSCAPE else [("betreff", E["betreff"], None)]   # 16:9: kein Betreff
+    out.append(("anrede", E["anrede"], None))
     for k, (txt, p) in enumerate(E["absaetze"]):
         out.append((f"a{k}", txt, p))
     out.append(("gruss", E["gruss"] + "\n" + E["name"], None))
@@ -478,6 +481,9 @@ def mail_base():
     for k, c in enumerate(((255, 95, 86), (255, 189, 46), (39, 201, 63))):
         d.ellipse((24 + k * 30, 19, 42 + k * 30, 37), fill=c)
     d.text((w / 2, 28), "Neue E-Mail", font=font("SemiBold", 26), fill=GREY, anchor="mm")
+    if LANDSCAPE:   # statt An/Betreff: Zeile fuer die 4 Punkte (wird live gezeichnet)
+        d.line((30, TOPBAR + FIELDS, w - 30, TOPBAR + FIELDS), fill=(225, 229, 236), width=2)
+        return shadow(img, 22, 55, 12)
     lf = font("SemiBold", 28)
     d.text((30, TOPBAR + 14), "An:", font=lf, fill=GREY)
     d.text((150, TOPBAR + 14), recipient(), font=font("Medium", 28), fill=NAVY)
@@ -492,7 +498,7 @@ def body_layout():
     """Woerter mit Position: (teil, wort, x, y, zeichen_offset, punkt, erstes_wort_im_absatz, gewicht)."""
     out, y = [], 0
     f = font("Medium", FS)
-    for pid, txt, p in parts()[1:]:
+    for pid, txt, p in [q for q in parts() if q[0] != "betreff"]:
         weight = "SemiBold" if pid in ("anrede", "gruss") else "Medium"
         off = 0
         first = True
@@ -543,6 +549,8 @@ def draw_mail(frame, t, slide):
         return
     d = ImageDraw.Draw(frame, "RGBA")
     cursor = None
+    if LANDSCAPE:
+        draw_point_row(frame, t)
     n = revealed("betreff", t)
     if n:
         txt = E["betreff"][:n]
@@ -722,11 +730,112 @@ def draw_gram(frame, t):
             x += p.width + 14
 
 
+# ---------------------------------------------------------------- 16:9: Aufgabe allein / Punkte-Zeile
+def big_task_box():
+    """Aufgabenkarte passend zum Inhalt, senkrecht mittig."""
+    x0, _, x1, _ = TASK
+    h = 120 + len(big_task_lines()) * 66 + 30 + 70 + 2 * 112 + 30
+    y0 = int((175 + 1050 - h) / 2)
+    return x0, y0, x1, y0 + h
+
+
+@lru_cache(None)
+def big_task_bg():
+    x0, y0, x1, y1 = big_task_box()
+    img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 40, fill=(255, 250, 240), outline=(*ORANGE, 110), width=4)
+    d.text((56, 44), "AUFGABE", font=font("ExtraBold", 40), fill=ORANGE)
+    return shadow(img, 22, 45, 10)
+
+
+@lru_cache(None)
+def big_task_lines():
+    return wrap_words(A["text"], font("Medium", 50), TASK[2] - TASK[0] - 112)
+
+
+@lru_cache(None)
+def big_chip(k, cw, level):
+    col = PCOL[k]
+    img = Image.new("RGBA", (cw + 1, 91), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((0, 0, cw, 90), 45, fill=(*col, 36 + 22 * level), outline=(*col, 255), width=4)
+    num = pill(str(k + 1), 40, WHITE, col, 18, 6, "ExtraBold")
+    img.alpha_composite(num, (14, int(45 - num.height / 2)))
+    d.text((90, 18), A["punkte"][k], font=font("Bold", 44), fill=NAVY)
+    return img
+
+
+def draw_task_alone(frame, t, a):
+    x0, y0, x1, y1 = big_task_box()
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    comp(layer, big_task_bg(), (x0 - 44, y0 - 34))
+    d = ImageDraw.Draw(layer)
+    f = font("Medium", 50)
+    s, e = TL["task"]
+    lines = big_task_lines()
+    words = [w for line in lines for w in line]
+    n_spoken = int(len(words) * clamp((t - s) / max(0.5, e - s) * 1.05)) if t < e + 0.1 else len(words)
+    gi = 0
+    for li, line in enumerate(lines):
+        x = x0 + 56
+        for w in line:
+            col = NAVY if gi < n_spoken else mix(NAVY, 0.4, (255, 250, 240))
+            d.text((x, y0 + 120 + li * 66), w, font=f, fill=col)
+            x += f.getlength(w + " ")
+            gi += 1
+    ytop = y0 + 120 + len(lines) * 66 + 30
+    d.text((x0 + 56, ytop), "Schreiben Sie etwas zu folgenden Punkten:", font=font("SemiBold", 38), fill=GREY)
+    cw = int((x1 - x0 - 112 - 30) / 2)
+    for k in range(4):
+        cx = x0 + 56 + (k % 2) * (cw + 30)
+        cy = ytop + 70 + (k // 2) * 112
+        level = round(8 * clamp(1 - abs(t - (s + 0.8 + 0.5 * k + (e - s) * 0.5)) / 0.5)) if s <= t <= e + 1.5 else 0
+        comp(layer, big_chip(k, cw, level), (cx, cy))
+    comp(frame, layer, (0, 0), a)
+
+
+@lru_cache(None)
+def row_chip(k, cw):
+    col = PCOL[k]
+    img = Image.new("RGBA", (cw + 1, 61), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((0, 0, cw, 60), 30, fill=(*col, 40), outline=(*col, 255), width=3)
+    num = pill(str(k + 1), 28, WHITE, col, 13, 5, "ExtraBold")
+    img.alpha_composite(num, (9, int(30 - num.height / 2)))
+    f = font("Bold", 30)
+    label = A["punkte"][k]
+    while f.getlength(label) > cw - 120 and f.size > 20:
+        f = font("Bold", f.size - 2)
+    d.text((60, 30), label, font=f, fill=NAVY, anchor="lm")
+    return img
+
+
+def draw_point_row(frame, t):
+    x0, y0, x1, y1 = MAIL
+    gap = 16
+    cw = int((x1 - x0 - 60 - 3 * gap) / 4)
+    y = y0 + TOPBAR + (FIELDS - 60) / 2
+    for k in range(4):
+        cx = x0 + 30 + k * (cw + gap)
+        comp(frame, row_chip(k, cw), (cx, y))
+        dt = point_done_time(k)
+        on = dt is not None and t >= dt
+        ic = check_icon(19, OK if on else GREY, on)
+        comp_center(frame, ic, cx + cw - 32, y + 30, max(0.01, back_out((t - dt) / 0.35)) if on else 1)
+
+
 def draw_main(frame, t):
     draw_header(frame)
-    draw_task(frame, t)
     if LANDSCAPE:
-        draw_gram(frame, t)
+        # Aufgabe allein, dann E-Mail allein (weiche Ueberblendung)
+        k = ease_out((t - TL["mail_in"]) / 0.6)
+        if k < 0.999:
+            draw_task_alone(frame, t, 1 - k)
+        if k > 0.01:
+            draw_mail(frame, t, k)
+        return
+    draw_task(frame, t)
     slide = ease_out((t - TL["mail_in"]) / 0.5)
     if slide > 0.01:
         draw_mail(frame, t, slide)
@@ -856,7 +965,8 @@ def render_frame(fi):
 
 # ================================================================ Start
 def clear_caches():
-    for fn in (task_lines, task_bg, chip_img, mail_base, body_layout, gram_bg):
+    for fn in (task_lines, task_bg, chip_img, mail_base, body_layout, gram_bg, big_task_bg, big_task_lines,
+               big_chip, row_chip):
         fn.cache_clear()
 
 
@@ -956,7 +1066,6 @@ def render_one(idx, preview=False, out=None):
     name = f"dtz_aufgabe{E['aufgabe']}_beispiel{E['beispiel']}"
     print(f"[{idx + 1}/15] {name}: {A['thema']}", flush=True)
     plan()
-    build_gram_events()
     wav = HERE.parent / ".cache" / f"{name}.wav"
     build_audio(wav)
     if preview:
