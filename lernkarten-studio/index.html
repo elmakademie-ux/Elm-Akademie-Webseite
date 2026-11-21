@@ -128,6 +128,8 @@ input[type=file]{font:inherit;color:var(--fg);max-width:100%}
             <option value="orange">Orange</option>
             <option value="lila">Lila</option>
             <option value="rot">Rot</option>
+            <option value="tuerkis">Türkis</option>
+            <option value="pink">Pink</option>
           </select>
         </div>
       </div>
@@ -297,6 +299,54 @@ const PRESETS = {
       "Lisa: Sehr erfreut, Herr Naseri!",
       "Ahmad: Freut mich auch, Frau Müller!",
       "Lisa: Auf Wiedersehen, Herr Naseri!",
+      "Ahmad: Auf Wiedersehen, Frau Müller!"
+    ]
+  },
+  "B1 Dialog: Informelle Begrüßung": {
+    title: "B1 – Informelle Begrüßung (du)",
+    mode: "dialog",
+    male: "Ahmad",
+    female: "Lisa",
+    theme: "tuerkis",
+    items: [
+      "Lisa: Ahmad? Bist du das? Ich hätte dich fast nicht erkannt!",
+      "Ahmad: Lisa! Was für eine Überraschung! Wir haben uns seit dem Deutschkurs nicht mehr gesehen.",
+      "Lisa: Stimmt, das ist bestimmt schon ein halbes Jahr her. Wie geht es dir denn?",
+      "Ahmad: Eigentlich ganz gut. Ich habe vor zwei Monaten eine neue Stelle angefangen.",
+      "Lisa: Wirklich? Das freut mich für dich! Was machst du denn jetzt?",
+      "Ahmad: Ich arbeite als Elektriker in einer kleinen Firma. Die Kollegen sind sehr nett.",
+      "Lisa: Super! Sag mal, nennen dich deine Kollegen eigentlich auch Ahmad?",
+      "Ahmad: Nein, die meisten sagen einfach Ahmi. Das finde ich lustig.",
+      "Lisa: Das klingt sympathisch! Mich nennen meine Freunde übrigens manchmal Lissy.",
+      "Ahmad: Das wusste ich gar nicht. Darf ich dich auch so nennen?",
+      "Lisa: Klar, gern! Hast du Lust, nächste Woche einen Kaffee zu trinken?",
+      "Ahmad: Sehr gern! Dann können wir in Ruhe erzählen, was wir erlebt haben.",
+      "Lisa: Perfekt! Ich schreibe dir eine Nachricht, sobald ich meinen Dienstplan habe.",
+      "Ahmad: Alles klar. Bis bald, Lissy!",
+      "Lisa: Bis bald, Ahmi! Pass auf dich auf!"
+    ]
+  },
+  "B1 Dialog: Formelle Begrüßung": {
+    title: "B1 – Formelle Begrüßung (Sie)",
+    mode: "dialog",
+    male: "Ahmad",
+    female: "Lisa",
+    theme: "pink",
+    items: [
+      "Ahmad: Guten Tag! Entschuldigen Sie, ich habe um zehn Uhr einen Termin bei Frau Müller.",
+      "Lisa: Guten Tag! Das bin ich. Sie sind sicher Herr Naseri, oder?",
+      "Ahmad: Genau. Vielen Dank, dass Sie sich Zeit für mich nehmen.",
+      "Lisa: Gern geschehen. Nehmen Sie bitte Platz. Wie kann ich Ihnen helfen?",
+      "Ahmad: In meinem Arbeitsvertrag ist leider mein Nachname falsch geschrieben.",
+      "Lisa: Oh, das tut mir leid. Wie wird Ihr Name denn richtig geschrieben?",
+      "Ahmad: Mit einem S, nicht mit einem Z. Also N-A-S-E-R-I.",
+      "Lisa: Ich verstehe. Hier steht tatsächlich Nazeri. Ich korrigiere das sofort.",
+      "Ahmad: Vielen Dank. Ist das ein großer Aufwand für Sie?",
+      "Lisa: Nein, überhaupt nicht. Könnten Sie mir bitte noch kurz Ihren Ausweis zeigen?",
+      "Ahmad: Natürlich, hier bitte.",
+      "Lisa: Danke schön. So, jetzt ist alles richtig. Sie bekommen den neuen Vertrag per Post.",
+      "Ahmad: Das ist sehr freundlich. Ich wünsche Ihnen noch einen angenehmen Tag.",
+      "Lisa: Danke, gleichfalls! Auf Wiedersehen, Herr Naseri.",
       "Ahmad: Auf Wiedersehen, Frau Müller!"
     ]
   },
@@ -509,7 +559,9 @@ const THEMES = {
   gruen:  { bg0:"#06402f", bg1:"#11a378", mark:"#0b7d5a", box:"#e2f5ee", soft:"#a9dcc9" },
   orange: { bg0:"#7a2e05", bg1:"#f0841c", mark:"#c2570a", box:"#fff0e2", soft:"#f3c59c" },
   lila:   { bg0:"#3b0b5e", bg1:"#9b3fd6", mark:"#7a29b3", box:"#f3e8fc", soft:"#d4b4ec" },
-  rot:    { bg0:"#5e0a16", bg1:"#d63447", mark:"#b3202f", box:"#fde8ea", soft:"#efb1b8" }
+  rot:    { bg0:"#5e0a16", bg1:"#d63447", mark:"#b3202f", box:"#fde8ea", soft:"#efb1b8" },
+  tuerkis:{ bg0:"#063a46", bg1:"#0e9bb0", mark:"#0b7285", box:"#e0f4f7", soft:"#a6d9e2" },
+  pink:   { bg0:"#5a0c3c", bg1:"#d63384", mark:"#b02670", box:"#fce6f1", soft:"#efb3d2" }
 };
 function theme(){ return THEMES[$("theme").value] || THEMES.blau; }
 const cv = $("cv"), ctx = cv.getContext("2d");
@@ -579,7 +631,9 @@ function readDialog(){
     const key = who.toLowerCase();
     if (who && !order.includes(key)) order.push(key);
     const voice = key === female ? "f" : key === male ? "m" : (order.indexOf(key) % 2 ? "f" : "m");
-    return { who, text, voice, side: order.indexOf(key) % 2 ? "right" : "left", word:"", q:"", a:"" };
+    /* Männerstimme links, Frauenstimme rechts; ohne Namen: erste Person links */
+    const side = (male || female) ? (voice === "f" ? "right" : "left") : (order.indexOf(key) % 2 ? "right" : "left");
+    return { who, text, voice, side, word:"", q:"", a:"" };
   });
 }
 function updateModeUI(){

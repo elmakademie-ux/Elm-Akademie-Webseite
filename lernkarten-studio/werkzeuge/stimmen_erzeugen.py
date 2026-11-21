@@ -120,6 +120,8 @@ def spoken(text):
     # Buchstabieren: N-A-S-E-R-I -> En, A, Es, E, Er, I
     text = re.sub(r"\b[A-ZÄÖÜ](?:-[A-ZÄÖÜ])+\b",
                   lambda m: ", ".join(LETTERS[c] for c in m.group(0).split("-")), text)
+    # einzelner Buchstabe: "mit einem S" -> "mit einem Es"
+    text = re.sub(r"\b(einem|ein|einen) ([A-ZÄÖÜ])\b", lambda m: m.group(1) + " " + LETTERS[m.group(2)], text)
     for short, said in SAY_AS.items():
         text = re.sub(r"\b" + re.escape(short) + r"\b", said, text)
     # Postleitzahl (5 Ziffern) Ziffer für Ziffer: 44135 -> vier vier eins drei fünf
@@ -135,7 +137,7 @@ LETTERS = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E", "F": "Ef", "G": 
 SAY_AS = {"DTZ": "De Te Zett", "A2/B1": "A zwei, B eins"}   # Abkürzungen so, wie man sie spricht
 
 
-SAME = {"cairo": "kairo", "baghdad": "bagdad", "autowerkstadt": "autowerkstatt", "jonas": "yonas", "bagdat": "bagdad", "sarah": "sara", "tschüs": "tschüss", "tschüß": "tschüss"}   # gleiche Aussprache, andere Schreibweise
+SAME = {"cairo": "kairo", "baghdad": "bagdad", "autowerkstadt": "autowerkstatt", "jonas": "yonas", "bagdat": "bagdad", "sarah": "sara", "tschüs": "tschüss", "tschüß": "tschüss", "lizzie": "lissy", "lissi": "lissy", "lisi": "lissy", "ami": "ahmi", "armi": "ahmi"}   # gleiche Aussprache, andere Schreibweise
 VOCAB = ""   # Namen, Länder, Sprachen aus den Vorlagen, damit Whisper seltene Wörter kennt
 
 
