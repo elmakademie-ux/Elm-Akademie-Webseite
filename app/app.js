@@ -10,14 +10,31 @@ const hi=t=>{let h=esc(t);const rx=l=>new RegExp('(^|[^\\p{L}])('+l.join('|')+')
 const stats=()=>store.get('stats',{xp:0,mails:[],quiz:{r:0,n:0}});
 const addXp=n=>{const s=stats();s.xp+=n;store.set('stats',s)};
 
+const vid=(t,p)=>`<div class=card><b>🎬 ${t}</b><video controls preload=none playsinline style="width:100%;border-radius:12px;margin-top:8px" src="../videos/${p}"></video></div>`;
 const V={
-home(){const s=stats();return `<div class=card><div class=m>Dein Fortschritt</div><div class=big>${s.xp} XP</div>
+home(){const s=stats();const L=(h,t,sub,c)=>`<a class="card tile lvl" style="border-left-color:${c}" href="${h}"><b>${t}</b><span>${sub}</span></a>`;
+ return `<div class=card><div class=m>Dein Fortschritt</div><div class=big>${s.xp} XP</div>
  <div class=m>${s.mails.length}/15 Muster-E-Mails gelesen · Quiz: ${s.quiz.r}/${s.quiz.n} richtig</div>
  <div class=bar><i style="width:${s.mails.length/15*100}%"></i></div></div>
- <a class="card tile" href="#/mail"><b>✉️ DTZ B1 – Muster-E-Mails</b><span>5 Aufgaben · 15 Beispiele · Konnektoren &amp; Modalverben</span></a>
- <a class="card tile" href="#/wort"><b>📚 Wortschatz „Meine Wohnung“</b><span>Karteikarten &amp; Artikel-Quiz (der · die · das)</span></a>
- <a class="card tile" href="#/tag"><b>⏰ Mein Tagesablauf</b><span>Uhrzeiten &amp; trennbare Verben</span></a>
+ <p class=m>Wähle dein Niveau:</p>
+ ${L('#/a1','A1 · Anfänger','Meine Wohnung · Mein Tagesablauf','#16a34a')}
+ ${L('#/a2','A2 · Grundlagen','Inhalte folgen','#0d9488')}
+ ${L('#/b1','B1 · DTZ-Vorbereitung','E-Mail schreiben · 15 Muster-E-Mails','#2563eb')}
+ ${L('#/lernen','Für alle Niveaus','Lerntipps · Lernpause','#f97316')}
  <p class=m style="text-align:center">Folge der ELM Akademie für neue Lernvideos!<br>Die Mustertexte sind Übungshilfen, keine offiziellen Prüfungslösungen.</p>`},
+
+
+a1(){return `<h2 class=lv>A1 · Anfänger</h2>
+ <a class="card tile" href="#/wort"><b>📚 Wortschatz „Meine Wohnung“</b><span>Karteikarten &amp; Artikel-Quiz (der · die · das)</span></a>
+ ${vid('Meine Wohnung','wohnung/meine_wohnung.mp4')}
+ <a class="card tile" href="#/tag"><b>⏰ Mein Tagesablauf</b><span>Uhrzeiten &amp; trennbare Verben</span></a>
+ ${vid('Mein Tagesablauf','tagesablauf/tagesablauf.mp4')}`},
+a2(){return `<h2 class=lv>A2 · Grundlagen</h2><div class=card>Hier ist noch nichts. Neue Lektionen kommen bald. 🌱</div>`},
+b1(){return `<h2 class=lv>B1 · DTZ-Vorbereitung</h2>
+ <a class="card tile" href="#/mail"><b>✉️ DTZ – Muster-E-Mails</b><span>5 Aufgaben · 15 Beispiele · Konnektoren &amp; Modalverben</span></a>
+ ${vid('DTZ Schreiben – E-Mail schreiben','dtz_email/dtz_email.mp4')}
+ ${vid('Alle 15 Muster-E-Mails (mit Kapiteln)','dtz_muster/dtz_15_muster_emails_16x9.mp4')}`},
+lernen(){return `<h2 class=lv>Für alle Niveaus</h2>${vid('5 Lerntipps','lerntipps/lerntipps.mp4')}${vid('6 Übungen für deine Lernpause','lernpause/lernpause.mp4')}`},
 
 mail(a){ // a: "", "1".., "1-2"
  if(a&&a.includes('-')){const[t,b]=a.split('-'),e=D.emails.find(e=>e.aufgabe==t&&e.beispiel==b),A=D.aufgaben[t],st=stats();
@@ -29,8 +46,8 @@ mail(a){ // a: "", "1".., "1-2"
   <div class=card id=em><div class=m>Betreff: <b>${e.betreff}</b></div><p>${e.anrede}</p>
   ${e.absaetze.map(([x,p])=>`<div class="para ${pc(p)}"><small>${p==null?'':(p+1)+'. '+A.punkte[p]}</small><span>${hi(x)}</span></div>`).join('')}
   <p>${e.gruss},<br>${e.name}</p></div>
-  <p class=m><span class=kon>Konnektoren</span> · <span class=mod>Modalverben</span></p>`}
- if(a){const A=D.aufgaben[a];return `<a href="#/mail">← Alle Aufgaben</a><div class=card><b>Aufgabe ${a}: ${A.thema}</b><p>${A.text}</p>${A.punkte.map((p,i)=>`<div class="pt p${i}">${i+1}. ${p}</div>`).join('')}</div>
+  <p class=m><span class=kon>Konnektoren</span> · <span class=mod>Modalverben</span></p>${vid('Video zu dieser E-Mail',`dtz_muster/ausgabe/dtz_aufgabe${t}_beispiel${b}.mp4`)}`}
+ if(a){const A=D.aufgaben[a];return `<a href="#/b1">← B1</a> · <a href="#/mail">← Alle Aufgaben</a><div class=card><b>Aufgabe ${a}: ${A.thema}</b><p>${A.text}</p>${A.punkte.map((p,i)=>`<div class="pt p${i}">${i+1}. ${p}</div>`).join('')}</div>
   ${D.emails.filter(e=>e.aufgabe==a).map(e=>`<a class="card tile" href="#/mail/${a}-${e.beispiel}"><b>Beispiel ${e.beispiel}</b><span>${e.betreff}${stats().mails.includes(a+'-'+e.beispiel)?' ✅':''}</span></a>`).join('')}`}
  return `<p class=m>Wähle eine Aufgabe:</p>`+Object.entries(D.aufgaben).map(([k,A])=>`<a class="card tile" href="#/mail/${k}"><b>Aufgabe ${k}: ${A.thema}</b><span>${A.text}</span></a>`).join('')+
  `<div class=card><b>Konnektoren</b><p class=kon>${D.konnektoren.join(' · ')}</p><b>Modalverben</b><p class=mod>${D.modalverben.join(' · ')}</p></div>`},
@@ -49,7 +66,7 @@ window.mailText=i=>{const e=D.emails[i];return [e.anrede,...e.absaetze.map(a=>a[
 
 let deck=[],di=0,flip=false;
 function cards(){if(!deck.length){deck=shuffle(D.vokabeln);di=0}const w=deck[di];
- return `<a href="#/wort">← Wörter</a><div class=m style="text-align:center">${di+1}/${deck.length}</div><div class="card fc" onclick="flip=!flip;sayIf();route(1)">
+ return `<a href="#/a1">← A1</a> · <a href="#/wort">Wörter</a><div class=m style="text-align:center">${di+1}/${deck.length}</div><div class="card fc" onclick="flip=!flip;sayIf();route(1)">
  ${flip?`<span class=${art(w)}>${art(w)}</span> ${noun(w)}`:`${noun(w)}<span class=m>Artikel? Tippen zum Umdrehen</span>`}</div>
  <div class=row><button class=alt onclick="di=(di-1+deck.length)%deck.length;flip=false;route(1)">←</button><button onclick="say('${w}')">🔊</button><button onclick="di=(di+1)%deck.length;flip=false;route(1)">→</button></div>`}
 window.sayIf=()=>{if(flip)say(deck[di])};
@@ -66,6 +83,6 @@ window.ans=x=>{const w=q.l[q.i];q.a=x;const s=stats();s.quiz.n++;if(x==art(w)){q
 function route(keep){const[,p='',a='']=location.hash.slice(1).split('/');const k=p||'home';
  if(!keep){flip=false;if(k!='wort')q=null}
  main.innerHTML=(V[k]||V.home)(a);scrollTo(0,keep?scrollY:0);
- document.querySelectorAll('nav a').forEach(n=>n.classList.toggle('on',n.dataset.t==k))}
+ document.querySelectorAll('nav a').forEach(n=>n.classList.toggle('on',n.dataset.t==({mail:'b1',wort:'a1',tag:'a1'}[k]||k)))}
 window.route=route;addEventListener('hashchange',()=>route());route();
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});

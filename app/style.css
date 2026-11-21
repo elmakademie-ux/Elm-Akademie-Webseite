@@ -22,3 +22,4 @@ button.alt{background:#e2e8f0;color:#14213d}button.ok{background:var(--das)}butt
 .bar{height:8px;background:#0002;border-radius:9px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--b)}
 .big{font-size:44px;font-weight:800;color:var(--b)}.m{color:var(--m);font-size:14px}.row{display:flex;gap:8px;flex-wrap:wrap}
 .row button{flex:1}.sel{outline:3px solid var(--b)}
+.lvl{border-left:8px solid}h2.lv{margin:0 0 12px;color:var(--b)}

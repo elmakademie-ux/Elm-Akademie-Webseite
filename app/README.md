@@ -6,5 +6,7 @@ Installierbare, offlinefähige Web-App (kein Build nötig).
 - **Mein Tagesablauf**: Uhrzeiten und Sätze mit Vorlesefunktion
 - Fortschritt (XP) lokal im Browser gespeichert
 
-Starten: `cd app && python3 -m http.server 8000` → http://localhost:8000 (auf dem Handy „Zum Startbildschirm hinzufügen“).
+Starten: `python3 -m http.server 8000` im Repo-Hauptordner → http://localhost:8000/app/ (die Videos liegen in `../videos`) (auf dem Handy „Zum Startbildschirm hinzufügen“).
 Inhalte stammen aus `videos/*` (`data.js` wurde daraus erzeugt).
+
+Aufbau nach Niveau: A1 (Wohnung, Tagesablauf), A2 (folgt), B1 (DTZ), Für alle Niveaus (Lerntipps, Lernpause). Das Fitness-Video „Muskelaufbau“ gehört nicht zum Deutschlernen und ist nicht enthalten.
