@@ -6,14 +6,14 @@
       "scene_id": "B2-S01",
       "type": "hook",
       "start_est": 0.0,
-      "end_est": 14.928,
+      "end_est": 14.001,
       "clips": [
         "clips/B2/B2-S01_c01.mp4",
         "clips/B2/B2-S01_c02.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S01-L01_narrator.mp3",
-        "audio/B2/B2-S01-L02_narrator.mp3"
+        "audio/B2/B2-S01-L01_narrator.wav",
+        "audio/B2/B2-S01-L02_narrator.wav"
       ],
       "overlay_text": [
         "2 Minuten. 1 Chance."
@@ -22,15 +22,15 @@
     {
       "scene_id": "B2-S02",
       "type": "intro",
-      "start_est": 14.928,
-      "end_est": 27.786,
+      "start_est": 14.001,
+      "end_est": 24.98,
       "clips": [
         "clips/B2/B2-S02_c01.mp4",
         "clips/B2/B2-S02_c02.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S02-L01_narrator.mp3",
-        "audio/B2/B2-S02-L02_narrator.mp3"
+        "audio/B2/B2-S02-L01_narrator.wav",
+        "audio/B2/B2-S02-L02_narrator.wav"
       ],
       "overlay_text": [
         "B2",
@@ -42,8 +42,8 @@
     {
       "scene_id": "B2-S03",
       "type": "dialog",
-      "start_est": 27.786,
-      "end_est": 56.855,
+      "start_est": 24.98,
+      "end_est": 50.472,
       "clips": [
         "clips/B2/B2-S03_c01.mp4",
         "clips/B2/B2-S03_c02.mp4",
@@ -51,10 +51,10 @@
         "clips/B2/B2-S03_c04.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S03-L01_jonas.mp3",
-        "audio/B2/B2-S03-L02_mia.mp3",
-        "audio/B2/B2-S03-L03_jonas.mp3",
-        "audio/B2/B2-S03-L04_mia.mp3"
+        "audio/B2/B2-S03-L01_jonas.wav",
+        "audio/B2/B2-S03-L02_mia.wav",
+        "audio/B2/B2-S03-L03_jonas.wav",
+        "audio/B2/B2-S03-L04_mia.wav"
       ],
       "overlay_text": [
         "Darf ich mich kurz vorstellen?",
@@ -65,17 +65,17 @@
     {
       "scene_id": "B2-S04",
       "type": "dialog",
-      "start_est": 56.855,
-      "end_est": 82.578,
+      "start_est": 50.472,
+      "end_est": 73.937,
       "clips": [
         "clips/B2/B2-S04_c01.mp4",
         "clips/B2/B2-S04_c02.mp4",
         "clips/B2/B2-S04_c03.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S04-L01_jonas.mp3",
-        "audio/B2/B2-S04-L02_mia.mp3",
-        "audio/B2/B2-S04-L03_jonas.mp3"
+        "audio/B2/B2-S04-L01_jonas.wav",
+        "audio/B2/B2-S04-L02_mia.wav",
+        "audio/B2/B2-S04-L03_jonas.wav"
       ],
       "overlay_text": [
         "Woran arbeiten Sie derzeit?",
@@ -86,8 +86,8 @@
     {
       "scene_id": "B2-S05",
       "type": "dialog",
-      "start_est": 82.578,
-      "end_est": 119.095,
+      "start_est": 73.937,
+      "end_est": 105.651,
       "clips": [
         "clips/B2/B2-S05_c01.mp4",
         "clips/B2/B2-S05_c02.mp4",
@@ -95,10 +95,10 @@
         "clips/B2/B2-S05_c04.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S05-L01_jonas.mp3",
-        "audio/B2/B2-S05-L02_mia.mp3",
-        "audio/B2/B2-S05-L03_jonas.mp3",
-        "audio/B2/B2-S05-L04_mia.mp3"
+        "audio/B2/B2-S05-L01_jonas.wav",
+        "audio/B2/B2-S05-L02_mia.wav",
+        "audio/B2/B2-S05-L03_jonas.wav",
+        "audio/B2/B2-S05-L04_mia.wav"
       ],
       "overlay_text": [
         "Ich bin der Ansicht, dass …",
@@ -110,8 +110,8 @@
     {
       "scene_id": "B2-S06",
       "type": "dialog",
-      "start_est": 119.095,
-      "end_est": 163.205,
+      "start_est": 105.651,
+      "end_est": 143.178,
       "clips": [
         "clips/B2/B2-S06_c01.mp4",
         "clips/B2/B2-S06_c02.mp4",
@@ -122,14 +122,14 @@
         "clips/B2/B2-S06_c07.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S06-L01_jonas.mp3",
-        "audio/B2/B2-S06-L02_mia.mp3",
-        "audio/B2/B2-S06-L03_jonas.mp3",
-        "audio/B2/B2-S06-L04_mia.mp3",
-        "audio/B2/B2-S06-L05_jonas.mp3",
-        "audio/B2/B2-S06-L06_mia.mp3",
-        "audio/B2/B2-S06-L07_jonas.mp3",
-        "audio/B2/B2-S06-L08_mia.mp3"
+        "audio/B2/B2-S06-L01_jonas.wav",
+        "audio/B2/B2-S06-L02_mia.wav",
+        "audio/B2/B2-S06-L03_jonas.wav",
+        "audio/B2/B2-S06-L04_mia.wav",
+        "audio/B2/B2-S06-L05_jonas.wav",
+        "audio/B2/B2-S06-L06_mia.wav",
+        "audio/B2/B2-S06-L07_jonas.wav",
+        "audio/B2/B2-S06-L08_mia.wav"
       ],
       "overlay_text": [
         "Wären Sie an … interessiert?",
@@ -141,8 +141,8 @@
     {
       "scene_id": "B2-S07",
       "type": "vocab",
-      "start_est": 163.205,
-      "end_est": 190.793,
+      "start_est": 143.178,
+      "end_est": 173.51,
       "clips": [
         "clips/B2/B2-S07_c01.mp4",
         "clips/B2/B2-S07_c02.mp4",
@@ -151,11 +151,11 @@
         "clips/B2/B2-S07_c05.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S07-L01_narrator.mp3",
-        "audio/B2/B2-S07-L02_mia.mp3",
-        "audio/B2/B2-S07-L03_jonas.mp3",
-        "audio/B2/B2-S07-L04_mia.mp3",
-        "audio/B2/B2-S07-L05_jonas.mp3"
+        "audio/B2/B2-S07-L01_narrator.wav",
+        "audio/B2/B2-S07-L02_mia.wav",
+        "audio/B2/B2-S07-L03_jonas.wav",
+        "audio/B2/B2-S07-L04_mia.wav",
+        "audio/B2/B2-S07-L05_jonas.wav"
       ],
       "overlay_text": [
         "verantwortlich / zuständig für",
@@ -170,17 +170,17 @@
     {
       "scene_id": "B2-S08",
       "type": "grammar",
-      "start_est": 190.793,
-      "end_est": 211.964,
+      "start_est": 173.51,
+      "end_est": 195.407,
       "clips": [
         "clips/B2/B2-S08_c01.mp4",
         "clips/B2/B2-S08_c02.mp4",
         "clips/B2/B2-S08_c03.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S08-L01_narrator.mp3",
-        "audio/B2/B2-S08-L02_narrator.mp3",
-        "audio/B2/B2-S08-L03_narrator.mp3"
+        "audio/B2/B2-S08-L01_narrator.wav",
+        "audio/B2/B2-S08-L02_narrator.wav",
+        "audio/B2/B2-S08-L03_narrator.wav"
       ],
       "overlay_text": [
         "Konjunktiv II: Wären Sie …? · Ich würde vorschlagen, dass …",
@@ -191,8 +191,8 @@
     {
       "scene_id": "B2-S09",
       "type": "exercise",
-      "start_est": 211.964,
-      "end_est": 269.453,
+      "start_est": 195.407,
+      "end_est": 255.558,
       "clips": [
         "clips/B2/B2-S09_c01.mp4",
         "clips/B2/B2-S09_c02.mp4",
@@ -204,14 +204,14 @@
         "clips/B2/B2-S09_c08.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S09-L01_narrator.mp3",
-        "audio/B2/B2-S09-L02_narrator.mp3",
-        "audio/B2/B2-S09-L03_narrator.mp3",
-        "audio/B2/B2-S09-L04_narrator.mp3",
-        "audio/B2/B2-S09-L05_narrator.mp3",
-        "audio/B2/B2-S09-L06_narrator.mp3",
-        "audio/B2/B2-S09-L07_narrator.mp3",
-        "audio/B2/B2-S09-L08_narrator.mp3"
+        "audio/B2/B2-S09-L01_narrator.wav",
+        "audio/B2/B2-S09-L02_narrator.wav",
+        "audio/B2/B2-S09-L03_narrator.wav",
+        "audio/B2/B2-S09-L04_narrator.wav",
+        "audio/B2/B2-S09-L05_narrator.wav",
+        "audio/B2/B2-S09-L06_narrator.wav",
+        "audio/B2/B2-S09-L07_narrator.wav",
+        "audio/B2/B2-S09-L08_narrator.wav"
       ],
       "overlay_text": [
         "1. Sind Sie interessiert? → Wären Sie interessiert?",
@@ -223,17 +223,17 @@
     {
       "scene_id": "B2-S10",
       "type": "outro",
-      "start_est": 269.453,
-      "end_est": 285.245,
+      "start_est": 255.558,
+      "end_est": 268.259,
       "clips": [
         "clips/B2/B2-S10_c01.mp4",
         "clips/B2/B2-S10_c02.mp4",
         "clips/B2/B2-S10_c03.mp4"
       ],
       "audio_lines": [
-        "audio/B2/B2-S10-L01_mia.mp3",
-        "audio/B2/B2-S10-L02_jonas.mp3",
-        "audio/B2/B2-S10-L03_narrator.mp3"
+        "audio/B2/B2-S10-L01_mia.wav",
+        "audio/B2/B2-S10-L02_jonas.wav",
+        "audio/B2/B2-S10-L03_narrator.wav"
       ],
       "overlay_text": [
         "Stellen Sie sich in drei Sätzen vor!",

@@ -7,8 +7,8 @@
       "speaker": "narrator",
       "text": "Erster Arbeitstag. Alle Gesichter sind neu. Was sagst du?",
       "start": 0.6,
-      "end": 5.509,
-      "estimated": true,
+      "end": 4.707,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -16,9 +16,9 @@
       "scene": "A2-S01",
       "speaker": "narrator",
       "text": "Heute lernst du, wie du dich vorstellst, wenn du neue Kollegen triffst.",
-      "start": 6.209,
-      "end": 12.755,
-      "estimated": true,
+      "start": 5.407,
+      "end": 9.582,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -26,9 +26,9 @@
       "scene": "A2-S02",
       "speaker": "narrator",
       "text": "Das ist Niveau A2. Du sprichst über deinen Alltag und deine Arbeit.",
-      "start": 14.655,
-      "end": 21.2,
-      "estimated": true,
+      "start": 11.482,
+      "end": 16.344,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -36,9 +36,9 @@
       "scene": "A2-S02",
       "speaker": "narrator",
       "text": "Du benutzt einfache Nebensätze, zum Beispiel mit „weil“ und „wenn“.",
-      "start": 21.9,
-      "end": 27.355,
-      "estimated": true,
+      "start": 17.044,
+      "end": 20.646,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -46,9 +46,9 @@
       "scene": "A2-S03",
       "speaker": "jonas",
       "text": "Guten Morgen! Du bist bestimmt Mia, die neue Kollegin, oder?",
-      "start": 29.255,
-      "end": 34.709,
-      "estimated": true,
+      "start": 22.546,
+      "end": 26.583,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -56,9 +56,9 @@
       "scene": "A2-S03",
       "speaker": "mia",
       "text": "Ja, genau. Ich bin Mia Navarro. Heute ist mein erster Arbeitstag.",
-      "start": 35.409,
-      "end": 41.409,
-      "estimated": true,
+      "start": 27.283,
+      "end": 31.591,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -66,9 +66,9 @@
       "scene": "A2-S03",
       "speaker": "jonas",
       "text": "Herzlich willkommen! Ich bin Jonas. Ich arbeite im Team Technik. Möchtest du einen Kaffee?",
-      "start": 42.109,
-      "end": 49.745,
-      "estimated": true,
+      "start": 32.291,
+      "end": 38.069,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -76,9 +76,9 @@
       "scene": "A2-S03",
       "speaker": "mia",
       "text": "Gern, danke! Den brauche ich heute.",
-      "start": 50.445,
-      "end": 53.718,
-      "estimated": true,
+      "start": 38.769,
+      "end": 41.28,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -86,9 +86,9 @@
       "scene": "A2-S04",
       "speaker": "jonas",
       "text": "Woher kommst du denn? Dein Name klingt spanisch.",
-      "start": 55.618,
-      "end": 59.982,
-      "estimated": true,
+      "start": 43.18,
+      "end": 45.849,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -96,9 +96,9 @@
       "scene": "A2-S04",
       "speaker": "mia",
       "text": "Ja, ich komme aus Valencia. Die Stadt liegt im Osten von Spanien, direkt am Meer.",
-      "start": 60.682,
-      "end": 68.864,
-      "estimated": true,
+      "start": 46.549,
+      "end": 51.597,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -106,9 +106,9 @@
       "scene": "A2-S04",
       "speaker": "jonas",
       "text": "Schön! Und wo wohnst du jetzt?",
-      "start": 69.564,
-      "end": 72.836,
-      "estimated": true,
+      "start": 52.297,
+      "end": 54.203,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -116,9 +116,9 @@
       "scene": "A2-S04",
       "speaker": "mia",
       "text": "Ich wohne in Ehrenfeld. Meine Wohnung ist klein, aber ich mag das Viertel.",
-      "start": 73.536,
-      "end": 80.627,
-      "estimated": true,
+      "start": 54.903,
+      "end": 58.964,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -126,9 +126,9 @@
       "scene": "A2-S04",
       "speaker": "jonas",
       "text": "Ehrenfeld ist toll! Ich wohne in Nippes, aber ich komme ursprünglich aus Leipzig.",
-      "start": 81.327,
-      "end": 88.418,
-      "estimated": true,
+      "start": 59.664,
+      "end": 64.412,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -136,9 +136,9 @@
       "scene": "A2-S05",
       "speaker": "jonas",
       "text": "Seit wann lebst du in Deutschland?",
-      "start": 90.318,
-      "end": 93.591,
-      "estimated": true,
+      "start": 66.312,
+      "end": 67.9,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -146,9 +146,9 @@
       "scene": "A2-S05",
       "speaker": "mia",
       "text": "Seit einem Jahr. Ich bin im September nach Köln gezogen, weil ich hier einen Job gefunden habe.",
-      "start": 94.291,
-      "end": 103.564,
-      "estimated": true,
+      "start": 68.6,
+      "end": 73.367,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -156,9 +156,9 @@
       "scene": "A2-S05",
       "speaker": "jonas",
       "text": "Und dein Deutsch ist schon richtig gut!",
-      "start": 104.264,
-      "end": 108.082,
-      "estimated": true,
+      "start": 74.067,
+      "end": 75.795,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -166,9 +166,9 @@
       "scene": "A2-S05",
       "speaker": "mia",
       "text": "Danke! Ich lerne seit zwei Jahren Deutsch. Aber manchmal mache ich noch Fehler. Wenn ich einen Fehler mache, korrigier mich bitte.",
-      "start": 108.782,
-      "end": 120.236,
-      "estimated": true,
+      "start": 76.495,
+      "end": 82.844,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -176,9 +176,9 @@
       "scene": "A2-S05",
       "speaker": "jonas",
       "text": "Klar, gern. Aber ehrlich gesagt: Ich verstehe dich sehr gut.",
-      "start": 120.936,
-      "end": 126.391,
-      "estimated": true,
+      "start": 83.544,
+      "end": 87.51,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -186,9 +186,9 @@
       "scene": "A2-S06",
       "speaker": "jonas",
       "text": "Was war bis jetzt am schwierigsten in Deutschland?",
-      "start": 128.291,
-      "end": 132.655,
-      "estimated": true,
+      "start": 89.41,
+      "end": 91.847,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -196,9 +196,9 @@
       "scene": "A2-S06",
       "speaker": "mia",
       "text": "Die Bürokratie! Ich musste viele Formulare ausfüllen, obwohl ich nicht alle Wörter kannte. Aber die Leute waren sehr nett.",
-      "start": 133.355,
-      "end": 143.718,
-      "estimated": true,
+      "start": 92.547,
+      "end": 99.979,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -206,9 +206,9 @@
       "scene": "A2-S06",
       "speaker": "jonas",
       "text": "Und was gefällt dir besonders gut?",
-      "start": 144.418,
-      "end": 147.691,
-      "estimated": true,
+      "start": 100.679,
+      "end": 102.371,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -216,9 +216,9 @@
       "scene": "A2-S06",
       "speaker": "mia",
       "text": "Ich fahre gern mit dem Fahrrad am Rhein entlang. Das habe ich in Valencia auch gemacht, weil es dort viele Radwege gibt.",
-      "start": 148.391,
-      "end": 160.391,
-      "estimated": true,
+      "start": 103.071,
+      "end": 109.401,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -226,9 +226,9 @@
       "scene": "A2-S06",
       "speaker": "jonas",
       "text": "Dann komm doch am Samstag mit! Ich fahre immer am Rhein, wenn das Wetter schön ist.",
-      "start": 161.091,
-      "end": 169.818,
-      "estimated": true,
+      "start": 110.101,
+      "end": 114.62,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -236,9 +236,9 @@
       "scene": "A2-S06",
       "speaker": "mia",
       "text": "Sehr gern!",
-      "start": 170.518,
-      "end": 171.609,
-      "estimated": true,
+      "start": 115.32,
+      "end": 116.232,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -246,9 +246,9 @@
       "scene": "A2-S07",
       "speaker": "jonas",
       "text": "Ich zeige dir jetzt dein Büro. Danach stelle ich dich dem Team vor.",
-      "start": 173.509,
-      "end": 180.6,
-      "estimated": true,
+      "start": 118.132,
+      "end": 121.604,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -256,9 +256,9 @@
       "scene": "A2-S07",
       "speaker": "mia",
       "text": "Super, danke dir! Ich freue mich schon.",
-      "start": 181.3,
-      "end": 185.118,
-      "estimated": true,
+      "start": 122.304,
+      "end": 124.654,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -266,9 +266,9 @@
       "scene": "A2-S08",
       "speaker": "narrator",
       "text": "Diese Wörter und Sätze helfen dir im Gespräch. Sprich nach!",
-      "start": 187.018,
-      "end": 192.473,
-      "estimated": true,
+      "start": 126.554,
+      "end": 130.449,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -276,9 +276,9 @@
       "scene": "A2-S08",
       "speaker": "mia",
       "text": "der Kollege, die Kollegin. Der Arbeitstag. Herzlich willkommen!",
-      "start": 193.173,
-      "end": 197.536,
-      "estimated": true,
+      "start": 131.149,
+      "end": 135.089,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -286,9 +286,9 @@
       "scene": "A2-S08",
       "speaker": "jonas",
       "text": "wohnen, ziehen, leben. Ich lebe seit einem Jahr in Köln.",
-      "start": 200.236,
-      "end": 205.691,
-      "estimated": true,
+      "start": 137.789,
+      "end": 141.604,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -296,9 +296,9 @@
       "scene": "A2-S08",
       "speaker": "mia",
       "text": "der Fehler, korrigieren. Das Deutsch, die Kenntnisse.",
-      "start": 208.391,
-      "end": 212.209,
-      "estimated": true,
+      "start": 144.304,
+      "end": 147.15,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -306,9 +306,9 @@
       "scene": "A2-S08",
       "speaker": "jonas",
       "text": "ursprünglich, ehrlich gesagt, besonders gut.",
-      "start": 214.909,
-      "end": 217.636,
-      "estimated": true,
+      "start": 149.85,
+      "end": 152.47,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -316,9 +316,9 @@
       "scene": "A2-S09",
       "speaker": "narrator",
       "text": "Im Nebensatz steht das Verb am Ende. Zum Beispiel mit „weil“: Ich wohne in Köln, weil ich hier arbeite.",
-      "start": 221.536,
-      "end": 231.9,
-      "estimated": true,
+      "start": 156.37,
+      "end": 163.207,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -326,9 +326,9 @@
       "scene": "A2-S09",
       "speaker": "narrator",
       "text": "Mit „wenn“ ist es genauso: Wenn ich einen Fehler mache, korrigier mich bitte.",
-      "start": 232.6,
-      "end": 239.691,
-      "estimated": true,
+      "start": 163.907,
+      "end": 168.37,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -336,9 +336,9 @@
       "scene": "A2-S09",
       "speaker": "narrator",
       "text": "Und für die Zeit sagst du „seit“: Ich lebe seit einem Jahr in Deutschland.",
-      "start": 240.391,
-      "end": 248.027,
-      "estimated": true,
+      "start": 169.07,
+      "end": 173.032,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -346,9 +346,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Jetzt bist du dran! Verbinde die Sätze mit „weil“ oder „wenn“.",
-      "start": 249.927,
-      "end": 255.927,
-      "estimated": true,
+      "start": 174.932,
+      "end": 178.665,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -356,9 +356,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Eins: Ich wohne in Köln. Ich arbeite hier. Mit „weil“.",
-      "start": 256.627,
-      "end": 262.082,
-      "estimated": true,
+      "start": 179.365,
+      "end": 183.176,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -366,9 +366,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Lösung: Ich wohne in Köln, weil ich hier arbeite.",
-      "start": 266.782,
-      "end": 271.691,
-      "estimated": true,
+      "start": 187.876,
+      "end": 191.153,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -376,9 +376,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Zwei: Ich mache einen Fehler. Bitte korrigier mich. Mit „wenn“.",
-      "start": 272.391,
-      "end": 277.845,
-      "estimated": true,
+      "start": 191.853,
+      "end": 195.755,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -386,9 +386,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Lösung: Wenn ich einen Fehler mache, korrigier mich bitte.",
-      "start": 282.545,
-      "end": 287.455,
-      "estimated": true,
+      "start": 200.455,
+      "end": 203.858,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -396,9 +396,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Drei: Ich lerne Deutsch. Ich will hier arbeiten. Mit „weil“.",
-      "start": 288.155,
-      "end": 293.609,
-      "estimated": true,
+      "start": 204.558,
+      "end": 208.187,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -406,9 +406,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Lösung: Ich lerne Deutsch, weil ich hier arbeiten will.",
-      "start": 298.309,
-      "end": 303.218,
-      "estimated": true,
+      "start": 212.887,
+      "end": 216.256,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -416,9 +416,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Vier: Seit wann lebst du in Deutschland? Antworte mit „seit“.",
-      "start": 303.918,
-      "end": 309.373,
-      "estimated": true,
+      "start": 216.956,
+      "end": 220.738,
+      "estimated": false,
       "hold": 2.0
     },
     {
@@ -426,9 +426,9 @@
       "scene": "A2-S10",
       "speaker": "narrator",
       "text": "Zum Beispiel: Ich lebe seit einem Jahr in Deutschland.",
-      "start": 314.073,
-      "end": 318.982,
-      "estimated": true,
+      "start": 225.438,
+      "end": 228.34,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -436,9 +436,9 @@
       "scene": "A2-S11",
       "speaker": "mia",
       "text": "Und du? Woher kommst du und wo wohnst du?",
-      "start": 320.882,
-      "end": 325.791,
-      "estimated": true,
+      "start": 230.24,
+      "end": 233.174,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -446,9 +446,9 @@
       "scene": "A2-S11",
       "speaker": "jonas",
       "text": "Seit wann lernst du Deutsch?",
-      "start": 326.491,
-      "end": 329.218,
-      "estimated": true,
+      "start": 233.874,
+      "end": 235.212,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -456,9 +456,9 @@
       "scene": "A2-S11",
       "speaker": "narrator",
       "text": "Schreib es in die Kommentare! Benutze „weil“ oder „seit“.",
-      "start": 329.918,
-      "end": 334.827,
-      "estimated": true,
+      "start": 235.912,
+      "end": 239.411,
+      "estimated": false,
       "hold": 0.0
     },
     {
@@ -466,9 +466,9 @@
       "scene": "A2-S11",
       "speaker": "narrator",
       "text": "Bis zum nächsten Video!",
-      "start": 335.527,
-      "end": 337.709,
-      "estimated": true,
+      "start": 240.111,
+      "end": 241.524,
+      "estimated": false,
       "hold": 0.0
     }
   ]

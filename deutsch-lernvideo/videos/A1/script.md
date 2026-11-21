@@ -1,6 +1,6 @@
 # Hallo! Ich heiße … – Begrüßen und sich vorstellen
 
-**Niveau A1 – Anfänger** · Anrede: du · Zieldauer ca. 3:35 min (geschätzte Sprechzeit laut Zeitleiste: 00:03:35)
+**Niveau A1 – Anfänger** · Anrede: du · Zieldauer ca. 3:35 min (geschätzte Sprechzeit laut Zeitleiste: 00:02:37)
 
 *Deutsch lernen A1: Hallo, Name, Herkunft*
 
@@ -503,48 +503,52 @@ Dateien: `subtitles/A1.srt`, `subtitles/A1.vtt`. Text und Zeitleiste stammen aus
 
 | # | Start | Ende | Text |
 |---|---|---|---|
-| 1 | 00:00:00,600 | 00:00:06,953 | Hallo! Nur ein Wort. Und / schon beginnt ein Gespräch. |
-| 2 | 00:00:07,853 | 00:00:13,500 | Heute lernst du: Wie stelle ich mich vor? |
-| 3 | 00:00:15,600 | 00:00:23,365 | Das ist Niveau A1. Du lernst / einfache Wörter und kurze Sätze. |
-| 4 | 00:00:24,265 | 00:00:28,500 | Wir sprechen langsam. Sprich laut mit! |
-| 5 | 00:00:30,600 | 00:00:32,718 | Hallo! Guten Morgen! |
-| 6 | 00:00:33,618 | 00:00:35,029 | Guten Morgen! |
-| 7 | 00:00:35,929 | 00:00:36,729 | Hallo! |
-| 8 | 00:00:38,829 | 00:00:44,476 | Ich heiße Jonas. Und du? Wie heißt du? |
-| 9 | 00:00:45,376 | 00:00:47,494 | Ich heiße Mia. |
-| 10 | 00:00:48,394 | 00:00:49,806 | Hallo, Mia! |
-| 11 | 00:00:50,706 | 00:00:53,529 | Hallo, Jonas! Freut mich! |
-| 12 | 00:00:54,429 | 00:00:56,547 | Freut mich auch! |
-| 13 | 00:00:58,647 | 00:01:01,471 | Woher kommst du, Mia? |
-| 14 | 00:01:02,371 | 00:01:06,606 | Ich komme aus Spanien. Aus Valencia. |
-| 15 | 00:01:07,506 | 00:01:11,035 | Und du? Woher kommst du? |
-| 16 | 00:01:11,935 | 00:01:16,171 | Ich komme aus Deutschland. Aus Leipzig. |
-| 17 | 00:01:17,071 | 00:01:19,188 | Leipzig ist schön! |
-| 18 | 00:01:20,088 | 00:01:22,912 | Valencia ist auch schön! |
-| 19 | 00:01:25,012 | 00:01:26,424 | Tschüss, Jonas! |
-| 20 | 00:01:27,324 | 00:01:30,147 | Tschüss, Mia! Bis bald! |
-| 21 | 00:01:32,247 | 00:01:37,188 | Das sind die wichtigen / Wörter. Sprich nach! |
-| 22 | 00:01:38,088 | 00:01:42,912 | Hallo. Guten Morgen. Tschüss. |
-| 23 | 00:01:43,812 | 00:01:49,341 | Ich heiße. Wie heißt du? |
-| 24 | 00:01:50,241 | 00:01:56,476 | Ich komme aus. Woher kommst du? |
-| 25 | 00:01:57,376 | 00:02:00,788 | Freut mich! |
-| 26 | 00:02:02,888 | 00:02:06,418 | Achtung: Das Verb ändert sich. |
-| 27 | 00:02:07,318 | 00:02:15,788 | Ich heiße. Du heißt. Ich komme. / Du kommst. Ich bin. Du bist. |
-| 28 | 00:02:16,688 | 00:02:25,905 | Bei Fragen mit Fragewort steht das / Verb an Position zwei: Wie heißt du? |
-| 29 | 00:02:25,905 | 00:02:27,982 | Woher kommst du? |
-| 30 | 00:02:30,082 | 00:02:35,024 | Jetzt bist du dran! Ergänze die Sätze. |
-| 31 | 00:02:35,924 | 00:02:40,041 | Eins: Wie … du? |
-| 32 | 00:02:41,941 | 00:02:44,765 | Richtig: Wie heißt du? |
-| 33 | 00:02:45,665 | 00:02:49,782 | Zwei: Ich … Mia. |
-| 34 | 00:02:51,682 | 00:02:54,506 | Richtig: Ich heiße Mia. |
-| 35 | 00:02:55,406 | 00:02:59,524 | Drei: Woher … du? |
-| 36 | 00:03:01,424 | 00:03:04,247 | Richtig: Woher kommst du? |
-| 37 | 00:03:05,147 | 00:03:09,971 | Vier: Ich … aus Spanien. |
-| 38 | 00:03:11,871 | 00:03:15,400 | Richtig: Ich komme aus Spanien. |
-| 39 | 00:03:17,500 | 00:03:21,029 | Und du? Wie heißt du? |
-| 40 | 00:03:21,929 | 00:03:24,047 | Woher kommst du? |
-| 41 | 00:03:24,947 | 00:03:32,006 | Schreib es in die Kommentare: / Ich heiße … Ich komme aus … |
-| 42 | 00:03:32,906 | 00:03:35,024 | Bis bald! Tschüss! |
+| 1 | 00:00:00,600 | 00:00:04,174 | Hallo! Nur ein Wort. Und / schon beginnt ein Gespräch. |
+| 2 | 00:00:05,074 | 00:00:08,453 | Heute lernst du: Wie / stelle ich mich vor? |
+| 3 | 00:00:10,553 | 00:00:11,949 | Das ist Niveau A1. |
+| 4 | 00:00:11,949 | 00:00:15,207 | Du lernst einfache / Wörter und kurze Sätze. |
+| 5 | 00:00:16,107 | 00:00:19,121 | Wir sprechen langsam. / Sprich laut mit! |
+| 6 | 00:00:21,221 | 00:00:22,770 | Hallo! Guten Morgen! |
+| 7 | 00:00:23,670 | 00:00:24,508 | Guten Morgen! |
+| 8 | 00:00:25,408 | 00:00:25,954 | Hallo! |
+| 9 | 00:00:28,054 | 00:00:31,628 | Ich heiße Jonas. Und / du? Wie heißt du? |
+| 10 | 00:00:32,528 | 00:00:33,873 | Ich heiße Mia. |
+| 11 | 00:00:34,773 | 00:00:36,046 | Hallo, Mia! |
+| 12 | 00:00:36,946 | 00:00:38,836 | Hallo, Jonas! Freut mich! |
+| 13 | 00:00:39,736 | 00:00:40,860 | Freut mich auch! |
+| 14 | 00:00:42,960 | 00:00:44,812 | Woher kommst du, Mia? |
+| 15 | 00:00:45,712 | 00:00:48,073 | Ich komme aus / Spanien. Aus Valencia. |
+| 16 | 00:00:48,973 | 00:00:50,926 | Und du? Woher kommst du? |
+| 17 | 00:00:51,826 | 00:00:54,476 | Ich komme aus / Deutschland. Aus Leipzig. |
+| 18 | 00:00:55,376 | 00:00:56,689 | Leipzig ist schön! |
+| 19 | 00:00:57,589 | 00:00:59,396 | Valencia ist auch schön! |
+| 20 | 00:01:01,496 | 00:01:02,350 | Tschüss, Jonas! |
+| 21 | 00:01:03,250 | 00:01:05,705 | Tschüss, Mia! Bis bald! |
+| 22 | 00:01:07,805 | 00:01:10,644 | Das sind die wichtigen / Wörter. Sprich nach! |
+| 23 | 00:01:11,544 | 00:01:16,001 | Hallo. Guten / Morgen. Tschüss. |
+| 24 | 00:01:16,901 | 00:01:21,128 | Ich heiße. Wie heißt du? |
+| 25 | 00:01:22,028 | 00:01:26,247 | Ich komme aus. / Woher kommst du? |
+| 26 | 00:01:27,147 | 00:01:29,884 | Freut mich! |
+| 27 | 00:01:31,984 | 00:01:34,147 | Achtung: Das / Verb ändert sich. |
+| 28 | 00:01:35,047 | 00:01:39,104 | Ich heiße. Du heißt. Ich / komme. Du kommst. Ich bin. |
+| 29 | 00:01:39,104 | 00:01:39,740 | Du bist. |
+| 30 | 00:01:40,640 | 00:01:42,686 | Bei Fragen mit / Fragewort steht |
+| 31 | 00:01:42,686 | 00:01:44,459 | das Verb an Position zwei: |
+| 32 | 00:01:44,459 | 00:01:46,505 | Wie heißt du? / Woher kommst du? |
+| 33 | 00:01:48,605 | 00:01:51,539 | Jetzt bist du dran! / Ergänze die Sätze. |
+| 34 | 00:01:52,439 | 00:01:55,327 | Eins: Wie … du? |
+| 35 | 00:01:57,227 | 00:01:58,946 | Richtig: Wie heißt du? |
+| 36 | 00:01:59,846 | 00:02:03,430 | Zwei: Ich … Mia. |
+| 37 | 00:02:05,330 | 00:02:07,465 | Richtig: Ich heiße Mia. |
+| 38 | 00:02:08,365 | 00:02:12,010 | Drei: Woher … du? |
+| 39 | 00:02:13,910 | 00:02:15,666 | Richtig: Woher kommst du? |
+| 40 | 00:02:16,566 | 00:02:20,078 | Vier: Ich … aus Spanien. |
+| 41 | 00:02:21,978 | 00:02:24,213 | Richtig: Ich / komme aus Spanien. |
+| 42 | 00:02:26,313 | 00:02:28,266 | Und du? Wie heißt du? |
+| 43 | 00:02:29,166 | 00:02:30,177 | Woher kommst du? |
+| 44 | 00:02:31,077 | 00:02:33,255 | Schreib es in / die Kommentare: |
+| 45 | 00:02:33,255 | 00:02:35,283 | Ich heiße … Ich komme aus … |
+| 46 | 00:02:36,183 | 00:02:37,676 | Bis bald! Tschüss! |
 
 </details>
 

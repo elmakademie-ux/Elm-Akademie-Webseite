@@ -6,14 +6,14 @@
       "scene_id": "A2-S01",
       "type": "hook",
       "start_est": 0.0,
-      "end_est": 14.055,
+      "end_est": 10.882,
       "clips": [
         "clips/A2/A2-S01_c01.mp4",
         "clips/A2/A2-S01_c02.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S01-L01_narrator.mp3",
-        "audio/A2/A2-S01-L02_narrator.mp3"
+        "audio/A2/A2-S01-L01_narrator.wav",
+        "audio/A2/A2-S01-L02_narrator.wav"
       ],
       "overlay_text": [
         "Erster Arbeitstag!"
@@ -22,15 +22,15 @@
     {
       "scene_id": "A2-S02",
       "type": "intro",
-      "start_est": 14.055,
-      "end_est": 28.655,
+      "start_est": 10.882,
+      "end_est": 21.946,
       "clips": [
         "clips/A2/A2-S02_c01.mp4",
         "clips/A2/A2-S02_c02.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S02-L01_narrator.mp3",
-        "audio/A2/A2-S02-L02_narrator.mp3"
+        "audio/A2/A2-S02-L01_narrator.wav",
+        "audio/A2/A2-S02-L02_narrator.wav"
       ],
       "overlay_text": [
         "A2",
@@ -42,8 +42,8 @@
     {
       "scene_id": "A2-S03",
       "type": "dialog",
-      "start_est": 28.655,
-      "end_est": 55.018,
+      "start_est": 21.946,
+      "end_est": 42.58,
       "clips": [
         "clips/A2/A2-S03_c01.mp4",
         "clips/A2/A2-S03_c02.mp4",
@@ -51,10 +51,10 @@
         "clips/A2/A2-S03_c04.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S03-L01_jonas.mp3",
-        "audio/A2/A2-S03-L02_mia.mp3",
-        "audio/A2/A2-S03-L03_jonas.mp3",
-        "audio/A2/A2-S03-L04_mia.mp3"
+        "audio/A2/A2-S03-L01_jonas.wav",
+        "audio/A2/A2-S03-L02_mia.wav",
+        "audio/A2/A2-S03-L03_jonas.wav",
+        "audio/A2/A2-S03-L04_mia.wav"
       ],
       "overlay_text": [
         "Herzlich willkommen!",
@@ -64,8 +64,8 @@
     {
       "scene_id": "A2-S04",
       "type": "dialog",
-      "start_est": 55.018,
-      "end_est": 89.718,
+      "start_est": 42.58,
+      "end_est": 65.712,
       "clips": [
         "clips/A2/A2-S04_c01.mp4",
         "clips/A2/A2-S04_c02.mp4",
@@ -74,11 +74,11 @@
         "clips/A2/A2-S04_c05.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S04-L01_jonas.mp3",
-        "audio/A2/A2-S04-L02_mia.mp3",
-        "audio/A2/A2-S04-L03_jonas.mp3",
-        "audio/A2/A2-S04-L04_mia.mp3",
-        "audio/A2/A2-S04-L05_jonas.mp3"
+        "audio/A2/A2-S04-L01_jonas.wav",
+        "audio/A2/A2-S04-L02_mia.wav",
+        "audio/A2/A2-S04-L03_jonas.wav",
+        "audio/A2/A2-S04-L04_mia.wav",
+        "audio/A2/A2-S04-L05_jonas.wav"
       ],
       "overlay_text": [
         "Woher kommst du?",
@@ -89,8 +89,8 @@
     {
       "scene_id": "A2-S05",
       "type": "dialog",
-      "start_est": 89.718,
-      "end_est": 127.691,
+      "start_est": 65.712,
+      "end_est": 88.81,
       "clips": [
         "clips/A2/A2-S05_c01.mp4",
         "clips/A2/A2-S05_c02.mp4",
@@ -99,11 +99,11 @@
         "clips/A2/A2-S05_c05.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S05-L01_jonas.mp3",
-        "audio/A2/A2-S05-L02_mia.mp3",
-        "audio/A2/A2-S05-L03_jonas.mp3",
-        "audio/A2/A2-S05-L04_mia.mp3",
-        "audio/A2/A2-S05-L05_jonas.mp3"
+        "audio/A2/A2-S05-L01_jonas.wav",
+        "audio/A2/A2-S05-L02_mia.wav",
+        "audio/A2/A2-S05-L03_jonas.wav",
+        "audio/A2/A2-S05-L04_mia.wav",
+        "audio/A2/A2-S05-L05_jonas.wav"
       ],
       "overlay_text": [
         "Seit wann …?",
@@ -115,8 +115,8 @@
     {
       "scene_id": "A2-S06",
       "type": "dialog",
-      "start_est": 127.691,
-      "end_est": 172.909,
+      "start_est": 88.81,
+      "end_est": 117.532,
       "clips": [
         "clips/A2/A2-S06_c01.mp4",
         "clips/A2/A2-S06_c02.mp4",
@@ -126,12 +126,12 @@
         "clips/A2/A2-S06_c06.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S06-L01_jonas.mp3",
-        "audio/A2/A2-S06-L02_mia.mp3",
-        "audio/A2/A2-S06-L03_jonas.mp3",
-        "audio/A2/A2-S06-L04_mia.mp3",
-        "audio/A2/A2-S06-L05_jonas.mp3",
-        "audio/A2/A2-S06-L06_mia.mp3"
+        "audio/A2/A2-S06-L01_jonas.wav",
+        "audio/A2/A2-S06-L02_mia.wav",
+        "audio/A2/A2-S06-L03_jonas.wav",
+        "audio/A2/A2-S06-L04_mia.wav",
+        "audio/A2/A2-S06-L05_jonas.wav",
+        "audio/A2/A2-S06-L06_mia.wav"
       ],
       "overlay_text": [
         "Erfahrungen: Was war schwierig? Was gefällt dir?",
@@ -141,15 +141,15 @@
     {
       "scene_id": "A2-S07",
       "type": "dialog",
-      "start_est": 172.909,
-      "end_est": 186.418,
+      "start_est": 117.532,
+      "end_est": 125.954,
       "clips": [
         "clips/A2/A2-S07_c01.mp4",
         "clips/A2/A2-S07_c02.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S07-L01_jonas.mp3",
-        "audio/A2/A2-S07-L02_mia.mp3"
+        "audio/A2/A2-S07-L01_jonas.wav",
+        "audio/A2/A2-S07-L02_mia.wav"
       ],
       "overlay_text": [
         "Ich stelle dich dem Team vor."
@@ -158,8 +158,8 @@
     {
       "scene_id": "A2-S08",
       "type": "vocab",
-      "start_est": 186.418,
-      "end_est": 220.936,
+      "start_est": 125.954,
+      "end_est": 155.77,
       "clips": [
         "clips/A2/A2-S08_c01.mp4",
         "clips/A2/A2-S08_c02.mp4",
@@ -168,11 +168,11 @@
         "clips/A2/A2-S08_c05.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S08-L01_narrator.mp3",
-        "audio/A2/A2-S08-L02_mia.mp3",
-        "audio/A2/A2-S08-L03_jonas.mp3",
-        "audio/A2/A2-S08-L04_mia.mp3",
-        "audio/A2/A2-S08-L05_jonas.mp3"
+        "audio/A2/A2-S08-L01_narrator.wav",
+        "audio/A2/A2-S08-L02_mia.wav",
+        "audio/A2/A2-S08-L03_jonas.wav",
+        "audio/A2/A2-S08-L04_mia.wav",
+        "audio/A2/A2-S08-L05_jonas.wav"
       ],
       "overlay_text": [
         "der Kollege / die Kollegin",
@@ -186,17 +186,17 @@
     {
       "scene_id": "A2-S09",
       "type": "grammar",
-      "start_est": 220.936,
-      "end_est": 249.327,
+      "start_est": 155.77,
+      "end_est": 174.332,
       "clips": [
         "clips/A2/A2-S09_c01.mp4",
         "clips/A2/A2-S09_c02.mp4",
         "clips/A2/A2-S09_c03.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S09-L01_narrator.mp3",
-        "audio/A2/A2-S09-L02_narrator.mp3",
-        "audio/A2/A2-S09-L03_narrator.mp3"
+        "audio/A2/A2-S09-L01_narrator.wav",
+        "audio/A2/A2-S09-L02_narrator.wav",
+        "audio/A2/A2-S09-L03_narrator.wav"
       ],
       "overlay_text": [
         "weil / wenn / obwohl → Verb am Ende",
@@ -207,8 +207,8 @@
     {
       "scene_id": "A2-S10",
       "type": "exercise",
-      "start_est": 249.327,
-      "end_est": 320.282,
+      "start_est": 174.332,
+      "end_est": 229.64,
       "clips": [
         "clips/A2/A2-S10_c01.mp4",
         "clips/A2/A2-S10_c02.mp4",
@@ -221,15 +221,15 @@
         "clips/A2/A2-S10_c09.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S10-L01_narrator.mp3",
-        "audio/A2/A2-S10-L02_narrator.mp3",
-        "audio/A2/A2-S10-L03_narrator.mp3",
-        "audio/A2/A2-S10-L04_narrator.mp3",
-        "audio/A2/A2-S10-L05_narrator.mp3",
-        "audio/A2/A2-S10-L06_narrator.mp3",
-        "audio/A2/A2-S10-L07_narrator.mp3",
-        "audio/A2/A2-S10-L08_narrator.mp3",
-        "audio/A2/A2-S10-L09_narrator.mp3"
+        "audio/A2/A2-S10-L01_narrator.wav",
+        "audio/A2/A2-S10-L02_narrator.wav",
+        "audio/A2/A2-S10-L03_narrator.wav",
+        "audio/A2/A2-S10-L04_narrator.wav",
+        "audio/A2/A2-S10-L05_narrator.wav",
+        "audio/A2/A2-S10-L06_narrator.wav",
+        "audio/A2/A2-S10-L07_narrator.wav",
+        "audio/A2/A2-S10-L08_narrator.wav",
+        "audio/A2/A2-S10-L09_narrator.wav"
       ],
       "overlay_text": [
         "1. Ich wohne in Köln. + Ich arbeite hier. (weil)",
@@ -241,8 +241,8 @@
     {
       "scene_id": "A2-S11",
       "type": "outro",
-      "start_est": 320.282,
-      "end_est": 339.009,
+      "start_est": 229.64,
+      "end_est": 242.824,
       "clips": [
         "clips/A2/A2-S11_c01.mp4",
         "clips/A2/A2-S11_c02.mp4",
@@ -250,10 +250,10 @@
         "clips/A2/A2-S11_c04.mp4"
       ],
       "audio_lines": [
-        "audio/A2/A2-S11-L01_mia.mp3",
-        "audio/A2/A2-S11-L02_jonas.mp3",
-        "audio/A2/A2-S11-L03_narrator.mp3",
-        "audio/A2/A2-S11-L04_narrator.mp3"
+        "audio/A2/A2-S11-L01_mia.wav",
+        "audio/A2/A2-S11-L02_jonas.wav",
+        "audio/A2/A2-S11-L03_narrator.wav",
+        "audio/A2/A2-S11-L04_narrator.wav"
       ],
       "overlay_text": [
         "Woher kommst du? Wo wohnst du?",

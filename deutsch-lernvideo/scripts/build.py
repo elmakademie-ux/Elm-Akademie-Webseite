@@ -157,7 +157,7 @@ def build(level):
                 "text": ln["text"], "tts_text": tt, "emotion": ln["emotion"],
                 "ssml": f'<speak><prosody rate="{rate}">{tt}</prosody></speak>',
                 "pause_after_sec": round(gap + ln.get("pause_after", 0.0), 2),
-                "output_file": f"audio/{level}/{lid}_{ln['speaker']}.mp3",
+                "output_file": f"audio/{level}/{lid}_{ln["speaker"]}.wav",
                 "status": "pending",
             })
     save_json(ROOT / "audio" / level / "manifest.json", {
@@ -177,7 +177,7 @@ def build(level):
     edl = {"level": level, "title": script["title"], "scenes": [{
         "scene_id": s["id"], "type": s["type"], "start_est": s["_start"], "end_est": s["_end"],
         "clips": [f"clips/{level}/{s['id']}_c{n:02d}.mp4" for n in range(1, len(prompts[s['id']]['shots']) + 1)],
-        "audio_lines": [f"audio/{level}/{line_id(s, i)}_{ln['speaker']}.mp3" for i, ln in enumerate(s["lines"])],
+        "audio_lines": [f"audio/{level}/{line_id(s, i)}_{ln["speaker"]}.wav" for i, ln in enumerate(s["lines"])],
         "overlay_text": s.get("on_screen", [])} for s in script["scenes"]],
         "subtitles": f"subtitles/{level}.srt"}
     save_json(ROOT / "videos" / level / "edit_list.json", edl)

@@ -14,7 +14,7 @@
       "emotion": "curious, slightly dramatic, moderate-slow",
       "ssml": "<speak><prosody rate=\"-10%\">Erster Arbeitstag. Alle Gesichter sind neu. Was sagst du?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S01-L01_narrator.mp3",
+      "output_file": "audio/A2/A2-S01-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -27,7 +27,7 @@
       "emotion": "encouraging, moderate-slow",
       "ssml": "<speak><prosody rate=\"-10%\">Heute lernst du, wie du dich vorstellst, wenn du neue Kollegen triffst.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S01-L02_narrator.mp3",
+      "output_file": "audio/A2/A2-S01-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -40,7 +40,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Das ist Niveau A zwei. Du sprichst über deinen Alltag und deine Arbeit.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S02-L01_narrator.mp3",
+      "output_file": "audio/A2/A2-S02-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -53,7 +53,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Du benutzt einfache Nebensätze, zum Beispiel mit „weil“ und „wenn“.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S02-L02_narrator.mp3",
+      "output_file": "audio/A2/A2-S02-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -66,7 +66,7 @@
       "emotion": "friendly, welcoming, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Guten Morgen! Du bist bestimmt Mia, die neue Kollegin, oder?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S03-L01_jonas.mp3",
+      "output_file": "audio/A2/A2-S03-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -79,7 +79,7 @@
       "emotion": "a little nervous, smiling, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Ja, genau. Ich bin Mia Navarro. Heute ist mein erster Arbeitstag.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S03-L02_mia.mp3",
+      "output_file": "audio/A2/A2-S03-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -92,7 +92,7 @@
       "emotion": "warm, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Herzlich willkommen! Ich bin Jonas. Ich arbeite im Team Technik. Möchtest du einen Kaffee?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S03-L03_jonas.mp3",
+      "output_file": "audio/A2/A2-S03-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -105,7 +105,7 @@
       "emotion": "relieved, laughing, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Gern, danke! Den brauche ich heute.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S03-L04_mia.mp3",
+      "output_file": "audio/A2/A2-S03-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -118,7 +118,7 @@
       "emotion": "curious, friendly, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Woher kommst du denn? Dein Name klingt spanisch.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S04-L01_jonas.mp3",
+      "output_file": "audio/A2/A2-S04-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -131,7 +131,7 @@
       "emotion": "proud, warm, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Ja, ich komme aus Valencia. Die Stadt liegt im Osten von Spanien, direkt am Meer.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S04-L02_mia.mp3",
+      "output_file": "audio/A2/A2-S04-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "emotion": "interested, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Schön! Und wo wohnst du jetzt?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S04-L03_jonas.mp3",
+      "output_file": "audio/A2/A2-S04-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -157,7 +157,7 @@
       "emotion": "content, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Ich wohne in Ehrenfeld. Meine Wohnung ist klein, aber ich mag das Viertel.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S04-L04_mia.mp3",
+      "output_file": "audio/A2/A2-S04-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -170,7 +170,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Ehrenfeld ist toll! Ich wohne in Nippes, aber ich komme ursprünglich aus Leipzig.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S04-L05_jonas.mp3",
+      "output_file": "audio/A2/A2-S04-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -183,7 +183,7 @@
       "emotion": "curious, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Seit wann lebst du in Deutschland?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S05-L01_jonas.mp3",
+      "output_file": "audio/A2/A2-S05-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -196,7 +196,7 @@
       "emotion": "explaining, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Seit einem Jahr. Ich bin im September nach Köln gezogen, weil ich hier einen Job gefunden habe.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S05-L02_mia.mp3",
+      "output_file": "audio/A2/A2-S05-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -209,7 +209,7 @@
       "emotion": "impressed, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Und dein Deutsch ist schon richtig gut!</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S05-L03_jonas.mp3",
+      "output_file": "audio/A2/A2-S05-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -222,7 +222,7 @@
       "emotion": "modest, smiling, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Danke! Ich lerne seit zwei Jahren Deutsch. Aber manchmal mache ich noch Fehler. Wenn ich einen Fehler mache, korrigier mich bitte.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S05-L04_mia.mp3",
+      "output_file": "audio/A2/A2-S05-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -235,7 +235,7 @@
       "emotion": "reassuring, warm, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Klar, gern. Aber ehrlich gesagt: Ich verstehe dich sehr gut.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S05-L05_jonas.mp3",
+      "output_file": "audio/A2/A2-S05-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -248,7 +248,7 @@
       "emotion": "curious, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Was war bis jetzt am schwierigsten in Deutschland?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S06-L01_jonas.mp3",
+      "output_file": "audio/A2/A2-S06-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -261,7 +261,7 @@
       "emotion": "amused, expressive, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Die Bürokratie! Ich musste viele Formulare ausfüllen, obwohl ich nicht alle Wörter kannte. Aber die Leute waren sehr nett.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S06-L02_mia.mp3",
+      "output_file": "audio/A2/A2-S06-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -274,7 +274,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Und was gefällt dir besonders gut?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S06-L03_jonas.mp3",
+      "output_file": "audio/A2/A2-S06-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -287,7 +287,7 @@
       "emotion": "enthusiastic, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Ich fahre gern mit dem Fahrrad am Rhein entlang. Das habe ich in Valencia auch gemacht, weil es dort viele Radwege gibt.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S06-L04_mia.mp3",
+      "output_file": "audio/A2/A2-S06-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -300,7 +300,7 @@
       "emotion": "inviting, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Dann komm doch am Samstag mit! Ich fahre immer am Rhein, wenn das Wetter schön ist.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S06-L05_jonas.mp3",
+      "output_file": "audio/A2/A2-S06-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -313,7 +313,7 @@
       "emotion": "delighted, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Sehr gern!</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S06-L06_mia.mp3",
+      "output_file": "audio/A2/A2-S06-L06_mia.wav",
       "status": "pending"
     },
     {
@@ -326,7 +326,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Ich zeige dir jetzt dein Büro. Danach stelle ich dich dem Team vor.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S07-L01_jonas.mp3",
+      "output_file": "audio/A2/A2-S07-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -339,7 +339,7 @@
       "emotion": "excited, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Super, danke dir! Ich freue mich schon.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S07-L02_mia.mp3",
+      "output_file": "audio/A2/A2-S07-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -352,7 +352,7 @@
       "emotion": "encouraging, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Diese Wörter und Sätze helfen dir im Gespräch. Sprich nach!</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S08-L01_narrator.mp3",
+      "output_file": "audio/A2/A2-S08-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -365,7 +365,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">der Kollege, die Kollegin. Der Arbeitstag. Herzlich willkommen!</prosody></speak>",
       "pause_after_sec": 2.7,
-      "output_file": "audio/A2/A2-S08-L02_mia.mp3",
+      "output_file": "audio/A2/A2-S08-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -378,7 +378,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">wohnen, ziehen, leben. Ich lebe seit einem Jahr in Köln.</prosody></speak>",
       "pause_after_sec": 2.7,
-      "output_file": "audio/A2/A2-S08-L03_jonas.mp3",
+      "output_file": "audio/A2/A2-S08-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -391,7 +391,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">der Fehler, korrigieren. Das Deutsch, die Kenntnisse.</prosody></speak>",
       "pause_after_sec": 2.7,
-      "output_file": "audio/A2/A2-S08-L04_mia.mp3",
+      "output_file": "audio/A2/A2-S08-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -404,7 +404,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">ursprünglich, ehrlich gesagt, besonders gut.</prosody></speak>",
       "pause_after_sec": 2.7,
-      "output_file": "audio/A2/A2-S08-L05_jonas.mp3",
+      "output_file": "audio/A2/A2-S08-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -417,7 +417,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Im Nebensatz steht das Verb am Ende. Zum Beispiel mit „weil“: Ich wohne in Köln, weil ich hier arbeite.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S09-L01_narrator.mp3",
+      "output_file": "audio/A2/A2-S09-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -430,7 +430,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Mit „wenn“ ist es genauso: Wenn ich einen Fehler mache, korrigier mich bitte.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S09-L02_narrator.mp3",
+      "output_file": "audio/A2/A2-S09-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -443,7 +443,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Und für die Zeit sagst du „seit“: Ich lebe seit einem Jahr in Deutschland.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S09-L03_narrator.mp3",
+      "output_file": "audio/A2/A2-S09-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -456,7 +456,7 @@
       "emotion": "playful, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Jetzt bist du dran! Verbinde die Sätze mit „weil“ oder „wenn“.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S10-L01_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -469,7 +469,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Eins: Ich wohne in Köln. Ich arbeite hier. Mit „weil“.</prosody></speak>",
       "pause_after_sec": 4.7,
-      "output_file": "audio/A2/A2-S10-L02_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -482,7 +482,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Lösung: Ich wohne in Köln, weil ich hier arbeite.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S10-L03_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -495,7 +495,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Zwei: Ich mache einen Fehler. Bitte korrigier mich. Mit „wenn“.</prosody></speak>",
       "pause_after_sec": 4.7,
-      "output_file": "audio/A2/A2-S10-L04_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L04_narrator.wav",
       "status": "pending"
     },
     {
@@ -508,7 +508,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Lösung: Wenn ich einen Fehler mache, korrigier mich bitte.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S10-L05_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L05_narrator.wav",
       "status": "pending"
     },
     {
@@ -521,7 +521,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Drei: Ich lerne Deutsch. Ich will hier arbeiten. Mit „weil“.</prosody></speak>",
       "pause_after_sec": 4.7,
-      "output_file": "audio/A2/A2-S10-L06_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L06_narrator.wav",
       "status": "pending"
     },
     {
@@ -534,7 +534,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Lösung: Ich lerne Deutsch, weil ich hier arbeiten will.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S10-L07_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L07_narrator.wav",
       "status": "pending"
     },
     {
@@ -547,7 +547,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Vier: Seit wann lebst du in Deutschland? Antworte mit „seit“.</prosody></speak>",
       "pause_after_sec": 4.7,
-      "output_file": "audio/A2/A2-S10-L08_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L08_narrator.wav",
       "status": "pending"
     },
     {
@@ -560,7 +560,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Zum Beispiel: Ich lebe seit einem Jahr in Deutschland.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S10-L09_narrator.mp3",
+      "output_file": "audio/A2/A2-S10-L09_narrator.wav",
       "status": "pending"
     },
     {
@@ -573,7 +573,7 @@
       "emotion": "inviting, warm, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Und du? Woher kommst du und wo wohnst du?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S11-L01_mia.mp3",
+      "output_file": "audio/A2/A2-S11-L01_mia.wav",
       "status": "pending"
     },
     {
@@ -586,7 +586,7 @@
       "emotion": "curious, warm, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Seit wann lernst du Deutsch?</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S11-L02_jonas.mp3",
+      "output_file": "audio/A2/A2-S11-L02_jonas.wav",
       "status": "pending"
     },
     {
@@ -599,7 +599,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Schreib es in die Kommentare! Benutze „weil“ oder „seit“.</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S11-L03_narrator.mp3",
+      "output_file": "audio/A2/A2-S11-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -612,7 +612,7 @@
       "emotion": "warm, moderate",
       "ssml": "<speak><prosody rate=\"-10%\">Bis zum nächsten Video!</prosody></speak>",
       "pause_after_sec": 0.7,
-      "output_file": "audio/A2/A2-S11-L04_narrator.mp3",
+      "output_file": "audio/A2/A2-S11-L04_narrator.wav",
       "status": "pending"
     }
   ]

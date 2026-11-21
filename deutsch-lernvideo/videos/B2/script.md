@@ -1,6 +1,6 @@
 # Professionelle Vorstellung – Kontakte auf einer Fachkonferenz
 
-**Niveau B2 – Fortgeschrittene Sprachkenntnisse** · Anrede: Sie · Zieldauer ca. 4:45 min (geschätzte Sprechzeit laut Zeitleiste: 00:04:44)
+**Niveau B2 – Fortgeschrittene Sprachkenntnisse** · Anrede: Sie · Zieldauer ca. 4:45 min (geschätzte Sprechzeit laut Zeitleiste: 00:04:27)
 
 *Deutsch lernen B2: formelle Begrüßung, Argumentieren, Zusammenarbeit anbahnen*
 
@@ -505,76 +505,116 @@ Dateien: `subtitles/B2.srt`, `subtitles/B2.vtt`. Text und Zeitleiste stammen aus
 
 | # | Start | Ende | Text |
 |---|---|---|---|
-| 1 | 00:00:00,600 | 00:00:05,204 | Ein Gespräch von zwei Minuten kann / der Anfang einer Zusammenarbeit sein. |
-| 2 | 00:00:05,204 | 00:00:07,634 | Aber wie beginnt man es professionell? |
-| 3 | 00:00:08,084 | 00:00:10,673 | Heute begleitest du zwei Fachleute von der |
-| 4 | 00:00:10,673 | 00:00:13,878 | ersten Begrüßung bis zum / Austausch der Kontaktdaten. |
-| 5 | 00:00:15,528 | 00:00:19,140 | Das ist Niveau B2. Du sprichst / formell und differenziert, |
-| 6 | 00:00:19,140 | 00:00:22,562 | du argumentierst und gehst / auf andere Standpunkte ein. |
-| 7 | 00:00:23,012 | 00:00:26,736 | Achte auf die Anrede: Hier / sagen die beiden „Sie“. |
-| 8 | 00:00:28,386 | 00:00:32,731 | Guten Tag, entschuldigen Sie die / Störung. Darf ich mich kurz vorstellen? |
-| 9 | 00:00:32,731 | 00:00:37,076 | Jonas Keller, ich leite die Entwicklung / bei der Lernplattform Lernfluss. |
-| 10 | 00:00:37,526 | 00:00:38,974 | Guten Tag, Herr Keller. |
-| 11 | 00:00:38,974 | 00:00:44,075 | Mia Navarro, ich bin Projektleiterin im / Bereich E-Learning bei der Lernwerk GmbH. |
-| 12 | 00:00:44,075 | 00:00:46,216 | Es freut mich, Sie kennenzulernen. |
-| 13 | 00:00:46,666 | 00:00:48,749 | Die Freude ist ganz meinerseits. |
-| 14 | 00:00:48,749 | 00:00:52,459 | Ihr Vortrag zur Lernmotivation / hat mir sehr gut gefallen. |
-| 15 | 00:00:52,909 | 00:00:55,805 | Vielen Dank, das freut mich zu hören. |
-| 16 | 00:00:57,455 | 00:00:59,110 | Woran arbeiten Sie derzeit? |
-| 17 | 00:00:59,560 | 00:01:03,595 | Wir entwickeln gerade eine adaptive / Lernumgebung für Deutsch als Fremdsprache, |
-| 18 | 00:01:03,595 | 00:01:06,698 | die sich automatisch dem / Sprachniveau der Lernenden anpasst. |
-| 19 | 00:01:06,698 | 00:01:09,284 | Mein Team verantwortet die / didaktische Konzeption, |
-| 20 | 00:01:09,284 | 00:01:12,388 | während externe Partner die / technische Umsetzung übernehmen. |
-| 21 | 00:01:12,838 | 00:01:17,246 | Das ist interessant, denn genau an / der technischen Seite arbeiten wir. |
-| 22 | 00:01:17,246 | 00:01:21,528 | Mein Team ist für die Schnittstellen / und die Datenanalyse zuständig. |
-| 23 | 00:01:23,178 | 00:01:26,074 | Setzen Sie dabei auch / künstliche Intelligenz ein? |
-| 24 | 00:01:26,524 | 00:01:30,366 | In Teilbereichen schon, etwa bei / der Erstellung von Übungsvarianten. |
-| 25 | 00:01:30,366 | 00:01:34,095 | Ich bin allerdings der Ansicht, / dass KI Lehrkräfte nicht ersetzen, |
-| 26 | 00:01:34,095 | 00:01:35,508 | sondern entlasten sollte. |
-| 27 | 00:01:35,508 | 00:01:37,429 | Gerade bei der Aussprache und beim |
-| 28 | 00:01:37,429 | 00:01:40,593 | Feedback ist die menschliche / Einschätzung unverzichtbar. |
-| 29 | 00:01:41,043 | 00:01:44,811 | Da stimme ich Ihnen grundsätzlich / zu. Ich würde allerdings einwenden, |
-| 30 | 00:01:44,811 | 00:01:49,290 | dass automatisiertes Feedback bei großen / Lerngruppen einen echten Mehrwert bietet, |
-| 31 | 00:01:49,290 | 00:01:51,802 | sofern die Qualität / regelmäßig überprüft wird. |
-| 32 | 00:01:52,252 | 00:01:54,225 | Das ist ein berechtigter Punkt. |
-| 33 | 00:01:54,225 | 00:01:58,045 | Vermutlich liegt die Lösung in / einer Kombination aus beidem. |
-| 34 | 00:01:59,695 | 00:02:02,936 | Wären Sie grundsätzlich an / einem Pilotprojekt interessiert? |
-| 35 | 00:02:02,936 | 00:02:05,902 | Wir könnten Ihre Inhalte auf / unserer Plattform testen. |
-| 36 | 00:02:06,352 | 00:02:10,545 | Durchaus. Ich würde vorschlagen, dass / wir zunächst einen Termin vereinbaren, |
-| 37 | 00:02:10,545 | 00:02:14,628 | um die Rahmenbedingungen zu klären, / bevor wir intern Ressourcen einplanen. |
-| 38 | 00:02:15,078 | 00:02:18,388 | Sehr gern. Darf ich Ihnen / meine Visitenkarte geben? |
-| 39 | 00:02:18,838 | 00:02:20,467 | Danke. Hier ist meine. |
-| 40 | 00:02:20,467 | 00:02:25,872 | Sie erreichen mich am besten per / E-Mail, die Adresse steht auf der Karte. |
-| 41 | 00:02:26,322 | 00:02:29,633 | Ich melde mich Anfang / nächster Woche bei Ihnen. |
-| 42 | 00:02:30,083 | 00:02:31,366 | Das wäre wunderbar. |
-| 43 | 00:02:31,366 | 00:02:36,703 | Es war ein sehr anregendes Gespräch, und / ich freue mich auf die Zusammenarbeit. |
-| 44 | 00:02:37,153 | 00:02:40,050 | Ich mich ebenfalls. Auf / Wiedersehen, Frau Navarro. |
-| 45 | 00:02:40,500 | 00:02:42,155 | Auf Wiedersehen, Herr Keller. |
-| 46 | 00:02:43,805 | 00:02:47,529 | Das sind wichtige Wendungen für / berufliche Gespräche. Sprich nach! |
-| 47 | 00:02:47,979 | 00:02:53,290 | verantwortlich für, zuständig für. / Die Zusammenarbeit. Das Pilotprojekt. |
-| 48 | 00:02:53,740 | 00:02:58,222 | die Rahmenbedingungen. Die / Schnittstelle. Etwas einplanen. |
-| 49 | 00:02:58,672 | 00:03:03,155 | unverzichtbar, berechtigt, grundsätzlich. / Einen Standpunkt vertreten. |
-| 50 | 00:03:03,605 | 00:03:09,743 | Die Freude ist ganz meinerseits. / Ich melde mich bei Ihnen. |
-| 51 | 00:03:11,393 | 00:03:14,207 | Erstens: Mit dem Konjunktiv / II klingst du höflich. |
-| 52 | 00:03:14,207 | 00:03:18,428 | „Wären Sie interessiert?“ klingt / freundlicher als „Sind Sie interessiert?“. |
-| 53 | 00:03:18,878 | 00:03:20,313 | Zweitens: Mit „allerdings“, |
-| 54 | 00:03:20,313 | 00:03:22,173 | „sofern“ und „obwohl“ begründest du |
-| 55 | 00:03:22,173 | 00:03:24,671 | differenziert und gehst / auf Gegenargumente ein. |
-| 56 | 00:03:25,121 | 00:03:28,783 | Drittens: Relativsätze mit Präposition / machen deine Sätze präziser: |
-| 57 | 00:03:28,783 | 00:03:30,914 | eine Lernumgebung, an der wir arbeiten. |
-| 58 | 00:03:32,564 | 00:03:35,047 | Jetzt bist du dran! Formuliere höflicher. |
-| 59 | 00:03:35,497 | 00:03:42,048 | Eins: „Sind Sie an einem Pilotprojekt / interessiert?“ Benutze den Konjunktiv II. |
-| 60 | 00:03:44,498 | 00:03:47,395 | Lösung: Wären Sie an einem / Pilotprojekt interessiert? |
-| 61 | 00:03:47,845 | 00:03:49,205 | Zwei: „Ich schlage vor: |
-| 62 | 00:03:49,205 | 00:03:55,638 | Wir vereinbaren einen Termin.“ Beginne / mit „Ich würde vorschlagen, dass …“. |
-| 63 | 00:03:59,088 | 00:04:02,812 | Lösung: Ich würde vorschlagen, / dass wir einen Termin vereinbaren. |
-| 64 | 00:04:03,262 | 00:04:07,104 | Drei: Verbinde die Sätze mit „sofern“: / Automatisiertes Feedback hilft. |
-| 65 | 00:04:07,104 | 00:04:10,641 | Die Qualität wird überprüft. |
-| 66 | 00:04:14,091 | 00:04:17,816 | Lösung: Automatisiertes Feedback hilft, / sofern die Qualität überprüft wird. |
-| 67 | 00:04:18,266 | 00:04:24,403 | Vier: Stelle dich in drei Sätzen / vor: Name, Position, Unternehmen. |
-| 68 | 00:04:30,053 | 00:04:34,191 | Und Sie? Wie würden Sie sich / in drei Sätzen vorstellen? |
-| 69 | 00:04:34,641 | 00:04:39,607 | Schreiben Sie es in die Kommentare. / Wir freuen uns auf Ihre Vorstellung. |
-| 70 | 00:04:40,057 | 00:04:44,195 | Abonniere den Kanal für weitere / Folgen. Bis zum nächsten Mal! |
+| 1 | 00:00:00,600 | 00:00:02,357 | Ein Gespräch / von zwei Minuten |
+| 2 | 00:00:02,357 | 00:00:04,901 | kann der Anfang einer / Zusammenarbeit sein. |
+| 3 | 00:00:04,901 | 00:00:07,203 | Aber wie beginnt man / es professionell? |
+| 4 | 00:00:07,653 | 00:00:10,020 | Heute begleitest du / zwei Fachleute von der |
+| 5 | 00:00:10,020 | 00:00:12,951 | ersten Begrüßung bis zum / Austausch der Kontaktdaten. |
+| 6 | 00:00:14,601 | 00:00:15,668 | Das ist Niveau B2. |
+| 7 | 00:00:15,668 | 00:00:17,921 | Du sprichst formell / und differenziert, |
+| 8 | 00:00:17,921 | 00:00:21,122 | du argumentierst und gehst / auf andere Standpunkte ein. |
+| 9 | 00:00:21,572 | 00:00:23,930 | Achte auf die Anrede: Hier / sagen die beiden „Sie“. |
+| 10 | 00:00:25,580 | 00:00:27,882 | Guten Tag, entschuldigen / Sie die Störung. |
+| 11 | 00:00:27,882 | 00:00:30,352 | Darf ich mich kurz / vorstellen? Jonas Keller, |
+| 12 | 00:00:30,352 | 00:00:31,755 | ich leite die Entwicklung |
+| 13 | 00:00:31,755 | 00:00:33,552 | bei der Lernplattform / Lernfluss. |
+| 14 | 00:00:34,002 | 00:00:36,084 | Guten Tag, Herr / Keller. Mia Navarro, |
+| 15 | 00:00:36,084 | 00:00:38,050 | ich bin Projektleiterin / im Bereich |
+| 16 | 00:00:38,050 | 00:00:39,959 | E-Learning bei / der Lernwerk GmbH. |
+| 17 | 00:00:39,959 | 00:00:41,925 | Es freut mich, Sie / kennenzulernen. |
+| 18 | 00:00:42,375 | 00:00:44,061 | Die Freude ist / ganz meinerseits. |
+| 19 | 00:00:44,061 | 00:00:45,641 | Ihr Vortrag zur / Lernmotivation |
+| 20 | 00:00:45,641 | 00:00:47,011 | hat mir sehr gut gefallen. |
+| 21 | 00:00:47,461 | 00:00:49,422 | Vielen Dank, das / freut mich zu hören. |
+| 22 | 00:00:51,072 | 00:00:52,526 | Woran arbeiten Sie derzeit? |
+| 23 | 00:00:52,976 | 00:00:54,773 | Wir entwickeln / gerade eine adaptive |
+| 24 | 00:00:54,773 | 00:00:56,929 | Lernumgebung für Deutsch / als Fremdsprache, |
+| 25 | 00:00:56,929 | 00:00:58,161 | die sich automatisch dem |
+| 26 | 00:00:58,161 | 00:00:59,958 | Sprachniveau der / Lernenden anpasst. |
+| 27 | 00:00:59,958 | 00:01:02,524 | Mein Team verantwortet die / didaktische Konzeption, |
+| 28 | 00:01:02,524 | 00:01:03,705 | während externe Partner |
+| 29 | 00:01:03,705 | 00:01:05,553 | die technische / Umsetzung übernehmen. |
+| 30 | 00:01:06,003 | 00:01:07,023 | Das ist interessant, |
+| 31 | 00:01:07,023 | 00:01:07,890 | denn genau an der |
+| 32 | 00:01:07,890 | 00:01:09,470 | technischen Seite / arbeiten wir. |
+| 33 | 00:01:09,470 | 00:01:10,541 | Mein Team ist für die |
+| 34 | 00:01:10,541 | 00:01:12,887 | Schnittstellen und die / Datenanalyse zuständig. |
+| 35 | 00:01:14,537 | 00:01:17,000 | Setzen Sie dabei auch / künstliche Intelligenz ein? |
+| 36 | 00:01:17,450 | 00:01:18,613 | In Teilbereichen schon, |
+| 37 | 00:01:18,613 | 00:01:20,837 | etwa bei der Erstellung / von Übungsvarianten. |
+| 38 | 00:01:20,837 | 00:01:22,404 | Ich bin allerdings / der Ansicht, |
+| 39 | 00:01:22,404 | 00:01:24,123 | dass KI Lehrkräfte / nicht ersetzen, |
+| 40 | 00:01:24,123 | 00:01:25,387 | sondern entlasten sollte. |
+| 41 | 00:01:25,387 | 00:01:27,106 | Gerade bei der / Aussprache und beim |
+| 42 | 00:01:27,106 | 00:01:29,937 | Feedback ist die menschliche / Einschätzung unverzichtbar. |
+| 43 | 00:01:30,387 | 00:01:32,244 | Da stimme ich Ihnen / grundsätzlich zu. |
+| 44 | 00:01:32,244 | 00:01:33,800 | Ich würde allerdings / einwenden, |
+| 45 | 00:01:33,800 | 00:01:35,807 | dass automatisiertes / Feedback bei großen |
+| 46 | 00:01:35,807 | 00:01:37,865 | Lerngruppen einen / echten Mehrwert bietet, |
+| 47 | 00:01:37,865 | 00:01:40,173 | sofern die Qualität / regelmäßig überprüft wird. |
+| 48 | 00:01:40,623 | 00:01:41,993 | Das ist ein / berechtigter Punkt. |
+| 49 | 00:01:41,993 | 00:01:43,187 | Vermutlich liegt die Lösung |
+| 50 | 00:01:43,187 | 00:01:44,601 | in einer Kombination / aus beidem. |
+| 51 | 00:01:46,251 | 00:01:47,443 | Wären Sie grundsätzlich |
+| 52 | 00:01:47,443 | 00:01:49,257 | an einem Pilotprojekt / interessiert? |
+| 53 | 00:01:49,257 | 00:01:52,055 | Wir könnten Ihre Inhalte auf / unserer Plattform testen. |
+| 54 | 00:01:52,505 | 00:01:54,169 | Durchaus. Ich / würde vorschlagen, |
+| 55 | 00:01:54,169 | 00:01:56,405 | dass wir zunächst einen / Termin vereinbaren, |
+| 56 | 00:01:56,405 | 00:01:58,225 | um die Rahmenbedingungen / zu klären, |
+| 57 | 00:01:58,225 | 00:02:00,201 | bevor wir intern / Ressourcen einplanen. |
+| 58 | 00:02:00,651 | 00:02:03,381 | Sehr gern. Darf ich Ihnen / meine Visitenkarte geben? |
+| 59 | 00:02:03,831 | 00:02:04,908 | Danke. Hier ist meine. |
+| 60 | 00:02:04,908 | 00:02:06,867 | Sie erreichen mich / am besten per E-Mail, |
+| 61 | 00:02:06,867 | 00:02:08,434 | die Adresse steht / auf der Karte. |
+| 62 | 00:02:08,884 | 00:02:10,930 | Ich melde mich Anfang / nächster Woche bei Ihnen. |
+| 63 | 00:02:11,380 | 00:02:12,646 | Das wäre wunderbar. Es |
+| 64 | 00:02:12,646 | 00:02:14,546 | war ein sehr / anregendes Gespräch, |
+| 65 | 00:02:14,546 | 00:02:16,963 | und ich freue mich auf / die Zusammenarbeit. |
+| 66 | 00:02:17,413 | 00:02:20,323 | Ich mich ebenfalls. Auf / Wiedersehen, Frau Navarro. |
+| 67 | 00:02:20,773 | 00:02:22,128 | Auf Wiedersehen, / Herr Keller. |
+| 68 | 00:02:23,778 | 00:02:26,831 | Das sind wichtige Wendungen / für berufliche Gespräche. |
+| 69 | 00:02:26,831 | 00:02:27,522 | Sprich nach! |
+| 70 | 00:02:27,972 | 00:02:29,761 | verantwortlich / für, zuständig |
+| 71 | 00:02:29,761 | 00:02:31,242 | für. Die Zusammenarbeit. |
+| 72 | 00:02:31,242 | 00:02:34,291 | Das Pilotprojekt. |
+| 73 | 00:02:34,741 | 00:02:37,274 | die Rahmenbedingungen. / Die Schnittstelle. |
+| 74 | 00:02:37,274 | 00:02:40,262 | Etwas einplanen. |
+| 75 | 00:02:40,712 | 00:02:43,391 | unverzichtbar, / berechtigt, grundsätzlich. |
+| 76 | 00:02:43,391 | 00:02:47,156 | Einen Standpunkt vertreten. |
+| 77 | 00:02:47,606 | 00:02:49,208 | Die Freude ist / ganz meinerseits. |
+| 78 | 00:02:49,208 | 00:02:52,460 | Ich melde mich bei Ihnen. |
+| 79 | 00:02:54,110 | 00:02:56,931 | Erstens: Mit dem Konjunktiv / II klingst du höflich. |
+| 80 | 00:02:56,931 | 00:02:58,736 | „Wären Sie / interessiert?“ klingt |
+| 81 | 00:02:58,736 | 00:03:01,105 | freundlicher als „Sind / Sie interessiert?“. |
+| 82 | 00:03:01,555 | 00:03:03,011 | Zweitens: Mit „allerdings“, |
+| 83 | 00:03:03,011 | 00:03:04,898 | „sofern“ und „obwohl“ / begründest du |
+| 84 | 00:03:04,898 | 00:03:07,433 | differenziert und gehst / auf Gegenargumente ein. |
+| 85 | 00:03:07,883 | 00:03:08,438 | Drittens: |
+| 86 | 00:03:08,438 | 00:03:11,952 | Relativsätze mit Präposition / machen deine Sätze präziser: |
+| 87 | 00:03:11,952 | 00:03:14,357 | eine Lernumgebung, / an der wir arbeiten. |
+| 88 | 00:03:16,007 | 00:03:18,429 | Jetzt bist du dran! / Formuliere höflicher. |
+| 89 | 00:03:18,879 | 00:03:19,259 | Eins: |
+| 90 | 00:03:19,259 | 00:03:21,614 | „Sind Sie an / einem Pilotprojekt |
+| 91 | 00:03:21,614 | 00:03:26,729 | interessiert?“ Benutze / den Konjunktiv II. |
+| 92 | 00:03:29,179 | 00:03:32,687 | Lösung: Wären Sie an einem / Pilotprojekt interessiert? |
+| 93 | 00:03:33,137 | 00:03:34,446 | Zwei: „Ich schlage vor: |
+| 94 | 00:03:34,446 | 00:03:36,152 | Wir vereinbaren / einen Termin.“ |
+| 95 | 00:03:36,152 | 00:03:38,144 | Beginne mit „Ich / würde vorschlagen, |
+| 96 | 00:03:38,144 | 00:03:40,599 | dass …“. |
+| 97 | 00:03:44,049 | 00:03:45,842 | Lösung: Ich würde / vorschlagen, |
+| 98 | 00:03:45,842 | 00:03:47,874 | dass wir einen / Termin vereinbaren. |
+| 99 | 00:03:48,324 | 00:03:50,564 | Drei: Verbinde die / Sätze mit „sofern“: |
+| 100 | 00:03:50,564 | 00:03:52,392 | Automatisiertes / Feedback hilft. |
+| 101 | 00:03:52,392 | 00:03:56,043 | Die Qualität wird überprüft. |
+| 102 | 00:03:59,493 | 00:04:01,859 | Lösung: Automatisiertes / Feedback hilft, |
+| 103 | 00:04:01,859 | 00:04:03,982 | sofern die Qualität / überprüft wird. |
+| 104 | 00:04:04,432 | 00:04:06,752 | Vier: Stelle dich / in drei Sätzen vor: |
+| 105 | 00:04:06,752 | 00:04:10,508 | Name, Position, Unternehmen. |
+| 106 | 00:04:16,158 | 00:04:19,271 | Und Sie? Wie würden Sie sich / in drei Sätzen vorstellen? |
+| 107 | 00:04:19,721 | 00:04:21,424 | Schreiben Sie es / in die Kommentare. |
+| 108 | 00:04:21,424 | 00:04:23,175 | Wir freuen uns auf / Ihre Vorstellung. |
+| 109 | 00:04:23,625 | 00:04:25,955 | Abonniere den Kanal / für weitere Folgen. |
+| 110 | 00:04:25,955 | 00:04:27,209 | Bis zum nächsten Mal! |
 
 </details>
 

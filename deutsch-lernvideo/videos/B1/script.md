@@ -1,6 +1,6 @@
 # Auf der Geburtstagsparty – Jemanden näher kennenlernen
 
-**Niveau B1 – Selbstständige Sprachverwendung** · Anrede: du · Zieldauer ca. 5:25 min (geschätzte Sprechzeit laut Zeitleiste: 00:05:24)
+**Niveau B1 – Selbstständige Sprachverwendung** · Anrede: du · Zieldauer ca. 5:25 min (geschätzte Sprechzeit laut Zeitleiste: 00:04:14)
 
 *Deutsch lernen B1: Smalltalk, Erfahrungen, Meinungen begründen*
 
@@ -515,76 +515,112 @@ Dateien: `subtitles/B1.srt`, `subtitles/B1.vtt`. Text und Zeitleiste stammen aus
 
 | # | Start | Ende | Text |
 |---|---|---|---|
-| 1 | 00:00:00,600 | 00:00:07,523 | Du bist auf einer Party und kennst nur die / Gastgeberin. Wie kommst du ins Gespräch? |
-| 2 | 00:00:08,023 | 00:00:13,562 | Heute siehst du, wie aus einem kurzen / Hallo ein richtiges Gespräch wird. |
-| 3 | 00:00:15,262 | 00:00:20,800 | Das ist Niveau B1. Du kannst Erfahrungen / beschreiben und deine Meinung sagen. |
-| 4 | 00:00:21,300 | 00:00:25,695 | Außerdem begründest du, was du / denkst – mit Wörtern wie „weil“, |
-| 5 | 00:00:25,695 | 00:00:27,300 | „obwohl“ und „deshalb“. |
-| 6 | 00:00:29,000 | 00:00:34,077 | Hi, ich glaube, wir kennen / uns noch nicht. Ich bin Jonas. |
-| 7 | 00:00:34,577 | 00:00:40,115 | Hallo Jonas, ich bin Mia. Stimmt, / wir sind uns noch nicht begegnet. |
-| 8 | 00:00:40,615 | 00:00:42,462 | Woher kennst du Sophie? |
-| 9 | 00:00:42,962 | 00:00:47,034 | Wir haben uns vor zwei Jahren / im Deutschkurs kennengelernt. |
-| 10 | 00:00:47,034 | 00:00:50,346 | Damals war Sophie meine / Tandempartnerin. Und du? |
-| 11 | 00:00:50,846 | 00:00:55,675 | Wir haben zusammen in Leipzig / studiert. Sie hat mich vorhin gewarnt, |
-| 12 | 00:00:55,675 | 00:01:00,077 | dass heute ihre berühmte / Schokoladentorte auf den Tisch kommt. |
-| 13 | 00:01:00,577 | 00:01:05,192 | Dann bin ich froh, dass ich / vorher nichts gegessen habe! |
-| 14 | 00:01:06,892 | 00:01:11,046 | Du hast einen leichten Akzent. / Woher kommst du ursprünglich? |
-| 15 | 00:01:11,546 | 00:01:15,754 | Aus Valencia, in Spanien. Seit / fast drei Jahren lebe ich in Köln. |
-| 16 | 00:01:15,754 | 00:01:19,573 | Ich arbeite als Projektkoordinatorin / bei einem Unternehmen, |
-| 17 | 00:01:19,573 | 00:01:22,162 | das digitale Lernmaterialien entwickelt. |
-| 18 | 00:01:22,662 | 00:01:25,384 | Klingt spannend! Ich / bin Softwareentwickler. |
-| 19 | 00:01:25,384 | 00:01:28,662 | Manche würden sagen, das / ist nicht besonders kreativ. |
-| 20 | 00:01:29,162 | 00:01:30,676 | Das glaube ich nicht. |
-| 21 | 00:01:30,676 | 00:01:36,085 | Programmieren ist doch kreativ, denn / man muss ständig neue Lösungen finden. |
-| 22 | 00:01:36,585 | 00:01:39,815 | Genau so sehe ich das auch! Danke. |
-| 23 | 00:01:41,515 | 00:01:47,054 | Und wie hast du dich in Deutschland / eingelebt? Ist dir etwas schwergefallen? |
-| 24 | 00:01:47,554 | 00:01:51,074 | Am Anfang war es schwierig, / Freunde zu finden, |
-| 25 | 00:01:51,074 | 00:01:57,042 | weil die Leute hier eher zurückhaltend / sind. Inzwischen habe ich aber gemerkt, |
-| 26 | 00:01:57,042 | 00:02:01,862 | dass sie sehr zuverlässig sind, / wenn man sie erst einmal kennt. |
-| 27 | 00:02:02,362 | 00:02:07,573 | Da ist was dran. Als ich für / den Job nach Köln gezogen bin, |
-| 28 | 00:02:07,573 | 00:02:12,783 | habe ich mich auch fremd gefühlt, / obwohl ich Deutscher bin. |
-| 29 | 00:02:12,783 | 00:02:16,669 | Der Dialekt war für / mich anfangs ein Rätsel. |
-| 30 | 00:02:17,169 | 00:02:21,323 | Ja, genau! Kölsch verstehe / ich bis heute nicht richtig. |
-| 31 | 00:02:21,823 | 00:02:25,515 | Keine Sorge, das geht / vielen Kölnern auch so. |
-| 32 | 00:02:27,215 | 00:02:31,831 | Was würdest du Leuten raten, / die neu in Deutschland sind? |
-| 33 | 00:02:32,331 | 00:02:35,350 | Meiner Meinung nach sollte man so früh wie |
-| 34 | 00:02:35,350 | 00:02:39,375 | möglich einem Verein beitreten / oder einen Kurs besuchen. |
-| 35 | 00:02:39,375 | 00:02:42,034 | Man lernt dort nicht nur die Sprache, |
-| 36 | 00:02:42,034 | 00:02:45,916 | sondern auch Menschen mit / ähnlichen Interessen kennen. |
-| 37 | 00:02:45,916 | 00:02:49,869 | Deshalb habe ich mich bei / einem Fahrradclub angemeldet. |
-| 38 | 00:02:50,369 | 00:02:55,733 | Ich finde, das ist ein guter Tipp. / Trotzdem traut sich nicht jeder. |
-| 39 | 00:02:55,733 | 00:02:58,215 | Außerdem fehlt vielen die Zeit. |
-| 40 | 00:02:58,715 | 00:02:59,638 | Das stimmt. |
-| 41 | 00:02:59,638 | 00:03:06,100 | Aber wenn man nur eine Stunde pro Woche / investiert, ist das schon ein Anfang. |
-| 42 | 00:03:06,600 | 00:03:12,675 | Da hast du recht. Weißt du was? / Mein Kumpel Tom fährt auch viel Rad. |
-| 43 | 00:03:12,675 | 00:03:14,908 | Soll ich euch vorstellen? |
-| 44 | 00:03:15,408 | 00:03:19,562 | Sehr gern! Und danach probieren / wir die berühmte Schokoladentorte. |
-| 45 | 00:03:20,062 | 00:03:20,862 | Abgemacht! |
-| 46 | 00:03:22,562 | 00:03:27,177 | Das sind nützliche Wörter und / Wendungen für Smalltalk. Sprich nach! |
-| 47 | 00:03:27,677 | 00:03:32,908 | jemanden kennenlernen. Sich / einleben. Sich fremd fühlen. |
-| 48 | 00:03:33,408 | 00:03:37,254 | zurückhaltend, zuverlässig. / Inzwischen. Anfangs. |
-| 49 | 00:03:37,754 | 00:03:44,369 | Meiner Meinung nach. Ich / finde, dass. Da hast du recht. |
-| 50 | 00:03:44,869 | 00:03:48,715 | einem Verein beitreten. Abgemacht! |
-| 51 | 00:03:50,415 | 00:03:54,685 | Mit „weil“, „obwohl“ und / „dass“ steht das Verb am Ende: |
-| 52 | 00:03:54,685 | 00:03:58,723 | Es war schwierig, weil die / Leute zurückhaltend sind. |
-| 53 | 00:03:59,223 | 00:04:03,928 | Mit „deshalb“, „trotzdem“ und / „außerdem“ steht das Verb direkt danach: |
-| 54 | 00:04:03,928 | 00:04:06,146 | Deshalb habe ich mich angemeldet. |
-| 55 | 00:04:06,646 | 00:04:08,644 | Der Relativsatz beschreibt ein Nomen: |
-| 56 | 00:04:08,644 | 00:04:11,723 | ein Unternehmen, das digitale / Lernmaterialien entwickelt. |
-| 57 | 00:04:13,423 | 00:04:16,654 | Jetzt bist du dran! Welches Wort passt? |
-| 58 | 00:04:17,154 | 00:04:24,231 | Eins: Ich fühle mich fremd, … ich / Deutscher bin. Weil oder obwohl? |
-| 59 | 00:04:26,731 | 00:04:27,654 | Lösung: obwohl. |
-| 60 | 00:04:28,154 | 00:04:30,450 | Zwei: Ich lerne Menschen kennen. … |
-| 61 | 00:04:30,450 | 00:04:35,692 | habe ich mich angemeldet. / Deshalb oder trotzdem? |
-| 62 | 00:04:38,192 | 00:04:39,115 | Lösung: Deshalb. |
-| 63 | 00:04:39,615 | 00:04:46,692 | Drei: Programmieren ist kreativ, … man / findet neue Lösungen. Denn oder obwohl? |
-| 64 | 00:04:49,192 | 00:04:50,115 | Lösung: denn. |
-| 65 | 00:04:50,615 | 00:04:53,315 | Vier: Sag deine Meinung. Beginne mit |
-| 66 | 00:04:53,315 | 00:04:58,615 | „Meiner Meinung nach“ / und nenne einen Grund. |
-| 67 | 00:05:04,315 | 00:05:09,854 | Und du? Was rätst du Leuten, / die neu in einem Land sind? |
-| 68 | 00:05:10,354 | 00:05:15,431 | Schreib deine Meinung in die / Kommentare, und vergiss den Grund nicht! |
-| 69 | 00:05:15,931 | 00:05:20,085 | Benutze „weil“, „deshalb“ oder / „trotzdem“. Wir lesen alle Kommentare. |
-| 70 | 00:05:20,585 | 00:05:24,277 | Abonniere den Kanal und / bis zum nächsten Mal! |
+| 1 | 00:00:00,600 | 00:00:03,463 | Du bist auf einer Party und / kennst nur die Gastgeberin. |
+| 2 | 00:00:03,463 | 00:00:04,869 | Wie kommst du ins Gespräch? |
+| 3 | 00:00:05,369 | 00:00:06,210 | Heute siehst du, |
+| 4 | 00:00:06,210 | 00:00:09,103 | wie aus einem kurzen Hallo / ein richtiges Gespräch wird. |
+| 5 | 00:00:10,803 | 00:00:11,865 | Das ist Niveau B1. |
+| 6 | 00:00:11,865 | 00:00:13,813 | Du kannst Erfahrungen / beschreiben |
+| 7 | 00:00:13,813 | 00:00:15,230 | und deine Meinung sagen. |
+| 8 | 00:00:15,730 | 00:00:17,050 | Außerdem begründest du, |
+| 9 | 00:00:17,050 | 00:00:19,289 | was du denkst – mit / Wörtern wie „weil“, |
+| 10 | 00:00:19,289 | 00:00:20,609 | „obwohl“ und „deshalb“. |
+| 11 | 00:00:22,309 | 00:00:25,002 | Hi, ich glaube, wir / kennen uns noch nicht. |
+| 12 | 00:00:25,002 | 00:00:25,899 | Ich bin Jonas. |
+| 13 | 00:00:26,399 | 00:00:27,851 | Hallo Jonas, ich bin Mia. |
+| 14 | 00:00:27,851 | 00:00:30,233 | Stimmt, wir sind uns / noch nicht begegnet. |
+| 15 | 00:00:30,733 | 00:00:31,877 | Woher kennst du Sophie? |
+| 16 | 00:00:32,377 | 00:00:33,230 | Wir haben uns vor |
+| 17 | 00:00:33,230 | 00:00:35,286 | zwei Jahren im / Deutschkurs kennengelernt. |
+| 18 | 00:00:35,286 | 00:00:37,694 | Damals war Sophie meine / Tandempartnerin. Und du? |
+| 19 | 00:00:38,194 | 00:00:40,142 | Wir haben zusammen / in Leipzig studiert. |
+| 20 | 00:00:40,142 | 00:00:41,541 | Sie hat mich vorhin gewarnt, |
+| 21 | 00:00:41,541 | 00:00:42,740 | dass heute ihre berühmte |
+| 22 | 00:00:42,740 | 00:00:44,589 | Schokoladentorte / auf den Tisch kommt. |
+| 23 | 00:00:45,089 | 00:00:47,569 | Dann bin ich froh, dass ich / vorher nichts gegessen habe! |
+| 24 | 00:00:49,269 | 00:00:50,813 | Du hast einen / leichten Akzent. |
+| 25 | 00:00:50,813 | 00:00:52,305 | Woher kommst du / ursprünglich? |
+| 26 | 00:00:52,805 | 00:00:54,366 | Aus Valencia, in Spanien. |
+| 27 | 00:00:54,366 | 00:00:56,801 | Seit fast drei Jahren / lebe ich in Köln. |
+| 28 | 00:00:56,801 | 00:00:57,737 | Ich arbeite als |
+| 29 | 00:00:57,737 | 00:01:00,422 | Projektkoordinatorin / bei einem Unternehmen, |
+| 30 | 00:01:00,422 | 00:01:02,919 | das digitale / Lernmaterialien entwickelt. |
+| 31 | 00:01:03,419 | 00:01:05,860 | Klingt spannend! Ich / bin Softwareentwickler. |
+| 32 | 00:01:05,860 | 00:01:08,801 | Manche würden sagen, das / ist nicht besonders kreativ. |
+| 33 | 00:01:09,301 | 00:01:10,277 | Das glaube ich nicht. |
+| 34 | 00:01:10,277 | 00:01:11,719 | Programmieren / ist doch kreativ, |
+| 35 | 00:01:11,719 | 00:01:13,718 | denn man muss ständig / neue Lösungen finden. |
+| 36 | 00:01:14,218 | 00:01:16,345 | Genau so sehe ich / das auch! Danke. |
+| 37 | 00:01:18,045 | 00:01:20,268 | Und wie hast du dich in / Deutschland eingelebt? |
+| 38 | 00:01:20,268 | 00:01:21,669 | Ist dir etwas / schwergefallen? |
+| 39 | 00:01:22,169 | 00:01:24,404 | Am Anfang war es schwierig, / Freunde zu finden, |
+| 40 | 00:01:24,404 | 00:01:26,542 | weil die Leute hier / eher zurückhaltend sind. |
+| 41 | 00:01:26,542 | 00:01:28,145 | Inzwischen habe / ich aber gemerkt, |
+| 42 | 00:01:28,145 | 00:01:29,651 | dass sie sehr / zuverlässig sind, |
+| 43 | 00:01:29,651 | 00:01:31,157 | wenn man sie erst / einmal kennt. |
+| 44 | 00:01:31,657 | 00:01:32,483 | Da ist was dran. |
+| 45 | 00:01:32,483 | 00:01:34,651 | Als ich für den Job / nach Köln gezogen bin, |
+| 46 | 00:01:34,651 | 00:01:36,354 | habe ich mich auch / fremd gefühlt, |
+| 47 | 00:01:36,354 | 00:01:37,645 | obwohl ich Deutscher bin. |
+| 48 | 00:01:37,645 | 00:01:39,916 | Der Dialekt war für / mich anfangs ein Rätsel. |
+| 49 | 00:01:40,416 | 00:01:43,541 | Ja, genau! Kölsch verstehe / ich bis heute nicht richtig. |
+| 50 | 00:01:44,041 | 00:01:46,473 | Keine Sorge, das geht / vielen Kölnern auch so. |
+| 51 | 00:01:48,173 | 00:01:49,484 | Was würdest du Leuten raten, |
+| 52 | 00:01:49,484 | 00:01:50,796 | die neu in Deutschland sind? |
+| 53 | 00:01:51,296 | 00:01:53,180 | Meiner Meinung nach / sollte man so früh wie |
+| 54 | 00:01:53,180 | 00:01:54,525 | möglich einem / Verein beitreten |
+| 55 | 00:01:54,525 | 00:01:55,647 | oder einen Kurs besuchen. |
+| 56 | 00:01:55,647 | 00:01:57,306 | Man lernt dort nicht / nur die Sprache, |
+| 57 | 00:01:57,306 | 00:01:59,728 | sondern auch Menschen mit / ähnlichen Interessen kennen. |
+| 58 | 00:01:59,728 | 00:02:00,670 | Deshalb habe ich mich |
+| 59 | 00:02:00,670 | 00:02:02,150 | bei einem Fahrradclub / angemeldet. |
+| 60 | 00:02:02,650 | 00:02:04,505 | Ich finde, das ist / ein guter Tipp. |
+| 61 | 00:02:04,505 | 00:02:06,250 | Trotzdem traut / sich nicht jeder. |
+| 62 | 00:02:06,250 | 00:02:07,941 | Außerdem fehlt / vielen die Zeit. |
+| 63 | 00:02:08,441 | 00:02:08,985 | Das stimmt. |
+| 64 | 00:02:08,985 | 00:02:11,508 | Aber wenn man nur eine / Stunde pro Woche investiert, |
+| 65 | 00:02:11,508 | 00:02:12,745 | ist das schon ein Anfang. |
+| 66 | 00:02:13,245 | 00:02:15,033 | Da hast du recht. / Weißt du was? |
+| 67 | 00:02:15,033 | 00:02:17,108 | Mein Kumpel Tom / fährt auch viel Rad. |
+| 68 | 00:02:17,108 | 00:02:18,550 | Soll ich euch vorstellen? |
+| 69 | 00:02:19,050 | 00:02:19,551 | Sehr gern! |
+| 70 | 00:02:19,551 | 00:02:22,309 | Und danach probieren wir die / berühmte Schokoladentorte. |
+| 71 | 00:02:22,809 | 00:02:23,561 | Abgemacht! |
+| 72 | 00:02:25,261 | 00:02:28,174 | Das sind nützliche Wörter / und Wendungen für Smalltalk. |
+| 73 | 00:02:28,174 | 00:02:28,821 | Sprich nach! |
+| 74 | 00:02:29,321 | 00:02:34,381 | jemanden kennenlernen. Sich / einleben. Sich fremd fühlen. |
+| 75 | 00:02:34,881 | 00:02:40,563 | zurückhaltend, zuverlässig. / Inzwischen. Anfangs. |
+| 76 | 00:02:41,063 | 00:02:42,678 | Meiner Meinung / nach. Ich finde, |
+| 77 | 00:02:42,678 | 00:02:45,877 | dass. Da hast du recht. |
+| 78 | 00:02:46,377 | 00:02:50,634 | einem Verein / beitreten. Abgemacht! |
+| 79 | 00:02:52,334 | 00:02:54,213 | Mit „weil“, / „obwohl“ und „dass“ |
+| 80 | 00:02:54,213 | 00:02:55,608 | steht das Verb am Ende: |
+| 81 | 00:02:55,608 | 00:02:58,760 | Es war schwierig, weil die / Leute zurückhaltend sind. |
+| 82 | 00:02:59,260 | 00:03:00,065 | Mit „deshalb“, |
+| 83 | 00:03:00,065 | 00:03:01,846 | „trotzdem“ und / „außerdem“ steht |
+| 84 | 00:03:01,846 | 00:03:03,168 | das Verb direkt danach: |
+| 85 | 00:03:03,168 | 00:03:05,065 | Deshalb habe ich / mich angemeldet. |
+| 86 | 00:03:05,565 | 00:03:09,033 | Der Relativsatz beschreibt / ein Nomen: ein Unternehmen, |
+| 87 | 00:03:09,033 | 00:03:11,602 | das digitale / Lernmaterialien entwickelt. |
+| 88 | 00:03:13,302 | 00:03:15,909 | Jetzt bist du dran! / Welches Wort passt? |
+| 89 | 00:03:16,409 | 00:03:19,277 | Eins: Ich fühle mich / fremd, … ich Deutscher bin. |
+| 90 | 00:03:19,277 | 00:03:22,293 | Weil oder obwohl? |
+| 91 | 00:03:24,793 | 00:03:25,895 | Lösung: obwohl. |
+| 92 | 00:03:26,395 | 00:03:28,262 | Zwei: Ich lerne / Menschen kennen. |
+| 93 | 00:03:28,262 | 00:03:33,179 | … habe ich mich angemeldet. / Deshalb oder trotzdem? |
+| 94 | 00:03:35,679 | 00:03:36,794 | Lösung: Deshalb. |
+| 95 | 00:03:37,294 | 00:03:37,631 | Drei: |
+| 96 | 00:03:37,631 | 00:03:41,269 | Programmieren ist kreativ, / … man findet neue Lösungen. |
+| 97 | 00:03:41,269 | 00:03:44,414 | Denn oder obwohl? |
+| 98 | 00:03:46,914 | 00:03:47,766 | Lösung: denn. |
+| 99 | 00:03:48,266 | 00:03:49,579 | Vier: Sag deine Meinung. |
+| 100 | 00:03:49,579 | 00:03:54,643 | Beginne mit „Meiner Meinung / nach“ und nenne einen Grund. |
+| 101 | 00:04:00,343 | 00:04:03,255 | Und du? Was rätst du Leuten, / die neu in einem Land sind? |
+| 102 | 00:04:03,755 | 00:04:05,546 | Schreib deine Meinung / in die Kommentare, |
+| 103 | 00:04:05,546 | 00:04:06,800 | und vergiss den Grund nicht! |
+| 104 | 00:04:07,300 | 00:04:09,793 | Benutze „weil“, „deshalb“ / oder „trotzdem“. |
+| 105 | 00:04:09,793 | 00:04:11,337 | Wir lesen alle Kommentare. |
+| 106 | 00:04:11,837 | 00:04:14,326 | Abonniere den Kanal und / bis zum nächsten Mal! |
 
 </details>
 

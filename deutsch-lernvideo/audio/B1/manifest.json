@@ -14,7 +14,7 @@
       "emotion": "curious, conversational, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Du bist auf einer Party und kennst nur die Gastgeberin. Wie kommst du ins Gespräch?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S01-L01_narrator.mp3",
+      "output_file": "audio/B1/B1-S01-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -27,7 +27,7 @@
       "emotion": "warm, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Heute siehst du, wie aus einem kurzen Hallo ein richtiges Gespräch wird.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S01-L02_narrator.mp3",
+      "output_file": "audio/B1/B1-S01-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -40,7 +40,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Das ist Niveau B eins. Du kannst Erfahrungen beschreiben und deine Meinung sagen.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S02-L01_narrator.mp3",
+      "output_file": "audio/B1/B1-S02-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -53,7 +53,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Außerdem begründest du, was du denkst – mit Wörtern wie „weil“, „obwohl“ und „deshalb“.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S02-L02_narrator.mp3",
+      "output_file": "audio/B1/B1-S02-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -66,7 +66,7 @@
       "emotion": "casual, friendly, natural",
       "ssml": "<speak><prosody rate=\"0%\">Hi, ich glaube, wir kennen uns noch nicht. Ich bin Jonas.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S03-L01_jonas.mp3",
+      "output_file": "audio/B1/B1-S03-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -79,7 +79,7 @@
       "emotion": "warm, natural",
       "ssml": "<speak><prosody rate=\"0%\">Hallo Jonas, ich bin Mia. Stimmt, wir sind uns noch nicht begegnet.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S03-L02_mia.mp3",
+      "output_file": "audio/B1/B1-S03-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -92,7 +92,7 @@
       "emotion": "curious, natural",
       "ssml": "<speak><prosody rate=\"0%\">Woher kennst du Sophie?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S03-L03_jonas.mp3",
+      "output_file": "audio/B1/B1-S03-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -105,7 +105,7 @@
       "emotion": "friendly, natural",
       "ssml": "<speak><prosody rate=\"0%\">Wir haben uns vor zwei Jahren im Deutschkurs kennengelernt. Damals war Sophie meine Tandempartnerin. Und du?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S03-L04_mia.mp3",
+      "output_file": "audio/B1/B1-S03-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -118,7 +118,7 @@
       "emotion": "amused, natural",
       "ssml": "<speak><prosody rate=\"0%\">Wir haben zusammen in Leipzig studiert. Sie hat mich vorhin gewarnt, dass heute ihre berühmte Schokoladentorte auf den Tisch kommt.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S03-L05_jonas.mp3",
+      "output_file": "audio/B1/B1-S03-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -131,7 +131,7 @@
       "emotion": "laughing, natural",
       "ssml": "<speak><prosody rate=\"0%\">Dann bin ich froh, dass ich vorher nichts gegessen habe!</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S03-L06_mia.mp3",
+      "output_file": "audio/B1/B1-S03-L06_mia.wav",
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "emotion": "curious, natural",
       "ssml": "<speak><prosody rate=\"0%\">Du hast einen leichten Akzent. Woher kommst du ursprünglich?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S04-L01_jonas.mp3",
+      "output_file": "audio/B1/B1-S04-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -157,7 +157,7 @@
       "emotion": "proud, natural",
       "ssml": "<speak><prosody rate=\"0%\">Aus Valencia, in Spanien. Seit fast drei Jahren lebe ich in Köln. Ich arbeite als Projektkoordinatorin bei einem Unternehmen, das digitale Lernmaterialien entwickelt.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S04-L02_mia.mp3",
+      "output_file": "audio/B1/B1-S04-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -170,7 +170,7 @@
       "emotion": "self-ironic, natural",
       "ssml": "<speak><prosody rate=\"0%\">Klingt spannend! Ich bin Softwareentwickler. Manche würden sagen, das ist nicht besonders kreativ.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S04-L03_jonas.mp3",
+      "output_file": "audio/B1/B1-S04-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -183,7 +183,7 @@
       "emotion": "convinced, warm, natural",
       "ssml": "<speak><prosody rate=\"0%\">Das glaube ich nicht. Programmieren ist doch kreativ, denn man muss ständig neue Lösungen finden.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S04-L04_mia.mp3",
+      "output_file": "audio/B1/B1-S04-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -196,7 +196,7 @@
       "emotion": "pleased, natural",
       "ssml": "<speak><prosody rate=\"0%\">Genau so sehe ich das auch! Danke.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S04-L05_jonas.mp3",
+      "output_file": "audio/B1/B1-S04-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -209,7 +209,7 @@
       "emotion": "interested, natural",
       "ssml": "<speak><prosody rate=\"0%\">Und wie hast du dich in Deutschland eingelebt? Ist dir etwas schwergefallen?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S05-L01_jonas.mp3",
+      "output_file": "audio/B1/B1-S05-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -222,7 +222,7 @@
       "emotion": "reflective, honest, natural",
       "ssml": "<speak><prosody rate=\"0%\">Am Anfang war es schwierig, Freunde zu finden, weil die Leute hier eher zurückhaltend sind. Inzwischen habe ich aber gemerkt, dass sie sehr zuverlässig sind, wenn man sie erst einmal kennt.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S05-L02_mia.mp3",
+      "output_file": "audio/B1/B1-S05-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -235,7 +235,7 @@
       "emotion": "sympathetic, humorous, natural",
       "ssml": "<speak><prosody rate=\"0%\">Da ist was dran. Als ich für den Job nach Köln gezogen bin, habe ich mich auch fremd gefühlt, obwohl ich Deutscher bin. Der Dialekt war für mich anfangs ein Rätsel.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S05-L03_jonas.mp3",
+      "output_file": "audio/B1/B1-S05-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -248,7 +248,7 @@
       "emotion": "laughing, natural",
       "ssml": "<speak><prosody rate=\"0%\">Ja, genau! Kölsch verstehe ich bis heute nicht richtig.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S05-L04_mia.mp3",
+      "output_file": "audio/B1/B1-S05-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -261,7 +261,7 @@
       "emotion": "joking, natural",
       "ssml": "<speak><prosody rate=\"0%\">Keine Sorge, das geht vielen Kölnern auch so.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S05-L05_jonas.mp3",
+      "output_file": "audio/B1/B1-S05-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -274,7 +274,7 @@
       "emotion": "curious, natural",
       "ssml": "<speak><prosody rate=\"0%\">Was würdest du Leuten raten, die neu in Deutschland sind?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L01_jonas.mp3",
+      "output_file": "audio/B1/B1-S06-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -287,7 +287,7 @@
       "emotion": "convinced, clear, natural",
       "ssml": "<speak><prosody rate=\"0%\">Meiner Meinung nach sollte man so früh wie möglich einem Verein beitreten oder einen Kurs besuchen. Man lernt dort nicht nur die Sprache, sondern auch Menschen mit ähnlichen Interessen kennen. Deshalb habe ich mich bei einem Fahrradclub angemeldet.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L02_mia.mp3",
+      "output_file": "audio/B1/B1-S06-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -300,7 +300,7 @@
       "emotion": "thoughtful, natural",
       "ssml": "<speak><prosody rate=\"0%\">Ich finde, das ist ein guter Tipp. Trotzdem traut sich nicht jeder. Außerdem fehlt vielen die Zeit.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L03_jonas.mp3",
+      "output_file": "audio/B1/B1-S06-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -313,7 +313,7 @@
       "emotion": "reasonable, warm, natural",
       "ssml": "<speak><prosody rate=\"0%\">Das stimmt. Aber wenn man nur eine Stunde pro Woche investiert, ist das schon ein Anfang.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L04_mia.mp3",
+      "output_file": "audio/B1/B1-S06-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -326,7 +326,7 @@
       "emotion": "friendly, natural",
       "ssml": "<speak><prosody rate=\"0%\">Da hast du recht. Weißt du was? Mein Kumpel Tom fährt auch viel Rad. Soll ich euch vorstellen?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L05_jonas.mp3",
+      "output_file": "audio/B1/B1-S06-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -339,7 +339,7 @@
       "emotion": "cheerful, natural",
       "ssml": "<speak><prosody rate=\"0%\">Sehr gern! Und danach probieren wir die berühmte Schokoladentorte.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L06_mia.mp3",
+      "output_file": "audio/B1/B1-S06-L06_mia.wav",
       "status": "pending"
     },
     {
@@ -352,7 +352,7 @@
       "emotion": "laughing, natural",
       "ssml": "<speak><prosody rate=\"0%\">Abgemacht!</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S06-L07_jonas.mp3",
+      "output_file": "audio/B1/B1-S06-L07_jonas.wav",
       "status": "pending"
     },
     {
@@ -365,7 +365,7 @@
       "emotion": "encouraging, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Das sind nützliche Wörter und Wendungen für Smalltalk. Sprich nach!</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S07-L01_narrator.mp3",
+      "output_file": "audio/B1/B1-S07-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -378,7 +378,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">jemanden kennenlernen. Sich einleben. Sich fremd fühlen.</prosody></speak>",
       "pause_after_sec": 2.5,
-      "output_file": "audio/B1/B1-S07-L02_mia.mp3",
+      "output_file": "audio/B1/B1-S07-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -391,7 +391,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">zurückhaltend, zuverlässig. Inzwischen. Anfangs.</prosody></speak>",
       "pause_after_sec": 2.5,
-      "output_file": "audio/B1/B1-S07-L03_jonas.mp3",
+      "output_file": "audio/B1/B1-S07-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -404,7 +404,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Meiner Meinung nach. Ich finde, dass. Da hast du recht.</prosody></speak>",
       "pause_after_sec": 2.5,
-      "output_file": "audio/B1/B1-S07-L04_mia.mp3",
+      "output_file": "audio/B1/B1-S07-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -417,7 +417,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">einem Verein beitreten. Abgemacht!</prosody></speak>",
       "pause_after_sec": 2.5,
-      "output_file": "audio/B1/B1-S07-L05_jonas.mp3",
+      "output_file": "audio/B1/B1-S07-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -430,7 +430,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Mit „weil“, „obwohl“ und „dass“ steht das Verb am Ende: Es war schwierig, weil die Leute zurückhaltend sind.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S08-L01_narrator.mp3",
+      "output_file": "audio/B1/B1-S08-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -443,7 +443,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Mit „deshalb“, „trotzdem“ und „außerdem“ steht das Verb direkt danach: Deshalb habe ich mich angemeldet.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S08-L02_narrator.mp3",
+      "output_file": "audio/B1/B1-S08-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -456,7 +456,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Der Relativsatz beschreibt ein Nomen: ein Unternehmen, das digitale Lernmaterialien entwickelt.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S08-L03_narrator.mp3",
+      "output_file": "audio/B1/B1-S08-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -469,7 +469,7 @@
       "emotion": "playful, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Jetzt bist du dran! Welches Wort passt?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S09-L01_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -482,7 +482,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Eins: Ich fühle mich fremd, … ich Deutscher bin. Weil oder obwohl?</prosody></speak>",
       "pause_after_sec": 4.5,
-      "output_file": "audio/B1/B1-S09-L02_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -495,7 +495,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Lösung: obwohl.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S09-L03_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -508,7 +508,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Zwei: Ich lerne Menschen kennen. … habe ich mich angemeldet. Deshalb oder trotzdem?</prosody></speak>",
       "pause_after_sec": 4.5,
-      "output_file": "audio/B1/B1-S09-L04_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L04_narrator.wav",
       "status": "pending"
     },
     {
@@ -521,7 +521,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Lösung: Deshalb.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S09-L05_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L05_narrator.wav",
       "status": "pending"
     },
     {
@@ -534,7 +534,7 @@
       "emotion": "clear, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Drei: Programmieren ist kreativ, … man findet neue Lösungen. Denn oder obwohl?</prosody></speak>",
       "pause_after_sec": 4.5,
-      "output_file": "audio/B1/B1-S09-L06_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L06_narrator.wav",
       "status": "pending"
     },
     {
@@ -547,7 +547,7 @@
       "emotion": "pleased, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Lösung: denn.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S09-L07_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L07_narrator.wav",
       "status": "pending"
     },
     {
@@ -560,7 +560,7 @@
       "emotion": "encouraging, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Vier: Sag deine Meinung. Beginne mit „Meiner Meinung nach“ und nenne einen Grund.</prosody></speak>",
       "pause_after_sec": 6.5,
-      "output_file": "audio/B1/B1-S09-L08_narrator.mp3",
+      "output_file": "audio/B1/B1-S09-L08_narrator.wav",
       "status": "pending"
     },
     {
@@ -573,7 +573,7 @@
       "emotion": "inviting, warm, natural",
       "ssml": "<speak><prosody rate=\"0%\">Und du? Was rätst du Leuten, die neu in einem Land sind?</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S10-L01_mia.mp3",
+      "output_file": "audio/B1/B1-S10-L01_mia.wav",
       "status": "pending"
     },
     {
@@ -586,7 +586,7 @@
       "emotion": "friendly, natural",
       "ssml": "<speak><prosody rate=\"0%\">Schreib deine Meinung in die Kommentare, und vergiss den Grund nicht!</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S10-L02_jonas.mp3",
+      "output_file": "audio/B1/B1-S10-L02_jonas.wav",
       "status": "pending"
     },
     {
@@ -599,7 +599,7 @@
       "emotion": "friendly, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Benutze „weil“, „deshalb“ oder „trotzdem“. Wir lesen alle Kommentare.</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S10-L03_narrator.mp3",
+      "output_file": "audio/B1/B1-S10-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -612,7 +612,7 @@
       "emotion": "warm, moderate",
       "ssml": "<speak><prosody rate=\"0%\">Abonniere den Kanal und bis zum nächsten Mal!</prosody></speak>",
       "pause_after_sec": 0.5,
-      "output_file": "audio/B1/B1-S10-L04_narrator.mp3",
+      "output_file": "audio/B1/B1-S10-L04_narrator.wav",
       "status": "pending"
     }
   ]

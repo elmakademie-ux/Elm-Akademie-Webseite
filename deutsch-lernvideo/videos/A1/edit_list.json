@@ -6,14 +6,14 @@
       "scene_id": "A1-S01",
       "type": "hook",
       "start_est": 0.0,
-      "end_est": 15.0,
+      "end_est": 9.953,
       "clips": [
         "clips/A1/A1-S01_c01.mp4",
         "clips/A1/A1-S01_c02.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S01-L01_narrator.mp3",
-        "audio/A1/A1-S01-L02_narrator.mp3"
+        "audio/A1/A1-S01-L01_narrator.wav",
+        "audio/A1/A1-S01-L02_narrator.wav"
       ],
       "overlay_text": [
         "Hallo!"
@@ -22,15 +22,15 @@
     {
       "scene_id": "A1-S02",
       "type": "intro",
-      "start_est": 15.0,
-      "end_est": 30.0,
+      "start_est": 9.953,
+      "end_est": 20.621,
       "clips": [
         "clips/A1/A1-S02_c01.mp4",
         "clips/A1/A1-S02_c02.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S02-L01_narrator.mp3",
-        "audio/A1/A1-S02-L02_narrator.mp3"
+        "audio/A1/A1-S02-L01_narrator.wav",
+        "audio/A1/A1-S02-L02_narrator.wav"
       ],
       "overlay_text": [
         "A1",
@@ -42,15 +42,15 @@
     {
       "scene_id": "A1-S03",
       "type": "dialog",
-      "start_est": 30.0,
-      "end_est": 38.229,
+      "start_est": 20.621,
+      "end_est": 27.454,
       "clips": [
         "clips/A1/A1-S03_c01.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S03-L01_mia.mp3",
-        "audio/A1/A1-S03-L02_jonas.mp3",
-        "audio/A1/A1-S03-L03_jonas.mp3"
+        "audio/A1/A1-S03-L01_mia.wav",
+        "audio/A1/A1-S03-L02_jonas.wav",
+        "audio/A1/A1-S03-L03_jonas.wav"
       ],
       "overlay_text": [
         "Hallo!",
@@ -60,19 +60,19 @@
     {
       "scene_id": "A1-S04",
       "type": "dialog",
-      "start_est": 38.229,
-      "end_est": 58.047,
+      "start_est": 27.454,
+      "end_est": 42.36,
       "clips": [
         "clips/A1/A1-S04_c01.mp4",
         "clips/A1/A1-S04_c02.mp4",
         "clips/A1/A1-S04_c03.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S04-L01_jonas.mp3",
-        "audio/A1/A1-S04-L02_mia.mp3",
-        "audio/A1/A1-S04-L03_jonas.mp3",
-        "audio/A1/A1-S04-L04_mia.mp3",
-        "audio/A1/A1-S04-L05_jonas.mp3"
+        "audio/A1/A1-S04-L01_jonas.wav",
+        "audio/A1/A1-S04-L02_mia.wav",
+        "audio/A1/A1-S04-L03_jonas.wav",
+        "audio/A1/A1-S04-L04_mia.wav",
+        "audio/A1/A1-S04-L05_jonas.wav"
       ],
       "overlay_text": [
         "Ich heiße …",
@@ -83,8 +83,8 @@
     {
       "scene_id": "A1-S05",
       "type": "dialog",
-      "start_est": 58.047,
-      "end_est": 84.412,
+      "start_est": 42.36,
+      "end_est": 60.896,
       "clips": [
         "clips/A1/A1-S05_c01.mp4",
         "clips/A1/A1-S05_c02.mp4",
@@ -93,12 +93,12 @@
         "clips/A1/A1-S05_c05.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S05-L01_jonas.mp3",
-        "audio/A1/A1-S05-L02_mia.mp3",
-        "audio/A1/A1-S05-L03_mia.mp3",
-        "audio/A1/A1-S05-L04_jonas.mp3",
-        "audio/A1/A1-S05-L05_mia.mp3",
-        "audio/A1/A1-S05-L06_jonas.mp3"
+        "audio/A1/A1-S05-L01_jonas.wav",
+        "audio/A1/A1-S05-L02_mia.wav",
+        "audio/A1/A1-S05-L03_mia.wav",
+        "audio/A1/A1-S05-L04_jonas.wav",
+        "audio/A1/A1-S05-L05_mia.wav",
+        "audio/A1/A1-S05-L06_jonas.wav"
       ],
       "overlay_text": [
         "Woher kommst du?",
@@ -110,14 +110,14 @@
     {
       "scene_id": "A1-S06",
       "type": "dialog",
-      "start_est": 84.412,
-      "end_est": 91.647,
+      "start_est": 60.896,
+      "end_est": 67.205,
       "clips": [
         "clips/A1/A1-S06_c01.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S06-L01_mia.mp3",
-        "audio/A1/A1-S06-L02_jonas.mp3"
+        "audio/A1/A1-S06-L01_mia.wav",
+        "audio/A1/A1-S06-L02_jonas.wav"
       ],
       "overlay_text": [
         "Tschüss!",
@@ -127,8 +127,8 @@
     {
       "scene_id": "A1-S07",
       "type": "vocab",
-      "start_est": 91.647,
-      "end_est": 122.288,
+      "start_est": 67.205,
+      "end_est": 91.384,
       "clips": [
         "clips/A1/A1-S07_c01.mp4",
         "clips/A1/A1-S07_c02.mp4",
@@ -137,11 +137,11 @@
         "clips/A1/A1-S07_c05.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S07-L01_narrator.mp3",
-        "audio/A1/A1-S07-L02_mia.mp3",
-        "audio/A1/A1-S07-L03_jonas.mp3",
-        "audio/A1/A1-S07-L04_mia.mp3",
-        "audio/A1/A1-S07-L05_jonas.mp3"
+        "audio/A1/A1-S07-L01_narrator.wav",
+        "audio/A1/A1-S07-L02_mia.wav",
+        "audio/A1/A1-S07-L03_jonas.wav",
+        "audio/A1/A1-S07-L04_mia.wav",
+        "audio/A1/A1-S07-L05_jonas.wav"
       ],
       "overlay_text": [
         "Hallo",
@@ -157,17 +157,17 @@
     {
       "scene_id": "A1-S08",
       "type": "grammar",
-      "start_est": 122.288,
-      "end_est": 149.482,
+      "start_est": 91.384,
+      "end_est": 108.005,
       "clips": [
         "clips/A1/A1-S08_c01.mp4",
         "clips/A1/A1-S08_c02.mp4",
         "clips/A1/A1-S08_c03.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S08-L01_narrator.mp3",
-        "audio/A1/A1-S08-L02_narrator.mp3",
-        "audio/A1/A1-S08-L03_narrator.mp3"
+        "audio/A1/A1-S08-L01_narrator.wav",
+        "audio/A1/A1-S08-L02_narrator.wav",
+        "audio/A1/A1-S08-L03_narrator.wav"
       ],
       "overlay_text": [
         "ich heiße – du heißt",
@@ -180,8 +180,8 @@
     {
       "scene_id": "A1-S09",
       "type": "exercise",
-      "start_est": 149.482,
-      "end_est": 196.9,
+      "start_est": 108.005,
+      "end_est": 145.713,
       "clips": [
         "clips/A1/A1-S09_c01.mp4",
         "clips/A1/A1-S09_c02.mp4",
@@ -194,15 +194,15 @@
         "clips/A1/A1-S09_c09.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S09-L01_narrator.mp3",
-        "audio/A1/A1-S09-L02_narrator.mp3",
-        "audio/A1/A1-S09-L03_narrator.mp3",
-        "audio/A1/A1-S09-L04_narrator.mp3",
-        "audio/A1/A1-S09-L05_narrator.mp3",
-        "audio/A1/A1-S09-L06_narrator.mp3",
-        "audio/A1/A1-S09-L07_narrator.mp3",
-        "audio/A1/A1-S09-L08_narrator.mp3",
-        "audio/A1/A1-S09-L09_narrator.mp3"
+        "audio/A1/A1-S09-L01_narrator.wav",
+        "audio/A1/A1-S09-L02_narrator.wav",
+        "audio/A1/A1-S09-L03_narrator.wav",
+        "audio/A1/A1-S09-L04_narrator.wav",
+        "audio/A1/A1-S09-L05_narrator.wav",
+        "audio/A1/A1-S09-L06_narrator.wav",
+        "audio/A1/A1-S09-L07_narrator.wav",
+        "audio/A1/A1-S09-L08_narrator.wav",
+        "audio/A1/A1-S09-L09_narrator.wav"
       ],
       "overlay_text": [
         "1. Wie ___ du?  → heißt",
@@ -214,18 +214,18 @@
     {
       "scene_id": "A1-S10",
       "type": "outro",
-      "start_est": 196.9,
-      "end_est": 216.524,
+      "start_est": 145.713,
+      "end_est": 159.176,
       "clips": [
         "clips/A1/A1-S10_c01.mp4",
         "clips/A1/A1-S10_c02.mp4",
         "clips/A1/A1-S10_c03.mp4"
       ],
       "audio_lines": [
-        "audio/A1/A1-S10-L01_mia.mp3",
-        "audio/A1/A1-S10-L02_jonas.mp3",
-        "audio/A1/A1-S10-L03_narrator.mp3",
-        "audio/A1/A1-S10-L04_narrator.mp3"
+        "audio/A1/A1-S10-L01_mia.wav",
+        "audio/A1/A1-S10-L02_jonas.wav",
+        "audio/A1/A1-S10-L03_narrator.wav",
+        "audio/A1/A1-S10-L04_narrator.wav"
       ],
       "overlay_text": [
         "Ich heiße …",

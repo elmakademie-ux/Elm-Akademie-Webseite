@@ -6,14 +6,14 @@
       "scene_id": "B1-S01",
       "type": "hook",
       "start_est": 0.0,
-      "end_est": 14.662,
+      "end_est": 10.203,
       "clips": [
         "clips/B1/B1-S01_c01.mp4",
         "clips/B1/B1-S01_c02.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S01-L01_narrator.mp3",
-        "audio/B1/B1-S01-L02_narrator.mp3"
+        "audio/B1/B1-S01-L01_narrator.wav",
+        "audio/B1/B1-S01-L02_narrator.wav"
       ],
       "overlay_text": [
         "Party. Niemand kennt dich. Und jetzt?"
@@ -22,15 +22,15 @@
     {
       "scene_id": "B1-S02",
       "type": "intro",
-      "start_est": 14.662,
-      "end_est": 28.4,
+      "start_est": 10.203,
+      "end_est": 21.709,
       "clips": [
         "clips/B1/B1-S02_c01.mp4",
         "clips/B1/B1-S02_c02.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S02-L01_narrator.mp3",
-        "audio/B1/B1-S02-L02_narrator.mp3"
+        "audio/B1/B1-S02-L01_narrator.wav",
+        "audio/B1/B1-S02-L02_narrator.wav"
       ],
       "overlay_text": [
         "B1",
@@ -42,8 +42,8 @@
     {
       "scene_id": "B1-S03",
       "type": "dialog",
-      "start_est": 28.4,
-      "end_est": 66.292,
+      "start_est": 21.709,
+      "end_est": 48.669,
       "clips": [
         "clips/B1/B1-S03_c01.mp4",
         "clips/B1/B1-S03_c02.mp4",
@@ -53,12 +53,12 @@
         "clips/B1/B1-S03_c06.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S03-L01_jonas.mp3",
-        "audio/B1/B1-S03-L02_mia.mp3",
-        "audio/B1/B1-S03-L03_jonas.mp3",
-        "audio/B1/B1-S03-L04_mia.mp3",
-        "audio/B1/B1-S03-L05_jonas.mp3",
-        "audio/B1/B1-S03-L06_mia.mp3"
+        "audio/B1/B1-S03-L01_jonas.wav",
+        "audio/B1/B1-S03-L02_mia.wav",
+        "audio/B1/B1-S03-L03_jonas.wav",
+        "audio/B1/B1-S03-L04_mia.wav",
+        "audio/B1/B1-S03-L05_jonas.wav",
+        "audio/B1/B1-S03-L06_mia.wav"
       ],
       "overlay_text": [
         "Woher kennst du …?",
@@ -68,8 +68,8 @@
     {
       "scene_id": "B1-S04",
       "type": "dialog",
-      "start_est": 66.292,
-      "end_est": 100.915,
+      "start_est": 48.669,
+      "end_est": 77.445,
       "clips": [
         "clips/B1/B1-S04_c01.mp4",
         "clips/B1/B1-S04_c02.mp4",
@@ -78,11 +78,11 @@
         "clips/B1/B1-S04_c05.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S04-L01_jonas.mp3",
-        "audio/B1/B1-S04-L02_mia.mp3",
-        "audio/B1/B1-S04-L03_jonas.mp3",
-        "audio/B1/B1-S04-L04_mia.mp3",
-        "audio/B1/B1-S04-L05_jonas.mp3"
+        "audio/B1/B1-S04-L01_jonas.wav",
+        "audio/B1/B1-S04-L02_mia.wav",
+        "audio/B1/B1-S04-L03_jonas.wav",
+        "audio/B1/B1-S04-L04_mia.wav",
+        "audio/B1/B1-S04-L05_jonas.wav"
       ],
       "overlay_text": [
         "Ich arbeite als …",
@@ -93,8 +93,8 @@
     {
       "scene_id": "B1-S05",
       "type": "dialog",
-      "start_est": 100.915,
-      "end_est": 146.615,
+      "start_est": 77.445,
+      "end_est": 107.573,
       "clips": [
         "clips/B1/B1-S05_c01.mp4",
         "clips/B1/B1-S05_c02.mp4",
@@ -103,11 +103,11 @@
         "clips/B1/B1-S05_c05.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S05-L01_jonas.mp3",
-        "audio/B1/B1-S05-L02_mia.mp3",
-        "audio/B1/B1-S05-L03_jonas.mp3",
-        "audio/B1/B1-S05-L04_mia.mp3",
-        "audio/B1/B1-S05-L05_jonas.mp3"
+        "audio/B1/B1-S05-L01_jonas.wav",
+        "audio/B1/B1-S05-L02_mia.wav",
+        "audio/B1/B1-S05-L03_jonas.wav",
+        "audio/B1/B1-S05-L04_mia.wav",
+        "audio/B1/B1-S05-L05_jonas.wav"
       ],
       "overlay_text": [
         "Am Anfang war es schwierig, weil …",
@@ -118,8 +118,8 @@
     {
       "scene_id": "B1-S06",
       "type": "dialog",
-      "start_est": 146.615,
-      "end_est": 201.962,
+      "start_est": 107.573,
+      "end_est": 144.661,
       "clips": [
         "clips/B1/B1-S06_c01.mp4",
         "clips/B1/B1-S06_c02.mp4",
@@ -129,13 +129,13 @@
         "clips/B1/B1-S06_c06.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S06-L01_jonas.mp3",
-        "audio/B1/B1-S06-L02_mia.mp3",
-        "audio/B1/B1-S06-L03_jonas.mp3",
-        "audio/B1/B1-S06-L04_mia.mp3",
-        "audio/B1/B1-S06-L05_jonas.mp3",
-        "audio/B1/B1-S06-L06_mia.mp3",
-        "audio/B1/B1-S06-L07_jonas.mp3"
+        "audio/B1/B1-S06-L01_jonas.wav",
+        "audio/B1/B1-S06-L02_mia.wav",
+        "audio/B1/B1-S06-L03_jonas.wav",
+        "audio/B1/B1-S06-L04_mia.wav",
+        "audio/B1/B1-S06-L05_jonas.wav",
+        "audio/B1/B1-S06-L06_mia.wav",
+        "audio/B1/B1-S06-L07_jonas.wav"
       ],
       "overlay_text": [
         "Meiner Meinung nach …",
@@ -146,8 +146,8 @@
     {
       "scene_id": "B1-S07",
       "type": "vocab",
-      "start_est": 201.962,
-      "end_est": 229.815,
+      "start_est": 144.661,
+      "end_est": 171.734,
       "clips": [
         "clips/B1/B1-S07_c01.mp4",
         "clips/B1/B1-S07_c02.mp4",
@@ -156,11 +156,11 @@
         "clips/B1/B1-S07_c05.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S07-L01_narrator.mp3",
-        "audio/B1/B1-S07-L02_mia.mp3",
-        "audio/B1/B1-S07-L03_jonas.mp3",
-        "audio/B1/B1-S07-L04_mia.mp3",
-        "audio/B1/B1-S07-L05_jonas.mp3"
+        "audio/B1/B1-S07-L01_narrator.wav",
+        "audio/B1/B1-S07-L02_mia.wav",
+        "audio/B1/B1-S07-L03_jonas.wav",
+        "audio/B1/B1-S07-L04_mia.wav",
+        "audio/B1/B1-S07-L05_jonas.wav"
       ],
       "overlay_text": [
         "jemanden kennenlernen",
@@ -175,17 +175,17 @@
     {
       "scene_id": "B1-S08",
       "type": "grammar",
-      "start_est": 229.815,
-      "end_est": 252.823,
+      "start_est": 171.734,
+      "end_est": 192.702,
       "clips": [
         "clips/B1/B1-S08_c01.mp4",
         "clips/B1/B1-S08_c02.mp4",
         "clips/B1/B1-S08_c03.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S08-L01_narrator.mp3",
-        "audio/B1/B1-S08-L02_narrator.mp3",
-        "audio/B1/B1-S08-L03_narrator.mp3"
+        "audio/B1/B1-S08-L01_narrator.wav",
+        "audio/B1/B1-S08-L02_narrator.wav",
+        "audio/B1/B1-S08-L03_narrator.wav"
       ],
       "overlay_text": [
         "weil · obwohl · dass → Verb am Ende",
@@ -196,8 +196,8 @@
     {
       "scene_id": "B1-S09",
       "type": "exercise",
-      "start_est": 252.823,
-      "end_est": 303.715,
+      "start_est": 192.702,
+      "end_est": 239.743,
       "clips": [
         "clips/B1/B1-S09_c01.mp4",
         "clips/B1/B1-S09_c02.mp4",
@@ -209,14 +209,14 @@
         "clips/B1/B1-S09_c08.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S09-L01_narrator.mp3",
-        "audio/B1/B1-S09-L02_narrator.mp3",
-        "audio/B1/B1-S09-L03_narrator.mp3",
-        "audio/B1/B1-S09-L04_narrator.mp3",
-        "audio/B1/B1-S09-L05_narrator.mp3",
-        "audio/B1/B1-S09-L06_narrator.mp3",
-        "audio/B1/B1-S09-L07_narrator.mp3",
-        "audio/B1/B1-S09-L08_narrator.mp3"
+        "audio/B1/B1-S09-L01_narrator.wav",
+        "audio/B1/B1-S09-L02_narrator.wav",
+        "audio/B1/B1-S09-L03_narrator.wav",
+        "audio/B1/B1-S09-L04_narrator.wav",
+        "audio/B1/B1-S09-L05_narrator.wav",
+        "audio/B1/B1-S09-L06_narrator.wav",
+        "audio/B1/B1-S09-L07_narrator.wav",
+        "audio/B1/B1-S09-L08_narrator.wav"
       ],
       "overlay_text": [
         "1. Ich fühle mich fremd, ___ ich Deutscher bin. (weil / obwohl)  → obwohl",
@@ -228,8 +228,8 @@
     {
       "scene_id": "B1-S10",
       "type": "outro",
-      "start_est": 303.715,
-      "end_est": 325.377,
+      "start_est": 239.743,
+      "end_est": 255.426,
       "clips": [
         "clips/B1/B1-S10_c01.mp4",
         "clips/B1/B1-S10_c02.mp4",
@@ -237,10 +237,10 @@
         "clips/B1/B1-S10_c04.mp4"
       ],
       "audio_lines": [
-        "audio/B1/B1-S10-L01_mia.mp3",
-        "audio/B1/B1-S10-L02_jonas.mp3",
-        "audio/B1/B1-S10-L03_narrator.mp3",
-        "audio/B1/B1-S10-L04_narrator.mp3"
+        "audio/B1/B1-S10-L01_mia.wav",
+        "audio/B1/B1-S10-L02_jonas.wav",
+        "audio/B1/B1-S10-L03_narrator.wav",
+        "audio/B1/B1-S10-L04_narrator.wav"
       ],
       "overlay_text": [
         "Deine Meinung + dein Grund",

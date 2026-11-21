@@ -17,7 +17,7 @@ LEVELS = ["A1", "A2", "B1", "B2"]
 
 # Maximale Länge eines KI-Videoclips in Sekunden (anpassbar je nach Anbieter)
 MAX_CLIP_SEC = 8.0
-SUBTITLE_MAX_CHARS_PER_LINE = 42
+SUBTITLE_MAX_CHARS_PER_LINE = 28  # 9:16-Hochformat
 SUBTITLE_MAX_LINES = 2
 SCENE_LEAD_IN = 0.6
 SCENE_TAIL = 0.6

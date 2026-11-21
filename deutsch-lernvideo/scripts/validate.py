@@ -197,7 +197,7 @@ def check_level(level):
     for i, c in enumerate(cues, 1):
         lines = c["text"].split("\n")
         if len(lines) > SUBTITLE_MAX_LINES or any(len(x) > SUBTITLE_MAX_CHARS_PER_LINE for x in lines):
-            err(errors, level, f"Untertitel {i}", "mehr als 2 Zeilen bzw. >42 Zeichen/Zeile")
+            err(errors, level, f"Untertitel {i}", "mehr als 2 Zeilen bzw. >28 Zeichen/Zeile")
         dur = c["end"] - c["start"]
         if c["start"] < prev_end - 1e-6:
             err(errors, level, f"Untertitel {i}", "überlappt mit vorherigem")

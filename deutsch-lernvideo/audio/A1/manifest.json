@@ -14,7 +14,7 @@
       "emotion": "bright, welcoming, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Hallo! Nur ein Wort. Und schon beginnt ein Gespräch.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S01-L01_narrator.mp3",
+      "output_file": "audio/A1/A1-S01-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -27,7 +27,7 @@
       "emotion": "curious, encouraging, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Heute lernst du: Wie stelle ich mich vor?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S01-L02_narrator.mp3",
+      "output_file": "audio/A1/A1-S01-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -40,7 +40,7 @@
       "emotion": "friendly, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Das ist Niveau A eins. Du lernst einfache Wörter und kurze Sätze.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S02-L01_narrator.mp3",
+      "output_file": "audio/A1/A1-S02-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -53,7 +53,7 @@
       "emotion": "encouraging, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Wir sprechen langsam. Sprich laut mit!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S02-L02_narrator.mp3",
+      "output_file": "audio/A1/A1-S02-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -66,7 +66,7 @@
       "emotion": "friendly, bright, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Hallo! Guten Morgen!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S03-L01_mia.mp3",
+      "output_file": "audio/A1/A1-S03-L01_mia.wav",
       "status": "pending"
     },
     {
@@ -79,7 +79,7 @@
       "emotion": "pleasantly surprised, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Guten Morgen!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S03-L02_jonas.mp3",
+      "output_file": "audio/A1/A1-S03-L02_jonas.wav",
       "status": "pending"
     },
     {
@@ -92,7 +92,7 @@
       "emotion": "warm, smiling, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Hallo!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S03-L03_jonas.mp3",
+      "output_file": "audio/A1/A1-S03-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -105,7 +105,7 @@
       "emotion": "friendly, curious, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich heiße Jonas. Und du? Wie heißt du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S04-L01_jonas.mp3",
+      "output_file": "audio/A1/A1-S04-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -118,7 +118,7 @@
       "emotion": "warm, a little shy, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich heiße Mia.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S04-L02_mia.mp3",
+      "output_file": "audio/A1/A1-S04-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -131,7 +131,7 @@
       "emotion": "happy, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Hallo, Mia!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S04-L03_jonas.mp3",
+      "output_file": "audio/A1/A1-S04-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "emotion": "delighted, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Hallo, Jonas! Freut mich!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S04-L04_mia.mp3",
+      "output_file": "audio/A1/A1-S04-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -157,7 +157,7 @@
       "emotion": "warm, smiling, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Freut mich auch!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S04-L05_jonas.mp3",
+      "output_file": "audio/A1/A1-S04-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -170,7 +170,7 @@
       "emotion": "curious, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Woher kommst du, Mia?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S05-L01_jonas.mp3",
+      "output_file": "audio/A1/A1-S05-L01_jonas.wav",
       "status": "pending"
     },
     {
@@ -183,7 +183,7 @@
       "emotion": "proud, warm, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich komme aus Spanien. Aus Valencia.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S05-L02_mia.mp3",
+      "output_file": "audio/A1/A1-S05-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -196,7 +196,7 @@
       "emotion": "curious, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Und du? Woher kommst du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S05-L03_mia.mp3",
+      "output_file": "audio/A1/A1-S05-L03_mia.wav",
       "status": "pending"
     },
     {
@@ -209,7 +209,7 @@
       "emotion": "friendly, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich komme aus Deutschland. Aus Leipzig.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S05-L04_jonas.mp3",
+      "output_file": "audio/A1/A1-S05-L04_jonas.wav",
       "status": "pending"
     },
     {
@@ -222,7 +222,7 @@
       "emotion": "enthusiastic, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Leipzig ist schön!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S05-L05_mia.mp3",
+      "output_file": "audio/A1/A1-S05-L05_mia.wav",
       "status": "pending"
     },
     {
@@ -235,7 +235,7 @@
       "emotion": "smiling, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Valencia ist auch schön!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S05-L06_jonas.mp3",
+      "output_file": "audio/A1/A1-S05-L06_jonas.wav",
       "status": "pending"
     },
     {
@@ -248,7 +248,7 @@
       "emotion": "cheerful, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Tschüss, Jonas!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S06-L01_mia.mp3",
+      "output_file": "audio/A1/A1-S06-L01_mia.wav",
       "status": "pending"
     },
     {
@@ -261,7 +261,7 @@
       "emotion": "warm, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Tschüss, Mia! Bis bald!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S06-L02_jonas.mp3",
+      "output_file": "audio/A1/A1-S06-L02_jonas.wav",
       "status": "pending"
     },
     {
@@ -274,7 +274,7 @@
       "emotion": "encouraging, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Das sind die wichtigen Wörter. Sprich nach!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S07-L01_narrator.mp3",
+      "output_file": "audio/A1/A1-S07-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -287,7 +287,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Hallo. Guten Morgen. Tschüss.</prosody></speak>",
       "pause_after_sec": 2.9,
-      "output_file": "audio/A1/A1-S07-L02_mia.mp3",
+      "output_file": "audio/A1/A1-S07-L02_mia.wav",
       "status": "pending"
     },
     {
@@ -300,7 +300,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich heiße. Wie heißt du?</prosody></speak>",
       "pause_after_sec": 2.9,
-      "output_file": "audio/A1/A1-S07-L03_jonas.mp3",
+      "output_file": "audio/A1/A1-S07-L03_jonas.wav",
       "status": "pending"
     },
     {
@@ -313,7 +313,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich komme aus. Woher kommst du?</prosody></speak>",
       "pause_after_sec": 2.9,
-      "output_file": "audio/A1/A1-S07-L04_mia.mp3",
+      "output_file": "audio/A1/A1-S07-L04_mia.wav",
       "status": "pending"
     },
     {
@@ -326,7 +326,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Freut mich!</prosody></speak>",
       "pause_after_sec": 2.9,
-      "output_file": "audio/A1/A1-S07-L05_jonas.mp3",
+      "output_file": "audio/A1/A1-S07-L05_jonas.wav",
       "status": "pending"
     },
     {
@@ -339,7 +339,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Achtung: Das Verb ändert sich.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S08-L01_narrator.mp3",
+      "output_file": "audio/A1/A1-S08-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -352,7 +352,7 @@
       "emotion": "clear, very slow",
       "ssml": "<speak><prosody rate=\"-20%\">Ich heiße. Du heißt. Ich komme. Du kommst. Ich bin. Du bist.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S08-L02_narrator.mp3",
+      "output_file": "audio/A1/A1-S08-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -365,7 +365,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Bei Fragen mit Fragewort steht das Verb an Position zwei: Wie heißt du? Woher kommst du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S08-L03_narrator.mp3",
+      "output_file": "audio/A1/A1-S08-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -378,7 +378,7 @@
       "emotion": "playful, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Jetzt bist du dran! Ergänze die Sätze.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S09-L01_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L01_narrator.wav",
       "status": "pending"
     },
     {
@@ -391,7 +391,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Eins: Wie … du?</prosody></speak>",
       "pause_after_sec": 3.9,
-      "output_file": "audio/A1/A1-S09-L02_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L02_narrator.wav",
       "status": "pending"
     },
     {
@@ -404,7 +404,7 @@
       "emotion": "pleased, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Richtig: Wie heißt du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S09-L03_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -417,7 +417,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Zwei: Ich … Mia.</prosody></speak>",
       "pause_after_sec": 3.9,
-      "output_file": "audio/A1/A1-S09-L04_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L04_narrator.wav",
       "status": "pending"
     },
     {
@@ -430,7 +430,7 @@
       "emotion": "pleased, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Richtig: Ich heiße Mia.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S09-L05_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L05_narrator.wav",
       "status": "pending"
     },
     {
@@ -443,7 +443,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Drei: Woher … du?</prosody></speak>",
       "pause_after_sec": 3.9,
-      "output_file": "audio/A1/A1-S09-L06_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L06_narrator.wav",
       "status": "pending"
     },
     {
@@ -456,7 +456,7 @@
       "emotion": "pleased, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Richtig: Woher kommst du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S09-L07_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L07_narrator.wav",
       "status": "pending"
     },
     {
@@ -469,7 +469,7 @@
       "emotion": "clear, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Vier: Ich … aus Spanien.</prosody></speak>",
       "pause_after_sec": 3.9,
-      "output_file": "audio/A1/A1-S09-L08_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L08_narrator.wav",
       "status": "pending"
     },
     {
@@ -482,7 +482,7 @@
       "emotion": "pleased, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Richtig: Ich komme aus Spanien.</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S09-L09_narrator.mp3",
+      "output_file": "audio/A1/A1-S09-L09_narrator.wav",
       "status": "pending"
     },
     {
@@ -495,7 +495,7 @@
       "emotion": "inviting, warm, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Und du? Wie heißt du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S10-L01_mia.mp3",
+      "output_file": "audio/A1/A1-S10-L01_mia.wav",
       "status": "pending"
     },
     {
@@ -508,7 +508,7 @@
       "emotion": "inviting, warm, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Woher kommst du?</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S10-L02_jonas.mp3",
+      "output_file": "audio/A1/A1-S10-L02_jonas.wav",
       "status": "pending"
     },
     {
@@ -521,7 +521,7 @@
       "emotion": "friendly, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Schreib es in die Kommentare: Ich heiße … Ich komme aus …</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S10-L03_narrator.mp3",
+      "output_file": "audio/A1/A1-S10-L03_narrator.wav",
       "status": "pending"
     },
     {
@@ -534,7 +534,7 @@
       "emotion": "warm, slow",
       "ssml": "<speak><prosody rate=\"-20%\">Bis bald! Tschüss!</prosody></speak>",
       "pause_after_sec": 0.9,
-      "output_file": "audio/A1/A1-S10-L04_narrator.mp3",
+      "output_file": "audio/A1/A1-S10-L04_narrator.wav",
       "status": "pending"
     }
   ]

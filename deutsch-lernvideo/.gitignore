@@ -1,5 +1,6 @@
 .env
 clips/
+.cache/
 audio/*/*.mp3
 audio/*/*.wav
 characters/reference/*.png

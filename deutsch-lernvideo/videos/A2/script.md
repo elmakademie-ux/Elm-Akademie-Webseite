@@ -1,6 +1,6 @@
 # Neue Kollegen kennenlernen – Mein erster Arbeitstag
 
-**Niveau A2 – Grundlegende Sprachkenntnisse** · Anrede: du · Zieldauer ca. 5:40 min (geschätzte Sprechzeit laut Zeitleiste: 00:05:37)
+**Niveau A2 – Grundlegende Sprachkenntnisse** · Anrede: du · Zieldauer ca. 5:40 min (geschätzte Sprechzeit laut Zeitleiste: 00:04:01)
 
 *Deutsch lernen A2: Herkunft, Wohnort, Deutschkenntnisse*
 
@@ -553,61 +553,88 @@ Dateien: `subtitles/A2.srt`, `subtitles/A2.vtt`. Text und Zeitleiste stammen aus
 
 | # | Start | Ende | Text |
 |---|---|---|---|
-| 1 | 00:00:00,600 | 00:00:05,509 | Erster Arbeitstag. Alle / Gesichter sind neu. Was sagst du? |
-| 2 | 00:00:06,209 | 00:00:12,755 | Heute lernst du, wie du dich vorstellst, / wenn du neue Kollegen triffst. |
-| 3 | 00:00:14,655 | 00:00:21,200 | Das ist Niveau A2. Du sprichst über / deinen Alltag und deine Arbeit. |
-| 4 | 00:00:21,900 | 00:00:27,355 | Du benutzt einfache Nebensätze, / zum Beispiel mit „weil“ und „wenn“. |
-| 5 | 00:00:29,255 | 00:00:34,709 | Guten Morgen! Du bist bestimmt / Mia, die neue Kollegin, oder? |
-| 6 | 00:00:35,409 | 00:00:41,409 | Ja, genau. Ich bin Mia Navarro. / Heute ist mein erster Arbeitstag. |
-| 7 | 00:00:42,109 | 00:00:47,600 | Herzlich willkommen! Ich bin / Jonas. Ich arbeite im Team Technik. |
-| 8 | 00:00:47,600 | 00:00:49,745 | Möchtest du einen Kaffee? |
-| 9 | 00:00:50,445 | 00:00:53,718 | Gern, danke! Den brauche ich heute. |
-| 10 | 00:00:55,618 | 00:00:59,982 | Woher kommst du denn? / Dein Name klingt spanisch. |
-| 11 | 00:01:00,682 | 00:01:04,466 | Ja, ich komme aus Valencia. Die Stadt |
-| 12 | 00:01:04,466 | 00:01:08,864 | liegt im Osten von / Spanien, direkt am Meer. |
-| 13 | 00:01:09,564 | 00:01:12,836 | Schön! Und wo wohnst du jetzt? |
-| 14 | 00:01:13,536 | 00:01:20,627 | Ich wohne in Ehrenfeld. Meine Wohnung / ist klein, aber ich mag das Viertel. |
-| 15 | 00:01:21,327 | 00:01:28,418 | Ehrenfeld ist toll! Ich wohne in Nippes, / aber ich komme ursprünglich aus Leipzig. |
-| 16 | 00:01:30,318 | 00:01:33,591 | Seit wann lebst du in Deutschland? |
-| 17 | 00:01:34,291 | 00:01:35,869 | Seit einem Jahr. |
-| 18 | 00:01:35,869 | 00:01:43,564 | Ich bin im September nach Köln gezogen, / weil ich hier einen Job gefunden habe. |
-| 19 | 00:01:44,264 | 00:01:48,082 | Und dein Deutsch ist schon richtig gut! |
-| 20 | 00:01:48,782 | 00:01:55,796 | Danke! Ich lerne seit zwei Jahren Deutsch. / Aber manchmal mache ich noch Fehler. |
-| 21 | 00:01:55,796 | 00:02:00,236 | Wenn ich einen Fehler / mache, korrigier mich bitte. |
-| 22 | 00:02:00,936 | 00:02:06,391 | Klar, gern. Aber ehrlich gesagt: / Ich verstehe dich sehr gut. |
-| 23 | 00:02:08,291 | 00:02:12,655 | Was war bis jetzt am / schwierigsten in Deutschland? |
-| 24 | 00:02:13,355 | 00:02:14,650 | Die Bürokratie! |
-| 25 | 00:02:14,650 | 00:02:21,041 | Ich musste viele Formulare ausfüllen, / obwohl ich nicht alle Wörter kannte. |
-| 26 | 00:02:21,041 | 00:02:23,718 | Aber die Leute waren sehr nett. |
-| 27 | 00:02:24,418 | 00:02:27,691 | Und was gefällt dir besonders gut? |
-| 28 | 00:02:28,391 | 00:02:33,231 | Ich fahre gern mit dem / Fahrrad am Rhein entlang. |
-| 29 | 00:02:33,231 | 00:02:40,391 | Das habe ich in Valencia auch gemacht, / weil es dort viele Radwege gibt. |
-| 30 | 00:02:41,091 | 00:02:49,818 | Dann komm doch am Samstag mit! Ich fahre / immer am Rhein, wenn das Wetter schön ist. |
-| 31 | 00:02:50,518 | 00:02:51,609 | Sehr gern! |
-| 32 | 00:02:53,509 | 00:03:00,600 | Ich zeige dir jetzt dein Büro. / Danach stelle ich dich dem Team vor. |
-| 33 | 00:03:01,300 | 00:03:05,118 | Super, danke dir! Ich freue mich schon. |
-| 34 | 00:03:07,018 | 00:03:12,473 | Diese Wörter und Sätze helfen / dir im Gespräch. Sprich nach! |
-| 35 | 00:03:13,173 | 00:03:19,536 | der Kollege, die Kollegin. Der / Arbeitstag. Herzlich willkommen! |
-| 36 | 00:03:20,236 | 00:03:27,691 | wohnen, ziehen, leben. Ich / lebe seit einem Jahr in Köln. |
-| 37 | 00:03:28,391 | 00:03:34,209 | der Fehler, korrigieren. / Das Deutsch, die Kenntnisse. |
-| 38 | 00:03:34,909 | 00:03:39,636 | ursprünglich, ehrlich / gesagt, besonders gut. |
-| 39 | 00:03:41,536 | 00:03:47,734 | Im Nebensatz steht das Verb am / Ende. Zum Beispiel mit „weil“: |
-| 40 | 00:03:47,734 | 00:03:51,900 | Ich wohne in Köln, weil ich hier arbeite. |
-| 41 | 00:03:52,600 | 00:03:59,691 | Mit „wenn“ ist es genauso: Wenn ich / einen Fehler mache, korrigier mich bitte. |
-| 42 | 00:04:00,391 | 00:04:08,027 | Und für die Zeit sagst du „seit“: Ich / lebe seit einem Jahr in Deutschland. |
-| 43 | 00:04:09,927 | 00:04:15,927 | Jetzt bist du dran! Verbinde die / Sätze mit „weil“ oder „wenn“. |
-| 44 | 00:04:16,627 | 00:04:24,082 | Eins: Ich wohne in Köln. Ich / arbeite hier. Mit „weil“. |
-| 45 | 00:04:26,782 | 00:04:31,691 | Lösung: Ich wohne in Köln, / weil ich hier arbeite. |
-| 46 | 00:04:32,391 | 00:04:39,845 | Zwei: Ich mache einen Fehler. / Bitte korrigier mich. Mit „wenn“. |
-| 47 | 00:04:42,545 | 00:04:47,455 | Lösung: Wenn ich einen Fehler / mache, korrigier mich bitte. |
-| 48 | 00:04:48,155 | 00:04:55,609 | Drei: Ich lerne Deutsch. Ich / will hier arbeiten. Mit „weil“. |
-| 49 | 00:04:58,309 | 00:05:03,218 | Lösung: Ich lerne Deutsch, / weil ich hier arbeiten will. |
-| 50 | 00:05:03,918 | 00:05:11,373 | Vier: Seit wann lebst du in / Deutschland? Antworte mit „seit“. |
-| 51 | 00:05:14,073 | 00:05:18,982 | Zum Beispiel: Ich lebe seit / einem Jahr in Deutschland. |
-| 52 | 00:05:20,882 | 00:05:25,791 | Und du? Woher kommst du und wo wohnst du? |
-| 53 | 00:05:26,491 | 00:05:29,218 | Seit wann lernst du Deutsch? |
-| 54 | 00:05:29,918 | 00:05:34,827 | Schreib es in die Kommentare! / Benutze „weil“ oder „seit“. |
-| 55 | 00:05:35,527 | 00:05:37,709 | Bis zum nächsten Video! |
+| 1 | 00:00:00,600 | 00:00:03,754 | Erster Arbeitstag. Alle / Gesichter sind neu. |
+| 2 | 00:00:03,754 | 00:00:04,707 | Was sagst du? |
+| 3 | 00:00:05,407 | 00:00:07,793 | Heute lernst du, wie / du dich vorstellst, |
+| 4 | 00:00:07,793 | 00:00:09,582 | wenn du neue / Kollegen triffst. |
+| 5 | 00:00:11,482 | 00:00:12,808 | Das ist Niveau A2. |
+| 6 | 00:00:12,808 | 00:00:16,344 | Du sprichst über deinen / Alltag und deine Arbeit. |
+| 7 | 00:00:17,044 | 00:00:18,736 | Du benutzt einfache / Nebensätze, |
+| 8 | 00:00:18,736 | 00:00:20,646 | zum Beispiel mit / „weil“ und „wenn“. |
+| 9 | 00:00:22,546 | 00:00:23,436 | Guten Morgen! |
+| 10 | 00:00:23,436 | 00:00:26,583 | Du bist bestimmt Mia, / die neue Kollegin, oder? |
+| 11 | 00:00:27,283 | 00:00:29,370 | Ja, genau. Ich / bin Mia Navarro. |
+| 12 | 00:00:29,370 | 00:00:31,591 | Heute ist mein / erster Arbeitstag. |
+| 13 | 00:00:32,291 | 00:00:34,563 | Herzlich willkommen! / Ich bin Jonas. |
+| 14 | 00:00:34,563 | 00:00:38,069 | Ich arbeite im Team Technik. / Möchtest du einen Kaffee? |
+| 15 | 00:00:38,769 | 00:00:41,280 | Gern, danke! Den / brauche ich heute. |
+| 16 | 00:00:43,180 | 00:00:45,849 | Woher kommst du denn? / Dein Name klingt spanisch. |
+| 17 | 00:00:46,549 | 00:00:48,253 | Ja, ich komme aus Valencia. |
+| 18 | 00:00:48,253 | 00:00:51,597 | Die Stadt liegt im Osten / von Spanien, direkt am Meer. |
+| 19 | 00:00:52,297 | 00:00:54,203 | Schön! Und wo / wohnst du jetzt? |
+| 20 | 00:00:54,903 | 00:00:56,182 | Ich wohne in Ehrenfeld. |
+| 21 | 00:00:56,182 | 00:00:58,964 | Meine Wohnung ist klein, / aber ich mag das Viertel. |
+| 22 | 00:00:59,664 | 00:01:02,038 | Ehrenfeld ist toll! / Ich wohne in Nippes, |
+| 23 | 00:01:02,038 | 00:01:04,412 | aber ich komme / ursprünglich aus Leipzig. |
+| 24 | 00:01:06,312 | 00:01:07,900 | Seit wann lebst / du in Deutschland? |
+| 25 | 00:01:08,600 | 00:01:11,440 | Seit einem Jahr. Ich bin im / September nach Köln gezogen, |
+| 26 | 00:01:11,440 | 00:01:13,367 | weil ich hier einen / Job gefunden habe. |
+| 27 | 00:01:14,067 | 00:01:15,795 | Und dein Deutsch ist / schon richtig gut! |
+| 28 | 00:01:16,495 | 00:01:18,578 | Danke! Ich lerne seit / zwei Jahren Deutsch. |
+| 29 | 00:01:18,578 | 00:01:20,364 | Aber manchmal mache / ich noch Fehler. |
+| 30 | 00:01:20,364 | 00:01:22,844 | Wenn ich einen Fehler / mache, korrigier mich bitte. |
+| 31 | 00:01:23,544 | 00:01:25,695 | Klar, gern. Aber / ehrlich gesagt: |
+| 32 | 00:01:25,695 | 00:01:27,510 | Ich verstehe dich sehr gut. |
+| 33 | 00:01:29,410 | 00:01:30,255 | Was war bis jetzt |
+| 34 | 00:01:30,255 | 00:01:31,847 | am schwierigsten / in Deutschland? |
+| 35 | 00:01:32,547 | 00:01:35,829 | Die Bürokratie! Ich musste / viele Formulare ausfüllen, |
+| 36 | 00:01:35,829 | 00:01:38,059 | obwohl ich nicht / alle Wörter kannte. |
+| 37 | 00:01:38,059 | 00:01:39,979 | Aber die Leute / waren sehr nett. |
+| 38 | 00:01:40,679 | 00:01:42,371 | Und was gefällt / dir besonders gut? |
+| 39 | 00:01:43,071 | 00:01:45,646 | Ich fahre gern mit dem / Fahrrad am Rhein entlang. |
+| 40 | 00:01:45,646 | 00:01:47,684 | Das habe ich in / Valencia auch gemacht, |
+| 41 | 00:01:47,684 | 00:01:49,401 | weil es dort viele / Radwege gibt. |
+| 42 | 00:01:50,101 | 00:01:51,754 | Dann komm doch / am Samstag mit! |
+| 43 | 00:01:51,754 | 00:01:54,620 | Ich fahre immer am Rhein, / wenn das Wetter schön ist. |
+| 44 | 00:01:55,320 | 00:01:56,232 | Sehr gern! |
+| 45 | 00:01:58,132 | 00:01:59,710 | Ich zeige dir / jetzt dein Büro. |
+| 46 | 00:01:59,710 | 00:02:01,604 | Danach stelle ich / dich dem Team vor. |
+| 47 | 00:02:02,304 | 00:02:04,654 | Super, danke dir! / Ich freue mich schon. |
+| 48 | 00:02:06,554 | 00:02:09,643 | Diese Wörter und Sätze / helfen dir im Gespräch. |
+| 49 | 00:02:09,643 | 00:02:10,449 | Sprich nach! |
+| 50 | 00:02:11,149 | 00:02:13,818 | der Kollege, die / Kollegin. Der Arbeitstag. |
+| 51 | 00:02:13,818 | 00:02:17,089 | Herzlich willkommen! |
+| 52 | 00:02:17,789 | 00:02:19,939 | wohnen, ziehen, / leben. Ich lebe |
+| 53 | 00:02:19,939 | 00:02:23,604 | seit einem Jahr in Köln. |
+| 54 | 00:02:24,304 | 00:02:29,150 | der Fehler, korrigieren. / Das Deutsch, die Kenntnisse. |
+| 55 | 00:02:29,850 | 00:02:34,470 | ursprünglich, ehrlich / gesagt, besonders gut. |
+| 56 | 00:02:36,370 | 00:02:38,807 | Im Nebensatz steht / das Verb am Ende. |
+| 57 | 00:02:38,807 | 00:02:40,432 | Zum Beispiel mit „weil“: |
+| 58 | 00:02:40,432 | 00:02:43,207 | Ich wohne in Köln, / weil ich hier arbeite. |
+| 59 | 00:02:43,907 | 00:02:45,434 | Mit „wenn“ ist es genauso: |
+| 60 | 00:02:45,434 | 00:02:48,370 | Wenn ich einen Fehler / mache, korrigier mich bitte. |
+| 61 | 00:02:49,070 | 00:02:50,861 | Und für die Zeit / sagst du „seit“: |
+| 62 | 00:02:50,861 | 00:02:53,032 | Ich lebe seit einem / Jahr in Deutschland. |
+| 63 | 00:02:54,932 | 00:02:56,095 | Jetzt bist du dran! |
+| 64 | 00:02:56,095 | 00:02:58,665 | Verbinde die Sätze mit / „weil“ oder „wenn“. |
+| 65 | 00:02:59,365 | 00:03:05,176 | Eins: Ich wohne in Köln. Ich / arbeite hier. Mit „weil“. |
+| 66 | 00:03:07,876 | 00:03:11,153 | Lösung: Ich wohne in Köln, / weil ich hier arbeite. |
+| 67 | 00:03:11,853 | 00:03:13,196 | Zwei: Ich mache einen |
+| 68 | 00:03:13,196 | 00:03:15,051 | Fehler. Bitte / korrigier mich. |
+| 69 | 00:03:15,051 | 00:03:17,755 | Mit „wenn“. |
+| 70 | 00:03:20,455 | 00:03:20,873 | Lösung: |
+| 71 | 00:03:20,873 | 00:03:23,858 | Wenn ich einen Fehler / mache, korrigier mich bitte. |
+| 72 | 00:03:24,558 | 00:03:27,510 | Drei: Ich lerne Deutsch. / Ich will hier arbeiten. |
+| 73 | 00:03:27,510 | 00:03:30,187 | Mit „weil“. |
+| 74 | 00:03:32,887 | 00:03:36,256 | Lösung: Ich lerne Deutsch, / weil ich hier arbeiten will. |
+| 75 | 00:03:36,956 | 00:03:39,477 | Vier: Seit wann lebst / du in Deutschland? |
+| 76 | 00:03:39,477 | 00:03:42,738 | Antworte mit „seit“. |
+| 77 | 00:03:45,438 | 00:03:48,340 | Zum Beispiel: Ich lebe seit / einem Jahr in Deutschland. |
+| 78 | 00:03:50,240 | 00:03:53,174 | Und du? Woher kommst / du und wo wohnst du? |
+| 79 | 00:03:53,874 | 00:03:55,212 | Seit wann lernst du Deutsch? |
+| 80 | 00:03:55,912 | 00:03:57,724 | Schreib es in / die Kommentare! |
+| 81 | 00:03:57,724 | 00:03:59,411 | Benutze „weil“ oder „seit“. |
+| 82 | 00:04:00,111 | 00:04:01,524 | Bis zum nächsten Video! |
 
 </details>
 
