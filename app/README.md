@@ -9,4 +9,4 @@ Installierbare, offlinefähige Web-App (kein Build nötig).
 Starten: `python3 -m http.server 8000` im Repo-Hauptordner → http://localhost:8000/app/ (die Videos liegen in `../videos`) (auf dem Handy „Zum Startbildschirm hinzufügen“).
 Inhalte stammen aus `videos/*` (`data.js` wurde daraus erzeugt).
 
-Aufbau nach Niveau: A1 (Wohnung, Tagesablauf), A2 (folgt), B1 (DTZ), Für alle Niveaus (Lerntipps, Lernpause). Das Fitness-Video „Muskelaufbau“ gehört nicht zum Deutschlernen und ist nicht enthalten.
+Aufbau nach Niveau: A1 (Wohnung, Tagesablauf), A2 (folgt), B1 (DTZ). Lerntipps, Lernpause und Muskelaufbau sind nicht enthalten.

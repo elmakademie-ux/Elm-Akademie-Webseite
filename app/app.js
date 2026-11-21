@@ -20,7 +20,6 @@ home(){const s=stats();const L=(h,t,sub,c)=>`<a class="card tile lvl" style="bor
  ${L('#/a1','A1 · Anfänger','Meine Wohnung · Mein Tagesablauf','#16a34a')}
  ${L('#/a2','A2 · Grundlagen','Inhalte folgen','#0d9488')}
  ${L('#/b1','B1 · DTZ-Vorbereitung','E-Mail schreiben · 15 Muster-E-Mails','#2563eb')}
- ${L('#/lernen','Für alle Niveaus','Lerntipps · Lernpause','#f97316')}
  <p class=m style="text-align:center">Folge der ELM Akademie für neue Lernvideos!<br>Die Mustertexte sind Übungshilfen, keine offiziellen Prüfungslösungen.</p>`},
 
 
@@ -34,7 +33,6 @@ b1(){return `<h2 class=lv>B1 · DTZ-Vorbereitung</h2>
  <a class="card tile" href="#/mail"><b>✉️ DTZ – Muster-E-Mails</b><span>5 Aufgaben · 15 Beispiele · Konnektoren &amp; Modalverben</span></a>
  ${vid('DTZ Schreiben – E-Mail schreiben','dtz_email/dtz_email.mp4')}
  ${vid('Alle 15 Muster-E-Mails (mit Kapiteln)','dtz_muster/dtz_15_muster_emails_16x9.mp4')}`},
-lernen(){return `<h2 class=lv>Für alle Niveaus</h2>${vid('5 Lerntipps','lerntipps/lerntipps.mp4')}${vid('6 Übungen für deine Lernpause','lernpause/lernpause.mp4')}`},
 
 mail(a){ // a: "", "1".., "1-2"
  if(a&&a.includes('-')){const[t,b]=a.split('-'),e=D.emails.find(e=>e.aufgabe==t&&e.beispiel==b),A=D.aufgaben[t],st=stats();
