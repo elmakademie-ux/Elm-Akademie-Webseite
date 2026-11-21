@@ -1,0 +1,12 @@
+{
+  "name": "funny-family-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI video production studio for the animated comedy series The Funny Family",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test \"tests/*.test.js\""
+  }
+}
