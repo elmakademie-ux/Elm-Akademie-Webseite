@@ -34,6 +34,8 @@ MUSIK_LAUTSTAERKE = 0.12
 AUSSPRACHE = {"DTZ": "De Te Zett", "E-Mail": "Imeil", "E-Mails": "Imeils", "„": "", "“": ""}
 NAVY = (27, 54, 104)
 ORANGE = (237, 140, 20)          # Konnektoren
+BLUE = (30, 90, 180)             # ELM-Markenfarbe (Rahmen, Beschriftungen)
+BLUE_LIGHT = (236, 243, 255)     # heller Hintergrund der Aufgabenkarte
 PURPLE = (124, 77, 255)          # Modalverben
 BG = (244, 246, 250)
 OK = (46, 160, 90)
@@ -345,7 +347,7 @@ def blob(r, color):
     return img.filter(ImageFilter.GaussianBlur(30))
 
 
-BLOBS = [(blob(360, (*ORANGE, 20)), 0.0, (-220, 260)), (blob(320, (*NAVY, 14)), 2.0, (720, 900)),
+BLOBS = [(blob(360, (*BLUE, 20)), 0.0, (-220, 260)), (blob(320, (*NAVY, 14)), 2.0, (720, 900)),
          (blob(260, (*PURPLE, 14)), 4.0, (-60, 1450))]
 
 
@@ -373,12 +375,12 @@ def draw_header(frame, show_title=True):
     if not show_title:
         return
     if LANDSCAPE:
-        sub = text_img(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", "Bold", 30, ORANGE)
+        sub = text_img(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", "Bold", 30, BLUE)
         comp_center(frame, sub, W / 2, 52)
         ttl = text_img(A["thema"], "ExtraBold", 54, NAVY)
         comp_center(frame, ttl, W / 2, 104, min(1.0, 1100 / ttl.width))
         return
-    sub = text_img(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", "Bold", 32, ORANGE)
+    sub = text_img(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", "Bold", 32, BLUE)
     comp_center(frame, sub, W / 2, 222)
     ttl = text_img(A["thema"], "ExtraBold", 54, NAVY)
     s = min(1.0, (W - 120) / ttl.width)
@@ -410,8 +412,8 @@ def task_bg():
     x0, y0, x1, y1 = TASK
     img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 28, fill=(255, 250, 240), outline=(*ORANGE, 110), width=3)
-    d.text((28, 16), "AUFGABE", font=font("ExtraBold", 26), fill=ORANGE)
+    d.rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 28, fill=BLUE_LIGHT, outline=BLUE, width=4)
+    d.text((28, 16), "AUFGABE", font=font("ExtraBold", 26), fill=BLUE)
     return shadow(img, 14, 35, 6)
 
 
@@ -448,7 +450,7 @@ def draw_task(frame, t):
     for li, line in enumerate(task_lines()):
         x = x0 + 28
         for w in line:
-            col = NAVY if gi < n_spoken or t >= e else mix(NAVY, 0.45, (255, 250, 240))
+            col = NAVY if gi < n_spoken or t >= e else mix(NAVY, 0.45, BLUE_LIGHT)
             d.text((x, y0 + 52 + li * 37), w, font=f, fill=col)
             x += f.getlength(w + " ")
             gi += 1
@@ -481,6 +483,7 @@ def mail_base():
     for k, c in enumerate(((255, 95, 86), (255, 189, 46), (39, 201, 63))):
         d.ellipse((24 + k * 30, 19, 42 + k * 30, 37), fill=c)
     d.text((w / 2, 28), "Neue E-Mail", font=font("SemiBold", 26), fill=GREY, anchor="mm")
+    d.rounded_rectangle((0, 0, w - 1, h - 1), 30, outline=BLUE, width=5)
     if LANDSCAPE:   # statt An/Betreff: Zeile fuer die 4 Punkte (wird live gezeichnet)
         d.line((30, TOPBAR + FIELDS, w - 30, TOPBAR + FIELDS), fill=(225, 229, 236), width=2)
         return shadow(img, 22, 55, 12)
@@ -596,7 +599,7 @@ def draw_mail(frame, t, slide):
     if cursor and int(t * 3) % 2 == 0:
         cx, cy, ch = cursor
         if BODY_TOP - 40 < cy < BODY_BOTTOM:
-            d.rectangle((cx, cy, cx + 3, cy + ch), fill=ORANGE)
+            d.rectangle((cx, cy, cx + 3, cy + ch), fill=BLUE)
 
 
 # ---------------------------------------------------------------- Untertitel
@@ -644,7 +647,7 @@ def draw_intro_landscape(frame, t):
     a_out = clamp((TL["intro_end"] - t) / 0.3)
     bob = 10 * math.sin(t * 2.4)
     comp_center(frame, envelope(), 560, 470 + bob, 0.75 + 0.25 * back_out(t / 0.6), clamp(t / 0.25) * a_out)
-    lab = pill(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", 44, WHITE, ORANGE, 32, 12, "ExtraBold")
+    lab = pill(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", 44, WHITE, BLUE, 32, 12, "ExtraBold")
     comp(frame, lab, (840, 330), a_out * clamp((t - 0.3) / 0.3))
     ttl = text_img(A["thema"], "ExtraBold", 78, NAVY)
     tin = ease_out((t - 0.5) / 0.5)
@@ -673,7 +676,7 @@ def draw_intro(frame, t):
     env = shadow(env.resize((340, 236), Image.LANCZOS), 18, 60, 10)
     bob = 10 * math.sin(t * 2.4)
     comp_center(frame, env, W / 2, 560 + bob, 0.7 + 0.3 * back_out(t / 0.6), clamp(t / 0.25) * a_out)
-    lab = pill(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", 40, WHITE, ORANGE, 30, 12, "ExtraBold")
+    lab = pill(f"Aufgabe {E['aufgabe']} · Beispiel {E['beispiel']}", 40, WHITE, BLUE, 30, 12, "ExtraBold")
     comp_center(frame, lab, W / 2, 790, max(0.01, back_out((t - 0.3) / 0.4)), a_out)
     ttl = text_img(A["thema"], "ExtraBold", 74, NAVY)
     s = min(1.0, (W - 100) / ttl.width)
@@ -744,8 +747,8 @@ def big_task_bg():
     x0, y0, x1, y1 = big_task_box()
     img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 40, fill=(255, 250, 240), outline=(*ORANGE, 110), width=4)
-    d.text((56, 44), "AUFGABE", font=font("ExtraBold", 40), fill=ORANGE)
+    d.rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 40, fill=BLUE_LIGHT, outline=BLUE, width=5)
+    d.text((56, 44), "AUFGABE", font=font("ExtraBold", 40), fill=BLUE)
     return shadow(img, 22, 45, 10)
 
 
@@ -780,7 +783,7 @@ def draw_task_alone(frame, t, a):
     for li, line in enumerate(lines):
         x = x0 + 56
         for w in line:
-            col = NAVY if gi < n_spoken else mix(NAVY, 0.4, (255, 250, 240))
+            col = NAVY if gi < n_spoken else mix(NAVY, 0.4, BLUE_LIGHT)
             d.text((x, y0 + 120 + li * 66), w, font=f, fill=col)
             x += f.getlength(w + " ")
             gi += 1
@@ -910,7 +913,7 @@ def draw_special(frame, t):
         comp_center(frame, envelope(), W / 2, 250 + 10 * math.sin(t * 2.4), 0.8 + 0.2 * back_out(t / 0.6))
         ttl = text_img("15 Muster-E-Mails", "ExtraBold", 96, NAVY)
         comp_center(frame, ttl, W / 2, 450, 1, ease_out((t - 0.3) / 0.5))
-        sub = pill("DTZ Schreiben · Niveau B1.1", 44, WHITE, ORANGE, 34, 12, "ExtraBold")
+        sub = pill("DTZ Schreiben · Niveau B1.1", 44, WHITE, BLUE, 34, 12, "ExtraBold")
         comp_center(frame, sub, W / 2, 560, max(0.01, back_out((t - 0.6) / 0.4)))
         for k, (n, a) in enumerate(M.AUFGABEN.items()):
             st = 1.2 + 0.35 * k
