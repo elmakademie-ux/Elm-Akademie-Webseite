@@ -36,8 +36,10 @@ NEGATIVE_BLOCK = (
     "no photorealistic humans, no scary or uncanny expressions"
 )
 FRAMING_BLOCK = (
-    "16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be "
-    "cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles."
+    "9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: "
+    "characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth "
+    "(sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles "
+    "and the top tenth free for platform UI."
 )
 
 

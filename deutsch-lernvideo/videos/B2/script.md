@@ -62,7 +62,7 @@ CAMERA: Wide crane move through the foyer, then approach both characters.
 LIGHTING: Bright modern daylight through a glass facade, cool tones with warm accents.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (confident, engaging, moderately brisk) says in German: "Ein Gespräch von zwei Minuten kann der Anfang einer Zusammenarbeit sein. Aber wie beginnt man es professionell?" | Erzähler (engaging, moderate) says in German: "Heute begleitest du zwei Fachleute von der ersten Begrüßung bis zum Austausch der Kontaktdaten."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -101,7 +101,7 @@ CAMERA: Medium shot of Jonas, precise pop-ins.
 LIGHTING: Bright clean light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (clear, confident, moderate) says in German: "Das ist Niveau B2. Du sprichst formell und differenziert, du argumentierst und gehst auf andere Standpunkte ein." | Erzähler (pointed, moderate) says in German: "Achte auf die Anrede: Hier sagen die beiden „Sie“."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -142,7 +142,7 @@ CAMERA: Alternating medium shots, close-up on the handshake and name badges.
 LIGHTING: Bright foyer light, clear faces.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (polite, confident, natural) says in German: "Guten Tag, entschuldigen Sie die Störung. Darf ich mich kurz vorstellen? Jonas Keller, ich leite die Entwicklung bei der Lernplattform Lernfluss." | Mia (professional, warm, natural) says in German: "Guten Tag, Herr Keller. Mia Navarro, ich bin Projektleiterin im Bereich E-Learning bei der Lernwerk GmbH. Es freut mich, Sie kennenzulernen." | Jonas (sincere, natural) says in German: "Die Freude ist ganz meinerseits. Ihr Vortrag zur Lernmotivation hat mir sehr gut gefallen." | Mia (pleased, natural) says in German: "Vielen Dank, das freut mich zu hören."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -182,7 +182,7 @@ CAMERA: Two-shot with soft holographic interface graphics floating between them.
 LIGHTING: Clear modern light, holograms glow softly in blue and turquoise.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (interested, natural) says in German: "Woran arbeiten Sie derzeit?" | Mia (articulate, engaged, natural) says in German: "Wir entwickeln gerade eine adaptive Lernumgebung für Deutsch als Fremdsprache, die sich automatisch dem Sprachniveau der Lernenden anpasst. Mein Team verantwortet die didaktische Konzeption, während externe Partner die technische Umsetzung übernehmen." | Jonas (intrigued, natural) says in German: "Das ist interessant, denn genau an der technischen Seite arbeiten wir. Mein Team ist für die Schnittstellen und die Datenanalyse zuständig."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -223,7 +223,7 @@ CAMERA: Calm shot/reverse shot, close-ups on arguments, two-shot at the end.
 LIGHTING: Soft lounge light, warm tones.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (curious, natural) says in German: "Setzen Sie dabei auch künstliche Intelligenz ein?" | Mia (convinced, measured, natural) says in German: "In Teilbereichen schon, etwa bei der Erstellung von Übungsvarianten. Ich bin allerdings der Ansicht, dass KI Lehrkräfte nicht ersetzen, sondern entlasten sollte. Gerade bei der Aussprache und beim Feedback ist die menschliche Einschätzung unverzichtbar." | Jonas (diplomatic, thoughtful, natural) says in German: "Da stimme ich Ihnen grundsätzlich zu. Ich würde allerdings einwenden, dass automatisiertes Feedback bei großen Lerngruppen einen echten Mehrwert bietet, sofern die Qualität regelmäßig überprüft wird." | Mia (open, appreciative, natural) says in German: "Das ist ein berechtigter Punkt. Vermutlich liegt die Lösung in einer Kombination aus beidem."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -268,7 +268,7 @@ CAMERA: Medium shot; close-up on the business cards (fictional data, no readable
 LIGHTING: Bright daylight mood near the exit.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (proposing, polite, natural) says in German: "Wären Sie grundsätzlich an einem Pilotprojekt interessiert? Wir könnten Ihre Inhalte auf unserer Plattform testen." | Mia (interested, careful, natural) says in German: "Durchaus. Ich würde vorschlagen, dass wir zunächst einen Termin vereinbaren, um die Rahmenbedingungen zu klären, bevor wir intern Ressourcen einplanen." | Jonas (courteous, natural) says in German: "Sehr gern. Darf ich Ihnen meine Visitenkarte geben?" | Mia (friendly, professional, natural) says in German: "Danke. Hier ist meine. Sie erreichen mich am besten per E-Mail, die Adresse steht auf der Karte." | Jonas (confident, natural) says in German: "Ich melde mich Anfang nächster Woche bei Ihnen." | Mia (warm, professional, natural) says in German: "Das wäre wunderbar. Es war ein sehr anregendes Gespräch, und ich freue mich auf die Zusammenarbeit." | Jonas (warm, natural) says in German: "Ich mich ebenfalls. Auf Wiedersehen, Frau Navarro." | Mia (warm, natural) says in German: "Auf Wiedersehen, Herr Keller."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -310,7 +310,7 @@ CAMERA: Static frontal shot, calm card pop-ins.
 LIGHTING: Bright clean light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (clear, moderate) says in German: "Das sind wichtige Wendungen für berufliche Gespräche. Sprich nach!" | Mia (clear, moderate) says in German: "verantwortlich für, zuständig für. Die Zusammenarbeit. Das Pilotprojekt." | Jonas (clear, moderate) says in German: "die Rahmenbedingungen. Die Schnittstelle. Etwas einplanen." | Mia (clear, moderate) says in German: "unverzichtbar, berechtigt, grundsätzlich. Einen Standpunkt vertreten." | Jonas (clear, moderate) says in German: "Die Freude ist ganz meinerseits. Ich melde mich bei Ihnen."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -350,7 +350,7 @@ CAMERA: Medium shot of Mia, three columns fade in.
 LIGHTING: Bright clean light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (clear, moderate) says in German: "Erstens: Mit dem Konjunktiv II klingst du höflich. „Wären Sie interessiert?“ klingt freundlicher als „Sind Sie interessiert?“." | Erzähler (clear, moderate) says in German: "Zweitens: Mit „allerdings“, „sofern“ und „obwohl“ begründest du differenziert und gehst auf Gegenargumente ein." | Erzähler (clear, moderate) says in German: "Drittens: Relativsätze mit Präposition machen deine Sätze präziser: eine Lernumgebung, an der wir arbeiten."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -395,7 +395,7 @@ CAMERA: Frontal on the board, Mia and Jonas on both sides.
 LIGHTING: Bright light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (playful, moderate) says in German: "Jetzt bist du dran! Formuliere höflicher." | Erzähler (clear, moderate) says in German: "Eins: „Sind Sie an einem Pilotprojekt interessiert?“ Benutze den Konjunktiv II." | Erzähler (pleased, moderate) says in German: "Lösung: Wären Sie an einem Pilotprojekt interessiert?" | Erzähler (clear, moderate) says in German: "Zwei: „Ich schlage vor: Wir vereinbaren einen Termin.“ Beginne mit „Ich würde vorschlagen, dass …“." | Erzähler (pleased, moderate) says in German: "Lösung: Ich würde vorschlagen, dass wir einen Termin vereinbaren." | Erzähler (clear, moderate) says in German: "Drei: Verbinde die Sätze mit „sofern“: Automatisiertes Feedback hilft. Die Qualität wird überprüft." | Erzähler (pleased, moderate) says in German: "Lösung: Automatisiertes Feedback hilft, sofern die Qualität überprüft wird." | Erzähler (encouraging, moderate) says in German: "Vier: Stelle dich in drei Sätzen vor: Name, Position, Unternehmen."
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -435,7 +435,7 @@ CAMERA: Medium shot, slow zoom-out through the foyer, dissolve to end card.
 LIGHTING: Warm afternoon light through the glass facade.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Mia (inviting, professional, natural) says in German: "Und Sie? Wie würden Sie sich in drei Sätzen vorstellen?" | Jonas (friendly, professional, natural) says in German: "Schreiben Sie es in die Kommentare. Wir freuen uns auf Ihre Vorstellung." | Erzähler (warm, moderate) says in German: "Abonniere den Kanal für weitere Folgen. Bis zum nächsten Mal!"
 MUSIC / AMBIENCE: modern understated corporate pop, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 

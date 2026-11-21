@@ -62,7 +62,7 @@ CAMERA: Gliding steadicam through the party, party noise fades, settles on the e
 LIGHTING: Warm evening light, string lights with bokeh, colorful accents.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (curious, conversational, moderate) says in German: "Du bist auf einer Party und kennst nur die Gastgeberin. Wie kommst du ins Gespräch?" | Erzähler (warm, moderate) says in German: "Heute siehst du, wie aus einem kurzen Hallo ein richtiges Gespräch wird."
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -101,7 +101,7 @@ CAMERA: Medium shot of Mia, slight pan to the board.
 LIGHTING: Bright, soft purple and orange gradients.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (friendly, moderate) says in German: "Das ist Niveau B1. Du kannst Erfahrungen beschreiben und deine Meinung sagen." | Erzähler (clear, moderate) says in German: "Außerdem begründest du, was du denkst – mit Wörtern wie „weil“, „obwohl“ und „deshalb“."
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -144,7 +144,7 @@ CAMERA: Medium-wide at the buffet, then medium shot/reverse shot with the cake b
 LIGHTING: Warm party light, string lights in the background.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (casual, friendly, natural) says in German: "Hi, ich glaube, wir kennen uns noch nicht. Ich bin Jonas." | Mia (warm, natural) says in German: "Hallo Jonas, ich bin Mia. Stimmt, wir sind uns noch nicht begegnet." | Jonas (curious, natural) says in German: "Woher kennst du Sophie?" | Mia (friendly, natural) says in German: "Wir haben uns vor zwei Jahren im Deutschkurs kennengelernt. Damals war Sophie meine Tandempartnerin. Und du?" | Jonas (amused, natural) says in German: "Wir haben zusammen in Leipzig studiert. Sie hat mich vorhin gewarnt, dass heute ihre berühmte Schokoladentorte auf den Tisch kommt." | Mia (laughing, natural) says in German: "Dann bin ich froh, dass ich vorher nichts gegessen habe!"
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -186,7 +186,7 @@ CAMERA: Two-shot on the sofa, calm close-ups for personal remarks.
 LIGHTING: Dim warm lamp light, blurred party in the background.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (curious, natural) says in German: "Du hast einen leichten Akzent. Woher kommst du ursprünglich?" | Mia (proud, natural) says in German: "Aus Valencia, in Spanien. Seit fast drei Jahren lebe ich in Köln. Ich arbeite als Projektkoordinatorin bei einem Unternehmen, das digitale Lernmaterialien entwickelt." | Jonas (self-ironic, natural) says in German: "Klingt spannend! Ich bin Softwareentwickler. Manche würden sagen, das ist nicht besonders kreativ." | Mia (convinced, warm, natural) says in German: "Das glaube ich nicht. Programmieren ist doch kreativ, denn man muss ständig neue Lösungen finden." | Jonas (pleased, natural) says in German: "Genau so sehe ich das auch! Danke."
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -228,7 +228,7 @@ CAMERA: Alternating close-ups; short desaturated flashback bubble.
 LIGHTING: Soft light; flashback slightly desaturated.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (interested, natural) says in German: "Und wie hast du dich in Deutschland eingelebt? Ist dir etwas schwergefallen?" | Mia (reflective, honest, natural) says in German: "Am Anfang war es schwierig, Freunde zu finden, weil die Leute hier eher zurückhaltend sind. Inzwischen habe ich aber gemerkt, dass sie sehr zuverlässig sind, wenn man sie erst einmal kennt." | Jonas (sympathetic, humorous, natural) says in German: "Da ist was dran. Als ich für den Job nach Köln gezogen bin, habe ich mich auch fremd gefühlt, obwohl ich Deutscher bin. Der Dialekt war für mich anfangs ein Rätsel." | Mia (laughing, natural) says in German: "Ja, genau! Kölsch verstehe ich bis heute nicht richtig." | Jonas (joking, natural) says in German: "Keine Sorge, das geht vielen Kölnern auch so."
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -272,7 +272,7 @@ CAMERA: Medium shot at the balcony railing with city lights behind, slow circula
 LIGHTING: Blue hour, warm light from the window, bokeh city lights.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Jonas (curious, natural) says in German: "Was würdest du Leuten raten, die neu in Deutschland sind?" | Mia (convinced, clear, natural) says in German: "Meiner Meinung nach sollte man so früh wie möglich einem Verein beitreten oder einen Kurs besuchen. Man lernt dort nicht nur die Sprache, sondern auch Menschen mit ähnlichen Interessen kennen. Deshalb habe ich mich bei einem Fahrradclub angemeldet." | Jonas (thoughtful, natural) says in German: "Ich finde, das ist ein guter Tipp. Trotzdem traut sich nicht jeder. Außerdem fehlt vielen die Zeit." | Mia (reasonable, warm, natural) says in German: "Das stimmt. Aber wenn man nur eine Stunde pro Woche investiert, ist das schon ein Anfang." | Jonas (friendly, natural) says in German: "Da hast du recht. Weißt du was? Mein Kumpel Tom fährt auch viel Rad. Soll ich euch vorstellen?" | Mia (cheerful, natural) says in German: "Sehr gern! Und danach probieren wir die berühmte Schokoladentorte." | Jonas (laughing, natural) says in German: "Abgemacht!"
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -314,7 +314,7 @@ CAMERA: Static frontal shot, calm card pop-ins.
 LIGHTING: Bright pastel light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (encouraging, moderate) says in German: "Das sind nützliche Wörter und Wendungen für Smalltalk. Sprich nach!" | Mia (clear, moderate) says in German: "jemanden kennenlernen. Sich einleben. Sich fremd fühlen." | Jonas (clear, moderate) says in German: "zurückhaltend, zuverlässig. Inzwischen. Anfangs." | Mia (clear, moderate) says in German: "Meiner Meinung nach. Ich finde, dass. Da hast du recht." | Jonas (clear, moderate) says in German: "einem Verein beitreten. Abgemacht!"
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -354,7 +354,7 @@ CAMERA: Medium shot of Jonas, two columns fill the frame.
 LIGHTING: Bright, clear light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (clear, moderate) says in German: "Mit „weil“, „obwohl“ und „dass“ steht das Verb am Ende: Es war schwierig, weil die Leute zurückhaltend sind." | Erzähler (clear, moderate) says in German: "Mit „deshalb“, „trotzdem“ und „außerdem“ steht das Verb direkt danach: Deshalb habe ich mich angemeldet." | Erzähler (clear, moderate) says in German: "Der Relativsatz beschreibt ein Nomen: ein Unternehmen, das digitale Lernmaterialien entwickelt."
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -399,7 +399,7 @@ CAMERA: Frontal on the board, Mia and Jonas on both sides.
 LIGHTING: Bright light.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Erzähler (playful, moderate) says in German: "Jetzt bist du dran! Welches Wort passt?" | Erzähler (clear, moderate) says in German: "Eins: Ich fühle mich fremd, … ich Deutscher bin. Weil oder obwohl?" | Erzähler (pleased, moderate) says in German: "Lösung: obwohl." | Erzähler (clear, moderate) says in German: "Zwei: Ich lerne Menschen kennen. … habe ich mich angemeldet. Deshalb oder trotzdem?" | Erzähler (pleased, moderate) says in German: "Lösung: Deshalb." | Erzähler (clear, moderate) says in German: "Drei: Programmieren ist kreativ, … man findet neue Lösungen. Denn oder obwohl?" | Erzähler (pleased, moderate) says in German: "Lösung: denn." | Erzähler (encouraging, moderate) says in German: "Vier: Sag deine Meinung. Beginne mit „Meiner Meinung nach“ und nenne einen Grund."
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
@@ -440,7 +440,7 @@ CAMERA: Medium shot, slow zoom-out over the city, dissolve to end card.
 LIGHTING: Night mood, warm window light, city lights.
 DIALOGUE (German, speech pace clear and natural; lip-sync to the supplied audio track): Mia (inviting, warm, natural) says in German: "Und du? Was rätst du Leuten, die neu in einem Land sind?" | Jonas (friendly, natural) says in German: "Schreib deine Meinung in die Kommentare, und vergiss den Grund nicht!" | Erzähler (friendly, moderate) says in German: "Benutze „weil“, „deshalb“ oder „trotzdem“. Wir lesen alle Kommentare." | Erzähler (warm, moderate) says in German: "Abonniere den Kanal und bis zum nächsten Mal!"
 MUSIC / AMBIENCE: lively indie pop, softer under speech, very low in the mix. Keep music low so the speech stays clearly intelligible.
-FRAMING: 16:9 master frame; keep faces and key action inside the central 9:16 safe zone so the shot can be cropped for TikTok / Reels / Shorts; leave the lower third free for subtitles.
+FRAMING: 9:16 vertical master frame (1080x1920) for TikTok / Reels / Shorts; compose for portrait: characters in medium shots or close-ups stacked vertically, wide shots only with vertical depth (sky/foreground), keep faces in the middle 60% of the frame, leave the lower fifth free for subtitles and the top tenth free for platform UI.
 NEGATIVE: no text, no letters, no subtitles, no logos, no watermarks, no extra characters in the foreground, no change of hairstyle, hair color, clothing or face between shots, no distorted hands or faces, no photorealistic humans, no scary or uncanny expressions
 ```
 
