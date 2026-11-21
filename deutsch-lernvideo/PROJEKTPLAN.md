@@ -2,7 +2,7 @@
 
 ## 1. Ziel und Umfang
 Vier eigenständige Lernvideos (A1, A2, B1, B2) mit denselben Figuren (Mia, Jonas), 3D-Cartoon-Look,
-deutschen Untertiteln, für YouTube (16:9), TikTok/Instagram (9:16-Zuschnitt).
+deutschen Untertiteln, für TikTok, Instagram Reels und YouTube Shorts (9:16 Hochformat); 16:9 optional.
 
 ## 2. Lieferumfang (Phase 1 – erledigt)
 | Video | Szenen | Zeilen | Untertitel | geschätzte Länge | Setting |
@@ -32,7 +32,7 @@ Dazu: Prompts je Szene, Sprechertexte/TTS-Manifest, SRT/VTT, Schnittliste, Valid
 | 4 | Stimmen auswählen und testen (kurzer Probelauf) | offen | **ja (Kosten)** |
 | 5 | Pilot: eine Szene (z. B. A1-S04) komplett erzeugen, Konsistenz prüfen | offen | **ja (Kosten)** |
 | 6 | Restliche Szenen erzeugen, Audiodauern → Untertitel-Sync | offen | **ja (Kosten)** |
-| 7 | Schnitt, Einblendungen, Musik, Endcard, Export 16:9 und 9:16 | offen | nein |
+| 7 | Schnitt, Einblendungen, Musik, Endcard, Export 9:16 | offen | nein |
 | 8 | Veröffentlichung (Metadaten liegen in `script.json → social`) | offen | **ja (ausdrücklich)** |
 
 ## 5. Mengengerüst (für die Kostenplanung)

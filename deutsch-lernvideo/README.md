@@ -68,7 +68,7 @@ und Untertitel verwenden dieselben IDs, so lassen sich einzelne Szenen neu erzeu
   In B2 kommt nur ein Namensschild hinzu. Kleidung ändern: `characters.json`, danach `build.py`.
 * **Anrede:** A1–B1 „du“, B2 „Sie“ (Konferenz). Der Erzähler spricht die Zuschauer immer mit „du“ an.
 * **Sprecher:** Mia, Jonas und ein Erzähler (Off-Stimme für Hook, Einführung, Grammatik, Übung).
-* **Format:** 16:9-Master, Gesichter in der mittleren 9:16-Zone für Shorts/Reels/TikTok.
+* **Format:** 9:16-Hochformat (1080 × 1920) für TikTok, Reels und Shorts. Die Prompts verlangen Hochformat-Komposition. Für YouTube-Querformat wäre ein eigener 16:9-Durchlauf nötig (`FRAMING_BLOCK` in `scripts/lib.py` ändern).
 * **Text im Bild:** KI-Videomodelle schreiben deutsche Wörter oft falsch. Darum verbieten die Prompts Text;
   Einblendungen (`on_screen`) und Untertitel werden in der Postproduktion gesetzt.
 * **Dauer:** Die Zeiten sind Schätzungen (Wörter/Sprechtempo + Pausen): A1 ≈ 3:35, A2 ≈ 5:40, B1 ≈ 5:25, B2 ≈ 4:45.
