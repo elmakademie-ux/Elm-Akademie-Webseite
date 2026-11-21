@@ -117,6 +117,9 @@ def spoken(text):
         if frac:
             out += " Komma " + " ".join(num2words(int(d), lang="de") for d in frac)
         return out
+    # Buchstabieren: N-A-S-E-R-I -> En, A, Es, E, Er, I
+    text = re.sub(r"\b[A-ZÄÖÜ](?:-[A-ZÄÖÜ])+\b",
+                  lambda m: ", ".join(LETTERS[c] for c in m.group(0).split("-")), text)
     for short, said in SAY_AS.items():
         text = re.sub(r"\b" + re.escape(short) + r"\b", said, text)
     # Postleitzahl (5 Ziffern) Ziffer für Ziffer: 44135 -> vier vier eins drei fünf
@@ -125,6 +128,10 @@ def spoken(text):
     return re.sub(r"(\d+)(?:,(\d+))?", rep, text)
 
 
+LETTERS = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E", "F": "Ef", "G": "Ge", "H": "Ha", "I": "I",
+           "J": "Jott", "K": "Ka", "L": "El", "M": "Em", "N": "En", "O": "O", "P": "Pe", "Q": "Ku", "R": "Er",
+           "S": "Es", "T": "Te", "U": "U", "V": "Vau", "W": "We", "X": "Ix", "Y": "Ypsilon", "Z": "Zett",
+           "Ä": "Ä", "Ö": "Ö", "Ü": "Ü"}
 SAY_AS = {"DTZ": "De Te Zett", "A2/B1": "A zwei, B eins"}   # Abkürzungen so, wie man sie spricht
 
 
@@ -142,6 +149,7 @@ def vocab_hint(jobs):
 
 def words(t):
     w = re.sub(r"[^\wäöüß ]", " ", spoken(t).lower().replace("-", " ")).split()
+    w = [LETTERS.get(x.upper(), x).lower() if len(x) == 1 and x.isalpha() else x for x in w]   # einzelne Buchstaben
     return [SAME.get(x, x) for x in w]
 
 
