@@ -44,6 +44,21 @@ def read_presets(html_path):
 
     for m in re.finditer(r'title:\s*"([^"]+)"(.*?)items:\s*\[(.*?)\]', block, re.S):
         title, middle, items = m.group(1), m.group(2), m.group(3)
+        if re.search(r'mode:\s*"dialog"', middle):
+            # Dialog: Zeilen "Name: Satz"; Stimme nach male/female
+            mn = re.search(r'male:\s*"([^"]*)"', middle); fn = re.search(r'female:\s*"([^"]*)"', middle)
+            male, female = (mn.group(1).lower() if mn else ""), (fn.group(1).lower() if fn else "")
+            order = []
+            for l in re.findall(r'"([^"]+)"', items):
+                mm = re.match(r"^([^:]{1,30}):\s*(.+)$", l)
+                if not mm:
+                    continue
+                who, text = mm.group(1).strip().lower(), mm.group(2).strip()
+                if who not in order:
+                    order.append(who)
+                v = "f" if who == female else "m" if who == male else ("f" if order.index(who) % 2 else "m")
+                add(v, text, text)
+            continue
         r = re.search(r'roles:\s*"(\w\w)"', middle)
         roles = r.group(1) if r else "mf"
         q, a = roles[0], roles[1]
@@ -113,7 +128,7 @@ def spoken(text):
 SAY_AS = {"DTZ": "De Te Zett", "A2/B1": "A zwei, B eins"}   # Abkürzungen so, wie man sie spricht
 
 
-SAME = {"cairo": "kairo", "baghdad": "bagdad", "autowerkstadt": "autowerkstatt", "jonas": "yonas", "bagdat": "bagdad"}   # gleiche Aussprache, andere Schreibweise
+SAME = {"cairo": "kairo", "baghdad": "bagdad", "autowerkstadt": "autowerkstatt", "jonas": "yonas", "bagdat": "bagdad", "sarah": "sara", "tschüs": "tschüss", "tschüß": "tschüss"}   # gleiche Aussprache, andere Schreibweise
 VOCAB = ""   # Namen, Länder, Sprachen aus den Vorlagen, damit Whisper seltene Wörter kennt
 
 

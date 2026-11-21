@@ -90,9 +90,26 @@ input[type=file]{font:inherit;color:var(--fg);max-width:100%}
         <input type="text" id="title">
       </div>
       <div class="field">
+        <label for="mode">Art des Videos</label>
+        <select id="mode">
+          <option value="card">Karte mit Stichwörtern</option>
+          <option value="dialog">Dialog mit zwei Personen</option>
+        </select>
+      </div>
+      <div class="row" id="dialogNames" hidden>
+        <div class="field">
+          <label for="male">Name mit Männerstimme</label>
+          <input type="text" id="male" placeholder="z. B. Ali">
+        </div>
+        <div class="field">
+          <label for="female">Name mit Frauenstimme</label>
+          <input type="text" id="female" placeholder="z. B. Sara">
+        </div>
+      </div>
+      <div class="field">
         <label for="items">Karten-Zeilen</label>
         <textarea id="items" spellcheck="false"></textarea>
-        <p class="hint">Eine Zeile pro Stichwort: <b>Stichwort | ganze Frage | Beispielantwort</b>. Frage und Antwort sind optional. Bis zu 9 Zeilen passen gut.</p>
+        <p class="hint" id="itemsHint">Eine Zeile pro Stichwort: <b>Stichwort | ganze Frage | Beispielantwort</b>. Frage und Antwort sind optional. Bis zu 9 Zeilen passen gut.</p>
       </div>
       <div class="row">
         <div class="field">
@@ -241,6 +258,28 @@ const PRESETS = {
       "Arbeit/Beruf | | Ich bin Schneiderin und arbeite gerade in einer Bäckerei.",
       "Familie | | Ich bin verheiratet und ich habe drei Kinder.",
       "Sprachen | | Meine Muttersprache ist Arabisch und ich kann Kurdisch und ein bisschen Deutsch sprechen."
+    ]
+  },
+  "A1 Dialog: Hallo! Wie heißt du?": {
+    title: "A1 – Hallo! Wie heißt du?",
+    mode: "dialog",
+    male: "Ali",
+    female: "Sara",
+    theme: "gruen",
+    items: [
+      "Ali: Hallo!",
+      "Sara: Hallo! Guten Morgen!",
+      "Ali: Wie heißt du?",
+      "Sara: Ich heiße Sara. Und du?",
+      "Ali: Ich heiße Ali.",
+      "Sara: Freut mich, Ali!",
+      "Ali: Freut mich auch!",
+      "Sara: Wie bitte? Kannst du deinen Namen wiederholen?",
+      "Ali: Ja, natürlich. Ich heiße Ali.",
+      "Sara: Ah, Ali! Danke!",
+      "Ali: Gern!",
+      "Sara: Tschüss, Ali!",
+      "Ali: Tschüss, Sara! Bis bald!"
     ]
   },
   "DTZ Monolog Omar": {
@@ -421,6 +460,9 @@ function load(k){ try{ return localStorage.getItem("lks:"+k) }catch(e){ return n
 function applyPreset(name){
   const p = PRESETS[name];
   $("title").value = p.title;
+  $("mode").value = p.mode || "card";
+  $("male").value = p.male || ""; $("female").value = p.female || "";
+  updateModeUI();
   $("items").value = p.items.join("\n");
   setRoles(p.roles || "mf");
   state.titleVoice = p.titleVoice || ""; store("titleVoice", state.titleVoice);
@@ -438,7 +480,32 @@ Object.keys(PRESETS).forEach(name => {
 
 function roles(){ const r = document.querySelector('input[name="roles"]:checked').value; return { q:r[0], a:r[1] }; }
 function setRoles(r){ const el = $("roles-" + r); if (el){ el.checked = true; store("roles", r); } }
+function isDialog(){ return $("mode").value === "dialog"; }
+/* Dialog lines: "Name: Satz". The voice comes from the two name fields. */
+function readDialog(){
+  const male = $("male").value.trim().toLowerCase(), female = $("female").value.trim().toLowerCase();
+  const lines = $("items").value.split("\n").map(l => l.trim()).filter(Boolean).slice(0,40);
+  const order = [];
+  return lines.map(l => {
+    const m = l.match(/^([^:]{1,30}):\s*(.+)$/);
+    const who = m ? m[1].trim() : "", text = m ? m[2].trim() : l;
+    const key = who.toLowerCase();
+    if (who && !order.includes(key)) order.push(key);
+    const voice = key === female ? "f" : key === male ? "m" : (order.indexOf(key) % 2 ? "f" : "m");
+    return { who, text, voice, side: order.indexOf(key) % 2 ? "right" : "left", word:"", q:"", a:"" };
+  });
+}
+function updateModeUI(){
+  const d = isDialog();
+  $("dialogNames").hidden = !d;
+  $("voiceHint").querySelector(".seg").hidden = d;
+  document.querySelector('label[for="items"]').textContent = d ? "Dialog-Zeilen" : "Karten-Zeilen";
+  $("itemsHint").innerHTML = d
+    ? "Eine Zeile pro Satz: <b>Name: Satz</b>, z. B. „Ali: Hallo!“. Die Stimme richtet sich nach den beiden Namen oben."
+    : "Eine Zeile pro Stichwort: <b>Stichwort | ganze Frage | Beispielantwort</b>. Frage und Antwort sind optional. Bis zu 9 Zeilen passen gut.";
+}
 function readItems(){
+  if (isDialog()) return readDialog();
   return $("items").value.split("\n").map(l => l.trim()).filter(Boolean).slice(0,12).map(l => {
     const [word, q, a] = l.split("|").map(s => (s || "").trim());
     return { word, q, a };
@@ -456,14 +523,17 @@ function cfg(){
     items: readItems(),
     secs: secsValue(),
     footer: $("footer").value.trim(),
-    showAnswer: $("showAnswer").checked
+    showAnswer: $("showAnswer").checked,
+    mode: $("mode").value
   };
 }
 function saveDraft(){
   store("title",$("title").value); store("items",$("items").value);
   store("secs",$("secs").value); store("footer",$("footer").value); store("theme",$("theme").value);
   store("showAnswer",$("showAnswer").checked ? "1":"0");
+  store("mode",$("mode").value); store("male",$("male").value); store("female",$("female").value);
 }
+["mode","male","female"].forEach(id => $(id).addEventListener("input", () => { updateModeUI(); saveDraft(); updateSoundUI(); if(!state.playing) drawFrame(null); }));
 ["title","items","secs","footer","showAnswer","theme","showLogo"].forEach(id => $(id).addEventListener("input", () => { saveDraft(); if(!state.playing) drawFrame(null); if (id === "items" || id === "title") updateSoundUI(); }));
 
 /* ---------- drawing ---------- */
@@ -480,6 +550,94 @@ function wrap(text, maxW){
 }
 const SERIF = '"Noto Serif", Georgia, "Times New Roman", serif';
 const SANS = 'Poppins, Inter, Arial, sans-serif';
+
+/* Dialog: chat bubbles, newest at the bottom, older ones scroll up */
+function bubbleLayout(c, maxW){
+  ctx.font = `700 italic 50px ${SERIF}`;
+  return c.items.map(it => {
+    const lines = wrap(it.text, maxW - 64);
+    const tw = Math.max(...lines.map(l => ctx.measureText(l).width));
+    const bw = Math.min(maxW, tw + 64), bh = 34 + lines.length * 64 + 10;
+    return { lines, bw, bh, h: 44 + bh + 30 };
+  });
+}
+function drawDialog(c, TH, cx, cy, cw, ch, active, now){
+  const footerH = c.footer ? 70 : 0;
+  const ax = cx + 36, ay = cy + 36, aw = cw - 72, ah = ch - 72 - footerH;
+  const t = now || 0;
+  const P = state.playing ? state.plan : null;
+  // which lines are visible
+  let shown = c.items.length, cur = -1;
+  if (P){
+    shown = P.items.filter(p => t >= p.start).length;
+    cur = active ? active.index : -1;
+  }
+  if (shown === 0){
+    // title card before the first line
+    const names = [...new Set(c.items.map(it => it.who).filter(Boolean))].join(" & ");
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillStyle = TH.mark; ctx.font = `600 44px ${SANS}`;
+    ctx.fillText("Dialog", W/2, cy + ch*0.36);
+    ctx.fillStyle = "#14152b";
+    ctx.font = `800 italic 84px ${SERIF}`;
+    const tl = wrap(c.title.replace(/^[A-C][12]\s*[–-]\s*/, ""), aw - 40);
+    tl.forEach((l, i) => ctx.fillText(l, W/2, cy + ch*0.45 + i*100));
+    ctx.fillStyle = TH.mark; ctx.font = `600 50px ${SANS}`;
+    ctx.fillText(names, W/2, cy + ch*0.45 + tl.length*100 + 40);
+    return;
+  }
+  const maxW = aw * 0.78;
+  const L = bubbleLayout(c, maxW);
+  const heightUpTo = k => L.slice(0, k).reduce((s, b) => s + b.h, 0);
+  const offFor = k => Math.max(0, heightUpTo(k) - ah);
+  let off = offFor(shown);
+  if (P && shown > 0){
+    const p = Math.min(1, (t - P.items[shown-1].start) / 0.35), e = 1 - Math.pow(1-p, 3);
+    off = offFor(shown-1) + (offFor(shown) - offFor(shown-1)) * e;
+  }
+  ctx.save();
+  ctx.beginPath(); ctx.rect(cx, ay - 10, cw, ah + 20); ctx.clip();
+  let y = ay - off;
+  for (let i = 0; i < shown; i++){
+    const it = c.items[i], b = L[i], right = it.side === "right";
+    let alpha = 1, dy = 0;
+    if (P){
+      const p = Math.min(1, (t - P.items[i].start) / 0.3);
+      alpha = p; dy = (1 - p) * 40;
+    }
+    if (y + b.h > ay - 20 && y < ay + ah + 20){
+      ctx.globalAlpha = alpha * (P && i !== cur && cur >= 0 ? 0.72 : 1);
+      const bx = right ? ax + aw - b.bw - 86 : ax + 86;
+      const top = y + dy;
+      // avatar
+      const avx = right ? ax + aw - 36 : ax + 36, avy = top + 44 + 40;
+      ctx.fillStyle = right ? TH.mark : TH.box;
+      ctx.beginPath(); ctx.arc(avx, avy, 34, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = right ? "#ffffff" : TH.mark; ctx.font = `700 36px ${SANS}`;
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText((it.who || "?").charAt(0).toUpperCase(), avx, avy + 2);
+      // name
+      ctx.fillStyle = TH.mark; ctx.font = `600 32px ${SANS}`;
+      ctx.textAlign = right ? "right" : "left";
+      ctx.fillText(it.who, right ? bx + b.bw : bx, top + 20);
+      // bubble
+      ctx.fillStyle = right ? TH.mark : TH.box;
+      roundRect(bx, top + 44, b.bw, b.bh, 30); ctx.fill();
+      if (P && i === cur){ ctx.strokeStyle = TH.mark; ctx.lineWidth = 5; ctx.setLineDash([18,9]); ctx.lineDashOffset = -t*30;
+        roundRect(bx - 8, top + 36, b.bw + 16, b.bh + 16, 36); ctx.stroke(); ctx.setLineDash([]); }
+      ctx.fillStyle = right ? "#ffffff" : "#14152b";
+      ctx.font = `700 italic 50px ${SERIF}`; ctx.textAlign = "left"; ctx.textBaseline = "middle";
+      b.lines.forEach((l, j) => ctx.fillText(l, bx + 32, top + 44 + 34 + 22 + j*64));
+    }
+    y += b.h;
+  }
+  ctx.restore();
+  ctx.globalAlpha = 1;
+  if (c.footer){
+    ctx.fillStyle = "#6a6d92"; ctx.font = `600 38px ${SANS}`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(c.footer, W/2, cy+ch-30-footerH/2);
+  }
+}
 
 /* active: {index, local} where local = seconds since this item became active */
 function drawFrame(active, now){
@@ -505,6 +663,7 @@ function drawFrame(active, now){
   // card
   const cx = 30, cy = 140, cw = W-60, ch = H-cy-30;
   ctx.fillStyle = "#ffffff"; roundRect(cx,cy,cw,ch,26); ctx.fill();
+  if (c.mode === "dialog"){ drawDialog(c, TH, cx, cy, cw, ch, active, now); return; }
 
   const answerH = c.showAnswer ? 330 : 0;
   const footerH = c.footer ? 70 : 0;
@@ -654,6 +813,7 @@ function hasClip(v, text){ return !!CLIPS[clipKey(v, text)]; }
 function clip(v, text){ return BUFS[clipKey(v, text)] || null; }
 function missingVoices(){
   const c = cfg(), R = roles(), miss = [];
+  if (c.mode === "dialog"){ c.items.forEach(it => { if (!hasClip(it.voice, it.text)) miss.push(it.text); }); return miss; }
   c.items.forEach(it => { if (it.q && !hasClip(R.q, it.q)) miss.push(it.q); if (it.a && !hasClip(R.a, it.a)) miss.push(it.a); });
   return miss;
 }
@@ -681,6 +841,18 @@ function plan(c){
   const tclip = voices ? clip(TV, c.title) : null;
   if (tclip) intro = Math.max(INTRO, tclip.duration + 0.9);
   const items = []; let t = intro;
+  if (c.mode === "dialog"){
+    intro = t = Math.max(intro, 2.2);           /* title card */
+    c.items.forEach(it => {
+      const d = voices ? (clip(it.voice, it.text)?.duration ?? estSecs(it.text)) : Math.max(1.5, c.secs * 0.6);
+      const dur = Math.max(1.2, 0.15 + d + 0.6);
+      items.push({ start:t, dur, sayAt:0.15, ansAt:0 });
+      t += dur;
+    });
+    let total = t + 0.6 + ($("showLogo").checked ? OUTRO_LOGO : OUTRO);
+    if (soundMode() === "file" && audioFile.buffer) total = Math.max(total, audioFile.buffer.duration + 0.3);
+    return { intro, items, total, voices, dialog:true };
+  }
   c.items.forEach(it => {
     if (voices){
       const qd = it.q ? (clip(R.q, it.q)?.duration ?? estSecs(it.q)) : 0;
@@ -745,8 +917,9 @@ function startAudio(dest, P){
       else if (!dest) timers.push(setTimeout(() => browserSay(text, v === "m"), at*1000));
     };
     const R = roles();
-    if (state.titleVoice !== "-") say(state.titleVoice || R.q, c.title, 0.3);
-    c.items.forEach((it, i) => { const p = P.items[i]; say(R.q, it.q, p.start + p.qAt); say(R.a, it.a, p.start + p.aAt); });
+    if (state.titleVoice !== "-" && c.mode !== "dialog") say(state.titleVoice || R.q, c.title, 0.3);
+    if (c.mode === "dialog") c.items.forEach((it, i) => say(it.voice, it.text, P.items[i].start + P.items[i].sayAt));
+    else c.items.forEach((it, i) => { const p = P.items[i]; say(R.q, it.q, p.start + p.qAt); say(R.a, it.a, p.start + p.aAt); });
     stoppers.push(() => { timers.forEach(clearTimeout); try{ speechSynthesis.cancel() }catch(e){} });
   }
   if ($("ding").checked) P.items.forEach(p => scheduleDing(a, t0 + p.start, [master]));
@@ -884,6 +1057,9 @@ $("rec").onclick = async () => {
     const rl = load("roles"); if (rl) setRoles(rl);
     state.titleVoice = load("titleVoice") || "";
     const th = load("theme"); if (th && THEMES[th]) $("theme").value = th;
+    $("mode").value = load("mode") === "dialog" ? "dialog" : "card";
+    $("male").value = load("male") || ""; $("female").value = load("female") || "";
+    updateModeUI();
     const snd = load("sound"); if (snd && $("snd-"+snd)) $("snd-"+snd).checked = true;
     $("ding").checked = load("ding") !== "0"; $("music").checked = load("music") === "1";
   } else applyPreset("Vorstellung Amira");
