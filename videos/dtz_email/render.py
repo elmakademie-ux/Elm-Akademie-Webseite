@@ -35,12 +35,13 @@ FONT_DIR = Path("/usr/share/fonts/opentype/inter")
 NSTEP = len(C.SCHRITTE)
 
 # Layout
-HEADER_Y = 48
-DOTS_Y = 205
-STEP_Y = 262
-TASK = (60, 300, 1020, 560)
-MAIL = (60, 585, 1020, 1395)
-CAP_Y = 1425
+HEADER_Y = 100            # unterhalb der Plattform-Leiste (oben ca. 130 px verdeckt)
+DOTS_Y = 372
+STEP_Y = 310
+TASKB = (60, 430, 1020, 1230)     # grosse Aufgabenkarte (Schritt 1)
+CHIP_Y0, CHIP_H = 408, 74         # kompakte Punkte ab Schritt 2
+MAIL = (60, 604, 1020, 1345)
+CAP_BOTTOM = 1530                 # Untertitel enden vor der unteren Plattform-Leiste
 
 
 # ================================================================ Helfer
@@ -271,7 +272,7 @@ LOGO = None
 def load_logo():
     global LOGO
     logo = Image.open(HERE / "bilder" / "logo.png").convert("RGB")
-    logo = logo.resize((int(logo.width * 1.4), int(logo.height * 1.4)), Image.LANCZOS)
+    logo = logo.resize((int(logo.width * 1.6), int(logo.height * 1.6)), Image.LANCZOS)
     pad = 10
     card = Image.new("RGBA", (logo.width + 2 * pad, logo.height + 2 * pad), (0, 0, 0, 0))
     ImageDraw.Draw(card).rounded_rectangle((0, 0, card.width - 1, card.height - 1), 24, fill=WHITE)
@@ -300,8 +301,8 @@ def background(t):
 
 def draw_header(frame, active=-1):
     comp(frame, LOGO, (36, HEADER_Y - 22))
-    p = pill(C.NIVEAU, 36, WHITE, NAVY)
-    comp(frame, p, (W - 64 - p.width, HEADER_Y + 30))
+    p = pill(C.NIVEAU, 42, WHITE, NAVY, 36, 14)
+    comp(frame, p, (W - 48 - p.width, HEADER_Y + 36))
     if active < 0:
         return
     d = ImageDraw.Draw(frame, "RGBA")
@@ -319,67 +320,74 @@ def draw_header(frame, active=-1):
 
 @lru_cache(None)
 def step_title(i):
-    num = pill(str(i + 1), 44, WHITE, ORANGE, 22, 8, "ExtraBold")
-    ttl = text_img(C.SCHRITTE[i]["titel"], "ExtraBold", 64, NAVY)
+    num = pill(str(i + 1), 50, WHITE, ORANGE, 24, 8, "ExtraBold")
+    ttl = text_img(C.SCHRITTE[i]["titel"], "ExtraBold", 72, NAVY)
     img = Image.new("RGBA", (num.width + 20 + ttl.width, max(num.height, ttl.height)), (0, 0, 0, 0))
     img.alpha_composite(num, (0, (img.height - num.height) // 2))
     img.alpha_composite(ttl, (num.width + 20, (img.height - ttl.height) // 2 - 4))
     return img
 
 
-# ---------------------------------------------------------------- Aufgabenkarte
+# ---------------------------------------------------------------- Aufgabe
 @lru_cache(None)
-def task_card_base():
-    x0, y0, x1, y1 = TASK
+def task_big():
+    """Grosse Aufgabenkarte (Schritt 1): Karte + y-Start der Punkte."""
+    x0, y0, x1, y1 = TASKB
     w, h = x1 - x0, y1 - y0
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, w - 1, h - 1), 30, fill=(255, 248, 235), outline=(*ORANGE, 120), width=3)
-    d.text((28, 18), "AUFGABE", font=font("ExtraBold", 28), fill=ORANGE)
-    f = font("Medium", 31)
-    for k, line in enumerate(wrap(C.AUFGABE, f, w - 56)):
-        d.text((28, 58 + k * 40), line, font=f, fill=NAVY)
-    return img
+    d.rounded_rectangle((0, 0, w - 1, h - 1), 36, fill=(255, 248, 235), outline=(*ORANGE, 150), width=4)
+    d.text((40, 28), "AUFGABE", font=font("ExtraBold", 38), fill=ORANGE)
+    f = font("Medium", 48)
+    y = 88
+    for line in wrap(C.AUFGABE, f, w - 80):
+        d.text((40, y), line, font=f, fill=NAVY)
+        y += 64
+    return img, y + 26
 
 
-def chip_pos(k):
-    x0, y0, x1, y1 = TASK
-    cw = (x1 - x0 - 56 - 20) / 2
-    return x0 + 28 + (k % 2) * (cw + 20), y0 + 150 + (k // 2) * 54, cw
-
-
-def draw_task(frame, t, emph):
-    comp(frame, shadow(task_card_base(), 14, 35, 6), (TASK[0] - 28, TASK[1] - 28))
-    d = ImageDraw.Draw(frame, "RGBA")
-    for k, name in enumerate(C.PUNKTE):
-        x, y, cw = chip_pos(k)
-        done_t = done_time(k)
-        done = done_t is not None and t >= done_t
-        pulse = 0
-        if emph is not None:   # Schritt 1: Punkte nacheinander hervorheben
-            pulse = clamp(1 - abs(t - (emph + 0.6 * k)) / 0.45)
-        col = PCOL[k]
-        comp(frame, chip_bg(k, int(cw), round(pulse * 8)), (x, y))
-        num = pill(str(k + 1), 26, WHITE, col, 12, 4, "ExtraBold")
-        comp(frame, num, (x + 6, y + 23 - num.height / 2))
-        tf = font("Bold", 28)
-        d.text((x + 52, y + 7), name, font=tf, fill=NAVY)
-        ic = check_icon(17, OK, done)
-        if done:
-            s = back_out((t - done_t) / 0.35)
-            comp_center(frame, ic, x + cw - 26, y + 23, max(0.01, s))
-        else:
-            comp_center(frame, check_icon(17, GREY, False), x + cw - 26, y + 23)
+def chip_geom(k, big):
+    if big:
+        _, y0 = task_big()
+        return TASKB[0] + 40, TASKB[1] + y0 + k * 100, TASKB[2] - TASKB[0] - 80, 86
+    cw = (MAIL[2] - MAIL[0] - 16) // 2
+    return MAIL[0] + (k % 2) * (cw + 16), CHIP_Y0 + (k // 2) * (CHIP_H + 12), cw, CHIP_H
 
 
 @lru_cache(None)
-def chip_bg(k, cw, level):
-    """Heller Hintergrund des Aufgaben-Punkts; level 0..8 = Hervorhebung in Schritt 1."""
+def chip_bg(k, cw, ch, level):
     col = PCOL[k]
-    img = Image.new("RGBA", (cw + 1, 47), (0, 0, 0, 0))
-    ImageDraw.Draw(img).rounded_rectangle((0, 0, cw, 46), 23, fill=(*col, int(38 + 14 * level)),
-                                          outline=(*col, 255), width=3)
+    img = Image.new("RGBA", (cw + 1, ch + 1), (0, 0, 0, 0))
+    ImageDraw.Draw(img).rounded_rectangle((0, 0, cw, ch), ch // 2, fill=(*col, int(38 + 14 * level)),
+                                          outline=(*col, 255), width=4)
     return img
+
+
+def draw_chips(frame, t, big, emph=None):
+    d = ImageDraw.Draw(frame, "RGBA")
+    for k, name in enumerate(C.PUNKTE):
+        x, y, cw, ch = chip_geom(k, big)
+        done_t = done_time(k)
+        done = done_t is not None and t >= done_t
+        pulse = clamp(1 - abs(t - (emph + 0.6 * k)) / 0.45) if emph is not None else 0
+        col = PCOL[k]
+        comp(frame, chip_bg(k, cw, ch, round(pulse * 8)), (x, y))
+        num = pill(str(k + 1), int(ch * 0.46), WHITE, col, int(ch * 0.22), 4, "ExtraBold")
+        comp(frame, num, (x + ch * 0.2, y + ch / 2 - num.height / 2))
+        tf = font("Bold", int(ch * 0.47))
+        d.text((x + ch * 0.2 + num.width + 18, y + ch / 2), name, font=tf, fill=NAVY, anchor="lm")
+        r = int(ch * 0.32)
+        if done:
+            comp_center(frame, check_icon(r, OK, True), x + cw - ch * 0.5, y + ch / 2,
+                        max(0.01, back_out((t - done_t) / 0.35)))
+        else:
+            comp_center(frame, check_icon(r, GREY, False), x + cw - ch * 0.5, y + ch / 2)
+
+
+def draw_task_big(frame, t, emph):
+    card, _ = task_big()
+    comp(frame, shadow(card, 16, 38, 8), (TASKB[0] - 32, TASKB[1] - 32))
+    draw_chips(frame, t, True, emph)
 
 
 def done_time(k):
@@ -390,28 +398,29 @@ def done_time(k):
 
 
 # ---------------------------------------------------------------- E-Mail-Fenster
-MF = font("Medium", 34)
-LH = 47
-BODY_X = MAIL[0] + 96
-BODY_W = MAIL[2] - MAIL[0] - 96 - 40
-BODY_Y = MAIL[1] + 56 + 116 + 24
+MF = font("Medium", 41)
+LH = 55
+BODY_X = 92                              # relativ zum Fenster
+BODY_W = MAIL[2] - MAIL[0] - BODY_X - 36
+BODY_TOP = 182                           # relativ zum Fenster
+VIEW_H = MAIL[3] - MAIL[1] - BODY_TOP - 22
 ORDER = ["anrede", None, "p1", "p2", "p3", "p4", None, "schluss", None, "gruss"]
 
 
 @lru_cache(None)
 def mail_layout():
-    """Zeilen der E-Mail: (teil, zeilentext, y, zeichen_offset)."""
-    out, y = [], BODY_Y
+    """Zeilen der E-Mail: (teil, zeilentext, y relativ zum Textbereich, zeichen_offset)."""
+    out, y = [], 6
     for part in ORDER:
         if part is None:
-            y += 18
+            y += 20
             continue
         off = 0
         for line in wrap(C.EMAIL[part], MF, BODY_W):
             out.append((part, line, y, off))
             off += len(line) + 1
             y += LH
-        y += 6
+        y += 8
     return out
 
 
@@ -421,18 +430,18 @@ def mail_base():
     w, h = x1 - x0, y1 - y0
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, w - 1, h - 1), 30, fill=WHITE)
-    d.rounded_rectangle((0, 0, w - 1, 56), 30, fill=(232, 236, 243))
-    d.rectangle((0, 30, w - 1, 56), fill=(232, 236, 243))
+    d.rounded_rectangle((0, 0, w - 1, h - 1), 32, fill=WHITE)
+    d.rounded_rectangle((0, 0, w - 1, 58), 32, fill=(232, 236, 243))
+    d.rectangle((0, 32, w - 1, 58), fill=(232, 236, 243))
     for k, c in enumerate(((255, 95, 86), (255, 189, 46), (39, 201, 63))):
-        d.ellipse((24 + k * 30, 19, 42 + k * 30, 37), fill=c)
-    d.text((w / 2, 28), "Neue E-Mail", font=font("SemiBold", 26), fill=GREY, anchor="mm")
-    lf = font("SemiBold", 30)
-    d.text((30, 74), "An:", font=lf, fill=GREY)
-    d.text((150, 74), C.EMAIL_AN, font=font("Medium", 30), fill=NAVY)
-    d.line((30, 122, w - 30, 122), fill=(225, 229, 236), width=2)
-    d.text((30, 132), "Betreff:", font=lf, fill=GREY)
-    d.line((30, 180, w - 30, 180), fill=(225, 229, 236), width=2)
+        d.ellipse((26 + k * 32, 20, 46 + k * 32, 40), fill=c)
+    d.text((w / 2, 30), "Neue E-Mail", font=font("SemiBold", 28), fill=GREY, anchor="mm")
+    lf = font("SemiBold", 32)
+    d.text((32, 72), "An:", font=lf, fill=GREY)
+    d.text((170, 72), C.EMAIL_AN, font=font("Medium", 32), fill=NAVY)
+    d.line((32, 120, w - 32, 120), fill=(225, 229, 236), width=2)
+    d.text((32, 130), "Betreff:", font=lf, fill=GREY)
+    d.line((32, 178, w - 32, 178), fill=(225, 229, 236), width=2)
     return shadow(img, 22, 55, 12)
 
 
@@ -444,11 +453,26 @@ def revealed(part, t):
     return int(total * clamp((t - s) / max(0.3, (e - s) * 0.92)))
 
 
+def scroll_target(t):
+    """Wie weit der Text nach oben geschoben werden muss, damit der neueste Text sichtbar bleibt."""
+    bottom = 0
+    for part, line, y, off in mail_layout():
+        if revealed(part, t) - off > 0:
+            bottom = y + LH
+    return max(0, bottom - VIEW_H + 8)
+
+
+def scroll(t):
+    off = sum(scroll_target(t - k * 0.05) for k in range(8)) / 8     # weich
+    last = TL["steps"][-1]["start"]                                  # beim Pruefen wieder nach oben
+    return off * (1 - ease_out((t - last) / 0.5)) if t >= last else off
+
+
 @lru_cache(None)
 def mail_dim():
     x0, y0, x1, y1 = MAIL
     img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
-    ImageDraw.Draw(img).rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 30, fill=(*BG, 255))
+    ImageDraw.Draw(img).rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), 32, fill=(*BG, 255))
     return img
 
 
@@ -458,45 +482,55 @@ def draw_mail(frame, t, dim=1.0):
         comp(frame, mail_dim(), (MAIL[0], MAIL[1]), 1 - dim)
 
 
-def _draw_mail(frame, t, alpha=1.0):
-    base = mail_base()
-    comp(frame, base, (MAIL[0] - 44, MAIL[1] - 44), alpha)
+def _draw_mail(frame, t):
+    comp(frame, mail_base(), (MAIL[0] - 44, MAIL[1] - 44))
     d = ImageDraw.Draw(frame, "RGBA")
     cursor = None
-    # Betreff
     n = revealed("betreff", t)
+    sf = font("Bold", 34)
     if n:
         txt = C.EMAIL["betreff"][:n]
-        d.text((MAIL[0] + 175, MAIL[1] + 129), txt, font=font("Bold", 30), fill=(*NAVY, int(255 * alpha)))
+        d.text((MAIL[0] + 200, MAIL[1] + 130), txt, font=sf, fill=NAVY)
         if n < len(C.EMAIL["betreff"]):
-            cursor = (MAIL[0] + 175 + font("Bold", 30).getlength(txt) + 3, MAIL[1] + 132, 34)
-    # Text
-    shown_badge = set()
-    for part, line, y, off in mail_layout():
-        n = revealed(part, t) - off
+            cursor = (MAIL[0] + 200 + sf.getlength(txt) + 3, MAIL[1] + 134, 38)
+    # Text in eigener Ebene (wird nach oben geschoben und oben ausgeblendet)
+    body = Image.new("RGBA", (MAIL[2] - MAIL[0], VIEW_H), (0, 0, 0, 0))
+    bd = ImageDraw.Draw(body)
+    off = scroll(t)
+    bcur = None
+    shown = set()
+    for part, line, y, o in mail_layout():
+        n = revealed(part, t) - o
         if n <= 0:
             continue
+        yy = y - off
         txt = line[:n]
-        col = NAVY
         if part in C.PUNKT_ZU_TEIL:
             pc = PCOL[C.PUNKT_ZU_TEIL[part]]
-            if part not in shown_badge:
-                shown_badge.add(part)
-                num = pill(str(C.PUNKT_ZU_TEIL[part] + 1), 24, WHITE, pc, 11, 4, "ExtraBold")
-                comp(frame, num, (MAIL[0] + 34, y + 4), alpha)
-            d.rectangle((BODY_X - 16, y + 4, BODY_X - 11, y + LH - 4), fill=(*pc, int(255 * alpha)))
+            if part not in shown:
+                shown.add(part)
+                num = pill(str(C.PUNKT_ZU_TEIL[part] + 1), 26, WHITE, pc, 12, 4, "ExtraBold")
+                body.alpha_composite(num, (30, int(yy + 8))) if yy > -30 else None
+            bd.rectangle((BODY_X - 18, yy + 5, BODY_X - 12, yy + LH - 7), fill=(*pc, 255))
         weight = "SemiBold" if part in ("anrede", "gruss") else "Medium"
-        d.text((BODY_X, y), txt, font=font(weight, 34), fill=(*col, int(255 * alpha)))
+        bd.text((BODY_X, yy), txt, font=font(weight, 41), fill=NAVY)
         if n < len(line):
-            cursor = (BODY_X + font(weight, 34).getlength(txt) + 3, y + 4, 38)
+            bcur = (BODY_X + font(weight, 41).getlength(txt) + 3, yy + 5, 42)
+    if bcur and int(t * 3) % 2 == 0:
+        x, y, h = bcur
+        bd.rectangle((x, y, x + 4, y + h), fill=(*ORANGE, 255))
+    a = np.array(body.getchannel("A"), dtype=np.float32)
+    a[:26] *= np.linspace(0, 1, 26)[:, None]          # oben weich ausblenden
+    body.putalpha(Image.fromarray(a.astype(np.uint8)))
+    comp(frame, body, (MAIL[0], MAIL[1] + BODY_TOP))
     if cursor and int(t * 3) % 2 == 0:
         x, y, h = cursor
-        d.rectangle((x, y, x + 3, y + h), fill=(*ORANGE, int(255 * alpha)))
+        d.rectangle((x, y, x + 4, y + h), fill=(*ORANGE, 255))
 
 
 @lru_cache(None)
 def informal_card():
-    p = pill(C.INFORMELL, 30, NAVY, (255, 243, 224), 26, 14, "SemiBold")
+    p = pill(C.INFORMELL, 38, NAVY, (255, 243, 224), 32, 16, "SemiBold")
     return shadow(p, 10, 40, 5)
 
 
@@ -511,42 +545,58 @@ def word_starts(say):
     return out
 
 
+def split_lines(words, widths, sp, max_w):
+    """Gleichmaessig umbrechen: so wenige Zeilen wie moeglich, dann moeglichst gleich lang."""
+    def lw(ws):
+        return sum(ws) + sp * (len(ws) - 1)
+
+    def greedy(limit):
+        lines, cur = [], []
+        for k, w_ in enumerate(widths):
+            if cur and lw([widths[j] for j in cur] + [w_]) > limit:
+                lines.append(cur)
+                cur = []
+            cur.append(k)
+        return lines + [cur]
+    n = len(greedy(max_w))
+    lo, hi = 1, max_w
+    while hi - lo > 4:
+        mid = (lo + hi) / 2
+        lo, hi = (lo, mid) if len(greedy(mid)) <= n else (mid, hi)
+    return greedy(hi)
+
+
 @lru_cache(None)
 def caption_img(text, spoken):
-    f = font("Bold", 44)
+    f = font("Bold", 56)
     words = text.split()
     widths = [f.getlength(w) for w in words]
     sp = f.getlength(" ")
-    max_w = W - 200
+    lines = split_lines(words, widths, sp, W - 150)
+    lh = 74
 
-    def lw(ws):
-        return sum(ws) + sp * (len(ws) - 1)
-    if lw(widths) <= max_w:
-        splits = [0, len(words)]
-    else:
-        k = min(range(1, len(words)), key=lambda k: max(lw(widths[:k]), lw(widths[k:])))
-        splits = [0, k, len(words)]
-    lines = [(splits[i], splits[i + 1]) for i in range(len(splits) - 1)]
-    bw = int(max(lw(widths[a:b]) for a, b in lines)) + 64
-    bh = 58 * len(lines) + 30
+    def lw(ix):
+        return sum(widths[k] for k in ix) + sp * (len(ix) - 1)
+    bw = int(max(lw(ix) for ix in lines)) + 80
+    bh = lh * len(lines) + 40
     img = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, bw - 1, bh - 1), 26, fill=(*NAVY, 238))
-    for li, (a, b) in enumerate(lines):
-        x = (bw - lw(widths[a:b])) / 2
-        for k in range(a, b):
-            d.text((x, 14 + li * 58), words[k], font=f, fill=WHITE if k < spoken else (255, 255, 255, 110))
+    d.rounded_rectangle((0, 0, bw - 1, bh - 1), 34, fill=(*NAVY, 244))
+    for li, ix in enumerate(lines):
+        x = (bw - lw(ix)) / 2
+        for k in ix:
+            d.text((x, 20 + li * lh), words[k], font=f, fill=WHITE if k < spoken else (255, 255, 255, 120))
             x += widths[k] + sp
     return img
 
 
-def draw_caption(frame, t, y=CAP_Y):
+def draw_caption(frame, t, bottom=None):
     for say in TL["says"]:
         if say["start"] - 0.1 <= t < say["end"] + 0.6:
             spoken = sum(1 for ws in word_starts(say) if t >= ws)
             img = caption_img(say["text"], spoken)
             a = clamp((t - say["start"] + 0.1) / 0.15) * clamp((say["end"] + 0.6 - t) / 0.2)
-            comp(frame, img, ((W - img.width) / 2, y), a)
+            comp(frame, img, ((W - img.width) / 2, (bottom or CAP_BOTTOM) - img.height), a)
             return
 
 
@@ -572,7 +622,22 @@ def draw_intro(frame, t):
     sub = text_img(C.UNTERTITEL, "SemiBold", 50, ORANGE)
     tin2 = ease_out((t - 0.7) / 0.5)
     comp_center(frame, sub, W / 2, 1010 + 20 * (1 - tin2), 1, tin2 * a_out)
-    draw_caption(frame, t, 1150)
+    draw_caption(frame, t, 1400)
+
+
+def draw_step_body(frame, t, i, lt):
+    draw_chips(frame, t, False)
+    dim = 1.0
+    if i == NSTEP - 1:
+        dim = 1 - 0.65 * ease_out((lt - 0.3) / 0.5)
+    draw_mail(frame, t, dim)
+    for say in TL["says"]:
+        if say.get("step") == i and "Informell" in say["text"] and say["start"] - 0.2 <= t:
+            a = clamp((t - say["start"] + 0.2) / 0.3)
+            card = informal_card()
+            layout = [l for l in mail_layout() if l[0] == "anrede"]
+            y = MAIL[1] + BODY_TOP + layout[0][2] + 90 if layout else MAIL[1] + 300
+            comp_center(frame, card, W / 2, y, 0.8 + 0.2 * back_out((t - say["start"] + 0.2) / 0.4), a)
 
 
 def draw_step(frame, t, i):
@@ -581,48 +646,47 @@ def draw_step(frame, t, i):
     draw_header(frame, i)
     stt = step_title(i)
     comp_center(frame, stt, W / 2, STEP_Y, 0.85 + 0.15 * back_out(lt / 0.45), clamp(lt / 0.2))
-    draw_task(frame, t, st["start"] + 1.2 if i == 0 else None)
-    dim = 1.0
-    if i == NSTEP - 1:
-        dim = 1 - 0.65 * ease_out((lt - 0.3) / 0.5)
-    draw_mail(frame, t, dim)
-    # informelle Anrede einblenden, solange sie erwaehnt wird
-    for say in TL["says"]:
-        if say.get("step") == i and "Informell" in say["text"] and say["start"] - 0.2 <= t:
-            a = clamp((t - say["start"] + 0.2) / 0.3)
-            card = informal_card()
-            layout = [l for l in mail_layout() if l[0] == "anrede"]
-            y = layout[0][2] + 60 if layout else MAIL[1] + 260
-            comp_center(frame, card, W / 2 + 60, y + 30, 0.8 + 0.2 * back_out((t - say["start"] + 0.2) / 0.4), a)
+    if i == 0:
+        draw_task_big(frame, t, st["start"] + 1.2)
+    elif i == 1 and lt < 0.5:                      # Aufgabenkarte klingt aus, E-Mail blendet ein
+        u = ease_out(lt / 0.5)
+        old = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        draw_task_big(old, t, None)
+        comp(frame, old, (0, 0), 1 - u)
+        new = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        draw_step_body(new, t, i, lt)
+        comp(frame, new, (0, 0), u)
+    else:
+        draw_step_body(frame, t, i, lt)
     if i == NSTEP - 1:
         draw_checklist(frame, t, lt)
     draw_caption(frame, t)
 
 
 def draw_checklist(frame, t, lt):
-    card = Image.new("RGBA", (760, 120 + 110 * len(C.CHECKLISTE)), (0, 0, 0, 0))
+    card = Image.new("RGBA", (860, 150 + 124 * len(C.CHECKLISTE)), (0, 0, 0, 0))
     d = ImageDraw.Draw(card)
-    d.rounded_rectangle((0, 0, card.width - 1, card.height - 1), 36, fill=WHITE, outline=(*OK, 160), width=4)
-    d.text((card.width / 2, 58), "Checkliste", font=font("ExtraBold", 50), fill=NAVY, anchor="mm")
+    d.rounded_rectangle((0, 0, card.width - 1, card.height - 1), 40, fill=WHITE, outline=(*OK, 170), width=5)
+    d.text((card.width / 2, 74), "Checkliste", font=font("ExtraBold", 64), fill=NAVY, anchor="mm")
     a = ease_out((lt - 0.4) / 0.4)
-    cy = MAIL[1] + 360
+    cy = MAIL[1] + 380
     comp_center(frame, shadow(card, 22, 70, 12), W / 2, cy, 0.9 + 0.1 * back_out((lt - 0.4) / 0.5), a)
     top = cy - card.height / 2
     say = next(s for s in TL["says"] if s.get("step") == NSTEP - 1)
     span = say["end"] - say["start"]
     for k, item in enumerate(C.CHECKLISTE):
-        y = top + 130 + k * 110
+        y = top + 160 + k * 124
         tk = say["start"] + span * (0.35 + 0.25 * k)
         on = t >= tk
-        ic = check_icon(30, OK if on else GREY, on)
-        comp_center(frame, ic, W / 2 - 280, y + 25, max(0.01, back_out((t - tk) / 0.35)) if on else 1, a)
-        comp(frame, text_img(item, "Bold", 48, NAVY), (W / 2 - 220, y - 6), a)
+        ic = check_icon(38, OK if on else GREY, on)
+        comp_center(frame, ic, W / 2 - 330, y + 34, max(0.01, back_out((t - tk) / 0.35)) if on else 1, a)
+        comp(frame, text_img(item, "Bold", 58, NAVY), (W / 2 - 260, y - 6), a)
 
 
 def draw_outro(frame, t):
     lt = t - TL["outro_start"]
     draw_header(frame)
-    comp_center(frame, LOGO, W / 2, 620, 2.2 * (0.8 + 0.2 * back_out(lt / 0.6)), clamp(lt / 0.3))
+    comp_center(frame, LOGO, W / 2, 640, 1.9 * (0.8 + 0.2 * back_out(lt / 0.6)), clamp(lt / 0.3))
     ttl = text_img("Viel Erfolg beim DTZ!", "ExtraBold", 84, NAVY)
     comp_center(frame, ttl, W / 2, 900, 1, ease_out((lt - 0.3) / 0.5))
     p = pill("Folge der ELM Akademie", 50, WHITE, ORANGE, 44, 20, "ExtraBold")
