@@ -34,3 +34,10 @@ ffmpeg -y -i out/raw_<id>.mp4 -af loudnorm=I=-14:TP=-1.0:LRA=9 -c:v copy -c:a aa
 Vorschau im Browser: `npm run studio`.
 
 Hinweis: Stimmen sind KI-generiert (Thorsten, CC0) → beim Posten als KI-Inhalt kennzeichnen.
+
+## Echte Animation (Bild-zu-Video)
+Die Figuren in den Szenenbildern sind Standbilder. Für Mundbewegung, Augen, Gesten wie im
+KI-Cartoon-Beispiel: aus jedem Szenenbild mit einem Bild-zu-Video-Werkzeug (z. B. Runway, Kling, Hailuo, Veo)
+einen Clip erzeugen. `python3 tools/make_prompts.py <id>` schreibt dafür `video-prompts/<id>.md`
+(Prompt, Mindestlänge, Sprachdatei je Szene). Clips nach `public/assets/clips/` legen und in
+`src/clips.json` eintragen; die Komposition nutzt dann den Clip statt des Bildes.

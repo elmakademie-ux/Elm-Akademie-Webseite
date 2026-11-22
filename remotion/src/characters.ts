@@ -8,6 +8,9 @@ export type CharacterId = "teacher" | "student";
 export type Pose = {
   /** Bild in public/ */
   image: string;
+  /** optional: animierter Clip (aus dem Bild erzeugt), ersetzt das Standbild; Länge in Frames */
+  clip?: string;
+  clipFrames?: number;
   /** Kamera-Fokus im Bild (0..1) */
   focus: { x: number; y: number };
   /** Zoom am Anfang und am Ende der Einstellung */
@@ -49,7 +52,12 @@ export const CHARACTERS: Record<CharacterId, CharacterDef> = {
   },
 };
 
+/** src/clips.json: { "teacher/pointing": { "file": "assets/clips/teacher-pointing.mp4", "frames": 90 }, ... } */
+import clips from "./clips.json";
+const CLIPS = clips as Record<string, { file: string; frames: number }>;
+
 export const getPose = (who: CharacterId, pose: string): Pose => {
   const p = CHARACTERS[who].poses[pose] ?? Object.values(CHARACTERS[who].poses)[0];
-  return p;
+  const c = CLIPS[`${who}/${pose}`];
+  return c ? { ...p, clip: c.file, clipFrames: c.frames } : p;
 };

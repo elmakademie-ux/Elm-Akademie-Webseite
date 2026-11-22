@@ -1,5 +1,5 @@
 import React from "react";
-import { Img, interpolate, staticFile, Easing } from "remotion";
+import { Img, interpolate, Loop, OffthreadVideo, staticFile, Easing } from "remotion";
 import { CharacterId, getPose } from "../characters";
 
 export const BAND = { y: 470, w: 1080, h: 1080 };
@@ -37,7 +37,13 @@ export const CharacterView: React.FC<CharacterProps & { character: CharacterId }
       <div style={{ width: "100%", height: "100%",
         transformOrigin: `${p.focus.x * 100}% ${p.focus.y * 100}%`,
         transform: `translate(${dx}px, ${dy + lift}px) scale(${scale * bob}) rotate(${tilt}deg)` }}>
-        <Img src={staticFile(p.image)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        {p.clip ? (
+          <Loop durationInFrames={p.clipFrames ?? 90}>
+            <OffthreadVideo src={staticFile(p.clip)} muted style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          </Loop>
+        ) : (
+          <Img src={staticFile(p.image)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        )}
       </div>
     </div>
   );
