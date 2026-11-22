@@ -66,7 +66,8 @@ CHARACTERS.teacher_f = {
       mouth: { x: 0.341, y: 0.361, rx: 0.05, ry: 0.042 } },
     thinking: { image: "assets/surprise-test/scene-03.png", focus: { x: 0.45, y: 0.3 }, zoom: [1.0, 1.3], center: true,
       drift: [{ x: -22, y: 0 }, { x: 22, y: -6 }] },
-    surprised: { image: "assets/surprise-test/scene-05.png", focus: { x: 0.45, y: 0.35 }, zoom: [1.0, 1.25], center: true },
+    surprised: { image: "assets/surprise-test/scene-05.png", focus: { x: 0.45, y: 0.35 }, zoom: [1.0, 1.25], center: true,
+      mouth: { x: 0.55, y: 0.48, rx: 0.05, ry: 0.055 } },
     arms_crossed: { image: "assets/surprise-test/scene-06.png", focus: { x: 0.25, y: 0.36 }, zoom: [1.5, 1.68], center: true },
   },
 };
@@ -75,8 +76,10 @@ CHARACTERS.student_y = {
   color: "#d4a017",
   textColor: "#ffd640",
   poses: {
-    shrugging: { image: "assets/surprise-test/scene-02.png", focus: { x: 0.5, y: 0.35 }, zoom: [1.0, 1.2], center: true },
-    idea: { image: "assets/surprise-test/scene-04.png", focus: { x: 0.45, y: 0.35 }, zoom: [1.0, 1.2], center: true },
+    shrugging: { image: "assets/surprise-test/scene-02.png", focus: { x: 0.5, y: 0.35 }, zoom: [1.0, 1.2], center: true,
+      mouth: { x: 0.584, y: 0.43, rx: 0.055, ry: 0.045 } },
+    idea: { image: "assets/surprise-test/scene-04.png", focus: { x: 0.45, y: 0.35 }, zoom: [1.0, 1.2], center: true,
+      mouth: { x: 0.545, y: 0.395, rx: 0.085, ry: 0.05 } },
     laughing: { image: "assets/surprise-test/scene-06.png", focus: { x: 0.75, y: 0.4 }, zoom: [1.2, 1.4], center: true },
     worried: { image: "assets/surprise-test/scene-01.png", focus: { x: 0.75, y: 0.45 }, zoom: [1.1, 1.4], center: true },
   },

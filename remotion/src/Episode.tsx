@@ -3,11 +3,13 @@ import { AbsoluteFill, Audio, Easing, Img, interpolate, Sequence, staticFile, us
 import "./fonts";
 import { FONT_BOLD } from "./fonts";
 import { CharacterId, getPose } from "./characters";
-import { Student, Teacher } from "./components/Character";
+import { CharacterView } from "./components/Character";
 import { Line, Subtitles } from "./components/Subtitles";
 import { EPISODES } from "./episodes";
 
 type Shot = { pose: string; who: CharacterId; startFrame: number; endFrame: number };
+type Cast = Record<string, CharacterId>;
+const DEFAULT_CAST: Cast = { teacher: "teacher", student: "student" };
 /** Shorts: kein Abspann; das Video endet auf der Reaktion und läuft nahtlos in den Anfang (Loop). */
 export const LOOP_HOLD = 12;
 export const episodeFrames = (t: { outroFrame: number }) => t.outroFrame + LOOP_HOLD;
@@ -29,7 +31,9 @@ const Shot: React.FC<{ shot: Shot; index: number }> = ({ shot, index }) => {
   const line = T.lines.find((l) => abs >= l.startFrame && abs <= l.endFrame);
   const talk = line && line.who === shot.who ? line.env[abs - line.startFrame] ?? 0 : 0;
   const pose = getPose(shot.who, shot.pose);
-  const View = shot.who === "teacher" ? Teacher : Student;
+  const View: React.FC<{ pose: string; talk: number; frame: number; duration: number }> = (props) => (
+    <CharacterView character={shot.who} {...props} />
+  );
   const type = TRANSITIONS[index % TRANSITIONS.length];
   const e = (a: number, b: number, from: number, to: number) =>
     interpolate(local, [a, b], [from, to], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
@@ -83,7 +87,11 @@ const musicVolume = (T: Timeline) => (f: number) => {
 };
 
 export const Episode: React.FC<{ id: string }> = ({ id }) => {
-  const { episode, timeline: T } = EPISODES[id];
+  const { episode, timeline: base } = EPISODES[id];
+  // Besetzung: "cast" ordnet teacher/student einer Figur zu (z. B. teacher_f, student_y)
+  const cast = ((episode as { cast?: Cast }).cast ?? DEFAULT_CAST) as Cast;
+  const T: Timeline = { ...base, shots: base.shots.map((s) => ({ ...s, who: cast[s.who] ?? s.who })),
+    lines: base.lines.map((l) => ({ ...l, who: cast[l.who] ?? l.who })) };
   return (
     <Ctx.Provider value={T}>
       <AbsoluteFill style={{ background: "#0b1224", fontFamily: FONT_BOLD }}>
