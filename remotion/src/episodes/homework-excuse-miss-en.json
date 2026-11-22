@@ -1,0 +1,112 @@
+{
+  "id": "homework-excuse-miss-en",
+  "language": "en",
+  "title": "The Homework Excuse",
+  "names": {
+    "teacher_f": "TEACHER",
+    "student_y": "STUDENT"
+  },
+  "fps": 30,
+  "start": 0.3,
+  "pause": 0.2,
+  "reactionSeconds": 1.4,
+  "outroSeconds": 2.2,
+  "lines": [
+    {
+      "who": "teacher",
+      "pose": "pointing",
+      "text": "Why haven't you done your homework again?",
+      "sfx": [
+        "gasp"
+      ]
+    },
+    {
+      "who": "student",
+      "pose": "shrugging",
+      "text": "Unfortunately, I didn't have time yesterday."
+    },
+    {
+      "who": "teacher",
+      "pose": "thinking",
+      "text": "And what did you do instead?"
+    },
+    {
+      "who": "student",
+      "pose": "idea",
+      "text": "I was preparing for today's lesson!",
+      "sfx": [
+        "ding"
+      ],
+      "sfxDelay": 0.1
+    },
+    {
+      "who": "teacher",
+      "pose": "surprised",
+      "text": "Oh really? And how did you prepare?"
+    },
+    {
+      "who": "student",
+      "pose": "shrugging",
+      "text": "I practiced my excuses!",
+      "pauseBefore": 0.1
+    },
+    {
+      "who": "teacher",
+      "pose": "pointing",
+      "text": "GET OUT OF MY CLASSROOM!",
+      "say": "Get out of my classroom!",
+      "loud": true,
+      "sfx": [
+        "slam"
+      ],
+      "pauseBefore": 0.1
+    },
+    {
+      "who": "student",
+      "pose": "laughing",
+      "text": "See you tomorrow, Mr. Teacher!",
+      "sfx": [
+        "rimshot"
+      ],
+      "sfxAfterEnd": 0.05
+    }
+  ],
+  "reaction": {
+    "pose": "arms_crossed",
+    "sfx": [
+      "womp"
+    ],
+    "stickers": [
+      {
+        "text": "*sigh*",
+        "x": 0.24,
+        "y": 0.05,
+        "color": "#ffffff",
+        "delay": 0.2
+      },
+      {
+        "text": "Hehe!",
+        "x": 0.8,
+        "y": 0.13,
+        "color": "#ffd640",
+        "delay": 0.5
+      }
+    ]
+  },
+  "cast": {
+    "teacher": "teacher_f",
+    "student": "student_y"
+  },
+  "voices": {
+    "teacher": {
+      "model": "en_US-amy-medium",
+      "pitch": 0.98,
+      "length": 0.95
+    },
+    "student": {
+      "model": "en_US-joe-medium",
+      "pitch": 1.06,
+      "length": 1.0
+    }
+  }
+}

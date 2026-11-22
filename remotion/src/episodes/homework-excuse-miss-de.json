@@ -1,0 +1,109 @@
+{
+  "id": "homework-excuse-miss-de",
+  "title": "Die Hausaufgaben-Ausrede",
+  "fps": 30,
+  "start": 0.3,
+  "pause": 0.22,
+  "reactionSeconds": 1.5,
+  "outroSeconds": 2.2,
+  "lines": [
+    {
+      "who": "teacher",
+      "pose": "pointing",
+      "text": "Warum fehlen schon wieder deine Hausaufgaben?",
+      "sfx": [
+        "gasp"
+      ]
+    },
+    {
+      "who": "student",
+      "pose": "shrugging",
+      "text": "Leider hatte ich gestern keine Zeit."
+    },
+    {
+      "who": "teacher",
+      "pose": "thinking",
+      "text": "Und was hast du stattdessen gemacht?"
+    },
+    {
+      "who": "student",
+      "pose": "idea",
+      "text": "Ich habe mich auf heute vorbereitet!",
+      "sfx": [
+        "ding"
+      ],
+      "sfxDelay": 0.1
+    },
+    {
+      "who": "teacher",
+      "pose": "surprised",
+      "text": "Ach wirklich? Wie denn?"
+    },
+    {
+      "who": "student",
+      "pose": "shrugging",
+      "text": "Ich habe meine Ausreden geübt!",
+      "pauseBefore": 0.1
+    },
+    {
+      "who": "teacher",
+      "pose": "pointing",
+      "text": "RAUS AUS MEINEM KLASSENZIMMER!",
+      "sfx": [
+        "slam"
+      ],
+      "pauseBefore": 0.1
+    },
+    {
+      "who": "student",
+      "pose": "laughing",
+      "text": "Bis morgen, Herr Lehrer!",
+      "sfx": [
+        "rimshot"
+      ],
+      "sfxAfterEnd": 0.05
+    }
+  ],
+  "reaction": {
+    "pose": "arms_crossed",
+    "sfx": [
+      "womp"
+    ],
+    "stickers": [
+      {
+        "text": "*seufz*",
+        "x": 0.24,
+        "y": 0.05,
+        "color": "#ffffff",
+        "delay": 0.2
+      },
+      {
+        "text": "Hihi!",
+        "x": 0.8,
+        "y": 0.13,
+        "color": "#ffd640",
+        "delay": 0.5
+      }
+    ]
+  },
+  "cast": {
+    "teacher": "teacher_f",
+    "student": "student_y"
+  },
+  "names": {
+    "teacher_f": "LEHRERIN",
+    "student_y": "SCHÜLER"
+  },
+  "voices": {
+    "teacher": {
+      "model": "de_DE-ramona-low",
+      "pitch": 1.0,
+      "length": 0.95
+    },
+    "student": {
+      "model": "de_DE-thorsten-high",
+      "pitch": 1.13,
+      "length": 1.1
+    }
+  }
+}

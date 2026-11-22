@@ -150,7 +150,24 @@ def ensure_en(name):
     return CACHE / f"{name}.onnx"
 
 
-if LANG == "de":
+def ensure_named(name):
+    """Piper-Stimme nach Namen laden, z. B. 'de_DE-ramona-low' oder 'en_US-amy-medium'."""
+    import urllib.request
+    from common.audio import CACHE
+    CACHE.mkdir(parents=True, exist_ok=True)
+    lang_region, speaker, quality = name.split("-")
+    base = f"https://huggingface.co/rhasspy/piper-voices/resolve/main/{lang_region.split('_')[0]}/{lang_region}/{speaker}/{quality}/"
+    for f in (f"{name}.onnx", f"{name}.onnx.json"):
+        if not (CACHE / f).exists():
+            print("Lade Stimme:", f, flush=True)
+            urllib.request.urlretrieve(base + f, CACHE / f)
+    return CACHE / f"{name}.onnx"
+
+
+if "voices" in EP:      # eigene Stimmen je Episode: {"teacher": {"model": ..., "pitch": 1.0, "length": 1.0}, ...}
+    MODELS = {k: ensure_named(v["model"]) for k, v in EP["voices"].items()}
+    VOICES = {k: dict(pitch=v.get("pitch", 1.0), length=v.get("length", 1.0)) for k, v in EP["voices"].items()}
+elif LANG == "de":
     MODELS = {"teacher": ensure_voice(), "student": ensure_voice()}
 else:
     MODELS = {"teacher": ensure_en("en_US-ryan-medium"), "student": ensure_en("en_US-joe-medium")}
