@@ -40,6 +40,8 @@ SPRECHER = {
     "A": dict(name="ALI", farbe=RED, text=YELLOW, pitch=1.13, length=1.10),
 }
 FLOOR_Y = 1260
+CAP_NAME_Y, CAP_Y = 420, 545     # Position der Untertitel
+OUT_SUFFIX = ""                   # Dateiname-Zusatz je Stil
 
 
 # ================================================================ Helfer
@@ -640,8 +642,8 @@ def draw_caption(frame, t):
             col = SPRECHER[ln["wer"]]["text"]
             pop = back_out((t - starts[k] + 0.04) / 0.16)
             fade = clamp((ln["end"] + 0.3 - t) / 0.2)
-            comp_center(frame, name_pill(ln["wer"]), W / 2, 420, 1, fade)
-            comp_center(frame, cap_img(ch[k], col), W / 2, 545, 0.78 + 0.22 * pop, fade)
+            comp_center(frame, name_pill(ln["wer"]), W / 2, CAP_NAME_Y, 1, fade)
+            comp_center(frame, cap_img(ch[k], col), W / 2, CAP_Y, 0.78 + 0.22 * pop, fade)
             return
 
 
@@ -698,16 +700,26 @@ def render_frame(fi):
     draw_title(frame, t)
     if t < TL["outro"]:
         draw_caption(frame, t)
-    else:
-        lt = t - TL["outro"]
-        veil = Image.new("RGBA", (W, H), (255, 255, 255, int(235 * ease_out(lt / 0.4))))
-        frame.alpha_composite(veil)
-        comp_center(frame, LOGO, W / 2, 780, 2.5 * (0.85 + 0.15 * back_out(lt / 0.6)), clamp(lt / 0.3))
-        pill = Image.new("RGBA", (800, 118), (0, 0, 0, 0))
-        d = ImageDraw.Draw(pill)
-        d.rounded_rectangle((0, 0, 799, 117), 59, fill=ORANGE)
-        d.text((400, 61), "Folge der ELM Akademie", font=font("ExtraBold", 54), fill=WHITE, anchor="mm")
-        comp_center(frame, pill, W / 2, 1130, max(0.01, back_out((lt - 0.5) / 0.5)), clamp((lt - 0.5) / 0.2))
+    return finish(frame, t)
+
+
+def overlay_outro(frame, t):
+    lt = t - TL["outro"]
+    veil = Image.new("RGBA", (W, H), (255, 255, 255, int(235 * ease_out(lt / 0.4))))
+    frame.alpha_composite(veil)
+    comp_center(frame, LOGO, W / 2, 780, 2.5 * (0.85 + 0.15 * back_out(lt / 0.6)), clamp(lt / 0.3))
+    pill = Image.new("RGBA", (800, 118), (0, 0, 0, 0))
+    d = ImageDraw.Draw(pill)
+    d.rounded_rectangle((0, 0, 799, 117), 59, fill=ORANGE)
+    d.text((400, 61), "Folge der ELM Akademie", font=font("ExtraBold", 54), fill=WHITE, anchor="mm")
+    comp_center(frame, pill, W / 2, 1130, max(0.01, back_out((lt - 0.5) / 0.5)), clamp((lt - 0.5) / 0.2))
+
+
+def finish(frame, t):
+    """Abspann, Ein-/Ausblenden, Rohbytes."""
+    total = TL["total"]
+    if t >= TL["outro"]:
+        overlay_outro(frame, t)
     out = frame.convert("RGB")
     a = min(clamp(t / 0.3), clamp((total - t) / 0.6))
     if a < 1:
@@ -735,7 +747,7 @@ def main():
     TL["zzz"] = (z["end"] - 0.6) if z else 1e9
     load_logo()
     make_states()
-    wav = HERE.parent / ".cache" / f"{NAME}.wav"
+    wav = HERE.parent / ".cache" / f"{NAME}{OUT_SUFFIX}.wav"
     build_audio(wav)
     build_cam()
     if "--preview" in sys.argv:
@@ -748,7 +760,7 @@ def main():
         return
     outdir = HERE / "ausgabe"
     outdir.mkdir(exist_ok=True)
-    out = outdir / f"{NAME}.mp4"
+    out = outdir / f"{NAME}{OUT_SUFFIX}.mp4"
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-i", str(wav),

@@ -5,7 +5,8 @@ Große Wort-für-Wort-Untertitel (Sprecher mit Namensschild und Farbe), Stimmen,
 
 ```
 videos/comic/
-├── render.py                    Engine (Figuren, Szene, Untertitel, Ton)
+├── render.py                    Engine Stil 1: Strichmännchen (Szene, Untertitel, Ton)
+├── render_cartoon.py            Stil 2: Cartoon mit Nahaufnahmen und Schnitten
 ├── folgen/<name>.py             Dialog einer Folge  ← hier bearbeiten / neue Folge anlegen
 └── ausgabe/<name>.mp4           fertige Videos
 ```
@@ -17,6 +18,7 @@ Text, Gesichtsausdruck `le`/`ae`, Arme `la`/`aa`, `prop` = "wecker" oder "zzz"),
 cd videos/comic
 python3 render.py <name> --preview   # Vorschaubilder in vorschau/
 python3 render.py <name>             # Video → ausgabe/<name>.mp4 (ca. 1 Minute)
+python3 render_cartoon.py <name>     # Stil 2 → ausgabe/<name>_cartoon.mp4
 ```
 Voraussetzungen: Python 3, `pip install pillow numpy piper-tts`, `ffmpeg`.
 Die Stimme wird beim ersten Lauf automatisch geladen (~110 MB, nicht im Git).
