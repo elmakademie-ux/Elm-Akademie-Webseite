@@ -39,10 +39,24 @@ Deutsch hören und mitlesen: zu spät kommen, der Wecker, klingeln, früher stel
 The teacher has a surprise for the class… Scene 1 of our classroom comedy. 😱
 **Hashtags:** #Shorts #ClassroomComedy #Teacher #SurpriseTest #Cartoon #School #Funny
 
-## 5. dtz-email-schreiben.mp4 (60 s, Deutsch)
+## 5. dtz-email-schreiben.mp4 (60 s, Deutsch, ohne Logo)
 **Titel:** DTZ Schreiben: E-Mail schreiben in 60 Sekunden ✉️ #Shorts
 **Beschreibung:**
 So schreibst du beim Deutsch-Test für Zuwanderer (DTZ) eine gute E-Mail:
 1. Aufgabe lesen  2. Betreff  3. Anrede  4. Alle vier Punkte  5. Schluss & Gruß  6. Prüfen
 Mit Beispiel-E-Mail an die Arztpraxis und Checkliste.
 **Hashtags:** #Shorts #DTZ #DeutschLernen #DeutschTest #Schreiben #EMail #Deutsch #B1
+
+## 6. hausaufgaben-ausrede-miss-de.mp4 (≈ 16 s, Deutsch, Lehrerin mit roten Locken)
+**Titel:** Die Hausaufgaben-Ausrede 😂 Lehrerin vs. Schüler #Shorts
+**Beschreibung:**
+Warum fehlen schon wieder die Hausaufgaben? Die Ausrede des Schülers bringt die Lehrerin zur Verzweiflung. 😂
+Deutsch hören und mitlesen. Neue Wörter: die Ausrede, vorbereiten, das Klassenzimmer.
+**Hashtags:** #Shorts #DeutschLernen #Deutsch #Comedy #Klassenzimmer #Lehrerin #Hausaufgaben
+
+## 7. homework-excuse-miss-en.mp4 (≈ 19 s, Englisch, Lehrerin mit roten Locken)
+**Title:** The Homework Excuse 😂 Teacher vs. Student #Shorts
+**Description:**
+“I practiced my excuses!” The teacher has heard everything – until now. 😂
+Short classroom comedy with subtitles – listen, read along and learn English.
+**Hashtags:** #Shorts #ClassroomComedy #LearnEnglish #Teacher #Student #Funny #Cartoon

@@ -39,7 +39,7 @@ NSTEP = len(C.SCHRITTE)
 HEADER_Y = 176
 DOTS_Y = 362
 STEP_Y = 300
-TASKB = (40, 410, 960, 1230)      # grosse Aufgabenkarte (Schritt 1)
+TASKB = (40, 410, 960, 1150)      # grosse Aufgabenkarte (Schritt 1)
 CHIP_Y0, CHIP_H = 410, 74         # kompakte Punkte ab Schritt 2
 MAIL = (40, 596, 960, 1290)
 CAP_BOTTOM = 1470                 # Untertitel enden vor Titel/Kanalname der Shorts-Oberflaeche
@@ -350,7 +350,7 @@ def task_big():
 def chip_geom(k, big):
     if big:
         _, y0 = task_big()
-        return TASKB[0] + 40, TASKB[1] + y0 + k * 100, TASKB[2] - TASKB[0] - 80, 86
+        return TASKB[0] + 40, TASKB[1] + y0 + k * 88, TASKB[2] - TASKB[0] - 80, 76
     cw = (MAIL[2] - MAIL[0] - 16) // 2
     return MAIL[0] + (k % 2) * (cw + 16), CHIP_Y0 + (k // 2) * (CHIP_H + 12), cw, CHIP_H
 
