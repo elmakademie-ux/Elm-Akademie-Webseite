@@ -18,7 +18,10 @@ export const Subtitles: React.FC<{ lines: Line[] }> = ({ lines }) => {
   const pop = spring({ frame: frame - word.start, fps, config: { damping: 11, stiffness: 260, mass: 0.5 } });
   const fade = interpolate(frame, [line.startFrame - 3, line.startFrame, line.endFrame + 2, line.endFrame + 9], [0, 1, 1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const size = Math.max(104, Math.min(176, 176 - (word.text.length - 6) * 6.5));
+  // Schriftgröße: groß, aber das Wort muss immer in die Breite passen (Großbuchstaben sind breiter)
+  const caps = word.text === word.text.toUpperCase() && /[A-ZÄÖÜ]/.test(word.text);
+  const fit = 930 / (word.text.length * (caps ? 0.8 : 0.62));
+  const size = Math.max(64, Math.min(176, 176 - (word.text.length - 6) * 6.5, fit));
   const stroke = Math.round(size * 0.11);
   return (
     <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 470, opacity: fade }}>

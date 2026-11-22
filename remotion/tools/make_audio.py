@@ -5,7 +5,7 @@ Erzeugt aus src/episode.json:
   public/assets/audio/music.wav     Hintergrundmusik (selbst erzeugt, keine Lizenzfragen)
   src/timeline.json                 Zeitplan in Frames (Zeilen, Wörter, Lautstärke, Schnitte, Effekte)
 
-    python3 tools/make_audio.py
+    python3 tools/make_audio.py <episode-id>      (Standard: classroom-comedy)
 """
 import json
 import sys
@@ -18,9 +18,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT.parent / "videos"))
 from common.audio import SR, ensure_voice, make_music, speak, tone  # noqa: E402
 
-EP = json.load(open(ROOT / "src" / "episode.json", encoding="utf-8"))
+EID = next((a for a in sys.argv[1:] if not a.startswith("-")), "classroom-comedy")
+EP = json.load(open(ROOT / "src" / "episodes" / f"{EID}.json", encoding="utf-8"))
 FPS = EP["fps"]
-OUT = ROOT / "public" / "assets" / "audio"
+SFX_DIR = ROOT / "public" / "assets" / "audio"          # Effekte gemeinsam fuer alle Episoden
+OUT = SFX_DIR / EID                                       # Stimmen und Musik je Episode
 OUT.mkdir(parents=True, exist_ok=True)
 VOICES = {"teacher": dict(pitch=0.93, length=0.93), "student": dict(pitch=1.13, length=1.10)}
 rng = np.random.default_rng(7)
@@ -98,10 +100,24 @@ def sfx_womp():
     return out
 
 
-SFX = {"whoosh": (sfx_whoosh, 0.55), "gasp": (sfx_gasp, 0.4), "boing": (sfx_boing, 0.5),
+def sfx_ding():
+    n = int(1.0 * SR)
+    t = np.arange(n) / SR
+    return (np.sin(2 * np.pi * 1318.5 * t) + 0.4 * np.sin(2 * np.pi * 2637 * t)) * np.exp(-t * 4.5)
+
+
+def sfx_slam():
+    n = int(0.8 * SR)
+    t = np.arange(n) / SR
+    thump = np.sin(2 * np.pi * np.cumsum(90 * (1 + 2.0 * np.exp(-t * 30))) / SR) * np.exp(-t * 7)
+    crack = lowpass(rng.standard_normal(n), 3) * np.exp(-t * 40)
+    return thump + 0.8 * crack
+
+
+SFX = {"ding": (sfx_ding, 0.5), "slam": (sfx_slam, 0.8), "whoosh": (sfx_whoosh, 0.55), "gasp": (sfx_gasp, 0.4), "boing": (sfx_boing, 0.5),
        "alarm": (sfx_alarm, 0.45), "rimshot": (sfx_rimshot, 0.75), "womp": (sfx_womp, 0.6)}
 for name, (fn, gain) in SFX.items():
-    save(OUT / f"sfx-{name}.wav", fn(), gain)
+    save(SFX_DIR / f"sfx-{name}.wav", fn(), gain)
 
 
 # ------------------------------------------------------------ Stimmen
@@ -146,7 +162,7 @@ for i, ln in enumerate(EP["lines"]):
         words.append(dict(text=c, start=a + round((b - a) * acc / sum(wts)), end=a + round((b - a) * (acc + w) / sum(wts))))
         acc += w
     lines.append(dict(id=i + 1, who=ln["who"], pose=ln["pose"], text=ln["text"], startFrame=a, endFrame=b,
-                      audio=f"assets/audio/{name}", words=words, env=env))
+                      audio=f"assets/audio/{EID}/{name}", words=words, env=env))
     for s in ln.get("sfx", []):
         at = (t + dur + ln.get("sfxAfterEnd", 0)) if s == "rimshot" else (t + ln.get("sfxDelay", 0))
         sfx_events.append(dict(file=f"assets/audio/sfx-{s}.wav", frame=round(at * FPS), volume=SFX[s][1]))
@@ -173,5 +189,5 @@ music = make_music(total / FPS, [], 9999)
 save(OUT / "music.wav", music, 0.9)
 json.dump(dict(fps=FPS, totalFrames=total, reactionFrame=react, outroFrame=outro, lines=lines, shots=shots,
                sfx=sfx_events, stickers=EP["reaction"].get("stickers", [])),
-          open(ROOT / "src" / "timeline.json", "w", encoding="utf-8"), ensure_ascii=False)
+          open(ROOT / "src" / "timelines" / f"{EID}.json", "w", encoding="utf-8"), ensure_ascii=False)
 print(f"Dauer {total / FPS:.1f} s ({total} Frames), {len(lines)} Zeilen, {len(sfx_events)} Effekte")

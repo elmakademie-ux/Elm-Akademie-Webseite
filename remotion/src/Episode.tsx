@@ -7,20 +7,20 @@ import { Student, Teacher } from "./components/Character";
 import { Header } from "./components/Header";
 import { Outro } from "./components/Outro";
 import { Line, Subtitles } from "./components/Subtitles";
-import timeline from "./timeline.json";
-import episode from "./episode.json";
+import { EPISODES } from "./episodes";
 
 type Shot = { pose: string; who: CharacterId; startFrame: number; endFrame: number };
-const T = timeline as unknown as {
+export type Timeline = {
   totalFrames: number; reactionFrame: number; outroFrame: number; lines: (Line & { env: number[]; audio: string; pose: string })[];
   shots: Shot[]; sfx: { file: string; frame: number; volume: number }[];
   stickers: { text: string; x: number; y: number; color: string; delay: number }[];
 };
-export const TOTAL_FRAMES = T.totalFrames;
+const Ctx = React.createContext<Timeline>(null as unknown as Timeline);
 const OVERLAP = 9;                     // Frames, in denen der nächste Schnitt über den vorigen blendet
 const TRANSITIONS = ["zoom", "slide", "fade", "whip"] as const;
 
 const Shot: React.FC<{ shot: Shot; index: number }> = ({ shot, index }) => {
+  const T = React.useContext(Ctx);
   const local = useCurrentFrame();
   const abs = shot.startFrame + local;
   const duration = shot.endFrame - shot.startFrame + OVERLAP;
@@ -50,6 +50,7 @@ const Shot: React.FC<{ shot: Shot; index: number }> = ({ shot, index }) => {
 };
 
 const Stickers: React.FC = () => {
+  const T = React.useContext(Ctx);
   const frame = useCurrentFrame();
   return (
     <>
@@ -69,7 +70,7 @@ const Stickers: React.FC = () => {
   );
 };
 
-const musicVolume = (f: number) => {
+const musicVolume = (T: Timeline) => (f: number) => {
   let duck = 1;
   for (const l of T.lines) {
     duck = Math.min(duck, interpolate(f, [l.startFrame - 6, l.startFrame, l.endFrame, l.endFrame + 8], [1, 0.4, 0.4, 1],
@@ -79,28 +80,33 @@ const musicVolume = (f: number) => {
   return 0.14 * duck * fade;
 };
 
-export const ClassroomComedy: React.FC = () => (
-  <AbsoluteFill style={{ background: "#0b1224", fontFamily: FONT_BOLD }}>
-    {T.shots.map((s, i) => (
-      <Sequence key={i} from={s.startFrame} durationInFrames={s.endFrame - s.startFrame + (i < T.shots.length - 1 ? OVERLAP : 0)}>
-        <Shot shot={s} index={i} />
-      </Sequence>
-    ))}
-    <Stickers />
-    <Header badge={episode.badge} />
-    <Subtitles lines={T.lines} />
-    <Outro from={T.outroFrame} title={episode.title} />
-    {/* Ton */}
-    <Audio src={staticFile("assets/audio/music.wav")} volume={musicVolume} />
-    {T.lines.map((l) => (
-      <Sequence key={l.id} from={l.startFrame} layout="none">
-        <Audio src={staticFile(l.audio)} volume={0.85} />
-      </Sequence>
-    ))}
-    {T.sfx.map((s, i) => (
-      <Sequence key={`sfx${i}`} from={Math.max(0, s.frame)} layout="none">
-        <Audio src={staticFile(s.file)} volume={s.volume * 0.5} />
-      </Sequence>
-    ))}
-  </AbsoluteFill>
-);
+export const Episode: React.FC<{ id: string }> = ({ id }) => {
+  const { episode, timeline: T } = EPISODES[id];
+  return (
+    <Ctx.Provider value={T}>
+      <AbsoluteFill style={{ background: "#0b1224", fontFamily: FONT_BOLD }}>
+        {T.shots.map((s, i) => (
+          <Sequence key={i} from={s.startFrame} durationInFrames={s.endFrame - s.startFrame + (i < T.shots.length - 1 ? OVERLAP : 0)}>
+            <Shot shot={s} index={i} />
+          </Sequence>
+        ))}
+        <Stickers />
+        <Header badge={episode.badge} />
+        <Subtitles lines={T.lines} />
+        <Outro from={T.outroFrame} title={episode.title} />
+        {/* Ton */}
+        <Audio src={staticFile(`assets/audio/${id}/music.wav`)} volume={musicVolume(T)} />
+        {T.lines.map((l) => (
+          <Sequence key={l.id} from={l.startFrame} layout="none">
+            <Audio src={staticFile(l.audio)} volume={0.85} />
+          </Sequence>
+        ))}
+        {T.sfx.map((s, i) => (
+          <Sequence key={`sfx${i}`} from={Math.max(0, s.frame)} layout="none">
+            <Audio src={staticFile(s.file)} volume={s.volume * 0.5} />
+          </Sequence>
+        ))}
+      </AbsoluteFill>
+    </Ctx.Provider>
+  );
+};
