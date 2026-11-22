@@ -54,7 +54,7 @@ const ImpactLines: React.FC = () => {
       {Array.from({ length: 12 }).map((_, i) => {
         const ang = (i / 12) * Math.PI * 2 + 0.2;
         const r0 = 390 + 40 * s, r1 = r0 + 70 + 30 * (i % 3);
-        const cx = 540, cy = 1010;
+        const cx = 540, cy = 960;
         const l = { x1: cx + Math.cos(ang) * r0, y1: cy + Math.sin(ang) * r0 * 0.95, x2: cx + Math.cos(ang) * r1, y2: cy + Math.sin(ang) * r1 * 0.95 };
         return (
           <g key={i}>

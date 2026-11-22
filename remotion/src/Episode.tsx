@@ -4,12 +4,14 @@ import "./fonts";
 import { FONT_BOLD } from "./fonts";
 import { CharacterId, getPose } from "./characters";
 import { Student, Teacher } from "./components/Character";
-import { Header } from "./components/Header";
-import { Outro } from "./components/Outro";
 import { Line, Subtitles } from "./components/Subtitles";
 import { EPISODES } from "./episodes";
 
 type Shot = { pose: string; who: CharacterId; startFrame: number; endFrame: number };
+/** Shorts: kein Abspann; das Video endet auf der Reaktion und läuft nahtlos in den Anfang (Loop). */
+export const LOOP_HOLD = 12;
+export const episodeFrames = (t: { outroFrame: number }) => t.outroFrame + LOOP_HOLD;
+
 export type Timeline = {
   totalFrames: number; reactionFrame: number; outroFrame: number; lines: (Line & { env: number[]; audio: string; pose: string })[];
   shots: Shot[]; sfx: { file: string; frame: number; volume: number }[];
@@ -59,7 +61,7 @@ const Stickers: React.FC = () => {
         if (f < 0 || frame >= T.outroFrame) return null;
         const pop = interpolate(f, [0, 6, 10], [0.3, 1.2, 1], { extrapolateRight: "clamp" });
         return (
-          <div key={i} style={{ position: "absolute", left: s.x * 1080 - 200, top: 470 + s.y * 1080, width: 400, textAlign: "center",
+          <div key={i} style={{ position: "absolute", left: s.x * 1080 - 200, top: 420 + s.y * 1080, width: 400, textAlign: "center",
             fontFamily: "InterBlack, Inter, sans-serif", fontSize: 92, color: s.color, WebkitTextStroke: "10px #0b0b10",
             paintOrder: "stroke fill", transform: `scale(${pop}) rotate(${Math.sin(f / 4) * 3 - 4}deg)`, opacity: Math.min(1, f / 4) }}>
             {s.text}
@@ -76,7 +78,7 @@ const musicVolume = (T: Timeline) => (f: number) => {
     duck = Math.min(duck, interpolate(f, [l.startFrame - 6, l.startFrame, l.endFrame, l.endFrame + 8], [1, 0.4, 0.4, 1],
       { extrapolateLeft: "clamp", extrapolateRight: "clamp" }));
   }
-  const fade = interpolate(f, [0, 24, T.totalFrames - 40, T.totalFrames], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const fade = interpolate(f, [0, 8, episodeFrames(T) - 6, episodeFrames(T)], [0.3, 1, 1, 0.3], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return 0.14 * duck * fade;
 };
 
@@ -86,14 +88,12 @@ export const Episode: React.FC<{ id: string }> = ({ id }) => {
     <Ctx.Provider value={T}>
       <AbsoluteFill style={{ background: "#0b1224", fontFamily: FONT_BOLD }}>
         {T.shots.map((s, i) => (
-          <Sequence key={i} from={s.startFrame} durationInFrames={s.endFrame - s.startFrame + (i < T.shots.length - 1 ? OVERLAP : 0)}>
+          <Sequence key={i} from={s.startFrame} durationInFrames={s.endFrame - s.startFrame + (i < T.shots.length - 1 ? OVERLAP : LOOP_HOLD)}>
             <Shot shot={s} index={i} />
           </Sequence>
         ))}
         <Stickers />
-        <Header badge={episode.badge} />
         <Subtitles lines={T.lines} names={(episode as { names?: Partial<Record<CharacterId, string>> }).names} />
-        <Outro from={T.outroFrame} title={episode.title} cta={(episode as { cta?: string }).cta} />
         {/* Ton */}
         <Audio src={staticFile(`assets/audio/${id}/music.wav`)} volume={musicVolume(T)} />
         {T.lines.map((l) => (

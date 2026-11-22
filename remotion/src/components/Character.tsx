@@ -2,7 +2,7 @@ import React from "react";
 import { Img, interpolate, Loop, OffthreadVideo, staticFile, Easing } from "remotion";
 import { CharacterId, getPose } from "../characters";
 
-export const BAND = { y: 470, w: 1080, h: 1080 };
+export const BAND = { y: 420, w: 1080, h: 1080 };   // Shorts: unten ~420 px frei
 
 export type CharacterProps = {
   pose: string;

@@ -24,14 +24,14 @@ export const Subtitles: React.FC<{ lines: Line[]; names?: Partial<Record<Charact
   const size = Math.max(64, Math.min(176, 176 - (word.text.length - 6) * 6.5, fit));
   const stroke = Math.round(size * 0.11);
   return (
-    <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 470, opacity: fade }}>
-      <div style={{ position: "absolute", top: 222, left: 0, width: 1080, display: "flex", justifyContent: "center" }}>
+    <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 420, opacity: fade }}>
+      <div style={{ position: "absolute", top: 168, left: 0, width: 1080, display: "flex", justifyContent: "center" }}>
         <div style={{ background: def.color, color: "#fff", fontFamily: FONT_BOLD, fontSize: 40, letterSpacing: 2,
           padding: "8px 36px", borderRadius: 40, border: "5px solid #111", boxShadow: "0 6px 0 rgba(0,0,0,0.35)" }}>
           {names?.[line.who] ?? def.name}
         </div>
       </div>
-      <div style={{ position: "absolute", top: 268, left: 0, width: 1080, height: 190, display: "flex",
+      <div style={{ position: "absolute", top: 214, left: 0, width: 1080, height: 190, display: "flex",
         justifyContent: "center", alignItems: "center" }}>
         <div style={{ fontFamily: FONT_BLACK, fontSize: size, lineHeight: 1, color: word.hot ? "#ffd640" : def.textColor, whiteSpace: "nowrap",
           transform: `scale(${(word.hot ? 0.7 : 0.78) + (word.hot ? 0.4 : 0.22) * pop})`, WebkitTextStroke: `${stroke}px #0b0b10`, paintOrder: "stroke fill",

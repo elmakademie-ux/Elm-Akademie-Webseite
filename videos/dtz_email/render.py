@@ -35,13 +35,15 @@ FONT_DIR = Path("/usr/share/fonts/opentype/inter")
 NSTEP = len(C.SCHRITTE)
 
 # Layout
-HEADER_Y = 100            # unterhalb der Plattform-Leiste (oben ca. 130 px verdeckt)
-DOTS_Y = 372
-STEP_Y = 310
-TASKB = (60, 430, 1020, 1230)     # grosse Aufgabenkarte (Schritt 1)
-CHIP_Y0, CHIP_H = 408, 74         # kompakte Punkte ab Schritt 2
-MAIL = (60, 604, 1020, 1345)
-CAP_BOTTOM = 1530                 # Untertitel enden vor der unteren Plattform-Leiste
+# YouTube Shorts: oben ~150 px, unten ~420 px und rechts ~120 px (Buttons) bleiben frei
+HEADER_Y = 176
+DOTS_Y = 362
+STEP_Y = 300
+TASKB = (40, 410, 960, 1230)      # grosse Aufgabenkarte (Schritt 1)
+CHIP_Y0, CHIP_H = 410, 74         # kompakte Punkte ab Schritt 2
+MAIL = (40, 596, 960, 1290)
+CAP_BOTTOM = 1470                 # Untertitel enden vor Titel/Kanalname der Shorts-Oberflaeche
+CX = 500                          # Mitte des sicheren Bereichs (x 40..960)
 
 
 # ================================================================ Helfer
@@ -300,9 +302,8 @@ def background(t):
 
 
 def draw_header(frame, active=-1):
-    comp(frame, LOGO, (36, HEADER_Y - 22))
     p = pill(C.NIVEAU, 42, WHITE, NAVY, 36, 14)
-    comp(frame, p, (W - 48 - p.width, HEADER_Y + 36))
+    comp(frame, p, (48, HEADER_Y))
     if active < 0:
         return
     d = ImageDraw.Draw(frame, "RGBA")
@@ -572,7 +573,7 @@ def caption_img(text, spoken):
     words = text.split()
     widths = [f.getlength(w) for w in words]
     sp = f.getlength(" ")
-    lines = split_lines(words, widths, sp, W - 150)
+    lines = split_lines(words, widths, sp, 800)
     lh = 74
 
     def lw(ix):
@@ -596,7 +597,7 @@ def draw_caption(frame, t, bottom=None):
             spoken = sum(1 for ws in word_starts(say) if t >= ws)
             img = caption_img(say["text"], spoken)
             a = clamp((t - say["start"] + 0.1) / 0.15) * clamp((say["end"] + 0.6 - t) / 0.2)
-            comp(frame, img, ((W - img.width) / 2, (bottom or CAP_BOTTOM) - img.height), a)
+            comp(frame, img, (CX - img.width / 2, (bottom or CAP_BOTTOM) - img.height), a)
             return
 
 
@@ -637,7 +638,7 @@ def draw_step_body(frame, t, i, lt):
             card = informal_card()
             layout = [l for l in mail_layout() if l[0] == "anrede"]
             y = MAIL[1] + BODY_TOP + layout[0][2] + 90 if layout else MAIL[1] + 300
-            comp_center(frame, card, W / 2, y, 0.8 + 0.2 * back_out((t - say["start"] + 0.2) / 0.4), a)
+            comp_center(frame, card, CX, y, 0.8 + 0.2 * back_out((t - say["start"] + 0.2) / 0.4), a)
 
 
 def draw_step(frame, t, i):
@@ -670,7 +671,7 @@ def draw_checklist(frame, t, lt):
     d.text((card.width / 2, 74), "Checkliste", font=font("ExtraBold", 64), fill=NAVY, anchor="mm")
     a = ease_out((lt - 0.4) / 0.4)
     cy = MAIL[1] + 380
-    comp_center(frame, shadow(card, 22, 70, 12), W / 2, cy, 0.9 + 0.1 * back_out((lt - 0.4) / 0.5), a)
+    comp_center(frame, shadow(card, 22, 70, 12), CX, cy, 0.9 + 0.1 * back_out((lt - 0.4) / 0.5), a)
     top = cy - card.height / 2
     say = next(s for s in TL["says"] if s.get("step") == NSTEP - 1)
     span = say["end"] - say["start"]
@@ -679,18 +680,19 @@ def draw_checklist(frame, t, lt):
         tk = say["start"] + span * (0.35 + 0.25 * k)
         on = t >= tk
         ic = check_icon(38, OK if on else GREY, on)
-        comp_center(frame, ic, W / 2 - 330, y + 34, max(0.01, back_out((t - tk) / 0.35)) if on else 1, a)
-        comp(frame, text_img(item, "Bold", 58, NAVY), (W / 2 - 260, y - 6), a)
+        comp_center(frame, ic, CX - 330, y + 34, max(0.01, back_out((t - tk) / 0.35)) if on else 1, a)
+        comp(frame, text_img(item, "Bold", 58, NAVY), (CX - 260, y - 6), a)
 
 
 def draw_outro(frame, t):
     lt = t - TL["outro_start"]
     draw_header(frame)
-    comp_center(frame, LOGO, W / 2, 640, 1.9 * (0.8 + 0.2 * back_out(lt / 0.6)), clamp(lt / 0.3))
-    ttl = text_img("Viel Erfolg beim DTZ!", "ExtraBold", 84, NAVY)
-    comp_center(frame, ttl, W / 2, 900, 1, ease_out((lt - 0.3) / 0.5))
-    p = pill("Folge der ELM Akademie", 50, WHITE, ORANGE, 44, 20, "ExtraBold")
-    comp_center(frame, shadow(p, 14, 50, 8), W / 2, 1040, max(0.01, back_out((lt - 0.6) / 0.5)),
+    ic = check_icon(110, OK, True)
+    comp_center(frame, shadow(ic, 18, 60, 10), W / 2, 700, max(0.01, back_out(lt / 0.6)), clamp(lt / 0.3))
+    ttl = text_img("Viel Erfolg beim DTZ!", "ExtraBold", 88, NAVY)
+    comp_center(frame, ttl, W / 2, 920, 1, ease_out((lt - 0.3) / 0.5))
+    p = pill("Folge für mehr DTZ-Tipps", 50, WHITE, ORANGE, 44, 20, "ExtraBold")
+    comp_center(frame, shadow(p, 14, 50, 8), W / 2, 1060, max(0.01, back_out((lt - 0.6) / 0.5)),
                 clamp((lt - 0.6) / 0.2))
 
 
