@@ -1,0 +1,89 @@
+{
+  "id": "classroom-comedy",
+  "title": "Der schlaue Schüler",
+  "badge": "Klassen-Comedy",
+  "fps": 30,
+  "start": 0.35,
+  "pause": 0.28,
+  "reactionSeconds": 2.1,
+  "outroSeconds": 2.5,
+  "lines": [
+    {
+      "who": "teacher",
+      "pose": "pointing",
+      "text": "Ali, warum kommst du jeden Tag zu spät?",
+      "sfx": [
+        "gasp"
+      ]
+    },
+    {
+      "who": "student",
+      "pose": "explaining",
+      "text": "Herr Lehrer, ich habe ein Problem mit meinem Wecker."
+    },
+    {
+      "who": "teacher",
+      "pose": "glasses",
+      "text": "Was ist denn das Problem?"
+    },
+    {
+      "who": "student",
+      "pose": "thumb",
+      "text": "Er klingelt immer, wenn ich schlafe!",
+      "sfx": [
+        "alarm"
+      ],
+      "sfxDelay": 0.25
+    },
+    {
+      "who": "teacher",
+      "pose": "shocked",
+      "text": "Dann stell ihn früher!",
+      "sfx": [
+        "boing"
+      ]
+    },
+    {
+      "who": "student",
+      "pose": "explaining",
+      "text": "Das habe ich gemacht."
+    },
+    {
+      "who": "teacher",
+      "pose": "glasses",
+      "text": "Und?"
+    },
+    {
+      "who": "student",
+      "pose": "thumb",
+      "text": "Jetzt schlafe ich noch länger!",
+      "pauseBefore": 0.4,
+      "sfx": [
+        "rimshot"
+      ],
+      "sfxAfterEnd": 0.05
+    }
+  ],
+  "reaction": {
+    "pose": "tired",
+    "sfx": [
+      "womp"
+    ],
+    "stickers": [
+      {
+        "text": "*seufz*",
+        "x": 0.24,
+        "y": 0.05,
+        "color": "#ffffff",
+        "delay": 0.2
+      },
+      {
+        "text": "Zzz",
+        "x": 0.8,
+        "y": 0.13,
+        "color": "#ffd640",
+        "delay": 0.5
+      }
+    ]
+  }
+}
