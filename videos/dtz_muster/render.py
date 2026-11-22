@@ -31,7 +31,7 @@ NIVEAU = "DTZ · B1"
 GESAMTDAUER = 60.0
 SPRECHTEMPO = 1.0
 MUSIK_LAUTSTAERKE = 0.12
-AUSSPRACHE = {"DTZ": "De Te Zett", "E-Mail": "Imeil", "E-Mails": "Imeils", "„": "", "“": ""}
+AUSSPRACHE = {"&": "und", "DTZ": "De Te Zett", "E-Mail": "Imeil", "E-Mails": "Imeils", "„": "", "“": ""}
 NAVY = (27, 54, 104)
 ORANGE = (237, 140, 20)          # Konnektoren
 BLUE = (30, 90, 180)             # ELM-Markenfarbe (Rahmen, Beschriftungen)
@@ -64,17 +64,17 @@ SPECIAL = None       # "gintro" / "goutro" fuer das Gesamtvideo
 def apply_landscape():
     """Layout fuer 16:9 (1920 x 1080): erst die Aufgabe allein, dann die E-Mail allein
     (oben in der E-Mail die 4 Punkte statt An/Betreff)."""
-    global W, H, TASK, MAIL, BODY_TOP, BODY_BOTTOM, BODY_X, BODY_W, LANDSCAPE, FS, LH, FIELDS
+    global W, H, TASK, MAIL, BODY_TOP, BODY_BOTTOM, BODY_X, BODY_W, LANDSCAPE, FS, LH, FIELDS, TOPBAR
     W, H = 1920, 1080
     LANDSCAPE = True
-    FS, LH = 36, 50
-    FIELDS = 104                       # Zeile mit den 4 Punkten
+    FS, LH = 50, 68                    # grosse Schrift beim Schreiben
+    TOPBAR, FIELDS = 70, 124           # Fensterleiste, Zeile mit den 4 Punkten
     TASK = (230, 175, 1690, 1040)
-    MAIL = (300, 182, 1620, 1056)
-    BODY_TOP = MAIL[1] + TOPBAR + FIELDS + 18
-    BODY_BOTTOM = MAIL[3] - 26
-    BODY_X = MAIL[0] + 92
-    BODY_W = MAIL[2] - BODY_X - 36
+    MAIL = (0, 0, W, H)                # E-Mail fuellt das ganze Bild (ohne Rand)
+    BODY_TOP = TOPBAR + FIELDS + 26
+    BODY_BOTTOM = H - 24
+    BODY_X = 150
+    BODY_W = W - BODY_X - 90
 
 E = None   # aktuelle E-Mail
 A = None   # zugehoerige Aufgabe
@@ -242,6 +242,26 @@ def parts():
 
 
 # ================================================================ Audio + Zeitplan
+POINTS_INTRO = "Schreiben Sie etwas zu folgenden Punkten:"
+
+
+def points_text():
+    items = [p if p.endswith("?") else p + "." for p in A["punkte"]]
+    return POINTS_INTRO + " " + " ".join(items)
+
+
+def point_windows():
+    """Zeitfenster, in denen die Stimme die einzelnen Punkte spricht."""
+    ps, pe = TL["points"]
+    items = [p if p.endswith("?") else p + "." for p in A["punkte"]]
+    weights = [len(POINTS_INTRO) + 3] + [len(i) + 4 for i in items]
+    tot, acc, out = sum(weights), weights[0], []
+    for wgt in weights[1:]:
+        out.append((ps + (pe - ps) * acc / tot, ps + (pe - ps) * (acc + wgt) / tot))
+        acc += wgt
+    return out
+
+
 def spoken(display):
     s = display
     for a, b in AUSSPRACHE.items():
@@ -255,6 +275,8 @@ def synth(tempo):
     tmp = HERE.parent / ".cache" / "line_dtzm.wav"
     CLIPS.clear()
     texts = [intro_text(), A["text"], outro_text()] + [t for _, t, _ in parts()]
+    if LANDSCAPE:
+        texts.append(points_text())
     for text in texts:
         seg = speak(spoken(text), tmp, model, tempo)
         nz = np.nonzero(np.abs(seg) > 0.02)[0]
@@ -278,6 +300,11 @@ def build_timeline(gap):
     tl["task"] = (t, t + dur(A["text"]))
     tl["events"].append((t, A["text"]))
     t += dur(A["text"]) + gap + 0.3
+    if LANDSCAPE:   # Punkte vorlesen
+        pt = points_text()
+        tl["points"] = (t, t + dur(pt))
+        tl["events"].append((t, pt))
+        t += dur(pt) + gap + 0.3
     tl["mail_in"] = t - 0.5
     for pid, txt, _ in parts():
         tl["events"].append((t, txt))
@@ -472,6 +499,19 @@ def draw_task(frame, t):
 
 # ---------------------------------------------------------------- E-Mail-Fenster
 @lru_cache(None)
+def mail_base_full():
+    """16:9: E-Mail-Fenster bildfuellend, ohne Rand und Schatten."""
+    img = Image.new("RGBA", (W, H), (*WHITE, 255))
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, 0, W, TOPBAR), fill=(232, 236, 243))
+    for k, c in enumerate(((255, 95, 86), (255, 189, 46), (39, 201, 63))):
+        d.ellipse((30 + k * 40, TOPBAR / 2 - 12, 54 + k * 40, TOPBAR / 2 + 12), fill=c)
+    d.text((W / 2, TOPBAR / 2), "Neue E-Mail", font=font("SemiBold", 34), fill=GREY, anchor="mm")
+    d.line((40, TOPBAR + FIELDS, W - 40, TOPBAR + FIELDS), fill=(225, 229, 236), width=3)
+    return img
+
+
+@lru_cache(None)
 def mail_base():
     x0, y0, x1, y1 = MAIL
     w, h = x1 - x0, y1 - y0
@@ -546,8 +586,11 @@ def scroll_at(t):
 
 def draw_mail(frame, t, slide):
     x0, y0, x1, y1 = MAIL
-    dy = (1 - slide) * 260
-    comp(frame, mail_base(), (x0 - 44, y0 - 44 + dy), slide)
+    if LANDSCAPE:
+        comp(frame, mail_base_full(), (0, 0), slide)
+    else:
+        dy = (1 - slide) * 260
+        comp(frame, mail_base(), (x0 - 44, y0 - 44 + dy), slide)
     if slide < 0.999:
         return
     d = ImageDraw.Draw(frame, "RGBA")
@@ -583,12 +626,13 @@ def draw_mail(frame, t, slide):
         else:
             ld.text((bx + x, yy), txt, font=font(weight, FS), fill=NAVY)
         if p is not None:
-            ld.rectangle((bx - 18, yy + 4, bx - 13, yy + LH - 2), fill=PCOL[p])
+            bw = 7 if LANDSCAPE else 5
+            ld.rectangle((bx - 14 - bw, yy + 4, bx - 14, yy + LH - 2), fill=PCOL[p])
             if first:
-                num = pill(str(p + 1), 22, WHITE, PCOL[p], 10, 3, "ExtraBold")
-                layer.alpha_composite(num, (int(bx - 62), int(yy + 4)))
+                num = pill(str(p + 1), int(FS * 0.68), WHITE, PCOL[p], int(FS * 0.3), 3, "ExtraBold")
+                layer.alpha_composite(num, (int(bx - 24 - bw - num.width), int(yy + 4)))
         if n <= len(w) and revealed(pid, t) < (revealed(pid, 1e9)):
-            cursor = (BODY_X + x + font(weight, FS).getlength(txt) + 2, BODY_TOP + yy + 4, 36)
+            cursor = (BODY_X + x + font(weight, FS).getlength(txt) + 2, BODY_TOP + yy + 4, FS + 4)
     # weiche Kanten oben/unten
     if sc > 1:   # oben weich ausblenden, wenn gescrollt wird
         arr = np.asarray(layer).copy()
@@ -599,7 +643,13 @@ def draw_mail(frame, t, slide):
     if cursor and int(t * 3) % 2 == 0:
         cx, cy, ch = cursor
         if BODY_TOP - 40 < cy < BODY_BOTTOM:
-            d.rectangle((cx, cy, cx + 3, cy + ch), fill=BLUE)
+            d.rectangle((cx, cy, cx + (4 if LANDSCAPE else 3), cy + ch), fill=BLUE)
+    if LANDSCAPE:   # Logo klein oben rechts, immer wieder kurz eingeblendet
+        ph = (t - TL["mail_in"]) % 14
+        a = clamp((ph - 1.0) / 0.5) * clamp((7.0 - ph) / 0.5)
+        if a > 0.01:
+            lg = LOGO.resize((int(LOGO.width * 0.42), int(LOGO.height * 0.42)), Image.LANCZOS)
+            comp(frame, lg, (W - lg.width - 6, TOPBAR / 2 - lg.height / 2 + 2), a)
 
 
 # ---------------------------------------------------------------- Untertitel
@@ -788,12 +838,16 @@ def draw_task_alone(frame, t, a):
             x += f.getlength(w + " ")
             gi += 1
     ytop = y0 + 120 + len(lines) * 66 + 30
-    d.text((x0 + 56, ytop), "Schreiben Sie etwas zu folgenden Punkten:", font=font("SemiBold", 38), fill=GREY)
+    ps = TL["points"][0]
+    d.text((x0 + 56, ytop), POINTS_INTRO, font=font("SemiBold", 38),
+           fill=NAVY if t >= ps else mix(GREY, 0.7, BLUE_LIGHT))
+    wins = point_windows()
     cw = int((x1 - x0 - 112 - 30) / 2)
     for k in range(4):
         cx = x0 + 56 + (k % 2) * (cw + 30)
         cy = ytop + 70 + (k // 2) * 112
-        level = round(8 * clamp(1 - abs(t - (s + 0.8 + 0.5 * k + (e - s) * 0.5)) / 0.5)) if s <= t <= e + 1.5 else 0
+        w0, w1 = wins[k]   # Punkt leuchtet, waehrend er gesprochen wird
+        level = round(8 * clamp((t - w0 + 0.15) / 0.2) * clamp((w1 + 0.5 - t) / 0.3)) if t >= w0 - 0.15 else 0
         comp(layer, big_chip(k, cw, level), (cx, cy))
     comp(frame, layer, (0, 0), a)
 
@@ -801,31 +855,37 @@ def draw_task_alone(frame, t, a):
 @lru_cache(None)
 def row_chip(k, cw):
     col = PCOL[k]
-    img = Image.new("RGBA", (cw + 1, 61), (0, 0, 0, 0))
+    h = ROW_H
+    img = Image.new("RGBA", (cw + 1, h + 1), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, cw, 60), 30, fill=(*col, 40), outline=(*col, 255), width=3)
-    num = pill(str(k + 1), 28, WHITE, col, 13, 5, "ExtraBold")
-    img.alpha_composite(num, (9, int(30 - num.height / 2)))
-    f = font("Bold", 30)
+    d.rounded_rectangle((0, 0, cw, h), h // 2, fill=(*col, 40), outline=(*col, 255), width=4)
+    num = pill(str(k + 1), int(h * 0.46), WHITE, col, int(h * 0.2), 5, "ExtraBold")
+    img.alpha_composite(num, (10, int(h / 2 - num.height / 2)))
+    f = font("Bold", int(h * 0.48))
     label = A["punkte"][k]
-    while f.getlength(label) > cw - 120 and f.size > 20:
+    while f.getlength(label) > cw - num.width - 90 and f.size > 20:
         f = font("Bold", f.size - 2)
-    d.text((60, 30), label, font=f, fill=NAVY, anchor="lm")
+    d.text((num.width + 22, h / 2), label, font=f, fill=NAVY, anchor="lm")
     return img
+
+
+ROW_H = 84
 
 
 def draw_point_row(frame, t):
     x0, y0, x1, y1 = MAIL
     gap = 16
     cw = int((x1 - x0 - 60 - 3 * gap) / 4)
-    y = y0 + TOPBAR + (FIELDS - 60) / 2
+    y = y0 + TOPBAR + (FIELDS - ROW_H) / 2
     for k in range(4):
         cx = x0 + 30 + k * (cw + gap)
         comp(frame, row_chip(k, cw), (cx, y))
         dt = point_done_time(k)
         on = dt is not None and t >= dt
-        ic = check_icon(19, OK if on else GREY, on)
-        comp_center(frame, ic, cx + cw - 32, y + 30, max(0.01, back_out((t - dt) / 0.35)) if on else 1)
+        r = int(ROW_H * 0.32)
+        ic = check_icon(r, OK if on else GREY, on)
+        comp_center(frame, ic, cx + cw - r - 14, y + ROW_H / 2,
+                    max(0.01, back_out((t - dt) / 0.35)) if on else 1)
 
 
 def draw_main(frame, t):
@@ -969,7 +1029,7 @@ def render_frame(fi):
 # ================================================================ Start
 def clear_caches():
     for fn in (task_lines, task_bg, chip_img, mail_base, body_layout, gram_bg, big_task_bg, big_task_lines,
-               big_chip, row_chip):
+               big_chip, row_chip, mail_base_full):
         fn.cache_clear()
 
 
