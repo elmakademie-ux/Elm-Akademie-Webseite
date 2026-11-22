@@ -41,3 +41,11 @@ KI-Cartoon-Beispiel: aus jedem Szenenbild mit einem Bild-zu-Video-Werkzeug (z. B
 einen Clip erzeugen. `python3 tools/make_prompts.py <id>` schreibt dafür `video-prompts/<id>.md`
 (Prompt, Mindestlänge, Sprachdatei je Szene). Clips nach `public/assets/clips/` legen und in
 `src/clips.json` eintragen; die Komposition nutzt dann den Clip statt des Bildes.
+
+## Szene 1 – "The Surprise Test" (neue Besetzung)
+Vorlage: `public/assets/surprise-test/classroom-storyboard.png` → `scene-01.png … scene-06.png`
+(Lehrerin mit lockigen roten Haaren, Schüler im gelben Hoodie; Figuren in `src/characters.ts` als `teacher_f`, `student_y`).
+- Komponente: `src/SurpriseTestScene.tsx` (Sequence, AbsoluteFill, Img, interpolate, spring, useCurrentFrame, useVideoConfig)
+- Gesamte Episode: `src/SurpriseTestEpisode.tsx` (weitere Szenen in `SCENES` anreihen)
+- Ton: `python3 tools/make_scene_audio.py` (englische Stimme Piper "Amy", Betonung, Effekt, Klassenzimmer-Atmosphäre)
+- Rendern: `npx remotion render surprise-test out/raw_surprise.mp4`, dann wie oben mit `loudnorm` → `out/surprise-test-scene1.mp4`

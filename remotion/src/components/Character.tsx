@@ -29,6 +29,14 @@ export const CharacterView: React.FC<CharacterProps & { character: CharacterId }
   const dx = d0.x + (d1.x - d0.x) * t;
   const dy = d0.y + (d1.y - d0.y) * t;
   const bob = 1 + 0.016 * talk;
+  // Fokus (Gesicht) in die Bildmitte schieben, ohne dass Ränder sichtbar werden
+  let cx = 0, cy = 0;
+  if (p.center) {
+    const ox = p.focus.x * BAND.w, oy = p.focus.y * BAND.h;
+    const clampTo = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+    cx = clampTo((0.5 - p.focus.x) * BAND.w, -(scale - 1) * (BAND.w - ox), (scale - 1) * ox);
+    cy = clampTo((0.5 - p.focus.y) * BAND.h, -(scale - 1) * (BAND.h - oy), (scale - 1) * oy);
+  }
   const lift = -7 * talk;
   const tilt = Math.sin(frame / 2.2) * 0.5 * talk;
   return (
@@ -36,13 +44,25 @@ export const CharacterView: React.FC<CharacterProps & { character: CharacterId }
       borderRadius: 40, boxShadow: "0 24px 60px rgba(10,20,40,0.45)" }}>
       <div style={{ width: "100%", height: "100%",
         transformOrigin: `${p.focus.x * 100}% ${p.focus.y * 100}%`,
-        transform: `translate(${dx}px, ${dy + lift}px) scale(${scale * bob}) rotate(${tilt}deg)` }}>
+        transform: `translate(${dx + cx}px, ${dy + cy + lift}px) scale(${scale * bob}) rotate(${tilt}deg)` }}>
         {p.clip ? (
           <Loop durationInFrames={p.clipFrames ?? 90}>
             <OffthreadVideo src={staticFile(p.clip)} muted style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </Loop>
         ) : (
-          <Img src={staticFile(p.image)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          <>
+            <Img src={staticFile(p.image)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            {p.mouth && (
+              // Mundbereich: dasselbe Bild, nur vertikal mit der Stimme gestreckt/gestaucht (Lippenbewegung)
+              <div style={{ position: "absolute", inset: 0,
+                clipPath: `ellipse(${p.mouth.rx * 100}% ${p.mouth.ry * 100}% at ${p.mouth.x * 100}% ${p.mouth.y * 100}%)` }}>
+                <div style={{ width: "100%", height: "100%", transformOrigin: `${p.mouth.x * 100}% ${p.mouth.y * 100}%`,
+                  transform: `scale(${1 + 0.07 * talk}, ${0.78 + 0.6 * talk})` }}>
+                  <Img src={staticFile(p.image)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                </div>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>
@@ -51,3 +71,6 @@ export const CharacterView: React.FC<CharacterProps & { character: CharacterId }
 
 export const Teacher: React.FC<CharacterProps> = (props) => <CharacterView character="teacher" {...props} />;
 export const Student: React.FC<CharacterProps> = (props) => <CharacterView character="student" {...props} />;
+
+export const TeacherF: React.FC<CharacterProps> = (props) => <CharacterView character="teacher_f" {...props} />;
+export const StudentY: React.FC<CharacterProps> = (props) => <CharacterView character="student_y" {...props} />;

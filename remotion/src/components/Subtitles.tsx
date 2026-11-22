@@ -3,7 +3,7 @@ import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { CHARACTERS, CharacterId } from "../characters";
 import { FONT_BLACK, FONT_BOLD } from "../fonts";
 
-type Word = { text: string; start: number; end: number };
+type Word = { text: string; start: number; end: number; hot?: boolean };
 export type Line = { id: number; who: CharacterId; text: string; startFrame: number; endFrame: number; words: Word[] };
 
 /** Große Untertitel, Wort für Wort mit der Stimme synchron; Name des Sprechers als Schild. */
@@ -33,8 +33,8 @@ export const Subtitles: React.FC<{ lines: Line[] }> = ({ lines }) => {
       </div>
       <div style={{ position: "absolute", top: 268, left: 0, width: 1080, height: 190, display: "flex",
         justifyContent: "center", alignItems: "center" }}>
-        <div style={{ fontFamily: FONT_BLACK, fontSize: size, lineHeight: 1, color: def.textColor, whiteSpace: "nowrap",
-          transform: `scale(${0.78 + 0.22 * pop})`, WebkitTextStroke: `${stroke}px #0b0b10`, paintOrder: "stroke fill",
+        <div style={{ fontFamily: FONT_BLACK, fontSize: size, lineHeight: 1, color: word.hot ? "#ffd640" : def.textColor, whiteSpace: "nowrap",
+          transform: `scale(${(word.hot ? 0.7 : 0.78) + (word.hot ? 0.4 : 0.22) * pop})`, WebkitTextStroke: `${stroke}px #0b0b10`, paintOrder: "stroke fill",
           textShadow: "0 8px 0 rgba(0,0,0,0.35)" }}>
           {word.text}
         </div>

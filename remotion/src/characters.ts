@@ -3,11 +3,15 @@
  * Das Aussehen von Lehrer und Schüler wird nur durch Auswahl dieser Bilder (Posen) bestimmt,
  * nie durch neue Figurenbilder. Neue Episoden fügen weitere Posen hier hinzu.
  */
-export type CharacterId = "teacher" | "student";
+export type CharacterId = "teacher" | "student" | "teacher_f" | "student_y";
 
 export type Pose = {
   /** Bild in public/ */
   image: string;
+  /** Kamera hält den Fokus (Gesicht) in der Bildmitte */
+  center?: boolean;
+  /** Mundbereich (Anteile 0..1): wird beim Sprechen mit der Stimme verformt */
+  mouth?: { x: number; y: number; rx: number; ry: number };
   /** optional: animierter Clip (aus dem Bild erzeugt), ersetzt das Standbild; Länge in Frames */
   clip?: string;
   clipFrames?: number;
@@ -27,7 +31,7 @@ export type CharacterDef = {
   poses: Record<string, Pose>;
 };
 
-export const CHARACTERS: Record<CharacterId, CharacterDef> = {
+export const CHARACTERS = {
   teacher: {
     name: "LEHRER",
     color: "#2b4a8c",
@@ -49,6 +53,32 @@ export const CHARACTERS: Record<CharacterId, CharacterDef> = {
       satisfied: { image: "assets/scene-06.png", focus: { x: 0.7, y: 0.45 }, zoom: [1.0, 1.25] },
       arms_crossed: { image: "assets/scene-01.png", focus: { x: 0.7, y: 0.45 }, zoom: [1.0, 1.3] },
     },
+  },
+} as unknown as Record<CharacterId, CharacterDef>;
+
+/** Zweite Besetzung (Storyboard "Surprise Test"): Lehrerin mit lockigen roten Haaren, Schüler im gelben Hoodie. */
+CHARACTERS.teacher_f = {
+  name: "TEACHER",
+  color: "#2f7d4a",
+  textColor: "#ffffff",
+  poses: {
+    pointing: { image: "assets/surprise-test/scene-01.png", focus: { x: 0.33, y: 0.27 }, zoom: [1.1, 1.65], center: true,
+      mouth: { x: 0.341, y: 0.361, rx: 0.05, ry: 0.042 } },
+    thinking: { image: "assets/surprise-test/scene-03.png", focus: { x: 0.45, y: 0.3 }, zoom: [1.0, 1.3], center: true,
+      drift: [{ x: -22, y: 0 }, { x: 22, y: -6 }] },
+    surprised: { image: "assets/surprise-test/scene-05.png", focus: { x: 0.45, y: 0.35 }, zoom: [1.0, 1.25], center: true },
+    arms_crossed: { image: "assets/surprise-test/scene-06.png", focus: { x: 0.25, y: 0.36 }, zoom: [1.5, 1.68], center: true },
+  },
+};
+CHARACTERS.student_y = {
+  name: "STUDENT",
+  color: "#d4a017",
+  textColor: "#ffd640",
+  poses: {
+    shrugging: { image: "assets/surprise-test/scene-02.png", focus: { x: 0.5, y: 0.35 }, zoom: [1.0, 1.2], center: true },
+    idea: { image: "assets/surprise-test/scene-04.png", focus: { x: 0.45, y: 0.35 }, zoom: [1.0, 1.2], center: true },
+    laughing: { image: "assets/surprise-test/scene-06.png", focus: { x: 0.75, y: 0.4 }, zoom: [1.2, 1.4], center: true },
+    worried: { image: "assets/surprise-test/scene-01.png", focus: { x: 0.75, y: 0.45 }, zoom: [1.1, 1.4], center: true },
   },
 };
 
