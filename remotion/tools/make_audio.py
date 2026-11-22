@@ -24,7 +24,11 @@ FPS = EP["fps"]
 SFX_DIR = ROOT / "public" / "assets" / "audio"          # Effekte gemeinsam fuer alle Episoden
 OUT = SFX_DIR / EID                                       # Stimmen und Musik je Episode
 OUT.mkdir(parents=True, exist_ok=True)
-VOICES = {"teacher": dict(pitch=0.93, length=0.93), "student": dict(pitch=1.13, length=1.10)}
+LANG = EP.get("language", "de")
+if LANG == "de":
+    VOICES = {"teacher": dict(pitch=0.93, length=0.93), "student": dict(pitch=1.13, length=1.10)}
+else:   # Englisch: zwei Piper-Maennerstimmen (Lehrer tiefer, Schueler heller)
+    VOICES = {"teacher": dict(pitch=0.93, length=0.95), "student": dict(pitch=1.06, length=1.0)}
 rng = np.random.default_rng(7)
 
 
@@ -133,13 +137,31 @@ def chunks(text):
     return out
 
 
-model = ensure_voice()
+def ensure_en(name):
+    import urllib.request
+    from common.audio import CACHE
+    CACHE.mkdir(parents=True, exist_ok=True)
+    spk = name.split("-")[1]
+    base = f"https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/{spk}/medium/"
+    for f in (f"{name}.onnx", f"{name}.onnx.json"):
+        if not (CACHE / f).exists():
+            print("Lade Stimme:", f, flush=True)
+            urllib.request.urlretrieve(base + f, CACHE / f)
+    return CACHE / f"{name}.onnx"
+
+
+if LANG == "de":
+    MODELS = {"teacher": ensure_voice(), "student": ensure_voice()}
+else:
+    MODELS = {"teacher": ensure_en("en_US-ryan-medium"), "student": ensure_en("en_US-joe-medium")}
 tmp = ROOT.parent / "videos" / ".cache" / "line_remotion.wav"
 t = EP["start"]
 lines, sfx_events, shots = [], [], []
 for i, ln in enumerate(EP["lines"]):
     v = VOICES[ln["who"]]
-    seg = speak(ln["text"], tmp, model, v["length"])
+    seg = speak(ln.get("say", ln["text"]), tmp, MODELS[ln["who"]], v["length"])
+    if ln.get("loud"):                      # Schreien: lauter und etwas hoeher
+        seg = np.clip(seg * 1.35, -1, 1)
     f = v["pitch"]
     seg = np.interp(np.arange(int(len(seg) / f)) * f, np.arange(len(seg)), seg).astype(np.float32)
     nz = np.nonzero(np.abs(seg) > 0.02)[0]

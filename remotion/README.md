@@ -2,7 +2,7 @@
 
 Kurzvideo 1080 × 1920, 30 fps, ca. 17,5 s: Lehrer und Schüler Ali, deutsche Dialoge, große
 Wort-für-Wort-Untertitel, Kamerafahrten, Übergänge, Soundeffekte, ELM-Logo.
-**Fertig:** `out/classroom-comedy.mp4` (Episode 2: Der schlaue Schüler), `out/homework-excuse.mp4` (Episode 1: Die Hausaufgaben-Ausrede)
+**Fertig:** `out/classroom-comedy.mp4` (Episode 2: Der schlaue Schüler), `out/homework-excuse.mp4` (Episode 1: Die Hausaufgaben-Ausrede, deutsch), `out/homework-excuse-en.mp4` (Episode 1 auf Englisch, Originaltext)
 
 ## Visuelle Vorlage
 `public/assets/classroom-storyboard.png` (3 × 2) ist in `scene-01.png … scene-06.png` geschnitten.
@@ -49,3 +49,6 @@ Vorlage: `public/assets/surprise-test/classroom-storyboard.png` → `scene-01.pn
 - Gesamte Episode: `src/SurpriseTestEpisode.tsx` (weitere Szenen in `SCENES` anreihen)
 - Ton: `python3 tools/make_scene_audio.py` (englische Stimme Piper "Amy", Betonung, Effekt, Klassenzimmer-Atmosphäre)
 - Rendern: `npx remotion render surprise-test out/raw_surprise.mp4`, dann wie oben mit `loudnorm` → `out/surprise-test-scene1.mp4`
+
+## Englische Episoden
+`"language": "en"` in der Episode-JSON nimmt zwei englische Piper-Männerstimmen (Lehrer: Ryan, Schüler: Joe); `names` ersetzt die Namensschilder, `cta` den Abspann-Text, `say` den gesprochenen Text (z. B. Schreien ohne Großbuchstaben), `loud` macht die Zeile lauter.

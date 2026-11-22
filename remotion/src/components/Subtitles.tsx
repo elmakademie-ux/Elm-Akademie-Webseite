@@ -7,7 +7,7 @@ type Word = { text: string; start: number; end: number; hot?: boolean };
 export type Line = { id: number; who: CharacterId; text: string; startFrame: number; endFrame: number; words: Word[] };
 
 /** Große Untertitel, Wort für Wort mit der Stimme synchron; Name des Sprechers als Schild. */
-export const Subtitles: React.FC<{ lines: Line[] }> = ({ lines }) => {
+export const Subtitles: React.FC<{ lines: Line[]; names?: Partial<Record<CharacterId, string>> }> = ({ lines, names }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const line = lines.find((l) => frame >= l.startFrame - 3 && frame < l.endFrame + 9);
@@ -28,7 +28,7 @@ export const Subtitles: React.FC<{ lines: Line[] }> = ({ lines }) => {
       <div style={{ position: "absolute", top: 222, left: 0, width: 1080, display: "flex", justifyContent: "center" }}>
         <div style={{ background: def.color, color: "#fff", fontFamily: FONT_BOLD, fontSize: 40, letterSpacing: 2,
           padding: "8px 36px", borderRadius: 40, border: "5px solid #111", boxShadow: "0 6px 0 rgba(0,0,0,0.35)" }}>
-          {def.name}
+          {names?.[line.who] ?? def.name}
         </div>
       </div>
       <div style={{ position: "absolute", top: 268, left: 0, width: 1080, height: 190, display: "flex",

@@ -3,7 +3,7 @@ import { Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig }
 import { FONT_BLACK, FONT_BOLD } from "../fonts";
 
 /** Abspann: Logo, Titel, Aufforderung zum Folgen. */
-export const Outro: React.FC<{ from: number; title: string }> = ({ from, title }) => {
+export const Outro: React.FC<{ from: number; title: string; cta?: string }> = ({ from, title, cta: ctaText = "Folge der ELM Akademie" }) => {
   const frame = useCurrentFrame() - from;
   const { fps } = useVideoConfig();
   if (frame < 0) return null;
@@ -21,7 +21,7 @@ export const Outro: React.FC<{ from: number; title: string }> = ({ from, title }
       <div style={{ position: "absolute", top: 1160, width: 1080, display: "flex", justifyContent: "center",
         transform: `scale(${Math.max(0.01, cta)})` }}>
         <div style={{ background: "#ed8c14", color: "#fff", fontFamily: FONT_BOLD, fontSize: 56, padding: "24px 56px", borderRadius: 70 }}>
-          Folge der ELM Akademie
+          {ctaText}
         </div>
       </div>
     </div>

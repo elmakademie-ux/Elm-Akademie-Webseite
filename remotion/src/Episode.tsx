@@ -92,8 +92,8 @@ export const Episode: React.FC<{ id: string }> = ({ id }) => {
         ))}
         <Stickers />
         <Header badge={episode.badge} />
-        <Subtitles lines={T.lines} />
-        <Outro from={T.outroFrame} title={episode.title} />
+        <Subtitles lines={T.lines} names={(episode as { names?: Partial<Record<CharacterId, string>> }).names} />
+        <Outro from={T.outroFrame} title={episode.title} cta={(episode as { cta?: string }).cta} />
         {/* Ton */}
         <Audio src={staticFile(`assets/audio/${id}/music.wav`)} volume={musicVolume(T)} />
         {T.lines.map((l) => (
