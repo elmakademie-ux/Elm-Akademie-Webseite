@@ -1,0 +1,261 @@
+{
+  "id": "tiktok-3-dinge",
+  "fps": 30,
+  "voice": {
+    "model": "de_DE-thorsten-high",
+    "length": 1.0,
+    "pitch": 1.0
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "target": 4.8,
+      "minTail": 1.0,
+      "lines": [
+        {
+          "text": "3 Dinge in Deutschland, die mich komplett überrascht haben!",
+          "say": "Drei Dinge in Deutschland, die mich komplett überrascht haben!",
+          "at": 0.4,
+          "hot": [
+            "3",
+            "komplett",
+            "überrascht"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "pop",
+          "at": 0.4
+        },
+        {
+          "name": "whoosh",
+          "at": 1.25
+        },
+        {
+          "name": "whoosh",
+          "at": 2.55
+        },
+        {
+          "name": "whoosh",
+          "at": 3.85
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "target": 5.0,
+      "minTail": 1.2,
+      "lines": [
+        {
+          "text": "Nummer 1",
+          "say": "Nummer eins.",
+          "at": 0.35,
+          "hot": [
+            "1"
+          ]
+        },
+        {
+          "text": "Für einen Kaffee braucht man manchmal einen Termin.",
+          "gap": 0.3,
+          "hot": [
+            "Kaffee",
+            "Termin"
+          ]
+        },
+        {
+          "text": "Drei Wochen? Für einen Kaffee?!",
+          "gap": 1.7,
+          "hot": [
+            "Drei",
+            "Kaffee"
+          ],
+          "extra": true
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "pop",
+          "at": 0.35
+        },
+        {
+          "name": "tick",
+          "afterLine": 1,
+          "offset": 0.1,
+          "repeat": 6,
+          "every": 0.2
+        },
+        {
+          "name": "buzzer",
+          "afterLine": 1,
+          "offset": 1.0
+        },
+        {
+          "name": "ding",
+          "afterLine": 1,
+          "offset": 1.5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "target": 5.0,
+      "minTail": 1.2,
+      "lines": [
+        {
+          "text": "Nummer 2",
+          "say": "Nummer zwei.",
+          "at": 0.35,
+          "hot": [
+            "2"
+          ]
+        },
+        {
+          "text": "Wenn Deutsche sagen: Das ist interessant, meinen sie nicht immer etwas Positives.",
+          "gap": 0.3,
+          "hot": [
+            "interessant",
+            "nicht",
+            "Positives"
+          ]
+        },
+        {
+          "text": "Ich dachte jedes Mal: Super, es gefällt ihm!",
+          "gap": 1.8,
+          "hot": [
+            "Super",
+            "gefällt"
+          ],
+          "extra": true
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "pop",
+          "at": 0.35
+        },
+        {
+          "name": "pop",
+          "afterLine": 1,
+          "offset": -2.6
+        },
+        {
+          "name": "scratch",
+          "afterLine": 1,
+          "offset": 0.45
+        },
+        {
+          "name": "buzzer",
+          "afterLine": 1,
+          "offset": 1.2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "target": 5.0,
+      "minTail": 1.2,
+      "lines": [
+        {
+          "text": "Nummer 3",
+          "say": "Nummer drei.",
+          "at": 0.35,
+          "hot": [
+            "3"
+          ]
+        },
+        {
+          "text": "Menschen warten nachts an einer roten Ampel, obwohl kein Auto kommt.",
+          "gap": 0.3,
+          "hot": [
+            "nachts",
+            "roten",
+            "Ampel",
+            "kein Auto"
+          ]
+        },
+        {
+          "text": "Kein Auto. Nichts. Und trotzdem: Rot ist Rot.",
+          "gap": 1.5,
+          "hot": [
+            "Kein",
+            "Rot",
+            "Rot."
+          ],
+          "extra": true
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "pop",
+          "at": 0.35
+        },
+        {
+          "name": "ampel",
+          "afterLine": 1,
+          "offset": -3.2,
+          "repeat": 8,
+          "every": 0.5
+        },
+        {
+          "name": "ding",
+          "afterLine": 2,
+          "offset": 0.25
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "target": 10.2,
+      "minTail": 2.2,
+      "lines": [
+        {
+          "text": "Welche deutsche Angewohnheit hat dich am meisten überrascht? Schreib es in die Kommentare!",
+          "at": 0.4,
+          "hot": [
+            "deutsche",
+            "überrascht",
+            "Kommentare"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "pop",
+          "afterLine": 0,
+          "offset": 0.2
+        },
+        {
+          "name": "ding",
+          "afterLine": 0,
+          "offset": 1.4
+        },
+        {
+          "name": "pop",
+          "afterLine": 0,
+          "offset": 2.1
+        }
+      ]
+    }
+  ]
+}
