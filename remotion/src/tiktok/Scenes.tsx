@@ -197,12 +197,12 @@ export const Scene2: React.FC<SceneProps> = ({ lines }) => {
         </g>
         {/* BELEGT / bestätigt */}
         {f >= flipFrom + 30 && f < flipFrom + 45 && <Txt x={540} y={760} size={150} color={C.red} stroke="#fff" sw={14} rot={-8}>ALLES VOLL!</Txt>}
-        {booked && <g transform={`translate(400 1020) rotate(-4) scale(${Math.max(0.01, usePopStatic(f, flipFrom + 45))})`}>
+        {booked && f < rea.relStart && <g transform={`translate(400 1020) rotate(-4) scale(${Math.max(0.01, usePopStatic(f, flipFrom + 45))})`}>
           <rect x={-290} y={-56} width={580} height={104} rx={24} fill={C.green} stroke="#0b0b10" strokeWidth={8} />
           <Txt x={0} y={18} size={52} color="#04210f">TERMIN BESTÄTIGT</Txt></g>}
         {/* Reaktion */}
         {f >= rea.relStart && <g transform={`translate(${800 + (1 - react) * 500} 860) rotate(${(1 - react) * 20})`}><Person x={0} y={0} s={0.7} expr="wow" look={[-0.6, 0.3]} bob={Math.sin(f / 4) * 6} /></g>}
-        <Txt x={330} y={850} size={84} color={C.yellow} stroke="#0b0b10" sw={12} rot={-6} scale={Math.max(0.01, react)} opacity={f >= rea.relStart ? 1 : 0}>3 WOCHEN?!</Txt>
+        <Txt x={310} y={1075} size={80} color={C.yellow} stroke="#0b0b10" sw={12} rot={-6} scale={Math.max(0.01, react)} opacity={f >= rea.relStart ? 1 : 0}>3 WOCHEN?!</Txt>
       </Svg>
     </AbsoluteFill>
   );
@@ -241,7 +241,7 @@ export const Scene3: React.FC<SceneProps> = ({ lines }) => {
             <Person x={770} y={760} s={0.95} expr={confused ? "confused" : "neutral"} look={[-0.7, 0.2]} tilt={confused ? Math.sin(f / 6) * 6 : 0} bob={Math.sin(f / 5) * 4} />
             {confused && [0, 1, 2].map((i) => {
               const t = ((f + i * 14) % 42) / 42;
-              return <Txt key={i} x={650 + i * 120} y={470 - t * 90 - i * 20} size={110 + i * 20} color={C.yellow} stroke="#0b0b10" sw={10} opacity={1 - t * 0.6} rot={i * 12 - 12}>?</Txt>;
+              return <Txt key={i} x={650 + i * 120} y={600 - t * 50 - i * 14} size={96 + i * 16} color={C.yellow} stroke="#0b0b10" sw={10} opacity={1 - t * 0.6} rot={i * 12 - 12}>?</Txt>;
             })}
           </>
         )}
